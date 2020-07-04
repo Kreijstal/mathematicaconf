@@ -1,0 +1,862 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27793,        853]
+NotebookOptionsPosition[     21042,        675]
+NotebookOutlinePosition[     24808,        757]
+CellTagsIndexPosition[     24765,        754]
+WindowTitle->Knowledge Representation & Access
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"CanonicalName\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/CanonicalName"], "\<\"ChemicalData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ChemicalData"], "\<\"CityData\"\>":>
+       Documentation`HelpLookup["paclet:ref/CityData"], "\<\"CommonName\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/CommonName"], "\<\"CountryData\"\>":>
+       Documentation`HelpLookup["paclet:ref/CountryData"], "\<\"Entity\"\>":>
+       Documentation`HelpLookup["paclet:ref/Entity"], "\<\"EntityClass\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityClass"], "\<\"EntityClassList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityClassList"], "\<\"EntityList\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityList"], "\<\"EntityProperties\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityProperties"], "\<\"EntityProperty\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityProperty"], "\<\"EntityPropertyClass\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityPropertyClass"], "\<\"EntityValue\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityValue"], "\<\"FinancialData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FinancialData"], "\<\"GeoPosition\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/GeoPosition"], "\<\"Interpreter\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Interpreter"], "\<\"PersonData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PersonData"], "\<\"SemanticImport\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SemanticImport"], "\<\"SemanticInterpretation\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SemanticInterpretation"], "\<\"WeatherData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/WeatherData"], "\<\"WolframAlpha\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/WolframAlpha"], "\<\"WordData\"\>":>
+       Documentation`HelpLookup["paclet:ref/WordData"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"WDF (Wolfram Data Framework)\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/WDFWolframDataFramework"], "\<\"Free-Form & External \
+Input\"\>":>Documentation`HelpLookup[
+       "paclet:guide/FreeFormAndExternalInput"], "\<\"Wolfram|Alpha \
+Integration\"\>":>Documentation`HelpLookup[
+       "paclet:guide/WolframAlphaIntegration"], "\<\"Units & Measures\"\>":>
+       Documentation`HelpLookup["paclet:guide/Units"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"guide/KnowledgeRepresentationAndAccess\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/KnowledgeRepresentationAndAccess"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/\
+KnowledgeRepresentationAndAccess.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$85346], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/KnowledgeRepresentationAndAccess", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Knowledge Representation & Access", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+Deeply integrated into the Wolfram Language is access to the immense and \
+continuously updated Wolfram Knowledgebase also used in Wolfram|Alpha. \
+Free-form linguistics makes it easy to identify many millions of entities and \
+many thousands of properties and automatically generate precise Wolfram \
+Language representations suitable for extensive further computation.\
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJztlkGqwjAQhlN14RFcCR7lvSPoAbSCbsvzCeqlBL2NpRtB6KIUpKs0SvWT
+qps2Uk2z82da0unM10yQGXtjrz9tCCH+29z67uJnNnNXgxYPv6v5ZNxk0eHq
+ct3WF43SNA3DMAiCXWURTAqJOiaSUhIZRZFSKsuyF5FPEUZwHMe+75Ou2y1v
+kySpAiyKRHZVunMq4tOfYXNRLJCin+OiLhMy6UCKfmqpeLY6kQ7EhPBCtsmn
+9Z/0nKLhNyTfOBMhh0KOHsYaj+fUQPac8/Fwjvd3Ox5yZy1ktV2qzeJu22WN
+5FKrhfw9Ddu/ZxsqJdvrSPa6KE2b1m1CZnCUdn4GDbWYTCuGnW7OMiJ5y6ff
+nbAUy650EzaX+b+CK3PJ5so=
+     "], {{0, 24}, {30, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSizeRaw->{30, 24},
+   PlotRange->{{0, 30}, {0, 24}}]], "InlineOutput"],
+ " (",
+ Cell["Ctrl", "KeyEvent"],
+ StyleBox["+", "KeyEventDelimiter"],
+ Cell["\[LongEqual]", "KeyEvent"],
+ ")",
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " give free-form linguistics to be converted to Wolfram Language form"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->992024515],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Entity"]],"paclet:ref/Entity"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " symbolic representation of a named entity of any type (e.g. \"City\", \
+\"Person\", ...): ",
+ Cell[BoxData[
+  TemplateBox[{"\"New York City\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"City\"", ",", 
+        RowBox[{"{", 
+          
+          RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+            "\"UnitedStates\""}], "}"}]}], "]"}],
+    "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+   "Entity"]]]
+}], "GuideText",
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityProperty"]],"paclet:ref/EntityProperty"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " symbolic representation of a property for a type of entity (e.g. \
+\"Population\"): ",
+ Cell[BoxData[
+  TemplateBox[{"\"city population\"",RowBox[{"EntityProperty", "[", 
+      RowBox[{"\"City\"", ",", "\"Population\""}], "]"}],
+    "\"EntityProperty[\\\"City\\\", \\\"Population\\\"]\""},
+   "EntityProperty"]]]
+}], "GuideText",
+ CellID->1451797292],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityValue"]],"paclet:ref/EntityValue"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " value of a specific property of an entity (e.g. density of gold)"
+}], "GuideText",
+ CellID->2040471944],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityClass"]],"paclet:ref/EntityClass"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " representation of a class of entities of a given type (e.g. G8 countries): \
+",
+ Cell[BoxData[
+  TemplateBox[{"\"Europe\"",RowBox[{"EntityClass", "[", 
+      RowBox[{"\"Country\"", ",", "\"Europe\""}], "]"}],
+    "\"EntityClass[\\\"Country\\\", \\\"Europe\\\"]\"","\"countries\""},
+   "EntityClass"]],
+  ImageSize->{69, 25},
+  ImageMargins->{{0, 0}, {0, 0}},
+  ImageRegion->{{0, 1}, {0, 1}}]
+}], "GuideText",
+ CellID->1173055525],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityPropertyClass"]],"paclet:ref/EntityPropertyClass"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a class of properties of a given type (e.g. demographics)"
+}], "GuideText",
+ CellID->851456813]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->311258892],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CommonName"]],"paclet:ref/CommonName"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " common printable name of an entity or property"
+}], "GuideText",
+ CellID->1045603865],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CanonicalName"]],"paclet:ref/CanonicalName"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " unique canonical name of an entity or property"
+}], "GuideText",
+ CellID->605475654],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TypeName"]],"paclet:ref/TypeName"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " name of the type of an entity"
+}], "GuideText",
+ CellID->647889430],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityList"]],"paclet:ref/EntityList"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a list of entities of a given type or class"
+}], "GuideText",
+ CellID->1258073927],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityClassList"]],"paclet:ref/EntityClassList"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a list of entity classes of a given type"
+}], "GuideText",
+ CellID->851488723],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityProperties"]],"paclet:ref/EntityProperties"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " properties available for a class of entities"
+}], "GuideText",
+ CellID->1162450856],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["GeoPosition"]],"paclet:ref/GeoPosition"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " geo position (when applicable) for an entity"
+}], "GuideText",
+ CellID->1513748983]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->1077835843],
+
+Cell[CellGroupData[{
+
+Cell["Specific Domains", "GuideFunctionsSubsection",
+ CellID->723418254],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CountryData"]],"paclet:ref/CountryData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CityData"]],"paclet:ref/CityData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ChemicalData"]],"paclet:ref/ChemicalData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FinancialData"]],"paclet:ref/FinancialData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WeatherData"]],"paclet:ref/WeatherData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WordData"]],"paclet:ref/WordData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PersonData"]],"paclet:ref/PersonData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell["...", "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1293098301]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->1428251984],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SemanticInterpretation"]],"paclet:ref/SemanticInterpretation"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "convert free-form linguistics to Wolfram Language form"
+}], "GuideText",
+ CellID->1172559232],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SemanticImport"]],"paclet:ref/SemanticImport"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " import data, converting entities etc. to Wolfram Language form"
+}], "GuideText",
+ CellID->1903634434],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Interpreter"]],"paclet:ref/Interpreter"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " interpret input of various types (e.g. \"City\", \"Date\", etc.) "
+}], "GuideText",
+ CellID->1053828088]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->396206192],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Direct Wolfram|Alpha Access"]],
+   "paclet:guide/WolframAlphaIntegration"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->752374940],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WolframAlpha"]],"paclet:ref/WolframAlpha"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " get results in many possible forms from Wolfram|Alpha"
+}], "GuideText",
+ CellID->781903044],
+
+Cell[TextData[{
+ Cell[BoxData[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBLECOU2VJahIzkMEHxLxADGL/B4Ic
+BgKIGDU0RVgB2cpGjtsoj9b//wGDAjwg
+     "], {{0, 14}, {13, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSize->Magnification[1],
+   ImageSizeRaw->{13, 14},
+   PlotRange->{{0, 13}, {0, 14}}]], "InlineOutput"],
+ " (",
+ Cell["\[LongEqual]", "KeyEvent"],
+ " at beginning of input) \[LongDash] use free-form linguistics to generate \
+",
+ "Wolfram Language",
+ " output"
+}], "GuideText",
+ CellID->511613194],
+
+Cell[TextData[{
+ Cell[BoxData[
+  DynamicBox[FEPrivate`FrontEndResource["WABitmaps", "SpikeyEqual"],
+   ImageSizeCache->{21., {6., 16.}}]], "InlineOutput"],
+ " (",
+ Cell["\[LongEqual] \[LongEqual]", "KeyEvent"],
+ " at beginning of input) \[LongDash] generate full Wolfram|Alpha output"
+}], "GuideText",
+ CellID->770721223]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->172588407],
+
+Cell[CellGroupData[{
+
+Cell["System Configuration", "GuideFunctionsSubsection",
+ CellID->1701247227],
+
+Cell[TextData[{
+ Cell[TextData[{
+  StyleBox["Edit", "MenuName"],
+  StyleBox[" ", "MenuNameDelimiter"],
+  StyleBox["\[FilledRightTriangle]", "MenuNameDelimiter"],
+  StyleBox[" ", "MenuNameDelimiter"],
+  StyleBox["Preferences", "MenuName"],
+  StyleBox["...", "MenuName"],
+  StyleBox[" ", "MenuNameDelimiter"],
+  StyleBox["\[FilledRightTriangle]", "MenuNameDelimiter"],
+  StyleBox[" ", "MenuNameDelimiter"],
+  StyleBox["Internet", "MenuName"],
+  StyleBox[" ", "MenuName"],
+  StyleBox["Connectivity", "MenuName"]
+ }], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " enable and disable connectivity to the knowledgebase"
+}], "GuideText",
+ CellID->1264868031]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["WDF (Wolfram Data Framework)"]],
+   "paclet:guide/WDFWolframDataFramework"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1421364351],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Free-Form & External Input"]],
+   "paclet:guide/FreeFormAndExternalInput"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1456163664],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Wolfram|Alpha Integration"]],
+   "paclet:guide/WolframAlphaIntegration"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Units & Measures"]],"paclet:guide/Units"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1652800033]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Knowledge Representation & Access",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Knowledge Representation & Access", ButtonData -> 
+         "paclet:guide/KnowledgeRepresentationAndAccess", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Geographic Data & Entities", ButtonData -> 
+         "paclet:guide/GeographicData", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Knowledge Representation & Access", ButtonData -> 
+         "paclet:guide/KnowledgeRepresentationAndAccess", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Linguistic Data", ButtonData -> "paclet:guide/LinguisticData", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Knowledge Representation & Access", ButtonData -> 
+         "paclet:guide/KnowledgeRepresentationAndAccess", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 34.6496406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "knowledge representation", "knowledge management", "knowledge access", 
+      "ontology", "entity", "knowledge representation and reasoning", 
+      "natural language", "semantic net", "ontology", "classifier", 
+      "expert system", "semantics", "semantic interpretation", 
+      "entity-relationship model", "data model", "conceptual data model", 
+      "information system", "knowledge base", "knowledge repository"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Wolfram Language Guide", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "Deeply integrated into the Wolfram Language is access to the immense and \
+continuously updated Wolfram Knowledgebase also used in Wolfram|Alpha. \
+Free-form linguistics makes it easy to identify many millions of entities and \
+many thousands of properties and automatically generate precise Wolfram \
+Language representations suitable for extensive further computation.", 
+    "synonyms" -> {}, "title" -> "Knowledge Representation & Access", 
+    "titlemodifier" -> "", "windowtitle" -> 
+    "Knowledge Representation & Access", "type" -> "Guide", "uri" -> 
+    "guide/KnowledgeRepresentationAndAccess"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[605, 21, 5890, 135, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[6520, 160, 75, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[6598, 163, 424, 7, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7059, 175, 257, 11, 70, "GuideReferenceSection"],
+Cell[7319, 188, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7353, 190, 1021, 27, 70, "GuideText",
+ CellID->203374175],
+Cell[CellGroupData[{
+Cell[8399, 221, 48, 1, 70, "GuideDelimiter",
+ CellID->992024515],
+Cell[8450, 224, 721, 21, 70, "GuideText",
+ CellID->1463276848],
+Cell[9174, 247, 590, 16, 70, "GuideText",
+ CellID->1451797292],
+Cell[9767, 265, 337, 10, 70, "GuideText",
+ CellID->2040471944],
+Cell[10107, 277, 663, 19, 70, "GuideText",
+ CellID->1173055525],
+Cell[10773, 298, 345, 10, 70, "GuideText",
+ CellID->851456813]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11155, 313, 48, 1, 70, "GuideDelimiter",
+ CellID->311258892],
+Cell[11206, 316, 317, 10, 70, "GuideText",
+ CellID->1045603865],
+Cell[11526, 328, 322, 10, 70, "GuideText",
+ CellID->605475654],
+Cell[11851, 340, 295, 10, 70, "GuideText",
+ CellID->647889430],
+Cell[12149, 352, 314, 10, 70, "GuideText",
+ CellID->1258073927],
+Cell[12466, 364, 320, 10, 70, "GuideText",
+ CellID->851488723],
+Cell[12789, 376, 327, 10, 70, "GuideText",
+ CellID->1162450856],
+Cell[13119, 388, 317, 10, 70, "GuideText",
+ CellID->1513748983]
+}, Open  ]],
+Cell[13451, 401, 59, 1, 70, "GuideDelimiterSubsection",
+ CellID->1077835843],
+Cell[CellGroupData[{
+Cell[13535, 406, 72, 1, 70, "GuideFunctionsSubsection",
+ CellID->723418254],
+Cell[13610, 409, 2529, 75, 70, "InlineGuideFunctionListing",
+ CellID->1293098301]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16176, 489, 49, 1, 70, "GuideDelimiter",
+ CellID->1428251984],
+Cell[16228, 492, 358, 12, 70, "GuideText",
+ CellID->1172559232],
+Cell[16589, 506, 341, 10, 70, "GuideText",
+ CellID->1903634434],
+Cell[16933, 518, 338, 10, 70, "GuideText",
+ CellID->1053828088]
+}, Open  ]],
+Cell[17286, 531, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->396206192],
+Cell[CellGroupData[{
+Cell[17369, 536, 230, 6, 70, "GuideFunctionsSubsection",
+ CellID->752374940],
+Cell[17602, 544, 327, 10, 70, "GuideText",
+ CellID->781903044],
+Cell[17932, 556, 680, 21, 70, "GuideText",
+ CellID->511613194],
+Cell[18615, 579, 321, 8, 70, "GuideText",
+ CellID->770721223]
+}, Open  ]],
+Cell[18951, 590, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->172588407],
+Cell[CellGroupData[{
+Cell[19034, 595, 77, 1, 70, "GuideFunctionsSubsection",
+ CellID->1701247227],
+Cell[19114, 598, 678, 19, 70, "GuideText",
+ CellID->1264868031]
+}, Open  ]],
+Cell[19807, 620, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19875, 625, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[20159, 639, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[20193, 641, 209, 6, 70, "GuideMoreAbout",
+ CellID->1421364351],
+Cell[20405, 649, 208, 6, 70, "GuideMoreAbout",
+ CellID->1456163664],
+Cell[20616, 657, 206, 6, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[20825, 665, 175, 5, 70, "GuideMoreAbout",
+ CellID->1652800033]
+}, Open  ]],
+Cell[21015, 673, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

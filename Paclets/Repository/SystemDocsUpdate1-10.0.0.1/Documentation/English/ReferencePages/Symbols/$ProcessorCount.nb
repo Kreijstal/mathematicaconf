@@ -1,0 +1,884 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24816,        874]
+NotebookOptionsPosition[     17660,        651]
+NotebookOutlinePosition[     20763,        725]
+CellTagsIndexPosition[     20678,        720]
+WindowTitle->$ProcessorCount
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"$KernelCount\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$KernelCount"], "\<\"LaunchKernels\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/LaunchKernels"], "\<\"$ProcessorType\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$ProcessorType"], "\<\"SystemInformation\"\>":>
+       Documentation`HelpLookup["paclet:ref/SystemInformation"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Parallel Computing\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/ParallelComputing"], "\<\"System Information\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/SystemInformation"], "\<\"Wolfram System Setup\"\>":>
+       Documentation`HelpLookup["paclet:guide/WolframSystemSetup"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$ProcessorCount\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$ProcessorCount"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$ProcessorCount.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$70787], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "ref/$ProcessorCount", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$ProcessorCount", "ObjectName",
+ CellID->1224892054],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$ProcessorCount"]],"paclet:ref/$ProcessorCount"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]gives the number of processor cores available on the \
+computer system on which ",
+     "the Wolfram System",
+     " is being run."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->670386203],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$ProcessorCount"]],"paclet:ref/$ProcessorCount"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is used by ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Parallelize"]],"paclet:ref/Parallelize"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " and other parallel functions."
+}], "Notes",
+ CellID->214531132],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(5)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->384917488],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->156471689],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$ProcessorCount"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->363641672],
+
+Cell[BoxData["2"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->156319915]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Applications",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->258228157],
+
+Cell["\<\
+By default, as many parallel kernels are launched as there are processor \
+cores:\
+\>", "ExampleText",
+ CellID->429204322],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$ProcessorCount"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->116159714],
+
+Cell[BoxData["4"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->759107400]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$ConfiguredKernels"], "Input",
+ CellLabel->"In[2]:=",
+ CellID->360229538],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox["\<\"\[LeftSkeleton]\\!\\(4\\) local kernels\
+\[RightSkeleton]\"\>",
+   StringForm["\[LeftSkeleton]`1` local kernels\[RightSkeleton]", 4],
+   Editable->False], "}"}]], "Output",
+ ImageSize->{151, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->1545435717]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LaunchKernels", "[", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->617225934],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"1", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"2", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"3", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"4", ",", "\<\"local\"\>"}], "]"}]}], "}"}]], "Output",
+ ImageSize->{332, 33},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->1614583057]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->240443713],
+
+Cell[TextData[{
+ "You can change ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$ProcessorCount"]],"paclet:ref/$ProcessorCount"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " in a new session to simulate a multicore computer:"
+}], "ExampleText",
+ CellID->614816925],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Unprotect", "[", "$ProcessorCount", "]"}], ";", 
+  RowBox[{"$ProcessorCount", "=", "8"}], ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->149720742],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LaunchKernels", "[", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->515542180],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"1", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"2", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"3", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"4", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"5", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"6", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"7", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"8", ",", "\<\"local\"\>"}], "]"}]}], "}"}]], "Output",
+ ImageSize->{494, 50},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->351783094]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Possible Issues",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1305812373],
+
+Cell["\<\
+No kernels are launched by default on a single-core computer:\
+\>", "ExampleText",
+ CellID->60062676],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$ProcessorCount"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->436651798],
+
+Cell[BoxData["1"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->378173936]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LaunchKernels", "[", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->77612365],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LaunchKernels", "::", "\<\"unicore\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"The default parallel kernel \
+configuration does not launch any kernels on a single-core \
+machine.\\\\\\\\tUse LaunchKernels[n] to launch n kernels \
+anyway.\\\\\\\"\\\", \\\"MT\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\
+\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/LaunchKernels\\\", ButtonNote -> \
+\\\"LaunchKernels::unicore\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->906193638],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ ImageSize->{18, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->919333480]
+}, Open  ]],
+
+Cell["Specify the number of desired kernels to launch them anyway:", \
+"ExampleText",
+ CellID->105041],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LaunchKernels", "[", "2", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->126482656],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"1", ",", "\<\"local\"\>"}], "]"}], ",", 
+   RowBox[{"KernelObject", "[", 
+    RowBox[{"2", ",", "\<\"local\"\>"}], "]"}]}], "}"}]], "Output",
+ ImageSize->{331, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->80762156]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->313413572],
+
+Cell[TextData[{
+ "Changing ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$ProcessorCount"]],"paclet:ref/$ProcessorCount"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " takes effect only if it happens before using any parallel commands:"
+}], "ExampleText",
+ CellID->154191173],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$ProcessorCount"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1639617643],
+
+Cell[BoxData["4"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->1927146042]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$KernelCount"], "Input",
+ CellLabel->"In[2]:=",
+ CellID->2114150613],
+
+Cell[BoxData["0"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->1480344252]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Unprotect", "[", "$ProcessorCount", "]"}], ";", 
+  RowBox[{"$ProcessorCount", "=", "8"}], ";"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->973791150],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"LaunchKernels", "[", "]"}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->101149808],
+
+Cell[BoxData["4"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->845833948]
+}, Open  ]],
+
+Cell["\<\
+You can always launch the desired number of kernels explicitly:\
+\>", "ExampleText",
+ CellID->85216579],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"LaunchKernels", "[", "8", "]"}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->19413570],
+
+Cell[BoxData["8"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->1865158746]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$KernelCount"]],"paclet:ref/$KernelCount"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LaunchKernels"]],"paclet:ref/LaunchKernels"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$ProcessorType"]],"paclet:ref/$ProcessorType"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SystemInformation"]],"paclet:ref/SystemInformation"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Parallel Computing"]],"paclet:guide/ParallelComputing"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->14896470],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["System Information"]],"paclet:guide/SystemInformation"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->152168273],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Wolfram System Setup"]],"paclet:guide/WolframSystemSetup"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->413094960]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 2008",
+ Cell[" (7.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$ProcessorCount",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Parallel Computing", ButtonData -> "paclet:guide/ParallelComputing", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$ProcessorCount", ButtonData -> "paclet:ref/$ProcessorCount", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Tuning & Debugging", ButtonData -> "paclet:guide/TuningAndDebugging",
+          BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Parallel Computing", ButtonData -> "paclet:guide/ParallelComputing", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$ProcessorCount", ButtonData -> "paclet:ref/$ProcessorCount", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  "1:eJxTTMoPSmNkYGAoZgESPpnFJcGsQIZzTn5pCgBQsAYO", "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 20.6826406}", 
+    "history" -> {"7", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "processor count", "number of processors", "number of cores", 
+      "CPU count"}, "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, 
+    "index" -> True, "label" -> "Built-in Wolfram Language Symbol", 
+    "language" -> "en", "paclet" -> "Mathematica", "status" -> "None", 
+    "summary" -> 
+    "$ProcessorCount gives the number of processor cores available on the \
+computer system on which the Wolfram System is being run.", "synonyms" -> {}, 
+    "title" -> "$ProcessorCount", "titlemodifier" -> "", "windowtitle" -> 
+    "$ProcessorCount", "type" -> "Symbol", "uri" -> "ref/$ProcessorCount"}, 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[6570, 197, 387, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->384917488]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 20535, 713}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[587, 21, 4023, 98, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[4613, 121, 58, 1, 43, "ObjectName",
+ CellID->1224892054],
+Cell[CellGroupData[{
+Cell[4696, 126, 568, 17, 83, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[5289, 147, 738, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->670386203],
+Cell[6030, 173, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6064, 175, 423, 14, 70, "Notes",
+ CellID->214531132],
+Cell[6490, 191, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6570, 197, 387, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->384917488],
+Cell[CellGroupData[{
+Cell[6982, 216, 195, 6, 25, "ExampleSection",
+ CellID->156471689],
+Cell[CellGroupData[{
+Cell[7202, 226, 84, 2, 28, "Input",
+ CellID->363641672],
+Cell[7289, 230, 158, 5, 36, "Output",
+ CellID->156319915]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7496, 241, 193, 6, 25, "ExampleSection",
+ CellID->258228157],
+Cell[7692, 249, 132, 4, 70, "ExampleText",
+ CellID->429204322],
+Cell[CellGroupData[{
+Cell[7849, 257, 84, 2, 70, "Input",
+ CellID->116159714],
+Cell[7936, 261, 158, 5, 36, "Output",
+ CellID->759107400]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8131, 271, 87, 2, 70, "Input",
+ CellID->360229538],
+Cell[8221, 275, 358, 10, 36, "Output",
+ CellID->1545435717]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8616, 290, 104, 3, 70, "Input",
+ CellID->617225934],
+Cell[8723, 295, 533, 15, 54, "Output",
+ CellID->1614583057]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9293, 315, 125, 3, 70, "ExampleDelimiter",
+ CellID->240443713],
+Cell[9421, 320, 295, 9, 70, "ExampleText",
+ CellID->614816925],
+Cell[9719, 331, 184, 5, 70, "Input",
+ CellID->149720742],
+Cell[CellGroupData[{
+Cell[9928, 340, 104, 3, 70, "Input",
+ CellID->515542180],
+Cell[10035, 345, 880, 23, 71, "Output",
+ CellID->351783094]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[10976, 375, 197, 6, 19, "ExampleSection",
+ CellID->1305812373],
+Cell[11176, 383, 111, 3, 70, "ExampleText",
+ CellID->60062676],
+Cell[CellGroupData[{
+Cell[11312, 390, 84, 2, 70, "Input",
+ CellID->436651798],
+Cell[11399, 394, 158, 5, 36, "Output",
+ CellID->378173936]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11594, 404, 103, 3, 70, "Input",
+ CellID->77612365],
+Cell[11700, 409, 595, 11, 70, "Message",
+ CellID->906193638],
+Cell[12298, 422, 175, 6, 36, "Output",
+ CellID->919333480]
+}, Open  ]],
+Cell[12488, 431, 102, 2, 70, "ExampleText",
+ CellID->105041],
+Cell[CellGroupData[{
+Cell[12615, 437, 109, 3, 70, "Input",
+ CellID->126482656],
+Cell[12727, 442, 357, 11, 36, "Output",
+ CellID->80762156]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13121, 458, 125, 3, 70, "ExampleDelimiter",
+ CellID->313413572],
+Cell[13249, 463, 306, 9, 70, "ExampleText",
+ CellID->154191173],
+Cell[CellGroupData[{
+Cell[13580, 476, 85, 2, 70, "Input",
+ CellID->1639617643],
+Cell[13668, 480, 159, 5, 36, "Output",
+ CellID->1927146042]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13864, 490, 82, 2, 70, "Input",
+ CellID->2114150613],
+Cell[13949, 494, 159, 5, 36, "Output",
+ CellID->1480344252]
+}, Open  ]],
+Cell[14123, 502, 184, 5, 70, "Input",
+ CellID->973791150],
+Cell[CellGroupData[{
+Cell[14332, 511, 137, 4, 70, "Input",
+ CellID->101149808],
+Cell[14472, 517, 158, 5, 36, "Output",
+ CellID->845833948]
+}, Open  ]],
+Cell[14645, 525, 113, 3, 70, "ExampleText",
+ CellID->85216579],
+Cell[CellGroupData[{
+Cell[14783, 532, 141, 4, 70, "Input",
+ CellID->19413570],
+Cell[14927, 538, 159, 5, 36, "Output",
+ CellID->1865158746]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[15125, 548, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15193, 553, 270, 12, 31, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[15466, 567, 1170, 34, 58, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16673, 606, 276, 12, 31, "MoreAboutSection",
+ CellID->38303248],
+Cell[16952, 620, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[16986, 622, 177, 5, 19, "MoreAbout",
+ CellID->14896470],
+Cell[17166, 629, 178, 5, 19, "MoreAbout",
+ CellID->152168273],
+Cell[17347, 636, 181, 5, 19, "MoreAbout",
+ CellID->413094960]
+}, Open  ]],
+Cell[17543, 644, 87, 3, 43, "History"],
+Cell[17633, 649, 23, 0, 25, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

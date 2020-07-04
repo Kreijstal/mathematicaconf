@@ -1,0 +1,972 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     31171,        963]
+NotebookOptionsPosition[     23613,        765]
+NotebookOutlinePosition[     27891,        857]
+CellTagsIndexPosition[     27848,        854]
+WindowTitle->Mesh-Based Geometric Regions
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"BoundaryDiscretizeGraphics\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/BoundaryDiscretizeGraphics"], \
+"\<\"BoundaryDiscretizeRegion\"\>":>Documentation`HelpLookup[
+       "paclet:ref/BoundaryDiscretizeRegion"], "\<\"BoundaryMesh\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/BoundaryMesh"], "\<\"BoundaryMeshRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/BoundaryMeshRegion"], "\<\"ConnectedMeshComponents\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ConnectedMeshComponents"], "\<\"ConvexHullMesh\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ConvexHullMesh"], "\<\"DelaunayMesh\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DelaunayMesh"], "\<\"DimensionalMeshComponents\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DimensionalMeshComponents"], "\<\"DiscretizeGraphics\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DiscretizeGraphics"], "\<\"DiscretizeRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DiscretizeRegion"], "\<\"HighlightMesh\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/HighlightMesh"], "\<\"MaxCellMeasure\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MaxCellMeasure"], "\<\"MeshCellCentroid\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellCentroid"], "\<\"MeshCellCount\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellCount"], "\<\"MeshCellIndex\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellIndex"], "\<\"MeshCellLabel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellLabel"], "\<\"MeshCellMarker\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellMarker"], "\<\"MeshCellMeasure\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellMeasure"], "\<\"MeshCellQuality\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellQuality"], "\<\"MeshCells\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCells"], "\<\"MeshCellStyle\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellStyle"], "\<\"MeshCoordinates\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCoordinates"], "\<\"MeshPrimitives\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshPrimitives"], "\<\"MeshQualityGoal\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshQualityGoal"], "\<\"MeshRefinementFunction\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshRefinementFunction"], "\<\"MeshRegion\"\>":>
+       Documentation`HelpLookup["paclet:ref/MeshRegion"], "\<\"NDSolve\"\>":>
+       Documentation`HelpLookup["paclet:ref/NDSolve"], "\<\"NIntegrate\"\>":>
+       Documentation`HelpLookup["paclet:ref/NIntegrate"], "\<\"Plot3D\"\>":>
+       Documentation`HelpLookup["paclet:ref/Plot3D"], "\<\"Property\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Property"], "\<\"PropertyValue\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PropertyValue"], "\<\"RegionDimension\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionDimension"], "\<\"RegionMeasure\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionMeasure"], "\<\"RegionNearest\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionNearest"], "\<\"TriangulateMesh\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TriangulateMesh"], "\<\"VoronoiMesh\"\>":>
+       Documentation`HelpLookup["paclet:ref/VoronoiMesh"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Geometric Computation\"\>":>
+       Documentation`HelpLookup["paclet:guide/GeometricComputation"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"guide/MeshRegions\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/MeshRegions"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/MeshRegions.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$88910], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "guide/MeshRegions", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Mesh-Based Geometric Regions", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Language provides rich support for mesh-based regions, including \
+a boundary representation where the region is represented by its boundary \
+(curves, surfaces, etc.) or where the region is represented as the disjoint \
+union of simple cells. Mesh-based regions can be constructed in a variety of \
+ways, including from points (Delaunay, convex hull, etc.), as a \
+discretization of graphics (2D and 3D), as a discretization of any other \
+region, or directly. Mesh-based regions work just like any other region in \
+the Wolfram Language and can be analyzed, used as input to solvers, or used \
+as a building block to construct more complex regions. \
+\>", "GuideAbstract",
+ CellID->291642155]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[CellGroupData[{
+
+Cell["Mesh Regions from Cells", "GuideFunctionsSubsection",
+ CellID->413247206],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRegion"]],"paclet:ref/MeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a mesh as the disjoint union of cells"
+}], "GuideText",
+ CellID->183214148],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryMeshRegion"]],"paclet:ref/BoundaryMeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a boundary mesh representing an enclosed region"
+}], "GuideText",
+ CellID->749246366]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mesh Regions from Point Sets", "GuideFunctionsSubsection",
+ CellID->262824315],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DelaunayMesh"]],"paclet:ref/DelaunayMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Delaunay mesh from a collection of points"
+}], "GuideText",
+ CellID->556350375],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["VoronoiMesh"]],"paclet:ref/VoronoiMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Voronoi mesh from a collection of points"
+}], "GuideText",
+ CellID->888662920],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ConvexHullMesh"]],"paclet:ref/ConvexHullMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " convex hull from a collection of points"
+}], "GuideText",
+ CellID->234543759]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mesh Regions from Other Objects", "GuideFunctionsSubsection",
+ CellID->132065312],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DiscretizeGraphics"]],"paclet:ref/DiscretizeGraphics"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryDiscretizeGraphics"]],
+    "paclet:ref/BoundaryDiscretizeGraphics"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " discretize 2D or 3D graphics"
+}], "GuideText",
+ CellID->197028585],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DiscretizeRegion"]],"paclet:ref/DiscretizeRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryDiscretizeRegion"]],
+    "paclet:ref/BoundaryDiscretizeRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " discretize a region "
+}], "GuideText",
+ CellID->269441133],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MaxCellMeasure"]],"paclet:ref/MaxCellMeasure"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshQualityGoal"]],"paclet:ref/MeshQualityGoal"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRefinementFunction"]],"paclet:ref/MeshRefinementFunction"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->210557929]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mesh Regions from Mesh Regions", "GuideFunctionsSubsection",
+ CellID->231670197],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HighlightMesh"]],"paclet:ref/HighlightMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " highlight cells of ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRegion"]],"paclet:ref/MeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " or ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryMeshRegion"]],"paclet:ref/BoundaryMeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "GuideText",
+ CellID->207714720],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TriangulateMesh"]],"paclet:ref/TriangulateMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " convert a ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryMeshRegion"]],"paclet:ref/BoundaryMeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " to ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRegion"]],"paclet:ref/MeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "GuideText",
+ CellID->659076281],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryMesh"]],"paclet:ref/BoundaryMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " convert a ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRegion"]],"paclet:ref/MeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " to a ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryMeshRegion"]],"paclet:ref/BoundaryMeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "GuideText",
+ CellID->120739814]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->165486779],
+
+Cell[CellGroupData[{
+
+Cell["Mesh Components", "GuideFunctionsSubsection",
+ CellID->97714505],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DimensionalMeshComponents"]],
+    "paclet:ref/DimensionalMeshComponents"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " split ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRegion"]],"paclet:ref/MeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " into different dimension components"
+}], "GuideText",
+ CellID->8717246],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ConnectedMeshComponents"]],
+    "paclet:ref/ConnectedMeshComponents"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " split ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRegion"]],"paclet:ref/MeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " into connected components"
+}], "GuideText",
+ CellID->282008849]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Mesh Parts", "GuideFunctionsSubsection",
+ CellID->926480040],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellCount"]],"paclet:ref/MeshCellCount"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " the number of cells of different dimensions "
+}], "GuideText",
+ CellID->80375210],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCoordinates"]],"paclet:ref/MeshCoordinates"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " the mesh vertex coordinates "
+}], "GuideText",
+ CellID->522132680],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCells"]],"paclet:ref/MeshCells"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " mesh cells from cell index and general cell specification"
+}], "GuideText",
+ CellID->151241134],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellIndex"]],"paclet:ref/MeshCellIndex"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " mesh cell indexes from mesh cells and general cell specification"
+}], "GuideText",
+ CellID->347464581],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshPrimitives"]],"paclet:ref/MeshPrimitives"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " graphics primitives from mesh cell specification"
+}], "GuideText",
+ CellID->493511169]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Mesh Standard Properties \[RightGuillemet]"]],
+   "paclet:guide/Properties"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->632475709],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Property"]],"paclet:ref/Property"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " associate a cell with a particular property"
+}], "GuideText",
+ CellID->108463861],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PropertyValue"]],"paclet:ref/PropertyValue"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " get and set property values for cells"
+}], "GuideText",
+ CellID->69043073],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellStyle"]],"paclet:ref/MeshCellStyle"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellLabel"]],"paclet:ref/MeshCellLabel"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellMarker"]],"paclet:ref/MeshCellMarker"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellMeasure"]],"paclet:ref/MeshCellMeasure"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellCentroid"]],"paclet:ref/MeshCellCentroid"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellQuality"]],"paclet:ref/MeshCellQuality"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->771039368]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->59947157],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Solvers over Regions \[RightGuillemet]"]],
+   "paclet:guide/GeometricSolvers"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->332864194],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NDSolve"]],"paclet:ref/NDSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " solve partial differential equations over regions"
+}], "GuideText",
+ CellID->71465352],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NIntegrate"]],"paclet:ref/NIntegrate"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Plot3D"]],"paclet:ref/Plot3D"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/GeometricSolvers"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->62968816]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Region Properties and Measures \[RightGuillemet]"]],
+   "paclet:guide/GeometricPropertiesAndMeasures"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->689969391],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionDimension"]],"paclet:ref/RegionDimension"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionMeasure"]],"paclet:ref/RegionMeasure"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionNearest"]],"paclet:ref/RegionNearest"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/GeometricPropertiesAndMeasures"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->15816455]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Geometric Computation"]],"paclet:guide/GeometricComputation"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Mesh-Based Geometric Regions",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Mesh-Based Geometric Regions", ButtonData -> 
+         "paclet:guide/MeshRegions", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Geometric Computation", ButtonData -> 
+         "paclet:guide/GeometricComputation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Mesh-Based Geometric Regions", ButtonData -> 
+         "paclet:guide/MeshRegions", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Plane Geometry", ButtonData -> "paclet:guide/PlaneGeometry", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Geometric Computation", ButtonData -> 
+         "paclet:guide/GeometricComputation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Mesh-Based Geometric Regions", ButtonData -> 
+         "paclet:guide/MeshRegions", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 37.2326406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "cell complex", "simplicial complex", "polygon complex", 
+      "polyhedral complex", "CW complex", "piecewise linear complex", "grid", 
+      "mesh", "discretized region", "mesh generation", "grid generation", 
+      "triangulate", "triangulation", "tetrahedralization", 
+      "simplicial decomposition", "Delaunay triangulation", 
+      "Delaunay tetrahedralization", "discretize a region", 
+      "discretize a graphic", "mesh cells", "mesh index", "mesh coordinates", 
+      "boundary representation", "boundary mesh region", "mesh region"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Wolfram Language Guide", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "The Wolfram Language provides rich support for mesh-based regions, \
+including a boundary representation where the region is represented by its \
+boundary (curves, surfaces, etc.) or where the region is represented as the \
+disjoint union of simple cells. Mesh-based regions can be constructed in a \
+variety of ways, including from points (Delaunay, convex hull, etc.), as a \
+discretization of graphics (2D and 3D), as a discretization of any other \
+region, or directly. Mesh-based regions work just like any other region in \
+the Wolfram Language and can be analyzed, used as input to solvers, or used \
+as a building block to construct more complex regions. ", "synonyms" -> {}, 
+    "title" -> "Mesh-Based Geometric Regions", "titlemodifier" -> "", 
+    "windowtitle" -> "Mesh-Based Geometric Regions", "type" -> "Guide", "uri" -> 
+    "guide/MeshRegions"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[600, 21, 6913, 154, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[7538, 179, 70, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[7611, 182, 716, 11, 70, "GuideAbstract",
+ CellID->291642155]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8364, 198, 257, 11, 70, "GuideReferenceSection"],
+Cell[8624, 211, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[CellGroupData[{
+Cell[8680, 215, 79, 1, 70, "GuideFunctionsSubsection",
+ CellID->413247206],
+Cell[8762, 218, 307, 10, 70, "GuideText",
+ CellID->183214148],
+Cell[9072, 230, 333, 10, 70, "GuideText",
+ CellID->749246366]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9442, 245, 84, 1, 70, "GuideFunctionsSubsection",
+ CellID->262824315],
+Cell[9529, 248, 315, 10, 70, "GuideText",
+ CellID->556350375],
+Cell[9847, 260, 312, 10, 70, "GuideText",
+ CellID->888662920],
+Cell[10162, 272, 317, 10, 70, "GuideText",
+ CellID->234543759]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10516, 287, 87, 1, 70, "GuideFunctionsSubsection",
+ CellID->132065312],
+Cell[10606, 290, 524, 17, 70, "GuideText",
+ CellID->197028585],
+Cell[11133, 309, 508, 17, 70, "GuideText",
+ CellID->269441133],
+Cell[11644, 328, 850, 26, 70, "InlineGuideFunctionListing",
+ CellID->210557929]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12531, 359, 86, 1, 70, "GuideFunctionsSubsection",
+ CellID->231670197],
+Cell[12620, 362, 652, 21, 70, "GuideText",
+ CellID->207714720],
+Cell[13275, 385, 647, 21, 70, "GuideText",
+ CellID->659076281],
+Cell[13925, 408, 643, 21, 70, "GuideText",
+ CellID->120739814]
+}, Open  ]],
+Cell[14583, 432, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->165486779],
+Cell[CellGroupData[{
+Cell[14666, 437, 70, 1, 70, "GuideFunctionsSubsection",
+ CellID->97714505],
+Cell[14739, 440, 516, 17, 70, "GuideText",
+ CellID->8717246],
+Cell[15258, 459, 504, 17, 70, "GuideText",
+ CellID->282008849]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15799, 481, 66, 1, 70, "GuideFunctionsSubsection",
+ CellID->926480040],
+Cell[15868, 484, 319, 10, 70, "GuideText",
+ CellID->80375210],
+Cell[16190, 496, 308, 10, 70, "GuideText",
+ CellID->522132680],
+Cell[16501, 508, 325, 10, 70, "GuideText",
+ CellID->151241134],
+Cell[16829, 520, 340, 10, 70, "GuideText",
+ CellID->347464581],
+Cell[17172, 532, 326, 10, 70, "GuideText",
+ CellID->493511169]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17535, 547, 232, 6, 70, "GuideFunctionsSubsection",
+ CellID->632475709],
+Cell[17770, 555, 309, 10, 70, "GuideText",
+ CellID->108463861],
+Cell[18082, 567, 312, 10, 70, "GuideText",
+ CellID->69043073],
+Cell[18397, 579, 1711, 52, 70, "InlineGuideFunctionListing",
+ CellID->771039368]
+}, Open  ]],
+Cell[20123, 634, 57, 1, 70, "GuideDelimiterSubsection",
+ CellID->59947157],
+Cell[CellGroupData[{
+Cell[20205, 639, 234, 6, 70, "GuideFunctionsSubsection",
+ CellID->332864194],
+Cell[20442, 647, 312, 10, 70, "GuideText",
+ CellID->71465352],
+Cell[20757, 659, 796, 25, 70, "InlineGuideFunctionListing",
+ CellID->62968816]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21590, 689, 258, 6, 70, "GuideFunctionsSubsection",
+ CellID->689969391],
+Cell[21851, 697, 1125, 34, 70, "InlineGuideFunctionListing",
+ CellID->15816455]
+}, Open  ]],
+Cell[22991, 734, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23059, 739, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[23343, 753, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[23377, 755, 194, 5, 70, "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+Cell[23586, 763, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

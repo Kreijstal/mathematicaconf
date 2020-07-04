@@ -1,0 +1,886 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27059,        876]
+NotebookOptionsPosition[     20369,        687]
+NotebookOutlinePosition[     24345,        782]
+CellTagsIndexPosition[     24260,        777]
+WindowTitle->TemplateIf
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"TemplateSequence\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TemplateSequence"], "\<\"TemplateExpression\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TemplateExpression"], "\<\"If\"\>":>
+       Documentation`HelpLookup["paclet:ref/If"], "\<\"Switch\"\>":>
+       Documentation`HelpLookup["paclet:ref/Switch"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Summary of New Features in 10\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/SummaryOfNewFeaturesIn100"], "\<\"Working with Templates\
+\"\>":>Documentation`HelpLookup[
+       "paclet:guide/WorkingWithTemplates"], "\<\"XML Templates\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/XMLTemplates"], "\<\"New in 10.0: Core Language & \
+Structure\"\>":>Documentation`HelpLookup[
+       "paclet:guide/NewIn100CoreLanguageAndStructure"], "\<\"New in 10.0: \
+Strings & Text\"\>":>Documentation`HelpLookup[
+       "paclet:guide/NewIn100StringsAndText"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/TemplateIf\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/TemplateIf"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/TemplateIf.html"], 
+                StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$55338], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "ref/TemplateIf", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[BoxData[GridBox[{
+   {Cell["TemplateIf", "ObjectName"], Cell[BoxData[
+     TooltipBox[
+      StyleBox[
+       TagBox[
+        GraphicsBox[RasterBox[CompressedData["
+1:eJztVrtKA0EUXdTCD/AHbOJ3GFsrbUypoI2CoIJYxD9Qkk5BwXTGbbQzpYVg
+Z2KhVWySReMT44pZyUbPzMneDCEGq2zAPewOd+7eGe7jzJ0dnVueWhiwLGt1
+GMPU7Pr4ysrsxvQQJvGNtfm5QQgjeCfxKvk7QoQIXfH1VPScgu+5oml4LjT1
+aiUwuMW0Vi5wrDnq+XosmvbQ+4E94NeUpmHsGS6qF/ullAX/RfN6tgXN08ki
+p28Xe5i2PfIV8JyrNs375VE5bWGfnkXRHe95Gx7CK06RfGd3DJr7TLxpoB1+
+ziURS7OU5QKKKztgysAhBEtsavz+KCXc1jnf5pQRldIWRpJNlSmNMi39tgOz
+hOcll6QGu1Hj5u0ehPAXIJxKNkH5PjMB3yqHMyaBITu7sd+WuzpGVB/78BQj
+IVwiZAgddwdxuAThs3gO4S4TJ9mEwAycLCVdTa7CTBnnbeFDJatSxIOMPUMJ
+qg1oF3APbjP/7vUp2wjaUdPgWBmYPQdpkeXsUQicoYHhmhgzqGl3kvcSzULo
+EZRDo/CrD2arRFnZJ3UdrzjKcqYI9UVyeAZlLZNWN66VsADfpEzS8J2dmJzB
+j5scuddxOatMmazW/WeTO5t7hgj8BggJJecoBIkH2XssatYtdlyOYkmMcmvI
+Wda5GuuH/4HgZm+dnSo6RrrVWllo8BDOc8SD5MgnmunrNWbGyM4DJvQ2oA54
+yCZUD7xt9cDgkNqmQVnfm1J0BsJT3LZQ/gdU50n1S+eJECHCv8IPaJ3PKw==
+
+          "], {{0, 0}, {76, 20}}, {0, 255},
+          ColorFunction->RGBColor],
+         ImageSize->{76, 20},
+         PlotRange->{{0, 76}, {0, 20}}],
+        Deploy,
+        DefaultBaseStyle->"Deploy"], "NewIn10Graphic",
+       StripOnInput->False],
+      "New in 10",
+      TooltipDelay->0.3]],
+     Magnification->1]}
+  }]], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["TemplateIf"]],"paclet:ref/TemplateIf"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["condition", "TI"], ",", 
+        StyleBox["tclause", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]represents an element of a template object that inserts \
+",
+     Cell[BoxData[
+      StyleBox["tclause", "TI"]], "InlineFormula"],
+     " if the condition evaluates to ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["True"]],"paclet:ref/True"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "."
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["TemplateIf"]],"paclet:ref/TemplateIf"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["condition", "TI"], ",", 
+        StyleBox["tclause", "TI"], ",", 
+        StyleBox["fclause", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]inserts ",
+     Cell[BoxData[
+      StyleBox["fclause", "TI"]], "InlineFormula"],
+     " if the condition evaluates to ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["False"]],"paclet:ref/False"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details and Options"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->48895542],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["condition", "TI"]], "InlineFormula"],
+ " can be either a ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TemplateSlot"]],"paclet:ref/TemplateSlot"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " or ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TemplateExpression"]],"paclet:ref/TemplateExpression"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->1750922218],
+
+Cell[TextData[{
+ "The ",
+ Cell[BoxData[
+  StyleBox["tclause", "TI"]], "InlineFormula"],
+ " is used when ",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["condition", "TI"], " ", "===", " ", 
+   TemplateBox[{Cell[
+      TextData["True"]],"paclet:ref/True"},
+    "RefLink",
+    BaseStyle->"InlineFormula"]}]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->2086498855],
+
+Cell[TextData[{
+ "If an ",
+ Cell[BoxData[
+  StyleBox["fclause", "TI"]], "InlineFormula"],
+ " is not provided, the value ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Sequence"]],"paclet:ref/Sequence"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", "]"}]], "InlineFormula"],
+ " is used instead."
+}], "Notes",
+ CellID->124699944],
+
+Cell[TextData[{
+ "In an XML template, ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TemplateIf"]],"paclet:ref/TemplateIf"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " can be indicated using ",
+ StyleBox["<wolfram:condition>", "InlineCode"],
+ "...",
+ StyleBox["</wolfram:condition>", "InlineCode"],
+ ". Multiple conditions can be nested using ",
+ StyleBox["<wolfram:switch><wolfram:condition>", "InlineCode"],
+ "...",
+ StyleBox["</wolfram:condition>", "InlineCode"],
+ "...",
+ StyleBox["<wolfram:else>", "InlineCode"],
+ "...",
+ StyleBox["</wolfram:else></wolfram:switch>", "InlineCode"],
+ "."
+}], "Notes",
+ CellID->1645931837],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TemplateIf"]],"paclet:ref/TemplateIf"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " has the option ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InsertionFunction"]],"paclet:ref/InsertionFunction"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ", with default setting ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Inherited"]],"paclet:ref/Inherited"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ", that specifies how the content of each template slot should be formatted \
+before inserting it."
+}], "Notes",
+ CellID->1439527452],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->258515952],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->201400445],
+
+Cell[TextData[{
+ "Using ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TemplateIf"]],"paclet:ref/TemplateIf"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->1068757177],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", " ", "=", " ", 
+   RowBox[{"TemplateIf", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"TemplateSlot", "[", "\"\<test\>\"", "]"}], ",", 
+     "\[IndentingNewLine]", "True", ",", "\[IndentingNewLine]", "False"}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TemplateApply", "[", 
+  RowBox[{"t", ",", 
+   RowBox[{"<|", 
+    RowBox[{"\"\<test\>\"", " ", "\[Rule]", " ", 
+     RowBox[{"True", " ", "===", " ", "True"}]}], "|>"}]}], "]"}]}], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1405997834],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->2030862801]
+}, Open  ]],
+
+Cell[TextData[{
+ "Run a test over a ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TemplateSlot"]],"paclet:ref/TemplateSlot"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula",
+  ShowStringCharacters->False],
+ ":"
+}], "ExampleText",
+ CellID->937037504],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"TemplateSlot", "[", "\"\<data\>\"", "]"}], "->", 
+    RowBox[{"TemplateIf", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"MatchQ", "[", 
+       RowBox[{
+        RowBox[{"TemplateSlot", "[", "\"\<data\>\"", "]"}], ",", " ", 
+        "_Integer"}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Fibonacci", "[", 
+       RowBox[{"TemplateSlot", "[", "\"\<data\>\"", "]"}], "]"}], ",", 
+      "\[IndentingNewLine]", "None"}], "\[IndentingNewLine]", "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TemplateApply", "[", 
+  RowBox[{"t", ",", 
+   RowBox[{"<|", 
+    RowBox[{"\"\<data\>\"", " ", "\[Rule]", " ", "30"}], "|>"}]}], 
+  "]"}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->1396439298],
+
+Cell[BoxData[
+ RowBox[{"30", "\[Rule]", "832040"}]], "Output",
+ ImageSize->{79, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->440393403]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Options",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->2061341341],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "InsertionFunction",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CellID->1757724783],
+
+Cell[TextData[{
+ "Using an ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InsertionFunction"]],"paclet:ref/InsertionFunction"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula",
+  ShowStringCharacters->False],
+ ":"
+}], "ExampleText",
+ CellID->283207400],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", " ", "=", " ", 
+   RowBox[{"TemplateIf", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"MatchQ", "[", 
+      RowBox[{
+       RowBox[{"TemplateSlot", "[", "\"\<planets\>\"", "]"}], ",", " ", 
+       "_List"}], "]"}], ",", " ", "\[IndentingNewLine]", 
+     RowBox[{"TemplateSlot", "[", "\"\<planets\>\"", "]"}], ",", " ", 
+     "\[IndentingNewLine]", "\"\<Please insert data\>\"", ",", " ", 
+     "\[IndentingNewLine]", 
+     RowBox[{"InsertionFunction", " ", "\[Rule]", " ", "\"\<json\>\""}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TemplateApply", "[", 
+  RowBox[{"t", ",", " ", 
+   RowBox[{"<|", 
+    RowBox[{"\"\<planets\>\"", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Earth\>\"", ",", " ", "\"\<Mars\>\"", ",", " ", 
+       "\"\<Jupiter\>\""}], "}"}]}], " ", "|>"}]}], "]"}]}], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1043010048],
+
+Cell[BoxData["\<\"[\\n    \\\"Earth\\\",\\n    \\\"Mars\\\",\\n    \
+\\\"Jupiter\\\"\\n]\"\>"], "Output",
+ ImageSize->{95, 84},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->382406436]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InsertionFunction"]],"paclet:ref/InsertionFunction"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula",
+  ShowStringCharacters->False],
+ " can be any function:"
+}], "ExampleText",
+ CellID->392915042],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", " ", "=", " ", 
+   RowBox[{"TemplateIf", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"MatchQ", "[", 
+      RowBox[{
+       RowBox[{"TemplateSlot", "[", "\"\<planet\>\"", "]"}], ",", " ", 
+       "_String"}], "]"}], ",", " ", "\[IndentingNewLine]", 
+     RowBox[{"TemplateSlot", "[", "\"\<planet\>\"", "]"}], ",", " ", 
+     "\[IndentingNewLine]", "\"\<Please insert a planet\>\"", ",", " ", 
+     "\[IndentingNewLine]", 
+     RowBox[{"InsertionFunction", " ", "\[Rule]", " ", "ToUpperCase"}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TemplateApply", "[", 
+  RowBox[{"t", ",", " ", 
+   RowBox[{"<|", 
+    RowBox[{"\"\<planet\>\"", " ", "\[Rule]", " ", "\"\<Jupiter\>\""}], 
+    "|>"}]}], "]"}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->1243196094],
+
+Cell[BoxData["\<\"JUPITER\"\>"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->1638854852]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TemplateSequence"]],"paclet:ref/TemplateSequence"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TemplateExpression"]],"paclet:ref/TemplateExpression"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["If"]],"paclet:ref/If"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Switch"]],"paclet:ref/Switch"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Summary of New Features in 10"]],
+   "paclet:guide/SummaryOfNewFeaturesIn100"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->25074561],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Working with Templates"]],"paclet:guide/WorkingWithTemplates"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->210645730],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["XML Templates"]],"paclet:guide/XMLTemplates"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->40831727],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["New in 10.0: Core Language & Structure"]],
+   "paclet:guide/NewIn100CoreLanguageAndStructure"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->31551012],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["New in 10.0: Strings & Text"]],
+   "paclet:guide/NewIn100StringsAndText"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->882557516]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 2014",
+ Cell[" (10.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"TemplateIf",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Working with Templates", ButtonData -> 
+         "paclet:guide/WorkingWithTemplates", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "TemplateIf", ButtonData -> "paclet:ref/TemplateIf", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Notebook Document Generation", ButtonData -> 
+         "paclet:guide/DocumentGeneration", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Working with Templates", ButtonData -> 
+         "paclet:guide/WorkingWithTemplates", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "TemplateIf", ButtonData -> "paclet:ref/TemplateIf", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "External Language Interfaces", ButtonData -> 
+         "paclet:guide/ExternalLanguageInterfaces", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Working with Templates", ButtonData -> 
+         "paclet:guide/WorkingWithTemplates", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "TemplateIf", ButtonData -> "paclet:ref/TemplateIf", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 42, 56.8206406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "template conditional", "template if", "template clause", 
+      "conditional template application"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Built-in Wolfram Language Symbol", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "TemplateIf[condition, tclause] represents an element of a template \
+object that inserts tclause if the condition evaluates to True. \
+TemplateIf[condition, tclause, fclause] inserts fclause if the condition \
+evaluates to False.", "synonyms" -> {}, "title" -> "TemplateIf", 
+    "titlemodifier" -> "", "windowtitle" -> "TemplateIf", "type" -> "Symbol", 
+    "uri" -> "ref/TemplateIf"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[11204, 343, 387, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->258515952]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 24116, 770}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[582, 21, 4245, 102, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[4830, 125, 1311, 30, 46, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[6166, 159, 1603, 50, 152, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[7794, 213, 749, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->48895542],
+Cell[8546, 239, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[8580, 241, 482, 17, 70, "Notes",
+ CellID->1750922218],
+Cell[9065, 260, 356, 14, 70, "Notes",
+ CellID->2086498855],
+Cell[9424, 276, 355, 13, 70, "Notes",
+ CellID->124699944],
+Cell[9782, 291, 657, 21, 70, "Notes",
+ CellID->1645931837],
+Cell[10442, 314, 679, 21, 70, "Notes",
+ CellID->1439527452],
+Cell[11124, 337, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11204, 343, 387, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->258515952],
+Cell[CellGroupData[{
+Cell[11616, 362, 195, 6, 25, "ExampleSection",
+ CellID->201400445],
+Cell[11814, 370, 227, 9, 37, "ExampleText",
+ CellID->1068757177],
+Cell[CellGroupData[{
+Cell[12066, 383, 571, 14, 119, "Input",
+ CellID->1405997834],
+Cell[12640, 399, 162, 5, 36, "Output",
+ CellID->2030862801]
+}, Open  ]],
+Cell[12817, 407, 273, 10, 37, "ExampleText",
+ CellID->937037504],
+Cell[CellGroupData[{
+Cell[13115, 421, 789, 21, 119, "Input",
+ CellID->1396439298],
+Cell[13907, 444, 192, 6, 36, "Output",
+ CellID->440393403]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14148, 456, 189, 6, 25, "ExampleSection",
+ CellID->2061341341],
+Cell[CellGroupData[{
+Cell[14362, 466, 205, 6, 70, "ExampleSubsection",
+ CellID->1757724783],
+Cell[14570, 474, 274, 10, 70, "ExampleText",
+ CellID->283207400],
+Cell[CellGroupData[{
+Cell[14869, 488, 947, 23, 70, "Input",
+ CellID->1043010048],
+Cell[15819, 513, 235, 6, 105, "Output",
+ CellID->382406436]
+}, Open  ]],
+Cell[16069, 522, 280, 9, 70, "ExampleText",
+ CellID->392915042],
+Cell[CellGroupData[{
+Cell[16374, 535, 838, 20, 70, "Input",
+ CellID->1243196094],
+Cell[17215, 557, 173, 5, 36, "Output",
+ CellID->1638854852]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[17427, 567, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17495, 572, 270, 12, 31, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[17768, 586, 1142, 34, 58, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18947, 625, 276, 12, 31, "MoreAboutSection",
+ CellID->38303248],
+Cell[19226, 639, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[19260, 641, 200, 6, 19, "MoreAbout",
+ CellID->25074561],
+Cell[19463, 649, 185, 5, 19, "MoreAbout",
+ CellID->210645730],
+Cell[19651, 656, 167, 5, 19, "MoreAbout",
+ CellID->40831727],
+Cell[19821, 663, 216, 6, 19, "MoreAbout",
+ CellID->31551012],
+Cell[20040, 671, 196, 6, 19, "MoreAbout",
+ CellID->882557516]
+}, Open  ]],
+Cell[20251, 680, 88, 3, 43, "History"],
+Cell[20342, 685, 23, 0, 25, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

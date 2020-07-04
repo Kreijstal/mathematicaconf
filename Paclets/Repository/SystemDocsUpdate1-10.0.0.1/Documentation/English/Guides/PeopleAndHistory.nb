@@ -1,0 +1,855 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27279,        846]
+NotebookOptionsPosition[     21125,        673]
+NotebookOutlinePosition[     23387,        724]
+CellTagsIndexPosition[     23344,        721]
+WindowTitle->People & History
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"BuildingData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/BuildingData"], "\<\"CityData\"\>":>
+       Documentation`HelpLookup["paclet:ref/CityData"], "\<\"CountryData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/CountryData"], "\<\"CurrencyConvert\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/CurrencyConvert"], "\<\"DateObject\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DateObject"], "\<\"ElementData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ElementData"], "\<\"EntityValue\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityValue"], "\<\"FinancialData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FinancialData"], "\<\"HistoricalPeriodData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/HistoricalPeriodData"], "\<\"InflationAdjust\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/InflationAdjust"], "\<\"MoonPhase\"\>":>
+       Documentation`HelpLookup["paclet:ref/MoonPhase"], "\<\"MovieData\"\>":>
+       Documentation`HelpLookup["paclet:ref/MovieData"], "\<\"PersonData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PersonData"], "\<\"PlanetData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PlanetData"], "\<\"SocialMediaData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SocialMediaData"], "\<\"SolarEclipse\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SolarEclipse"], "\<\"SunPosition\"\>":>
+       Documentation`HelpLookup["paclet:ref/SunPosition"], "\<\"Sunrise\"\>":>
+       Documentation`HelpLookup["paclet:ref/Sunrise"], "\<\"Sunset\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Sunset"], "\<\"UniversityData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/UniversityData"], "\<\"WeatherData\"\>":>
+       Documentation`HelpLookup["paclet:ref/WeatherData"], "\<\"WordData\"\>":>
+       Documentation`HelpLookup["paclet:ref/WordData"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Social Network Analysis\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/SocialNetworks"], "\<\"Time Series\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/TimeSeries"], "\<\"Transportation Data\"\>":>
+       Documentation`HelpLookup["paclet:guide/TransportationData"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"guide/PeopleAndHistory\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/PeopleAndHistory"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/PeopleAndHistory.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$95391], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/PeopleAndHistory", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["People & History", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Language has built-in access to an extensive collection of \
+continually updated data on people and many kinds of history. Free-form \
+linguistics provide a convenient mechanism for accessing all available data; \
+more common categories also have specific associated Wolfram Language \
+functions. \
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJztlkGqwjAQhlN14RFcCR7lvSPoAbSCbsvzCeqlBL2NpRtB6KIUpKs0SvWT
+qps2Uk2z82da0unM10yQGXtjrz9tCCH+29z67uJnNnNXgxYPv6v5ZNxk0eHq
+ct3WF43SNA3DMAiCXWURTAqJOiaSUhIZRZFSKsuyF5FPEUZwHMe+75Ou2y1v
+kySpAiyKRHZVunMq4tOfYXNRLJCin+OiLhMy6UCKfmqpeLY6kQ7EhPBCtsmn
+9Z/0nKLhNyTfOBMhh0KOHsYaj+fUQPac8/Fwjvd3Ox5yZy1ktV2qzeJu22WN
+5FKrhfw9Ddu/ZxsqJdvrSPa6KE2b1m1CZnCUdn4GDbWYTCuGnW7OMiJ5y6ff
+nbAUy650EzaX+b+CK3PJ5so=
+     "], {{0, 24}, {30, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSizeRaw->{30, 24},
+   PlotRange->{{0, 30}, {0, 24}}]], "InlineOutput"],
+ " (",
+ Cell["Ctrl", "KeyEvent"],
+ StyleBox["+", "KeyEventDelimiter"],
+ Cell["\[LongEqual]", "KeyEvent"],
+ ") \[LongDash] request data using free-form linguistics"
+}], "GuideText",
+ CellID->618196486],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityValue"]],"paclet:ref/EntityValue"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " general access to values of properties for all types of entities"
+}], "GuideText",
+ CellID->759792097],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->1252196795],
+
+Cell[CellGroupData[{
+
+Cell["Notable People", "GuideFunctionsSubsection",
+ CellID->764166063],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PersonData"]],"paclet:ref/PersonData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " data on hundreds of thousands of current and historical figures"
+}], "GuideText",
+ CellID->203374175]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Social Media Connections"]],"paclet:guide/SocialNetworks"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->216706887],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SocialMediaData"]],"paclet:ref/SocialMediaData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " data on Facebook friends, Twitter followers, etc."
+}], "GuideText",
+ CellID->1269959695]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->622910854],
+
+Cell[CellGroupData[{
+
+Cell["Historical Naming Data", "GuideFunctionsSubsection",
+ CellID->965135196],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->812094104],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"GivenName\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], 
+  " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"Surname\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->2081693520]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->311258892],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Socioeconomic History"]],
+   "paclet:guide/SocioeconomicAndDemographicData"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->131886106],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CountryData"]],"paclet:ref/CountryData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " historical demographics, economics, etc. for all countries"
+}], "GuideText",
+ CellID->406659838],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CityData"]],"paclet:ref/CityData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " historical demographics, founding dates, etc."
+}], "GuideText",
+ CellID->1380934675],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InflationAdjust"]],"paclet:ref/InflationAdjust"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " historical inflation adjustment"
+}], "GuideText",
+ CellID->1955796178]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Cultural & Political History \[RightGuillemet]"]],
+   "paclet:guide/CulturalData"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->425129275],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HistoricalPeriodData"]],"paclet:ref/HistoricalPeriodData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " data on notable historical periods"
+}], "GuideText",
+ CellID->1253953779],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BuildingData"]],"paclet:ref/BuildingData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MovieData"]],"paclet:ref/MovieData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["UniversityData"]],"paclet:ref/UniversityData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/CulturalData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1386811781],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WordData"]],"paclet:ref/WordData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " word usage history"
+}], "GuideText",
+ CellID->1676723657],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->938837751],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"HistoricalEvent\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"HistoricalSite\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"HistoricalCountry\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->1483726548]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Science & Technology History", "GuideFunctionsSubsection",
+ CellID->609368998],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ElementData"]],"paclet:ref/ElementData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PlanetData"]],"paclet:ref/PlanetData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1971450650],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->645884987],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"Invention\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], 
+  " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"MathProblem\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], 
+  " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"PhysicsProblem\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"MannedSpaceMission\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->2006624571]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Corporate & Financial History", "GuideFunctionsSubsection",
+ CellID->1419850129],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FinancialData"]],"paclet:ref/FinancialData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " extensive historical data on stocks, companies, etc."
+}], "GuideText",
+ CellID->582832639],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CurrencyConvert"]],"paclet:ref/CurrencyConvert"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " historical currency conversion rates"
+}], "GuideText",
+ CellID->1209844475],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->118278899],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"Company\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"Foundation\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->1491082018]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->306819635],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Historical Dates & Calendars"]],"paclet:guide/DateAndTime"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1434025512],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DateObject"]],"paclet:ref/DateObject"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " represent and convert Gregorian, Julian, Jewish, etc. dates"
+}], "GuideText",
+ CellID->65836453]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Historical Weather, Astronomy, etc."]],
+   "paclet:guide/AstronomicalComputationAndData"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->856855244],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WeatherData"]],"paclet:ref/WeatherData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " complete worldwide historical weather records"
+}], "GuideText",
+ CellID->1321119808],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Sunrise"]],"paclet:ref/Sunrise"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Sunset"]],"paclet:ref/Sunset"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SunPosition"]],"paclet:ref/SunPosition"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MoonPhase"]],"paclet:ref/MoonPhase"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SolarEclipse"]],"paclet:ref/SolarEclipse"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell["...", "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1585858041]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Paleontology", "GuideFunctionsSubsection",
+ CellID->1446904100],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->507391813],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"GeologicalPeriod\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"EarthImpact\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], 
+  " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"Dinosaur\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->76638854]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Social Network Analysis"]],"paclet:guide/SocialNetworks"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Time Series"]],"paclet:guide/TimeSeries"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->252299663],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Transportation Data"]],"paclet:guide/TransportationData"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1999706666]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"People & History",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "People & History", ButtonData -> "paclet:guide/PeopleAndHistory", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 41.5316406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "people", "person", "human", "humankind", "mankind", "history", 
+      "culture", "pop culture", "popular culture", "cultural heritage", 
+      "heritage", "social media", "famous people", "noteworthy people", 
+      "human culture", "human history", "sociology", "scoail science", 
+      "social behavior"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Language Guide", "language" -> "en", "paclet" -> "Mathematica", 
+    "status" -> "None", "summary" -> 
+    "The Wolfram Language has built-in access to an extensive collection of \
+continually updated data on people and many kinds of history. Free-form \
+linguistics provide a convenient mechanism for accessing all available data; \
+more common categories also have specific associated Wolfram Language \
+functions. ", "synonyms" -> {}, "title" -> "People & History", 
+    "titlemodifier" -> "", "windowtitle" -> "People & History", "type" -> 
+    "Guide", "uri" -> "guide/PeopleAndHistory"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[588, 21, 5603, 128, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[6216, 153, 58, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[6277, 156, 363, 7, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6677, 168, 257, 11, 70, "GuideReferenceSection"],
+Cell[6937, 181, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6971, 183, 954, 24, 70, "GuideText",
+ CellID->618196486],
+Cell[7928, 209, 336, 10, 70, "GuideText",
+ CellID->759792097],
+Cell[8267, 221, 59, 1, 70, "GuideDelimiterSubsection",
+ CellID->1252196795],
+Cell[CellGroupData[{
+Cell[8351, 226, 70, 1, 70, "GuideFunctionsSubsection",
+ CellID->764166063],
+Cell[8424, 229, 333, 10, 70, "GuideText",
+ CellID->203374175]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8794, 244, 214, 5, 70, "GuideFunctionsSubsection",
+ CellID->216706887],
+Cell[9011, 251, 330, 10, 70, "GuideText",
+ CellID->1269959695]
+}, Open  ]],
+Cell[9356, 264, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->622910854],
+Cell[CellGroupData[{
+Cell[9439, 269, 78, 1, 70, "GuideFunctionsSubsection",
+ CellID->965135196],
+Cell[9520, 272, 140, 2, 70, "GuideText",
+ CellID->812094104],
+Cell[9663, 276, 315, 7, 70, "InlineGuideFunctionListing",
+ CellID->2081693520]
+}, Open  ]],
+Cell[9993, 286, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->311258892],
+Cell[CellGroupData[{
+Cell[10076, 291, 232, 6, 70, "GuideFunctionsSubsection",
+ CellID->131886106],
+Cell[10311, 299, 330, 10, 70, "GuideText",
+ CellID->406659838],
+Cell[10644, 311, 312, 10, 70, "GuideText",
+ CellID->1380934675],
+Cell[10959, 323, 312, 10, 70, "GuideText",
+ CellID->1955796178]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11308, 338, 238, 6, 70, "GuideFunctionsSubsection",
+ CellID->425129275],
+Cell[11549, 346, 325, 10, 70, "GuideText",
+ CellID->1253953779],
+Cell[11877, 358, 1004, 31, 70, "InlineGuideFunctionListing",
+ CellID->1386811781],
+Cell[12884, 391, 285, 10, 70, "GuideText",
+ CellID->1676723657],
+Cell[13172, 403, 140, 2, 70, "GuideText",
+ CellID->938837751],
+Cell[13315, 407, 493, 10, 70, "InlineGuideFunctionListing",
+ CellID->1483726548]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13845, 422, 84, 1, 70, "GuideFunctionsSubsection",
+ CellID->609368998],
+Cell[13932, 425, 663, 19, 70, "InlineGuideFunctionListing",
+ CellID->1971450650],
+Cell[14598, 446, 140, 2, 70, "GuideText",
+ CellID->645884987],
+Cell[14741, 450, 644, 13, 70, "InlineGuideFunctionListing",
+ CellID->2006624571]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15422, 468, 86, 1, 70, "GuideFunctionsSubsection",
+ CellID->1419850129],
+Cell[15511, 471, 328, 10, 70, "GuideText",
+ CellID->582832639],
+Cell[15842, 483, 317, 10, 70, "GuideText",
+ CellID->1209844475],
+Cell[16162, 495, 140, 2, 70, "GuideText",
+ CellID->118278899],
+Cell[16305, 499, 313, 6, 70, "InlineGuideFunctionListing",
+ CellID->1491082018]
+}, Open  ]],
+Cell[16633, 508, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->306819635],
+Cell[CellGroupData[{
+Cell[16716, 513, 216, 5, 70, "GuideFunctionsSubsection",
+ CellID->1434025512],
+Cell[16935, 520, 328, 10, 70, "GuideText",
+ CellID->65836453]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17300, 535, 245, 6, 70, "GuideFunctionsSubsection",
+ CellID->856855244],
+Cell[17548, 543, 318, 10, 70, "GuideText",
+ CellID->1321119808],
+Cell[17869, 555, 1520, 48, 70, "InlineGuideFunctionListing",
+ CellID->1585858041]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19426, 608, 69, 1, 70, "GuideFunctionsSubsection",
+ CellID->1446904100],
+Cell[19498, 611, 140, 2, 70, "GuideText",
+ CellID->507391813],
+Cell[19641, 615, 479, 10, 70, "InlineGuideFunctionListing",
+ CellID->76638854]
+}, Open  ]],
+Cell[20135, 628, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20203, 633, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[20487, 647, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[20521, 649, 191, 5, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[20715, 656, 174, 5, 70, "GuideMoreAbout",
+ CellID->252299663],
+Cell[20892, 663, 191, 5, 70, "GuideMoreAbout",
+ CellID->1999706666]
+}, Open  ]],
+Cell[21098, 671, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

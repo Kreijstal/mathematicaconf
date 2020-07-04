@@ -1,0 +1,536 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17140,        527]
+NotebookOptionsPosition[     11438,        382]
+NotebookOutlinePosition[     15755,        480]
+CellTagsIndexPosition[     15712,        477]
+WindowTitle->$MachineDomains
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Global System Information\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/GlobalSystemInformation"], "\<\"Internet Connectivity\
+\"\>":>Documentation`HelpLookup["paclet:tutorial/InternetConnectivity"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"$MachineAddresses\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$MachineAddresses"], "\<\"$MachineName\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$MachineName"], "\<\"$MachineID\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$MachineID"], "\<\"$GeoLocation\"\>":>
+       Documentation`HelpLookup["paclet:ref/$GeoLocation"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Cloud Execution Metadata\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/CloudExecutionMetadata"], "\<\"External Operations\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/ExternalOperations"], "\<\"System & License Management\"\
+\>":>Documentation`HelpLookup[
+       "paclet:guide/SystemAndLicenseManagement"], "\<\"System \
+Information\"\>":>Documentation`HelpLookup["paclet:guide/SystemInformation"]},
+       
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$MachineDomains\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$MachineDomains"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$MachineDomains.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$64712], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "ref/$MachineDomains", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$MachineDomains", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$MachineDomains"]],"paclet:ref/$MachineDomains"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]is a list of strings giving the names of the current \
+network domains associated with the computer on which ",
+     "the Wolfram System",
+     " is being run. "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->17455],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$MachineDomains"]],"paclet:ref/$MachineDomains"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " gives ",
+ Cell[BoxData[
+  RowBox[{"{", "}"}]], "InlineFormula"],
+ " if no network domain is defined."
+}], "Notes",
+ CellID->58895839],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$MachineDomains"]],"paclet:ref/$MachineDomains"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " will typically give a list with one element for each network adapter on \
+your computer."
+}], "Notes",
+ CellID->259873558],
+
+Cell[TextData[{
+ "If a network configuration is changed, the value of ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$MachineDomains"]],"paclet:ref/$MachineDomains"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " may change during the course of a single ",
+ "Wolfram System",
+ " session."
+}], "Notes",
+ CellID->108570128],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->29995],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$MachineAddresses"]],"paclet:ref/$MachineAddresses"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$MachineName"]],"paclet:ref/$MachineName"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$MachineID"]],"paclet:ref/$MachineID"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$GeoLocation"]],"paclet:ref/$GeoLocation"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->21043]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->2767],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Global System Information"]],
+   "paclet:tutorial/GlobalSystemInformation"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->28413],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Internet Connectivity"]],"paclet:tutorial/InternetConnectivity"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->341631938],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->173854191],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Cloud Execution Metadata"]],
+   "paclet:guide/CloudExecutionMetadata"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->1],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["External Operations"]],"paclet:guide/ExternalOperations"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->1],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["System & License Management"]],
+   "paclet:guide/SystemAndLicenseManagement"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->1],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["System Information"]],"paclet:guide/SystemInformation"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->1]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 2007",
+ Cell[" (6.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$MachineDomains",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Wolfram System Setup", ButtonData -> 
+         "paclet:guide/WolframSystemSetup", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "System Information", ButtonData -> "paclet:guide/SystemInformation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$MachineDomains", ButtonData -> "paclet:ref/$MachineDomains", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Cloud Functions & Deployment", ButtonData -> 
+         "paclet:guide/CloudFunctionsAndDeployment", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Cloud Execution Metadata", ButtonData -> 
+         "paclet:guide/CloudExecutionMetadata", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "System Information", ButtonData -> "paclet:guide/SystemInformation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$MachineDomains", ButtonData -> "paclet:ref/$MachineDomains", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Creating Instant APIs", ButtonData -> 
+         "paclet:guide/CreatingAnInstantAPI", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Cloud Execution Metadata", ButtonData -> 
+         "paclet:guide/CloudExecutionMetadata", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "System Information", ButtonData -> "paclet:guide/SystemInformation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$MachineDomains", ButtonData -> "paclet:ref/$MachineDomains", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 10.5996406}", 
+    "history" -> {"6", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "domain name", "internet domain", "machine domain", "network domain"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Built-in Wolfram Language Symbol", "language" -> "en", 
+    "paclet" -> "Mathematica", "status" -> "None", "summary" -> 
+    "$MachineDomains is a list of strings giving the names of the current \
+network domains associated with the computer on which the Wolfram System is \
+being run. ", "synonyms" -> {"machine domains"}, "title" -> "$MachineDomains",
+     "titlemodifier" -> "", "windowtitle" -> "$MachineDomains", "type" -> 
+    "Symbol", "uri" -> "ref/$MachineDomains"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[587, 21, 4955, 122, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[5545, 145, 58, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[5606, 148, 594, 17, 70, "Usage",
+ CellID->17455],
+Cell[CellGroupData[{
+Cell[6225, 169, 730, 24, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1],
+Cell[6958, 195, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6992, 197, 318, 11, 70, "Notes",
+ CellID->58895839],
+Cell[7313, 210, 307, 9, 70, "Notes",
+ CellID->259873558],
+Cell[7623, 221, 350, 11, 70, "Notes",
+ CellID->108570128],
+Cell[7976, 234, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8044, 239, 265, 12, 70, "SeeAlsoSection",
+ CellID->29995],
+Cell[8312, 253, 1156, 34, 70, "SeeAlso",
+ CellID->21043]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9505, 292, 267, 12, 70, "TutorialsSection",
+ CellID->2767],
+Cell[9775, 306, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[9809, 308, 194, 6, 70, "Tutorials",
+ CellID->28413],
+Cell[10006, 316, 187, 5, 70, "Tutorials",
+ CellID->341631938],
+Cell[10196, 323, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10264, 328, 277, 12, 70, "MoreAboutSection",
+ CellID->173854191],
+Cell[10544, 342, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[10578, 344, 185, 6, 70, "MoreAbout",
+ CellID->1],
+Cell[10766, 352, 172, 5, 70, "MoreAbout",
+ CellID->1],
+Cell[10941, 359, 192, 6, 70, "MoreAbout",
+ CellID->1],
+Cell[11136, 367, 170, 5, 70, "MoreAbout",
+ CellID->1]
+}, Open  ]],
+Cell[11321, 375, 87, 3, 70, "History"],
+Cell[11411, 380, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

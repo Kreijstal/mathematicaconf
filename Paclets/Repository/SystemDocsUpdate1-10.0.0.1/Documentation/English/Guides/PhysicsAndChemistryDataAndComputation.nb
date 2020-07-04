@@ -1,0 +1,612 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19646,        603]
+NotebookOptionsPosition[     14361,        464]
+NotebookOutlinePosition[     16964,        519]
+CellTagsIndexPosition[     16921,        516]
+WindowTitle->Physics & Chemistry: Data and Computation
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ChemicalData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ChemicalData"], "\<\"ElementData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ElementData"], "\<\"EntityValue\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityValue"], "\<\"FormulaData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FormulaData"], "\<\"IsotopeData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/IsotopeData"], "\<\"MineralData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MineralData"], "\<\"ParticleData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ParticleData"], "\<\"PhysicalSystemData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PhysicalSystemData"], "\<\"ThermodynamicData\"\>":>
+       Documentation`HelpLookup["paclet:ref/ThermodynamicData"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Astronomical Data\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/AstronomicalComputationAndData"], "\<\"Life Science Data\
+\"\>":>Documentation`HelpLookup[
+       "paclet:guide/LifeSciencesAndMedicineDataAndComputation"], "\<\"Units \
+& Measures\"\>":>Documentation`HelpLookup["paclet:guide/Units"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"guide/PhysicsAndChemistryDataAndComputation\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/PhysicsAndChemistryDataAndComputation"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/\
+PhysicsAndChemistryDataAndComputation.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$95901], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/PhysicsAndChemistryDataAndComputation", ".html"]], 
+           None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Physics & Chemistry: Data and Computation", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Language provides seamless access to the curated and continuously \
+updated Wolfram Knowledgebase used in Wolfram|Alpha\[LongDash]which includes \
+a wide range of types of data for physics and chemistry. Free-form \
+linguistics provides a convenient mechanism for accessing all available data; \
+more common categories also have specific associated Wolfram Language \
+functions.\
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJztlkGqwjAQhlN14RFcCR7lvSPoAbSCbsvzCeqlBL2NpRtB6KIUpKs0SvWT
+qps2Uk2z82da0unM10yQGXtjrz9tCCH+29z67uJnNnNXgxYPv6v5ZNxk0eHq
+ct3WF43SNA3DMAiCXWURTAqJOiaSUhIZRZFSKsuyF5FPEUZwHMe+75Ou2y1v
+kySpAiyKRHZVunMq4tOfYXNRLJCin+OiLhMy6UCKfmqpeLY6kQ7EhPBCtsmn
+9Z/0nKLhNyTfOBMhh0KOHsYaj+fUQPac8/Fwjvd3Ox5yZy1ktV2qzeJu22WN
+5FKrhfw9Ddu/ZxsqJdvrSPa6KE2b1m1CZnCUdn4GDbWYTCuGnW7OMiJ5y6ff
+nbAUy650EzaX+b+CK3PJ5so=
+     "], {{0, 24}, {30, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSizeRaw->{30, 24},
+   PlotRange->{{0, 30}, {0, 24}}]], "InlineOutput"],
+ " (",
+ Cell["Ctrl", "KeyEvent"],
+ StyleBox["+", "KeyEventDelimiter"],
+ Cell["\[LongEqual]", "KeyEvent"],
+ ") \[LongDash] request data using free-form linguistics"
+}], "GuideText",
+ CellID->618196486],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityValue"]],"paclet:ref/EntityValue"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " general access to values of properties for all types of entities"
+}], "GuideText",
+ CellID->759792097],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->311258892],
+
+Cell[CellGroupData[{
+
+Cell["Properties of Matter", "GuideFunctionsSubsection",
+ CellID->210934681],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ElementData"]],"paclet:ref/ElementData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " bulk, atomic, chemical, etc. properties of all chemical elements"
+}], "GuideText",
+ CellID->282183111],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ChemicalData"]],"paclet:ref/ChemicalData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " structural, physical, and other properties of chemical compounds"
+}], "GuideText",
+ CellID->214817493],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MineralData"]],"paclet:ref/MineralData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " properties of all standard named minerals"
+}], "GuideText",
+ CellID->1557311931],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ThermodynamicData"]],"paclet:ref/ThermodynamicData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " detailed thermodynamic properties of common fluids"
+}], "GuideText",
+ CellID->622648531],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->772203353],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"ChemicalReaction\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"ChemicalBond\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"],
+   " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "...", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->1178075050]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->457268471],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["IsotopeData"]],"paclet:ref/IsotopeData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " static and decay ",
+ "properties of all nuclear isotopes"
+}], "GuideText",
+ CellID->93364050],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ParticleData"]],"paclet:ref/ParticleData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " properties of stable, unstable, and resonance particles"
+}], "GuideText",
+ CellID->584863432]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->1831166017],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->819102562],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->812094104],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"Laser\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"Light\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"ParticleAccelerator\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "...", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->1607029243]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->1800116720],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Formulas & Models"]],"paclet:guide/ScientificModels"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1286582264],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FormulaData"]],"paclet:ref/FormulaData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " common formulas and equations used in physics and chemistry"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PhysicalSystemData"]],"paclet:ref/PhysicalSystemData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " equations and other properties for common physical systems"
+}], "GuideText",
+ CellID->575269405]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Astronomical Data"]],
+   "paclet:guide/AstronomicalComputationAndData"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Life Science Data"]],
+   "paclet:guide/LifeSciencesAndMedicineDataAndComputation"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->252299663],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Units & Measures"]],"paclet:guide/Units"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->226788923],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "GuideRelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->415694148],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Physics in Wolfram|Alpha"]],
+   "http://www.wolframalpha.com/examples/Physics.html"},
+  "WebLink",
+  BaseStyle->{"GuideRelatedLinks"}]]]], "GuideRelatedLinks",
+ CellID->2119547306],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Chemistry in Wolfram|Alpha"]],
+   "http://www.wolframalpha.com/examples/Chemistry.html"},
+  "WebLink",
+  BaseStyle->{"GuideRelatedLinks"}]]]], "GuideRelatedLinks",
+ CellID->124005763],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Material Properties in Wolfram|Alpha"]],
+   "http://www.wolframalpha.com/examples/Materials.html"},
+  "WebLink",
+  BaseStyle->{"GuideRelatedLinks"}]]]], "GuideRelatedLinks",
+ CellID->1105721151]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Physics & Chemistry: Data and Computation",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Physics & Chemistry: Data and Computation", ButtonData -> 
+         "paclet:guide/PhysicsAndChemistryDataAndComputation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 41.7596406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "physics", "chemistry", "chemical physics", "physical chemistry", 
+      "chemical computation", "physical computation", "physics data", 
+      "physical data", "chemistry data", "physics data", "mineral data", 
+      "minerology data", "physics tables", "physical tables", 
+      "chemistry tables", "chemical tables", "physics formulas", 
+      "physical formulas", "chemistry formulas", "chemical formulas"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Wolfram Language Guide", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "The Wolfram Language provides seamless access to the curated and \
+continuously updated Wolfram Knowledgebase used in \
+Wolfram|Alpha\[LongDash]which includes a wide range of types of data for \
+physics and chemistry. Free-form linguistics provides a convenient mechanism \
+for accessing all available data; more common categories also have specific \
+associated Wolfram Language functions.", "synonyms" -> {}, "title" -> 
+    "Physics & Chemistry: Data and Computation", "titlemodifier" -> "", 
+    "windowtitle" -> "Physics & Chemistry: Data and Computation", "type" -> 
+    "Guide", "uri" -> "guide/PhysicsAndChemistryDataAndComputation"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[613, 21, 4626, 111, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5264, 136, 83, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[5350, 139, 444, 8, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5831, 152, 257, 11, 70, "GuideReferenceSection"],
+Cell[6091, 165, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6125, 167, 954, 24, 70, "GuideText",
+ CellID->618196486],
+Cell[7082, 193, 336, 10, 70, "GuideText",
+ CellID->759792097],
+Cell[7421, 205, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->311258892],
+Cell[CellGroupData[{
+Cell[7504, 210, 76, 1, 70, "GuideFunctionsSubsection",
+ CellID->210934681],
+Cell[7583, 213, 336, 10, 70, "GuideText",
+ CellID->282183111],
+Cell[7922, 225, 338, 10, 70, "GuideText",
+ CellID->214817493],
+Cell[8263, 237, 314, 10, 70, "GuideText",
+ CellID->1557311931],
+Cell[8580, 249, 334, 10, 70, "GuideText",
+ CellID->622648531],
+Cell[8917, 261, 140, 2, 70, "GuideText",
+ CellID->772203353],
+Cell[9060, 265, 473, 10, 70, "InlineGuideFunctionListing",
+ CellID->1178075050]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9570, 280, 48, 1, 70, "GuideDelimiter",
+ CellID->457268471],
+Cell[9621, 283, 327, 11, 70, "GuideText",
+ CellID->93364050],
+Cell[9951, 296, 329, 10, 70, "GuideText",
+ CellID->584863432]
+}, Open  ]],
+Cell[10295, 309, 59, 1, 70, "GuideDelimiterSubsection",
+ CellID->1831166017],
+Cell[CellGroupData[{
+Cell[10379, 314, 48, 1, 70, "GuideDelimiter",
+ CellID->819102562],
+Cell[10430, 317, 140, 2, 70, "GuideText",
+ CellID->812094104],
+Cell[10573, 321, 614, 11, 70, "InlineGuideFunctionListing",
+ CellID->1607029243]
+}, Open  ]],
+Cell[11202, 335, 59, 1, 70, "GuideDelimiterSubsection",
+ CellID->1800116720],
+Cell[CellGroupData[{
+Cell[11286, 340, 210, 5, 70, "GuideFunctionsSubsection",
+ CellID->1286582264],
+Cell[11499, 347, 331, 10, 70, "GuideText",
+ CellID->203374175],
+Cell[11833, 359, 344, 10, 70, "GuideText",
+ CellID->575269405]
+}, Open  ]],
+Cell[12192, 372, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12260, 377, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[12544, 391, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[12578, 393, 205, 6, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[12786, 401, 215, 6, 70, "GuideMoreAbout",
+ CellID->252299663],
+Cell[13004, 409, 174, 5, 70, "GuideMoreAbout",
+ CellID->226788923],
+Cell[13181, 416, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13249, 421, 284, 12, 70, "GuideRelatedLinksSection",
+ CellID->415694148],
+Cell[13536, 435, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[13570, 437, 242, 6, 70, "GuideRelatedLinks",
+ CellID->2119547306],
+Cell[13815, 445, 245, 6, 70, "GuideRelatedLinks",
+ CellID->124005763],
+Cell[14063, 453, 256, 6, 70, "GuideRelatedLinks",
+ CellID->1105721151]
+}, Open  ]],
+Cell[14334, 462, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

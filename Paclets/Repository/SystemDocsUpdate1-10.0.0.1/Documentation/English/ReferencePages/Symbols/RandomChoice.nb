@@ -1,0 +1,3158 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    103990,       3148]
+NotebookOptionsPosition[     89089,       2663]
+NotebookOutlinePosition[     94058,       2778]
+CellTagsIndexPosition[     93936,       2772]
+WindowTitle->RandomChoice
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Pseudorandom Numbers\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/PseudorandomNumbers"], "\<\"Random Number \
+Generation\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/RandomNumberGenerationOverview"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"RandomInteger\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RandomInteger"], "\<\"RandomSample\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RandomSample"], "\<\"RandomReal\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RandomReal"], "\<\"SeedRandom\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SeedRandom"], "\<\"BlockRandom\"\>":>
+       Documentation`HelpLookup["paclet:ref/BlockRandom"], "\<\"Part\"\>":>
+       Documentation`HelpLookup["paclet:ref/Part"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Constructing Lists\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/ConstructingLists"], "\<\"Mathematical Functions\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/MathematicalFunctions"], "\<\"Random Number Generation\"\
+\>":>Documentation`HelpLookup[
+       "paclet:guide/RandomNumberGeneration"], "\<\"Statistical Data Analysis\
+\"\>":>Documentation`HelpLookup["paclet:guide/Statistics"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/RandomChoice\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/RandomChoice"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/RandomChoice.html"]\
+, StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$51736], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "ref/RandomChoice", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["RandomChoice", "ObjectName",
+ CellID->12514],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["RandomChoice"]],"paclet:ref/RandomChoice"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{"{", 
+        RowBox[{
+         SubscriptBox[
+          StyleBox["e", "TI"], 
+          StyleBox["1", "TR"]], ",", 
+         SubscriptBox[
+          StyleBox["e", "TI"], 
+          StyleBox["2", "TR"]], ",", 
+         StyleBox["\[Ellipsis]", "TR"]}], "}"}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives a pseudorandom choice of one of the ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["e", "TI"], 
+       StyleBox["i", "TI"]]], "InlineFormula"],
+     ". "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["RandomChoice"]],"paclet:ref/RandomChoice"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["list", "TI"], ",", 
+        StyleBox["n", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives a list of ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula"],
+     " pseudorandom choices. "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["RandomChoice"]],"paclet:ref/RandomChoice"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["list", "TI"], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["n", "TI"], 
+           StyleBox["1", "TR"]], ",", 
+          SubscriptBox[
+           StyleBox["n", "TI"], 
+           StyleBox["2", "TR"]], ",", 
+          StyleBox["\[Ellipsis]", "TR"]}], "}"}]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives an ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula"],
+     "\[Times]",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["2", "TR"]]], "InlineFormula"],
+     "\[Times]\[Ellipsis] array of pseudorandom choices. "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["RandomChoice"]],"paclet:ref/RandomChoice"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["w", "TI"], 
+           StyleBox["1", "TR"]], ",", 
+          SubscriptBox[
+           StyleBox["w", "TI"], 
+           StyleBox["2", "TR"]], ",", 
+          StyleBox["\[Ellipsis]", "TR"]}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["e", "TI"], 
+           StyleBox["1", "TR"]], ",", 
+          SubscriptBox[
+           StyleBox["e", "TI"], 
+           StyleBox["2", "TR"]], ",", 
+          StyleBox["\[Ellipsis]", "TR"]}], "}"}]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives a pseudorandom choice weighted by the ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["w", "TI"], 
+       StyleBox["i", "TI"]]], "InlineFormula"],
+     ". "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["RandomChoice"]],"paclet:ref/RandomChoice"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        RowBox[{
+         StyleBox["wlist", "TI"], "\[Rule]", 
+         StyleBox["elist", "TI"]}], ",", 
+        StyleBox["n", "TI"]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]gives a list of ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula"],
+     " weighted choices."
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["RandomChoice"]],"paclet:ref/RandomChoice"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        RowBox[{
+         StyleBox["wlist", "TI"], "\[Rule]", 
+         StyleBox["elist", "TI"]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["n", "TI"], 
+           StyleBox["1", "TR"]], ",", 
+          SubscriptBox[
+           StyleBox["n", "TI"], 
+           StyleBox["2", "TR"]], ",", 
+          StyleBox["\[Ellipsis]", "TR"]}], "}"}]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]gives an ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula"],
+     "\[Times]",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["2", "TR"]]], "InlineFormula"],
+     "\[Times]\[Ellipsis] array of weighted choices."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, None, None, {None}}, "RowsIndexed" -> {}}},
+ CellID->535],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->14067936],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["RandomChoice"]],"paclet:ref/RandomChoice"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   RowBox[{"{", 
+    RowBox[{
+     SubscriptBox[
+      StyleBox["e", "TI"], 
+      StyleBox["1", "TR"]], ",", 
+     SubscriptBox[
+      StyleBox["e", "TI"], 
+      StyleBox["2", "TR"]], ",", 
+     StyleBox["\[Ellipsis]", "TR"]}], "}"}], "]"}]], "InlineFormula"],
+ " chooses with equal probability between all of the ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["e", "TI"], 
+   StyleBox["i", "TI"]]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->17689],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RandomChoice"]],"paclet:ref/RandomChoice"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " gives a different sequence of pseudorandom choices whenever you run ",
+ "the Wolfram Language",
+ ". You can start with a particular seed using ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SeedRandom"]],"paclet:ref/SeedRandom"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->22564],
+
+Cell[TextData[{
+ "A ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Method"]],"paclet:ref/Method"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " option to ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SeedRandom"]],"paclet:ref/SeedRandom"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " can be given to specify the pseudorandom generator used. "
+}], "Notes",
+ CellID->19196],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(22)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->202355090],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(4)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->146597716],
+
+Cell[TextData[{
+ "Choose among ",
+ Cell[BoxData[
+  FormBox["a", TraditionalForm]], "InlineMath"],
+ ", ",
+ Cell[BoxData[
+  FormBox["b", TraditionalForm]], "InlineMath"],
+ ", and ",
+ Cell[BoxData[
+  FormBox["c", TraditionalForm]], "InlineMath"],
+ " at random:"
+}], "ExampleText",
+ CellID->13198],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{"{", 
+   RowBox[{"a", ",", "b", ",", "c"}], "}"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->30919],
+
+Cell[BoxData["c"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->579930443]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->20471],
+
+Cell["A list of 20 random choices:", "ExampleText",
+ CellID->23901],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", "20"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->29350],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "c", ",", "c", ",", "c", ",", "a", ",", "a", ",", "a", ",", "c", ",", "c", 
+   ",", "b", ",", "c", ",", "c", ",", "c", ",", "c", ",", "c", ",", "b", ",", 
+   "b", ",", "b", ",", "c", ",", "b", ",", "b"}], "}"}]], "Output",
+ ImageSize->{367, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->202526445]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->27380],
+
+Cell["A 4\[Times]3 array of random choices:", "ExampleText",
+ CellID->11021],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->31205],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "a"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c", ",", "b", ",", "a"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"b", ",", "a", ",", "b"}], "}"}]}], "}"}]], "Output",
+ ImageSize->{279, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->49945473]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->7268],
+
+Cell["Choices weighted with probabilities:", "ExampleText",
+ CellID->7752],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0.2", ",", "0.2", ",", "0.6"}], "}"}], "->", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c"}], "}"}]}], ",", "20"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->10704],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "b", ",", "b", ",", "b", ",", "b", ",", "c", ",", "c", ",", "b", ",", "a", 
+   ",", "b", ",", "c", ",", "c", ",", "a", ",", "c", ",", "c", ",", "c", ",", 
+   "c", ",", "c", ",", "a", ",", "c", ",", "c"}], "}"}]], "Output",
+ ImageSize->{367, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->14115234]
+}, Open  ]],
+
+Cell["Weights are automatically normalized:", "ExampleText",
+ CellID->24471],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"2", ",", "2", ",", "6"}], "}"}], "->", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c"}], "}"}]}], ",", "20"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->7342],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "c", ",", "c", ",", "a", ",", "c", ",", "b", ",", "a", ",", "a", ",", "a", 
+   ",", "c", ",", "b", ",", "a", ",", "a", ",", "c", ",", "c", ",", "b", ",", 
+   "c", ",", "c", ",", "b", ",", "c", ",", "a"}], "}"}]], "Output",
+ ImageSize->{367, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->58560908]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Scope",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->18514],
+
+Cell["The choices can be any expressions:", "ExampleText",
+ CellID->8067],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Exp", "[", "x", "]"}], ",", 
+     RowBox[{"x", "^", "2"}], ",", 
+     RowBox[{"1", "/", "x"}], ",", "2"}], "}"}], ",", "10"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->21394],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", "x"], ",", 
+   SuperscriptBox["x", "2"], ",", 
+   FractionBox["1", "x"], ",", 
+   FractionBox["1", "x"], ",", 
+   SuperscriptBox["x", "2"], ",", 
+   SuperscriptBox["x", "2"], ",", 
+   SuperscriptBox["\[ExponentialE]", "x"], ",", 
+   SuperscriptBox["\[ExponentialE]", "x"], ",", 
+   SuperscriptBox["\[ExponentialE]", "x"], ",", 
+   SuperscriptBox["\[ExponentialE]", "x"]}], "}"}]], "Output",
+ ImageSize->{244, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->461032493]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a", "->", "1"}], ",", 
+     RowBox[{"a", "->", "4"}], ",", 
+     RowBox[{"b", "->", "6"}]}], "}"}], ",", "10"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->27344],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"a", "\[Rule]", "1"}], ",", 
+   RowBox[{"a", "\[Rule]", "4"}], ",", 
+   RowBox[{"a", "\[Rule]", "4"}], ",", 
+   RowBox[{"a", "\[Rule]", "4"}], ",", 
+   RowBox[{"b", "\[Rule]", "6"}], ",", 
+   RowBox[{"a", "\[Rule]", "4"}], ",", 
+   RowBox[{"a", "\[Rule]", "4"}], ",", 
+   RowBox[{"b", "\[Rule]", "6"}], ",", 
+   RowBox[{"b", "\[Rule]", "6"}], ",", 
+   RowBox[{"a", "\[Rule]", "4"}]}], "}"}]], "Output",
+ ImageSize->{427, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->283390035]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->204087685],
+
+Cell["Choose among all numbers between -10 and 10:", "ExampleText",
+ CellID->1443450991],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "10"}], ";;", "10"}], ",", "10"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->570337536],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", 
+   RowBox[{"-", "4"}], ",", "6", ",", "2", ",", "1", ",", "10", ",", "10", 
+   ",", 
+   RowBox[{"-", "7"}], ",", "10", ",", "7"}], "}"}]], "Output",
+ ImageSize->{224, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->179181272]
+}, Open  ]],
+
+Cell["Choose among even numbers between -10 and 10:", "ExampleText",
+ CellID->960319489],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "10"}], ";;", "10", ";;", "2"}], ",", "10"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->1750044418],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"8", ",", 
+   RowBox[{"-", "8"}], ",", 
+   RowBox[{"-", "10"}], ",", "4", ",", "0", ",", "6", ",", 
+   RowBox[{"-", "2"}], ",", "8", ",", "6", ",", 
+   RowBox[{"-", "6"}]}], "}"}]], "Output",
+ ImageSize->{226, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->1918316]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Applications",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(9)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1286],
+
+Cell["Generate a random string:", "ExampleText",
+ CellID->17856],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<A\>\"", ",", "\"\<C\>\"", ",", "\"\<G\>\"", ",", "\"\<T\>\""}], 
+    "}"}], ",", "50"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->22607],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"A\"\>", ",", "\<\"A\"\>", ",", "\<\"G\"\>", ",", "\<\"G\"\>", 
+   ",", "\<\"C\"\>", ",", "\<\"A\"\>", ",", "\<\"T\"\>", ",", "\<\"C\"\>", 
+   ",", "\<\"C\"\>", ",", "\<\"G\"\>", ",", "\<\"A\"\>", ",", "\<\"G\"\>", 
+   ",", "\<\"T\"\>", ",", "\<\"G\"\>", ",", "\<\"A\"\>", ",", "\<\"T\"\>", 
+   ",", "\<\"C\"\>", ",", "\<\"G\"\>", ",", "\<\"C\"\>", ",", "\<\"G\"\>", 
+   ",", "\<\"G\"\>", ",", "\<\"A\"\>", ",", "\<\"A\"\>", ",", "\<\"C\"\>", 
+   ",", "\<\"A\"\>", ",", "\<\"G\"\>", ",", "\<\"C\"\>", ",", "\<\"C\"\>", 
+   ",", "\<\"A\"\>", ",", "\<\"T\"\>", ",", "\<\"A\"\>", ",", "\<\"T\"\>", 
+   ",", "\<\"A\"\>", ",", "\<\"A\"\>", ",", "\<\"G\"\>", ",", "\<\"A\"\>", 
+   ",", "\<\"C\"\>", ",", "\<\"C\"\>", ",", "\<\"T\"\>", ",", "\<\"T\"\>", 
+   ",", "\<\"G\"\>", ",", "\<\"T\"\>", ",", "\<\"T\"\>", ",", "\<\"A\"\>", 
+   ",", "\<\"A\"\>", ",", "\<\"G\"\>", ",", "\<\"T\"\>", ",", "\<\"T\"\>", 
+   ",", "\<\"G\"\>", ",", "\<\"C\"\>"}], "}"}]], "Output",
+ ImageSize->{476, 33},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->138274832]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringJoin", "[", "%", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->19756],
+
+Cell[BoxData["\<\"AAGGCATCCGAGTGATCGCGGAACAGCCATATAAGACCTTGTTAAGTTGC\"\>"], \
+"Output",
+ ImageSize->{354, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->127477814]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->27941],
+
+Cell["Generate a weighted random string:", "ExampleText",
+ CellID->17840],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringJoin", "[", 
+  RowBox[{"RandomChoice", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"4", ",", "1"}], "}"}], "->", 
+     RowBox[{"{", 
+      RowBox[{"\"\<A\>\"", ",", "\"\<B\>\""}], "}"}]}], ",", "80"}], "]"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->2424],
+
+Cell[BoxData["\<\"\
+ABBAAAAAAAAAAABAAABBBAAAABAAAABBAABBAABAAAAAAAAAAAAAAABAAAAAABAAABAAAAABAAAAAB\
+AB\"\>"], "Output",
+ ImageSize->{564, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->659928242]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->29634],
+
+Cell[TextData[{
+ "Generate integers according to a ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "/", "n"}], TraditionalForm]], "InlineMath"],
+ " distribution:"
+}], "ExampleText",
+ CellID->18653],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"1", "/", "n"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "10"}], "}"}]}], "]"}], "->", 
+    RowBox[{"Range", "[", "10", "]"}]}], ",", "30"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->21805],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "4", ",", "1", ",", "1", ",", "3", ",", "2", ",", "1", ",", "4", ",", "1", 
+   ",", "3", ",", "1", ",", "4", ",", "2", ",", "2", ",", "1", ",", "4", ",", 
+   "9", ",", "2", ",", "1", ",", "3", ",", "1", ",", "1", ",", "1", ",", "1", 
+   ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "3", ",", "1"}], 
+  "}"}]], "Output",
+ ImageSize->{547, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->17367580]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->24581],
+
+Cell["Random array of color choices:", "ExampleText",
+ CellID->14481],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ArrayPlot", "[", 
+  RowBox[{"RandomChoice", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"20", ",", "20"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->14036],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJzVVtsNAjEMq8QKLMAk7MAISHyzOiMgJH64o8rLdnpIJyE3cdI2aXy5P2+P
+0xjj/P0+/39/r+sO+ovP7GZ+Xl4vv3cdxWPhrPNB2Vt5oe6hWj/o+1LvP+tX
+rWf0vqL+q9XJ1g59Dqp6qfZ7FK/mz76vaD5RuyyPNw77HlnzzMJZfKp9Ze1R
+cVbjYZ0DW4+h35nV+x2Nq/W/ly/L06UT1HOFhXv92DqzSw+s1r9H7zuVrtiu
+s/tLpRO63mH1e6LC1Tos67dKvVn2bLxLj6HrKYtH47Ltu+aLtc7OH1WX23XV
+fKyeB/q+vPxs/W/5rdLv3XG65iYrbpde7Xr/Z+vq+kDjMzvV/XrjVuOz4mbz
+UuuuKr9qzlrrRzsfKx8vrpqDUb/V5po3frd+UOsT9lzw8qrneZeuntmx8/by
+ovmj/eXNZ4+/AZgl21c=
+   "], {{0, 0}, {20, 20}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}},
+  ImageMargins->0.]], "Output",
+ ImageSize->{229, 225},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ GraphicsBoxOptions->{ImageSize->{225, Automatic}},
+ CellLabel->"Out[1]=",
+ CellID->785856750]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->32118],
+
+Cell["A random walk with steps of unit length:", "ExampleText",
+ CellID->31049],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"Accumulate", "[", 
+   RowBox[{"RandomChoice", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", "50"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->27593],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJxd0TsKwkAUheHBKmUKCwsLFREREY3vZyYxidq6BMHaLWRnzpJcgsrcW8x/
+IRwOHzeTR/fxuj8bxpjkd/3TzycN01gTTGRDj+FN9bfPFryN/Q68h/2+uvMx
+gA/hI+mR9DF8Ap/CZ/AEPsf5C/gSvlKXWavL+2/UJbd6vuROUr/zHn7A/hH3
+P8FT7NvQawvP4Bk8h+fwM1y7Pl8BL+AlvIRX6n7qCn6Ba9f/c1V33rXr/79J
+j90X+49AIQ==
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0., 50.}, {-4., 4.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ ImageSize->{244, 148},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->342000493]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14053],
+
+Cell["2D random walk:", "ExampleText",
+ CellID->18086],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Line", "[", 
+   RowBox[{"Accumulate", "[", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1000", ",", "2"}], "}"}]}], "]"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->3322],
+
+Cell[BoxData[
+ GraphicsBox[LineBox[CompressedData["
+1:eJyNmYlyIjkMht3QQHMlkwBJIHPsvtI+wj7A7jPvTA5yACGTcEMvqvlV/NHI
+nbiK6v7ql2TZljsp+8+///3rn1IIYVgOQZ7J/pfvW0CT9yQcWo4m7ztoW/AG
+vN4/S+AydGbW2X5l9BXpASxtTf0pSy7CW/yYVVf/JfGWeEG8gb4m9nSOz/kE
+kz+PZwlegOfEZUdfIt4i4s+6tLkzHh6/zVfna5cfmq4v67H53eLd6tbfi8/1
+xvXk1YvWh4wnBVeIdf7m4Bn4FfwC/gl+NvyCeK+GRa/CvrZ/TvfPbP982j/r
+4Ab0Juwb8Pf41dFbjv2zia/9TcBj4szRnxBvgvhi394/R+BH8MP+ebR/3hsW
+/Rj2R2TP/k3YNxy+Rz53DmfgGuw9foS91e+wHkX+Vq86/kOHK5H4yqqn4DK4
+BE6Ih9BvYc/MOsfz4j9QfI8/0l9qxuflP0T+mt9NJF8bT/mmoD873xmY62OI
++rlFfSl79dMg/1vwDXFG/d2i/xsnX+Fr8BXyv3bG783nDdmrv8T7gf6+g/+D
+/h32PxwugRNwcPgKrPnZfK8i9rF4wtKE5dt7ZZh1jSft2rG3/dn8eL5j9cP7
+wda76I/gEXGlYH9yfG9/c33YevTqs+j7VTX5cH4jk7/uXx6P8BjzN8J8Kk+I
+pY0w/4/EAfHY32NpD/C/Jw7h8P0qys+bf+UxeAJ+Iq4aZvsR9LGxH2N+R3nx
+3wPv70NsPXm99Xtxbdj7nvD3SeK10B+z6O3w9vvVhn4EPob+ifgOLPFOMJ5T
+cAd69wM8JGZ/jfcIHoHH6G+C/j3Wv//Mqj/Bfop4z4j/E/wCfgXPwHPwAv5L
+w3PEn6E/5cUH2PqfoP+ieEusD7PoK/ivwRviU+Ktw2K/Q7wt+SsfQW8Tbwzv
+3rEv0lsUbw1eoV6X4AX0uWGeD9U/Mj8rM5/Ka8PWn9ff1kcHehf2PcTrYnzK
+Z9DPwRcOb4jPIvE6mD+Ov4X9Dv454ilbfevonr2Nv3Hy70fG4+VfND/eeJi7
+yK+H8Xnj2Tjj6cN+EH61S2LRL2H/Gf6XyGdgxjeA3oc9++fwl/Yl/Dqj+GpY
+9FJE9/zZvgx74W/gP4gT0tVe/S+hD8B98AX6Y1a97NgPHD1FfLa/jOifHZ3j
+XYTf8xM+d/LTfDR/Xt+Y/xl03R9aP149vbd/1F5aD/G76K+H8XQxfuWzgvHo
++FNwpWB+7frE1teb3xT9V5CPcpm4Z9jq5yGebxX51LDemWHRv4C/Gmb7OrgB
+vUms+sDYK/eJ1b4JbkFnZj0W3+ZfQf4psepqb/11fvrgC/C5wxUzv7w/uJ6V
+rc71ZtezF1n/9/YX7wflEIr3m1fvsXy9+qwiX5mfLuazQ8y62nv1zWz3Z4e4
+RHwK/QT+nxyugmvEx4ZVP0X+wnXombFXFl3+H5F6bINbEW463AS38N6GFuNm
+xJ/Z2jfwqztcdzjDr4Yfc0yv4r2C9xRchp7Ct4y+SgWcESfQA3EGlvhS39Kf
+1Luy1TPHvwSd49Ude+EG4nv6R/MLmBvhlDjBfLGu4xHegjfgdf77ebXoi/zt
++bWnSz5z8Cw/nE8z63k3n3/b+4GSo8+I00g8L1/Oh/Oz+S4K4ul47X2Hl98r
+cQIOYGnz/O39h96H2PuOldHt/cssf/8+hu8f7Hx482PvE2L3ERLf3kcoT/O3
+5ynT/HCe4t1H8Pk/3w/oeYo9j5nm/vmM1Z+JvfMdL37N6PY8zDv/4fOkMvxL
+hm3/bG/P0/j8zDsP4/M2aRPUi8SXvTwlVj2g/4TyU56SbuMVMZ/v2Xy8/Hl8
+dn40H60fra/EqTddT+8+zLsfszrvT7t/E9KL4tn6KjovjK23nnfGzi/t+fF7
+54+8vzi/ovz/ByJwz+A=
+   "]],
+  ImageMargins->0.]], "Output",
+ ImageSize->{229, 265},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ GraphicsBoxOptions->{ImageSize->{225, Automatic}},
+ CellLabel->"Out[1]=",
+ CellID->136553227]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->334],
+
+Cell["Random walk on a hexagonal lattice:", "ExampleText",
+ CellID->703],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Line", "[", 
+   RowBox[{"Accumulate", "[", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Sin", "[", 
+           RowBox[{"2", "Pi", " ", 
+            RowBox[{"i", "/", "6"}]}], "]"}], ",", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", "Pi", " ", 
+            RowBox[{"i", "/", "6"}]}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "6"}], "}"}]}], "]"}], ",", "1000"}], "]"}], "]"}],
+    "]"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->28908],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+AoFVg/U9WjzegUAgEAgEAoHAhuH/AHPp1XY=
+    "], {{0, 240}, {214, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{214, 240},
+  PlotRange->{{0, 214}, {0, 240}}]], "Output",
+ ImageSize->{218, 240},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[1]=",
+ CellID->178036794]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->28160],
+
+Cell["Randomly generate disks or circles:", "ExampleText",
+ CellID->4028],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"RandomChoice", "[", 
+      RowBox[{"{", 
+       RowBox[{"Disk", ",", "Circle"}], "}"}], "]"}], "[", 
+     RowBox[{"2", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "j"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "5"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->28415],
+
+Cell[BoxData[
+ GraphicsBox[{{CircleBox[{2, 2}], DiskBox[{2, 4}], DiskBox[{2, 6}], 
+    DiskBox[{2, 8}], DiskBox[{2, 10}]}, {DiskBox[{4, 2}], DiskBox[{4, 4}], 
+    CircleBox[{4, 6}], CircleBox[{4, 8}], CircleBox[{4, 10}]}, {
+    CircleBox[{6, 2}], CircleBox[{6, 4}], CircleBox[{6, 6}], 
+    CircleBox[{6, 8}], CircleBox[{6, 10}]}, {CircleBox[{8, 2}], 
+    CircleBox[{8, 4}], DiskBox[{8, 6}], CircleBox[{8, 8}], 
+    DiskBox[{8, 10}]}, {CircleBox[{10, 2}], DiskBox[{10, 4}], 
+    CircleBox[{10, 6}], CircleBox[{10, 8}], CircleBox[{10, 10}]}}]], "Output",
+ ImageSize->{244, 240},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->21286865]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->499413102],
+
+Cell["A random graph with 1% of possible edges filled in:", "ExampleText",
+ CellID->11773221],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{"RandomChoice", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0.01", ",", "0.99"}], "}"}], "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"100", ",", "100"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->246836684],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[CompressedData["
+1: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
+Yxu56JOcH8iLFcF6XeXmgKkW+A8JTtkI
+    "], {
+     {RGBColor[0.5, 0., 0.], 
+      LineBox[{{2, 31}, {3, 2}, {3, 69}, {4, 18}, {4, 57}, {5, 2}, {5, 90}, {
+       7, 1}, {7, 41}, {8, 39}, {9, 27}, {9, 32}, {9, 59}, {10, 15}, {11, 
+       26}, {12, 34}, {14, 80}, {15, 37}, {15, 86}, {16, 20}, {16, 40}, {16, 
+       51}, {16, 80}, {18, 79}, {19, 7}, {19, 40}, {19, 82}, {19, 83}, {22, 
+       61}, {22, 86}, {26, 52}, {26, 83}, {27, 75}, {28, 72}, {28, 98}, {29, 
+       36}, {30, 48}, {31, 79}, {32, 1}, {32, 70}, {33, 59}, {34, 99}, {38, 
+       72}, {39, 41}, {43, 6}, {46, 27}, {46, 68}, {50, 45}, {54, 4}, {55, 
+       56}, {56, 24}, {56, 27}, {56, 33}, {57, 77}, {58, 50}, {58, 89}, {59, 
+       25}, {60, 62}, {60, 98}, {63, 50}, {64, 29}, {65, 15}, {65, 61}, {65, 
+       68}, {66, 5}, {67, 25}, {68, 87}, {71, 8}, {71, 59}, {71, 85}, {71, 
+       86}, {72, 3}, {74, 87}, {77, 47}, {80, 74}, {82, 4}, {82, 36}, {82, 
+       80}, {83, 26}, {83, 89}, {83, 94}, {84, 68}, {84, 91}, {86, 34}, {90, 
+       76}, {91, 2}, {91, 97}, {92, 52}, {93, 36}, {94, 9}, {96, 10}, {96, 
+       99}, {97, 22}, {97, 30}, {100, 16}}]}, 
+     {RGBColor[0, 0, 0.7], 
+      TagBox[
+       TooltipBox[PointBox[1],
+        "1"],
+       Annotation[#, 1, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[2],
+        "2"],
+       Annotation[#, 2, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[3],
+        "3"],
+       Annotation[#, 3, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[4],
+        "4"],
+       Annotation[#, 4, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[5],
+        "5"],
+       Annotation[#, 5, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[6],
+        "6"],
+       Annotation[#, 6, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[7],
+        "7"],
+       Annotation[#, 7, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[8],
+        "8"],
+       Annotation[#, 8, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[9],
+        "9"],
+       Annotation[#, 9, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[10],
+        "10"],
+       Annotation[#, 10, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[11],
+        "11"],
+       Annotation[#, 11, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[12],
+        "12"],
+       Annotation[#, 12, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[13],
+        "13"],
+       Annotation[#, 13, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[14],
+        "14"],
+       Annotation[#, 14, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[15],
+        "15"],
+       Annotation[#, 15, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[16],
+        "16"],
+       Annotation[#, 16, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[17],
+        "17"],
+       Annotation[#, 17, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[18],
+        "18"],
+       Annotation[#, 18, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[19],
+        "19"],
+       Annotation[#, 19, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[20],
+        "20"],
+       Annotation[#, 20, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[21],
+        "21"],
+       Annotation[#, 21, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[22],
+        "22"],
+       Annotation[#, 22, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[23],
+        "23"],
+       Annotation[#, 23, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[24],
+        "24"],
+       Annotation[#, 24, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[25],
+        "25"],
+       Annotation[#, 25, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[26],
+        "26"],
+       Annotation[#, 26, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[27],
+        "27"],
+       Annotation[#, 27, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[28],
+        "28"],
+       Annotation[#, 28, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[29],
+        "29"],
+       Annotation[#, 29, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[30],
+        "30"],
+       Annotation[#, 30, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[31],
+        "31"],
+       Annotation[#, 31, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[32],
+        "32"],
+       Annotation[#, 32, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[33],
+        "33"],
+       Annotation[#, 33, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[34],
+        "34"],
+       Annotation[#, 34, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[35],
+        "35"],
+       Annotation[#, 35, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[36],
+        "36"],
+       Annotation[#, 36, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[37],
+        "37"],
+       Annotation[#, 37, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[38],
+        "38"],
+       Annotation[#, 38, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[39],
+        "39"],
+       Annotation[#, 39, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[40],
+        "40"],
+       Annotation[#, 40, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[41],
+        "41"],
+       Annotation[#, 41, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[42],
+        "42"],
+       Annotation[#, 42, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[43],
+        "43"],
+       Annotation[#, 43, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[44],
+        "44"],
+       Annotation[#, 44, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[45],
+        "45"],
+       Annotation[#, 45, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[46],
+        "46"],
+       Annotation[#, 46, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[47],
+        "47"],
+       Annotation[#, 47, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[48],
+        "48"],
+       Annotation[#, 48, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[49],
+        "49"],
+       Annotation[#, 49, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[50],
+        "50"],
+       Annotation[#, 50, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[51],
+        "51"],
+       Annotation[#, 51, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[52],
+        "52"],
+       Annotation[#, 52, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[53],
+        "53"],
+       Annotation[#, 53, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[54],
+        "54"],
+       Annotation[#, 54, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[55],
+        "55"],
+       Annotation[#, 55, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[56],
+        "56"],
+       Annotation[#, 56, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[57],
+        "57"],
+       Annotation[#, 57, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[58],
+        "58"],
+       Annotation[#, 58, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[59],
+        "59"],
+       Annotation[#, 59, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[60],
+        "60"],
+       Annotation[#, 60, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[61],
+        "61"],
+       Annotation[#, 61, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[62],
+        "62"],
+       Annotation[#, 62, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[63],
+        "63"],
+       Annotation[#, 63, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[64],
+        "64"],
+       Annotation[#, 64, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[65],
+        "65"],
+       Annotation[#, 65, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[66],
+        "66"],
+       Annotation[#, 66, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[67],
+        "67"],
+       Annotation[#, 67, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[68],
+        "68"],
+       Annotation[#, 68, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[69],
+        "69"],
+       Annotation[#, 69, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[70],
+        "70"],
+       Annotation[#, 70, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[71],
+        "71"],
+       Annotation[#, 71, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[72],
+        "72"],
+       Annotation[#, 72, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[73],
+        "73"],
+       Annotation[#, 73, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[74],
+        "74"],
+       Annotation[#, 74, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[75],
+        "75"],
+       Annotation[#, 75, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[76],
+        "76"],
+       Annotation[#, 76, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[77],
+        "77"],
+       Annotation[#, 77, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[78],
+        "78"],
+       Annotation[#, 78, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[79],
+        "79"],
+       Annotation[#, 79, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[80],
+        "80"],
+       Annotation[#, 80, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[81],
+        "81"],
+       Annotation[#, 81, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[82],
+        "82"],
+       Annotation[#, 82, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[83],
+        "83"],
+       Annotation[#, 83, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[84],
+        "84"],
+       Annotation[#, 84, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[85],
+        "85"],
+       Annotation[#, 85, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[86],
+        "86"],
+       Annotation[#, 86, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[87],
+        "87"],
+       Annotation[#, 87, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[88],
+        "88"],
+       Annotation[#, 88, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[89],
+        "89"],
+       Annotation[#, 89, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[90],
+        "90"],
+       Annotation[#, 90, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[91],
+        "91"],
+       Annotation[#, 91, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[92],
+        "92"],
+       Annotation[#, 92, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[93],
+        "93"],
+       Annotation[#, 93, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[94],
+        "94"],
+       Annotation[#, 94, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[95],
+        "95"],
+       Annotation[#, 95, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[96],
+        "96"],
+       Annotation[#, 96, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[97],
+        "97"],
+       Annotation[#, 97, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[98],
+        "98"],
+       Annotation[#, 98, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[99],
+        "99"],
+       Annotation[#, 99, "Tooltip"]& ], 
+      TagBox[
+       TooltipBox[PointBox[100],
+        "100"],
+       Annotation[#, 100, "Tooltip"]& ]}}],
+   Annotation[#, VertexCoordinateRules -> CompressedData["
+1:eJw9U2s0FAgUJu9mjBlDRgbzfmo8ttRSO9eSxpaSWmFKETWnlF5HYSi1laTt
+QVYthZCiTltS1JpLNT1IimhrJvQS1TQnj3UUtt3Ozo977rnnu9/33fOdc5kx
+CaFxE4yMjGK/1r/dy6TOerlADBP3O5r/nUNDW0rV6bzHDpCsnN0q4tsjX5Kv
+fr3NFqq4/DnBF23xptTmvKiPA4rS61T5B1NUMOs27HxCBT1blXSFMwlDnay0
+RfX9Uj9ObGnwMR6G9fs6apaJ4GHv0OqCCnt881yZEQ188HvXG8IadMWZOVpK
+Z4QIch1r4bjKGT8kjWLBIiZoE9uXto2wcWREI1lq6QHJK0vWTWsiY3xZlPWR
+FywYdmBKXpdzUbDGXEbeYAJ761f+59e5+IR89SsemF6OaKrIJOB45mBK4igT
+pCUB/pNDWagpTV/gPE8IspuStQy5FZ4OzChaME408D9bauhPw1nwdt2tIWKx
+JQZ90ilC1opgLmm+9ywrCprWH5scmCCEYW2WbUqzKWZTdqfOmUM18I3m6qll
+xkxoGb3mXHqLgY/GZ4t6SDQD/tTH/X1bphjY7eta7/iyEIZgPuV7Ieyp1SVM
+GmPhTzOKR4Pp7tDtS4vekUvB9U0HIuVNAthURm2c98wVIzY0pH2gmQAq59we
+yCRh5+lNWs+PAtD3pQpGLupV07ebNO5nOYHOumqqfb0rlnhrC+VnnEAUGc/d
+XUVBASPr/JnDYlhBKmtcdsUJfV7cyNUXCMGv9EQZa5CJb8JXHVOqWVDSWm7U
+E8JBW515x552uuF+BZG6lLBUAHnFXWkcHFN9FpZ23rZhgn362AaiDRv9RvJi
++lItoOTnowk1eTbo8/E3++QlAnD+cfVjeTodzfiXt27niuAt/DLT19Ua3Qv1
+srmxQjAN0hEWkR1RqHvpR33AMPgdeSp7S7JuljZFfZtlcQG0l15sA07NL5r4
+stwLwloiqsNottjun3SmiM2DVMJkuENzwUMWJV+cItiw45uOaqhHw70wTIP4
+XTUaSSIDFZoS3cVcrkHPrCg5m0nxAh/Q97uRqfiuMEVx304EjBbv/n6yGU5z
+c9zqFuwBIfItirZoG8xYZHZr5wjfwF/R3RlzbjUHjIzDszoDjFHieT9pjbMY
+Au9Kcxz/ZGHK+o4lVaEisLxw9BnpCBPXHc/qlUs5wKizjnwuHVHt4jVvaiB4
+wv4zt8TGm6lYaJHWGXtVAIfIcc2lQiayHvkHnKL3SmdoCdUpvVaot2t8rCph
+Qn3tAQmlgoGZ/+flXhSdtN4Sa95NOKu84AWpGeL72l1UDPOnPTMOEQJM2TvA
+WfxUlX2jR1f3Kwvq6Gvvzf2BgZxq2eJ4HQVmTYutIUkm4VDY0b6ICiEEVjPY
+9cEczHe4lrgwiw2PHnxsS/qOjtZ3hbyCS2QIBzPpwnQKEosLekbVbkB3zbRQ
+HKSjX3mqXTifBxnXWebVB5lYk1ZQsGgWAVbWRpVOV5Ox/F7c76FRIkN+ajb/
+Tj6JB+rFtRbahVSUurtmRFUKod/fYV/QWgYmRcbNul5BBFGgnmA35IBbt/rc
+K7zCBkZa+PTqP/pUt/3UG1kNbga9jva+bu2AKxiRI0/RtlmjUisa6NvFB8Wl
+w8qJQSTsucqTfeK6G/Y1MWFnu7r4wLioUH7utsTnk+qP3nObAi9r2luNWqgY
+L7Y7aa9hgAvHo0fRNRlpMW2VXB4Pslv7MxpULJwddGSVEthwwuXSSbUHC60+
+b54pr+XANoex8OizDmiS52/TfdPD4DfgdvJdMLpDdpCire8aFR3fJO87UEmG
+sS9ZV8t8HfCKd7u0OIcOY2pCK7vAET0G/4qVdXjAq/GOyohzRMzb6W/yJEoA
+M2qX9zcmDqoSG87fdhkWw0Piiez0Lhpmt24euTPkafC7Oz/i1MOv/9ocvaU1
+WcZF06bxhJ1EFzA/516eM9sFrVbuE9iJh6WvctWJV62IKNm23zv4PRNcaB0e
+Yxu56JOcH8iLFcF6XeXmgKkW+A8JTtkI
+     "]]& ],
+  AspectRatio->Automatic,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ ImageSize->{422, 251},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ GraphicsBoxOptions->{ImageSize->{418., Automatic}},
+ CellLabel->"Out[1]=",
+ CellID->69822614]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->10238],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SeedRandom"]],"paclet:ref/SeedRandom"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to get repeatable random values:"
+}], "ExampleText",
+ CellID->26529],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"RandomChoice", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", "5"}], "]"}], ",", 
+   RowBox[{"RandomChoice", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", "5"}], "]"}]}], 
+  "}"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->26610],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "c", ",", "a", ",", "a", ",", "a"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "c", ",", "a", ",", "a", ",", "a"}], "}"}]}], 
+  "}"}]], "Output",
+ ImageSize->{215, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->194187136]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"SeedRandom", "[", "1234", "]"}], ";", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", "5"}], "]"}]}], ",", 
+   RowBox[{
+    RowBox[{"SeedRandom", "[", "1234", "]"}], ";", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", "5"}], "]"}]}]}], 
+  "}"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->24742],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"c", ",", "a", ",", "a", ",", "b", ",", "c"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c", ",", "a", ",", "a", ",", "b", ",", "c"}], "}"}]}], 
+  "}"}]], "Output",
+ ImageSize->{215, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->731011437]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14249],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BlockRandom"]],"paclet:ref/BlockRandom"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to block one use of ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RandomChoice"]],"paclet:ref/RandomChoice"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " from affecting others:"
+}], "ExampleText",
+ CellID->29441],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"BlockRandom", "[", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{"Range", "[", "100", "]"}], "]"}], "]"}], ",", 
+   RowBox[{"RandomChoice", "[", 
+    RowBox[{"Range", "[", "100", "]"}], "]"}]}], "}"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->28560],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"76", ",", "76"}], "}"}]], "Output",
+ ImageSize->{57, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->32757124]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Neat Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(5)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->10681],
+
+Cell["Pick 10 random words beginning with \"a\" from the dictionary:", \
+"ExampleText",
+ CellID->622971423],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{"DictionaryLookup", "[", 
+    RowBox[{"\"\<a\>\"", "~~", "___"}], "]"}], ",", "10"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->20778882],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"antagonistically\"\>", ",", "\<\"abase\"\>", 
+   ",", "\<\"avoidably\"\>", ",", "\<\"argumentatively\"\>", 
+   ",", "\<\"anklebones\"\>", ",", "\<\"acceptors\"\>", 
+   ",", "\<\"autobiography\"\>", ",", "\<\"artefactual\"\>", 
+   ",", "\<\"airmails\"\>", ",", "\<\"alphabetic\"\>"}], "}"}]], "Output",
+ ImageSize->{447, 33},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->597697743]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->566140721],
+
+Cell["Pick 10 random Wolfram Language functions:", "ExampleText",
+ CellID->11901],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomChoice", "[", 
+  RowBox[{
+   RowBox[{"Names", "[", "\"\<*\>\"", "]"}], ",", "10"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->7671],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"NeedCurrentFrontEndPackagePacket\"\>", 
+   ",", "\<\"LogNormalDistribution\"\>", ",", "\<\"DirectedEdges\"\>", 
+   ",", "\<\"ControlPlacement\"\>", ",", "\<\"Filling\"\>", 
+   ",", "\<\"Del\"\>", ",", "\<\"ButtonStyleMenuListing\"\>", 
+   ",", "\<\"SuperMinus\"\>", ",", "\<\"LightYellow\"\>", 
+   ",", "\<\"DoubleBracketingBar\"\>"}], "}"}]], "Output",
+ ImageSize->{486, 50},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->27356504]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->13281],
+
+Cell["Make a continuous string of characters:", "ExampleText",
+ CellID->17338],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringJoin", "[", 
+  RowBox[{"RandomChoice", "[", 
+   RowBox[{
+    RowBox[{"CharacterRange", "[", 
+     RowBox[{"\"\<a\>\"", ",", "\"\<z\>\""}], "]"}], ",", "80"}], "]"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->9575],
+
+Cell[BoxData["\<\"\
+joyiswdwvprhnzspwpgtwvpfcellmixjhcrachhxtfgiejywjdvqithjjkbyttrowpmfzkzoqlvbzh\
+pw\"\>"], "Output",
+ ImageSize->{564, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->524491870]
+}, Open  ]],
+
+Cell["Break the characters into \"words\":", "ExampleText",
+ CellID->21553],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringJoin", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "5"}], "}"}], "->", 
+      RowBox[{"{", 
+       RowBox[{"\"\< \>\"", ",", "#"}], "}"}]}], "]"}], "&"}], "/@", 
+   RowBox[{"RandomChoice", "[", 
+    RowBox[{
+     RowBox[{"CharacterRange", "[", 
+      RowBox[{"\"\<a\>\"", ",", "\"\<z\>\""}], "]"}], ",", "80"}], "]"}]}], 
+  "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->19353],
+
+Cell[BoxData["\<\"z ss uewao dmqb kp jjfbiehmt n  bdw  ktf vc zj ydcv bsg \
+savnqdj  hhtwn odtqdsqwv\"\>"], "Output",
+ ImageSize->{564, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->293487017]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->21935],
+
+Cell["2D random walk with eight directions:", "ExampleText",
+ CellID->1825],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Line", "[", 
+   RowBox[{"Accumulate", "[", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", "0", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1000", ",", "2"}], "}"}]}], "]"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->31175],
+
+Cell[BoxData[
+ GraphicsBox[LineBox[CompressedData["
+1:eJyVmAtS40YURWVJtmRbBhvM8LHx/4shi8kSsoBk29lBGLAh05Xzai5vWq6K
+qqij+37d/dTdUMz/+Ov3P9MkSf7OkiSwIT/hMVvq7A1nT+U9492Y857Le1OY
+w2ZE55HYXN5bvBfoAt2SGj6mRT3NybDnwkLiUuzGBjVtfQ2o69V5p6KtftPF
++TyrV9dH/clcjs7Jvon/jvo97Tn3/U1//niC7eMHE8dgP/1giDui3+FR7Oo/
+RfIborV+eLy2/JPLP7n5BGbk5cJgb6KbrM/8GTpj/aZT/L5uhs5Zn9d5JN7G
+03FSN57yw8VbfsLeCY/uUdOfbp0nmU9dP1pCy9fxcme3+II6xpbTniV57f+h
+T04fxV5G7O/EH4WlzMPn23ifwhIWrL+gzyW67bTFtc7kNSSvjd/GUVqe1bE+
+q7b+++9k599o94S/m/y9avenvxf1ri2T+P3aisS1WGOBVrYj/hJd1vwUUreA
+pYyn93iZ/LzPs4i9TbyxA7vU61C/IzoX3Ra/X4fNz69X11hIbhdWTneJqxx7
+okvi2rCkblvY5b0r75Voe+/h60lMW/QFvCS+jx6gB+T0xV85f4i/Et1FV04b
+fXyF7kme19di76IDh9S7hkPWdwOHEXsp/Ib9VnSBDt/rDt4Lm9ibEndL3p2j
+5T0QP0r+23N1HBP3eIY5zGAqDPkN0RNhJvmmpxGq3/Kn1J248R5d3GNkfK07
+E52iU7HPiZuj1d+ACfkJ9cM9GcYL92bQ4f4P/vD7YAZVq99zInyn7hv6Df1d
+tMYZj/Ak85nI/HSeGneUOmPqj+ADvHd6FIn7Lgz2V2d/FfsY+1jirZ63n/M/
+irb6/8g4Izf+PfpO+ApD3i36Vvxv8B0e4Ul4T38fIvoTHZ479C3+O/HXMTwP
+7MMR+/IBjrCPnV/PYyOpP592/sL+tP0fzvtCmIteopfOHtjCHrjCvpL4DB3G
+XQvNrlziX8A581/QjyX9UZ2Qb7oh4y0lvyHaxlmh13AjDM9WGOw79A69Rz85
+vUc/CVPsGUypk1I/g6mrb/lWN6w/6A8YtI5r81F7LE7ndXBUe+b8fj5+XO/X
+cTz3yde+BHsu9P3y8d6u38H3T+el1O9m33crOvRt6+y2T/x+3jDvoO0c2Lko
+hMFfosPfA2E/doQLxzlxC/KW1FmKVv8c/8xx7vx6fm2+nnqu18Lc6Rbr1/WZ
+3jq9Tr72JXZ/6LyWSXye66R+vjZOwbgl82ijO+jwd90O7iPs4FfuqfOENh6w
+H8TeRVdOB/+z00+u/g5a/0zHxu/Cyo3XQyuD/QJeUk+5c6zzn8u7wG60cf18
+Kvpg+kL0c8Rv61IeWP8z/XhBv0iflRrvv09d/2xel/AC+6X0U/vbk3VrP6w/
+fXTf9TPWN9Ox+cTmd6BuiB/APvYBcX3hC/wtogfoQY39yvFa+Cx6SN4NHApf
+sFuc5R3gE/UP0NZl/dN1ql2p/d3Rt63Tuk+r5Nf7wO87jbPvXFE3cCPj6Hgb
+uE2+7o9t8vX8mNZ5+nPWd3F96hsHMPRtTT83cIvd/NtI/EDq1MXvRCt3wmvR
++zN2+46mzT9E36C/Mc4N87kRvSV+6+J36D1+HT82vyfHuv0XO796L+p9q/dE
+7D7W86/3SJX8ur9s3/r9HNt3sf23Zn5rpzfOviJ/ybgrYc/lG3sur+fiezJP
+y9NzoedA709db0xr/Llzo+de++f7Gqvn++nj6saP9d9/Bzu3se+wSb5+X19n
+5eqtqLd23ETsA2cfwKsIV3BJ3JK8lRvXuMSucQM3jt4zvg+2H+rmreMELty8
+Fs5unGOfUX9O/2ZwCif4H4mfkG+c0o+Qd02doTDYb4iLcSZx167eAPp5GtVu
+tHlPa/RE1tWDFf6e2B8dx2fslfjHzj6KsIu/i+44en9dXIc4r318G3vJvEvW
+WcBW8vP/nmPRxkLsI0f9P6rGW/0p483gFPu/E51irw==
+   "]]]], "Output",
+ ImageSize->{244, 162},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->699752959]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->5853],
+
+Cell["3D lattice random walk:", "ExampleText",
+ CellID->23449],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{"Line", "[", 
+   RowBox[{"Accumulate", "[", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1000", ",", "3"}], "}"}]}], "]"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->8089],
+
+Cell[BoxData[
+ Graphics3DBox[Line3DBox[CompressedData["
+1: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
+   "]],
+  ImageMargins->0.,
+  ViewAngle->Automatic,
+  ViewCenter->Automatic,
+  ViewPoint->{1.3, -2.4, 2.},
+  ViewVertical->{0., 0., 1.}]], "Output",
+ ImageSize->{304, 290},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ Graphics3DBoxOptions->{ImageSize->{300, Automatic}},
+ CellLabel->"Out[1]=",
+ CellID->905476503,ImageCache->GraphicsData["CompressedBitmap", "\<\
+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
+QPkndPNvsaBY9n8buV+W\
+\>"]]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->25340],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RandomInteger"]],"paclet:ref/RandomInteger"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RandomSample"]],"paclet:ref/RandomSample"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RandomReal"]],"paclet:ref/RandomReal"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SeedRandom"]],"paclet:ref/SeedRandom"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BlockRandom"]],"paclet:ref/BlockRandom"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Part"]],"paclet:ref/Part"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->13425]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->28153],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Pseudorandom Numbers"]],"paclet:tutorial/PseudorandomNumbers"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->32657],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Random Number Generation"]],
+   "paclet:tutorial/RandomNumberGenerationOverview"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->86049371],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->38330942],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Constructing Lists"]],"paclet:guide/ConstructingLists"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->127080367],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Mathematical Functions"]],"paclet:guide/MathematicalFunctions"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->480406714],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Random Number Generation"]],
+   "paclet:guide/RandomNumberGeneration"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->18928788],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Statistical Data Analysis"]],"paclet:guide/Statistics"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->583681635],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->12077],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Demonstrations with RandomChoice"]],
+    "http://demonstrations.wolfram.com/symbol.html?symbol=RandomChoice"},
+   "WebLink",
+   BaseStyle->{"RelatedLinks"}]]],
+ " (",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Wolfram Demonstrations Project"]],
+    "http://demonstrations.wolfram.com/"},
+   "WebLink",
+   BaseStyle->{"RelatedLinks"}]]],
+ ")"
+}], "RelatedLinks"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 2007",
+ Cell[" (6.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RandomChoice",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Mathematical Functions", ButtonData -> 
+         "paclet:guide/MathematicalFunctions", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Random Number Generation", ButtonData -> 
+         "paclet:guide/RandomNumberGeneration", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "RandomChoice", ButtonData -> "paclet:ref/RandomChoice", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Statistical Data Analysis", ButtonData -> "paclet:guide/Statistics", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Random Number Generation", ButtonData -> 
+         "paclet:guide/RandomNumberGeneration", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "RandomChoice", ButtonData -> "paclet:ref/RandomChoice", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Life Sciences & Medicine: Data & Computation", ButtonData -> 
+         "paclet:guide/LifeSciencesAndMedicineDataAndComputation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Statistical Data Analysis", ButtonData -> "paclet:guide/Statistics", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Random Number Generation", ButtonData -> 
+         "paclet:guide/RandomNumberGeneration", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "RandomChoice", ButtonData -> "paclet:ref/RandomChoice", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 42, 46.4566406}", 
+    "history" -> {"6", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "random selection", "sampling with replacement", "select randomly"}, 
+    "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {{
+      "Random Number Generation", 
+       "http://www.wolfram.com/learningcenter/tutorialcollection/\
+RandomNumberGeneration/"}}, "index" -> True, "label" -> 
+    "Built-in Wolfram Language Symbol", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "RandomChoice[{e1, e2, ...}] gives a pseudorandom choice of one of the \
+ei. RandomChoice[list, n] gives a list of n pseudorandom choices. \
+RandomChoice[list, {n1, n2, ...}] gives an n1*n2*... array of pseudorandom \
+choices. RandomChoice[{w1, w2, ...} -> {e1, e2, ...}] gives a pseudorandom \
+choice weighted by the wi. RandomChoice[wlist -> elist, n] gives a list of n \
+weighted choices. RandomChoice[wlist -> elist, {n1, n2, ...}] gives an \
+n1*n2*... array of weighted choices.", "synonyms" -> {"random choice"}, 
+    "title" -> "RandomChoice", "titlemodifier" -> "", "windowtitle" -> 
+    "RandomChoice", "type" -> "Symbol", "uri" -> "ref/RandomChoice"}, 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[13091, 407, 388, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->202355090]},
+ "RasterizedOutput"->{
+  Cell[32031, 1096, 10441, 179, 70, "Output",
+   CellTags->"RasterizedOutput",
+   CellID->178036794]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 93666, 2761},
+ {"RasterizedOutput", 93810, 2765}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[584, 21, 5083, 125, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5670, 148, 50, 1, 43, "ObjectName",
+ CellID->12514],
+Cell[CellGroupData[{
+Cell[5745, 153, 4879, 156, 400, "Usage",
+ CellID->535],
+Cell[CellGroupData[{
+Cell[10649, 313, 737, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->14067936],
+Cell[11389, 339, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[11423, 341, 631, 23, 70, "Notes",
+ CellID->17689],
+Cell[12057, 366, 515, 16, 70, "Notes",
+ CellID->22564],
+Cell[12575, 384, 433, 15, 70, "Notes",
+ CellID->19196],
+Cell[13011, 401, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13091, 407, 388, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->202355090],
+Cell[CellGroupData[{
+Cell[13504, 426, 195, 6, 25, "ExampleSection",
+ CellID->146597716],
+Cell[13702, 434, 293, 12, 35, "ExampleText",
+ CellID->13198],
+Cell[CellGroupData[{
+Cell[14020, 450, 161, 5, 28, "Input",
+ CellID->30919],
+Cell[14184, 457, 158, 5, 36, "Output",
+ CellID->579930443]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14379, 467, 121, 3, 9, "ExampleDelimiter",
+ CellID->20471],
+Cell[14503, 472, 67, 1, 33, "ExampleText",
+ CellID->23901],
+Cell[CellGroupData[{
+Cell[14595, 477, 187, 6, 28, "Input",
+ CellID->29350],
+Cell[14785, 485, 395, 10, 36, "Output",
+ CellID->202526445]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15229, 501, 121, 3, 9, "ExampleDelimiter",
+ CellID->27380],
+Cell[15353, 506, 76, 1, 33, "ExampleText",
+ CellID->11021],
+Cell[CellGroupData[{
+Cell[15454, 511, 235, 8, 28, "Input",
+ CellID->31205],
+Cell[15692, 521, 459, 15, 36, "Output",
+ CellID->49945473]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16200, 542, 120, 3, 9, "ExampleDelimiter",
+ CellID->7268],
+Cell[16323, 547, 74, 1, 33, "ExampleText",
+ CellID->7752],
+Cell[CellGroupData[{
+Cell[16422, 552, 281, 9, 28, "Input",
+ CellID->10704],
+Cell[16706, 563, 394, 10, 36, "Output",
+ CellID->14115234]
+}, Open  ]],
+Cell[17115, 576, 76, 1, 33, "ExampleText",
+ CellID->24471],
+Cell[CellGroupData[{
+Cell[17216, 581, 274, 9, 28, "Input",
+ CellID->7342],
+Cell[17493, 592, 394, 10, 36, "Output",
+ CellID->58560908]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17948, 609, 182, 6, 25, "ExampleSection",
+ CellID->18514],
+Cell[18133, 617, 73, 1, 70, "ExampleText",
+ CellID->8067],
+Cell[CellGroupData[{
+Cell[18231, 622, 282, 9, 70, "Input",
+ CellID->21394],
+Cell[18516, 633, 598, 17, 53, "Output",
+ CellID->461032493]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19151, 655, 268, 9, 70, "Input",
+ CellID->27344],
+Cell[19422, 666, 584, 17, 36, "Output",
+ CellID->283390035]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20043, 688, 125, 3, 70, "ExampleDelimiter",
+ CellID->204087685],
+Cell[20171, 693, 88, 1, 70, "ExampleText",
+ CellID->1443450991],
+Cell[CellGroupData[{
+Cell[20284, 698, 179, 6, 70, "Input",
+ CellID->570337536],
+Cell[20466, 706, 329, 10, 36, "Output",
+ CellID->179181272]
+}, Open  ]],
+Cell[20810, 719, 88, 1, 70, "ExampleText",
+ CellID->960319489],
+Cell[CellGroupData[{
+Cell[20923, 724, 191, 6, 70, "Input",
+ CellID->1750044418],
+Cell[21117, 732, 359, 11, 36, "Output",
+ CellID->1918316]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[21537, 750, 188, 6, 19, "ExampleSection",
+ CellID->1286],
+Cell[21728, 758, 64, 1, 70, "ExampleText",
+ CellID->17856],
+Cell[CellGroupData[{
+Cell[21817, 763, 239, 8, 70, "Input",
+ CellID->22607],
+Cell[22059, 773, 1132, 19, 54, "Output",
+ CellID->138274832]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23228, 797, 102, 3, 70, "Input",
+ CellID->19756],
+Cell[23333, 802, 218, 6, 36, "Output",
+ CellID->127477814]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23588, 813, 121, 3, 70, "ExampleDelimiter",
+ CellID->27941],
+Cell[23712, 818, 73, 1, 70, "ExampleText",
+ CellID->17840],
+Cell[CellGroupData[{
+Cell[23810, 823, 316, 11, 70, "Input",
+ CellID->2424],
+Cell[24129, 836, 250, 7, 36, "Output",
+ CellID->659928242]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24428, 849, 121, 3, 70, "ExampleDelimiter",
+ CellID->29634],
+Cell[24552, 854, 194, 7, 70, "ExampleText",
+ CellID->18653],
+Cell[CellGroupData[{
+Cell[24771, 865, 331, 11, 70, "Input",
+ CellID->21805],
+Cell[25105, 878, 501, 12, 36, "Output",
+ CellID->17367580]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25655, 896, 121, 3, 70, "ExampleDelimiter",
+ CellID->24581],
+Cell[25779, 901, 69, 1, 70, "ExampleText",
+ CellID->14481],
+Cell[CellGroupData[{
+Cell[25873, 906, 287, 9, 70, "Input",
+ CellID->14036],
+Cell[26163, 917, 847, 20, 246, "Output",
+ CellID->785856750]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27059, 943, 121, 3, 70, "ExampleDelimiter",
+ CellID->32118],
+Cell[27183, 948, 79, 1, 70, "ExampleText",
+ CellID->31049],
+Cell[CellGroupData[{
+Cell[27287, 953, 286, 10, 70, "Input",
+ CellID->27593],
+Cell[27576, 965, 722, 21, 169, "Output",
+ CellID->342000493]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28347, 992, 121, 3, 70, "ExampleDelimiter",
+ CellID->14053],
+Cell[28471, 997, 54, 1, 70, "ExampleText",
+ CellID->18086],
+Cell[CellGroupData[{
+Cell[28550, 1002, 375, 13, 70, "Input",
+ CellID->3322],
+Cell[28928, 1017, 2189, 41, 286, "Output",
+ CellID->136553227]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31166, 1064, 119, 3, 70, "ExampleDelimiter",
+ CellID->334],
+Cell[31288, 1069, 72, 1, 70, "ExampleText",
+ CellID->703],
+Cell[CellGroupData[{
+Cell[31385, 1074, 643, 20, 70, "Input",
+ CellID->28908],
+Cell[32031, 1096, 10441, 179, 70, "Output",
+ CellTags->"RasterizedOutput",
+ CellID->178036794]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42521, 1281, 121, 3, 70, "ExampleDelimiter",
+ CellID->28160],
+Cell[42645, 1286, 73, 1, 70, "ExampleText",
+ CellID->4028],
+Cell[CellGroupData[{
+Cell[42743, 1291, 479, 16, 70, "Input",
+ CellID->28415],
+Cell[43225, 1309, 683, 13, 261, "Output",
+ CellID->21286865]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43957, 1328, 125, 3, 70, "ExampleDelimiter",
+ CellID->499413102],
+Cell[44085, 1333, 93, 1, 70, "ExampleText",
+ CellID->11773221],
+Cell[CellGroupData[{
+Cell[44203, 1338, 366, 12, 70, "Input",
+ CellID->246836684],
+Cell[44572, 1352, 15827, 499, 70, "Output",
+ CellID->69822614]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[60460, 1858, 199, 6, 19, "ExampleSection",
+ CellID->10238],
+Cell[60662, 1866, 252, 9, 70, "ExampleText",
+ CellID->26529],
+Cell[CellGroupData[{
+Cell[60939, 1879, 370, 13, 70, "Input",
+ CellID->26610],
+Cell[61312, 1894, 365, 12, 36, "Output",
+ CellID->194187136]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61714, 1911, 510, 17, 70, "Input",
+ CellID->24742],
+Cell[62227, 1930, 365, 12, 36, "Output",
+ CellID->731011437]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62629, 1947, 121, 3, 70, "ExampleDelimiter",
+ CellID->14249],
+Cell[62753, 1952, 430, 15, 70, "ExampleText",
+ CellID->29441],
+Cell[CellGroupData[{
+Cell[63208, 1971, 304, 9, 70, "Input",
+ CellID->28560],
+Cell[63515, 1982, 204, 7, 36, "Output",
+ CellID->32757124]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[63780, 1996, 190, 6, 19, "ExampleSection",
+ CellID->10681],
+Cell[63973, 2004, 107, 2, 70, "ExampleText",
+ CellID->622971423],
+Cell[CellGroupData[{
+Cell[64105, 2010, 211, 6, 70, "Input",
+ CellID->20778882],
+Cell[64319, 2018, 476, 11, 54, "Output",
+ CellID->597697743]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64832, 2034, 125, 3, 70, "ExampleDelimiter",
+ CellID->566140721],
+Cell[64960, 2039, 81, 1, 70, "ExampleText",
+ CellID->11901],
+Cell[CellGroupData[{
+Cell[65066, 2044, 168, 5, 70, "Input",
+ CellID->7671],
+Cell[65237, 2051, 527, 12, 71, "Output",
+ CellID->27356504]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[65813, 2069, 121, 3, 70, "ExampleDelimiter",
+ CellID->13281],
+Cell[65937, 2074, 78, 1, 70, "ExampleText",
+ CellID->17338],
+Cell[CellGroupData[{
+Cell[66040, 2079, 253, 8, 70, "Input",
+ CellID->9575],
+Cell[66296, 2089, 250, 7, 36, "Output",
+ CellID->524491870]
+}, Open  ]],
+Cell[66561, 2099, 75, 1, 70, "ExampleText",
+ CellID->21553],
+Cell[CellGroupData[{
+Cell[66661, 2104, 487, 16, 70, "Input",
+ CellID->19353],
+Cell[67151, 2122, 248, 6, 36, "Output",
+ CellID->293487017]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67448, 2134, 121, 3, 70, "ExampleDelimiter",
+ CellID->21935],
+Cell[67572, 2139, 75, 1, 70, "ExampleText",
+ CellID->1825],
+Cell[CellGroupData[{
+Cell[67672, 2144, 386, 13, 70, "Input",
+ CellID->31175],
+Cell[68061, 2159, 2202, 40, 183, "Output",
+ CellID->699752959]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70312, 2205, 120, 3, 70, "ExampleDelimiter",
+ CellID->5853],
+Cell[70435, 2210, 62, 1, 70, "ExampleText",
+ CellID->23449],
+Cell[CellGroupData[{
+Cell[70522, 2215, 377, 13, 70, "Input",
+ CellID->8089],
+Cell[70902, 2230, 13267, 225, 311, 3244, 57, "CachedBoxData", "BoxData", \
+"Output",
+ CellID->905476503]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[84208, 2460, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[84276, 2465, 265, 12, 31, "SeeAlsoSection",
+ CellID->25340],
+Cell[84544, 2479, 1738, 52, 58, "SeeAlso",
+ CellID->13425]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[86319, 2536, 268, 12, 31, "TutorialsSection",
+ CellID->28153],
+Cell[86590, 2550, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[86624, 2552, 181, 5, 19, "Tutorials",
+ CellID->32657],
+Cell[86808, 2559, 203, 6, 19, "Tutorials",
+ CellID->86049371],
+Cell[87014, 2567, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87082, 2572, 276, 12, 31, "MoreAboutSection",
+ CellID->38330942],
+Cell[87361, 2586, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[87395, 2588, 178, 5, 19, "MoreAbout",
+ CellID->127080367],
+Cell[87576, 2595, 186, 5, 19, "MoreAbout",
+ CellID->480406714],
+Cell[87765, 2602, 192, 6, 19, "MoreAbout",
+ CellID->18928788],
+Cell[87960, 2610, 178, 5, 19, "MoreAbout",
+ CellID->583681635],
+Cell[88141, 2617, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[88209, 2622, 275, 12, 31, "RelatedLinksSection",
+ CellID->12077],
+Cell[88487, 2636, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[88521, 2638, 436, 15, 18, "RelatedLinks"]
+}, Open  ]],
+Cell[88972, 2656, 87, 3, 43, "History"],
+Cell[89062, 2661, 23, 0, 25, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

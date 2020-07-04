@@ -1,0 +1,912 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     25249,        902]
+NotebookOptionsPosition[     19130,        713]
+NotebookOutlinePosition[     21826,        779]
+CellTagsIndexPosition[     21741,        774]
+WindowTitle->$PreRead
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"The Main Loop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/TheMainLoop"], "\<\"Wolfram System Sessions\"\>":>
+       Documentation`HelpLookup["paclet:tutorial/WolframSystemSessions"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"$Pre\"\>":>Documentation`HelpLookup[
+       "paclet:ref/$Pre"], "\<\"CellEvaluationFunction\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/CellEvaluationFunction"], "\<\"StringReplace\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/StringReplace"], "\<\"ToExpression\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ToExpression"], "\<\"InputAliases\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/InputAliases"], "\<\"InputAutoReplacements\"\>":>
+       Documentation`HelpLookup["paclet:ref/InputAutoReplacements"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Session Customization\"\>":>
+       Documentation`HelpLookup["paclet:guide/SessionCustomization"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$PreRead\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$PreRead"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$PreRead.html"], 
+                StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$69822], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "ref/$PreRead", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$PreRead", "ObjectName",
+ CellID->25113],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$PreRead"]],"paclet:ref/$PreRead"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]is a global variable whose value, if set, is applied to \
+the text or box form of every input expression before it is fed to ",
+     "the Wolfram Language",
+     ". "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->17577],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->994552512],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$PreRead"]],"paclet:ref/$PreRead"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is always applied to each complete input string that will be fed to ",
+ "the Wolfram Language",
+ ". "
+}], "Notes",
+ CellID->26543],
+
+Cell[TextData[{
+ "In multiline input with a text\[Hyphen]based interface, whenever each line \
+is terminated, ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$PreRead"]],"paclet:ref/$PreRead"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is typically applied to the input so far. "
+}], "Notes",
+ CellID->10925],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$PreRead"]],"paclet:ref/$PreRead"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is applied to all strings returned by a ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$SyntaxHandler"]],"paclet:ref/$SyntaxHandler"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " function. "
+}], "Notes",
+ CellID->30964],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$PreRead"]],"paclet:ref/$PreRead"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is applied before ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["InString"]],"paclet:ref/InString"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   StyleBox["n", "TI"], "]"}]], "InlineFormula"],
+ " is assigned. "
+}], "Notes",
+ CellID->13840],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->214680218],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->75686111],
+
+Cell[TextData[{
+ "By default, ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$PreRead"]],"paclet:ref/$PreRead"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is not defined, meaning input strings are sent directly to evaluation:"
+}], "ExampleText",
+ CellID->289932834],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$PreRead"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->614411681],
+
+Cell[BoxData["$PreRead"], "Output",
+ ImageSize->{60, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->3644862]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->145113662],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData["\"\<hf\>\""], "InlineFormula"],
+ " as an alias for ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HoldForm"]],"paclet:ref/HoldForm"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->98485506],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$PreRead", "=", 
+  RowBox[{
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"\"\<hf\>\"", "\[Rule]", "\"\<HoldForm\>\""}]}], "]"}], 
+   "&"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->488301475],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"#1", "/.", "\[InvisibleSpace]", 
+   RowBox[{"\<\"hf\"\>", "\[Rule]", "\<\"HoldForm\"\>"}]}], "&"}]], "Output",
+ ImageSize->{135, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->95200360]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"hf", "[", 
+    RowBox[{"2", "+", "3"}], "]"}], ",", 
+   RowBox[{"hf", "[", 
+    RowBox[{"2", "/", "3"}], "]"}]}], "}"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->132860003],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{"2", "+", "3"}],
+    HoldForm], ",", 
+   TagBox[
+    FractionBox["2", "3"],
+    HoldForm]}], "}"}]], "Output",
+ ImageSize->{68, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->213891426]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", "%", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->106124773],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"List", "[", 
+    RowBox[{
+     RowBox[{"HoldForm", "[", 
+      RowBox[{"Plus", "[", 
+       RowBox[{"2", ",", "3"}], "]"}], "]"}], ",", 
+     RowBox[{"HoldForm", "[", 
+      RowBox[{"Times", "[", 
+       RowBox[{"2", ",", 
+        RowBox[{"Power", "[", 
+         RowBox[{"3", ",", 
+          RowBox[{"-", "1"}]}], "]"}]}], "]"}], "]"}]}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ ImageSize->{415, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//FullForm=",
+ CellID->532783366]
+}, Open  ]],
+
+Cell[TextData[{
+ "Restore ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$PreRead"]],"paclet:ref/$PreRead"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to its default value:"
+}], "ExampleText",
+ CellID->2890270],
+
+Cell[BoxData[
+ RowBox[{"$PreRead", "=."}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->134899990]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->301218473],
+
+Cell[TextData[{
+ "Have ",
+ "the Wolfram Language",
+ " print the ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FullForm"]],"paclet:ref/FullForm"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " of parsed input expressions before evaluation:"
+}], "ExampleText",
+ CellID->67863],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$PreRead", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Print", "[", 
+       RowBox[{"FullForm", "[", "#", "]"}], "]"}], ";", "#"}], ")"}], "&"}]}],
+   ";"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->176003988],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a", "+", 
+  SuperscriptBox["b", "2"]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->425980104],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"RowBox", "[", 
+    RowBox[{"List", "[", 
+     RowBox[{"\"\<a\>\"", ",", "\"\<+\>\"", ",", 
+      RowBox[{"SuperscriptBox", "[", 
+       RowBox[{"\"\<b\>\"", ",", "\"\<2\>\""}], "]"}]}], "]"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Print",
+ CellLabel->"During evaluation of In[30]:=",
+ CellID->365564383],
+
+Cell[BoxData[
+ RowBox[{"a", "+", 
+  SuperscriptBox["b", "2"]}]], "Output",
+ ImageSize->{37, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->839557249]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a", " ", "b", 
+  RowBox[{"(", 
+   RowBox[{"c", "+", "d"}], ")"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->366174633],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"RowBox", "[", 
+    RowBox[{"List", "[", 
+     RowBox[{"\"\<a\>\"", ",", "\"\<b\>\"", ",", 
+      RowBox[{"RowBox", "[", 
+       RowBox[{"List", "[", 
+        RowBox[{"\"\<(\>\"", ",", 
+         RowBox[{"RowBox", "[", 
+          RowBox[{"List", "[", 
+           RowBox[{"\"\<c\>\"", ",", "\"\<+\>\"", ",", "\"\<d\>\""}], "]"}], 
+          "]"}], ",", "\"\<)\>\""}], "]"}], "]"}]}], "]"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Print",
+ CellLabel->"During evaluation of In[31]:=",
+ CellID->5421813],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "b", " ", 
+  RowBox[{"(", 
+   RowBox[{"c", "+", "d"}], ")"}]}]], "Output",
+ ImageSize->{65, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->97696964]
+}, Open  ]],
+
+Cell[TextData[{
+ "Restore ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$PreRead"]],"paclet:ref/$PreRead"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to its default value:"
+}], "ExampleText",
+ CellID->365350627],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$PreRead", "=."}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->462135745],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"RowBox", "[", 
+    RowBox[{"List", "[", 
+     RowBox[{"\"\<$PreRead\>\"", ",", "\"\<=.\>\""}], "]"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Print",
+ CellLabel->"During evaluation of In[32]:=",
+ CellID->4276948]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->25118],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$Pre"]],"paclet:ref/$Pre"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CellEvaluationFunction"]],"paclet:ref/CellEvaluationFunction"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["StringReplace"]],"paclet:ref/StringReplace"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ToExpression"]],"paclet:ref/ToExpression"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InputAliases"]],"paclet:ref/InputAliases"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InputAutoReplacements"]],"paclet:ref/InputAutoReplacements"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->15545]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->32216],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["The Main Loop"]],"paclet:tutorial/TheMainLoop"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->1112],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData[{"Wolfram System", " Sessions"}]],
+   "paclet:tutorial/WolframSystemSessions"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->522604605],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->157506265],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Session Customization"]],"paclet:guide/SessionCustomization"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->24764683]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 1991",
+ Cell[" (2.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$PreRead",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Wolfram System Sessions", ButtonData -> 
+         "paclet:guide/WolframSystemSessions", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Session Customization", ButtonData -> 
+         "paclet:guide/SessionCustomization", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$PreRead", ButtonData -> "paclet:ref/$PreRead", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 18.8696406}", 
+    "history" -> {"2", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "alias", "EBCDIC", "preprocessing input from keyboard", 
+      "preprocessing input from terminals", 
+      "preprocessing of special characters", 
+      "processing before interactive reading", "processing before parsing", 
+      "text macros"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Built-in Wolfram Language Symbol", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "$PreRead is a global variable whose value, if set, is applied to the \
+text or box form of every input expression before it is fed to the Wolfram \
+Language. ", "synonyms" -> {"pre read"}, "title" -> "$PreRead", 
+    "titlemodifier" -> "", "windowtitle" -> "$PreRead", "type" -> "Symbol", 
+    "uri" -> "ref/$PreRead"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8418, 259, 387, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->214680218]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 21598, 767}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[580, 21, 4783, 118, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5366, 141, 46, 1, 43, "ObjectName",
+ CellID->25113],
+Cell[CellGroupData[{
+Cell[5437, 146, 585, 17, 97, "Usage",
+ CellID->17577],
+Cell[CellGroupData[{
+Cell[6047, 167, 738, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->994552512],
+Cell[6788, 193, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6822, 195, 301, 10, 70, "Notes",
+ CellID->26543],
+Cell[7126, 207, 340, 10, 70, "Notes",
+ CellID->10925],
+Cell[7469, 219, 421, 14, 70, "Notes",
+ CellID->30964],
+Cell[7893, 235, 442, 16, 70, "Notes",
+ CellID->13840],
+Cell[8338, 253, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8418, 259, 387, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->214680218],
+Cell[CellGroupData[{
+Cell[8830, 278, 194, 6, 25, "ExampleSection",
+ CellID->75686111],
+Cell[9027, 286, 298, 9, 37, "ExampleText",
+ CellID->289932834],
+Cell[CellGroupData[{
+Cell[9350, 299, 77, 2, 28, "Input",
+ CellID->614411681],
+Cell[9430, 303, 163, 5, 36, "Output",
+ CellID->3644862]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9630, 313, 125, 3, 9, "ExampleDelimiter",
+ CellID->145113662],
+Cell[9758, 318, 288, 11, 37, "ExampleText",
+ CellID->98485506],
+Cell[CellGroupData[{
+Cell[10071, 333, 240, 8, 28, "Input",
+ CellID->488301475],
+Cell[10314, 343, 275, 8, 36, "Output",
+ CellID->95200360]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10626, 356, 225, 8, 28, "Input",
+ CellID->132860003],
+Cell[10854, 366, 303, 13, 53, "Output",
+ CellID->213891426]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11194, 384, 104, 3, 28, "Input",
+ CellID->106124773],
+Cell[11301, 389, 644, 22, 50, "Output",
+ CellID->532783366]
+}, Open  ]],
+Cell[11960, 414, 243, 9, 37, "ExampleText",
+ CellID->2890270],
+Cell[12206, 425, 95, 3, 28, "Input",
+ CellID->134899990]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12338, 433, 125, 3, 9, "ExampleDelimiter",
+ CellID->301218473],
+Cell[12466, 438, 304, 11, 37, "ExampleText",
+ CellID->67863],
+Cell[12773, 451, 266, 10, 28, "Input",
+ CellID->176003988],
+Cell[CellGroupData[{
+Cell[13064, 465, 116, 4, 28, "Input",
+ CellID->425980104],
+Cell[13183, 471, 421, 13, 23, "Print",
+ CellID->365564383],
+Cell[13607, 486, 204, 7, 36, "Output",
+ CellID->839557249]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13848, 498, 144, 5, 28, "Input",
+ CellID->366174633],
+Cell[13995, 505, 614, 18, 23, "Print",
+ CellID->5421813],
+Cell[14612, 525, 236, 8, 36, "Output",
+ CellID->97696964]
+}, Open  ]],
+Cell[14863, 536, 245, 9, 37, "ExampleText",
+ CellID->365350627],
+Cell[CellGroupData[{
+Cell[15133, 549, 95, 3, 28, "Input",
+ CellID->462135745],
+Cell[15231, 554, 328, 11, 23, "Print",
+ CellID->4276948]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[15598, 570, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15666, 575, 265, 12, 31, "SeeAlsoSection",
+ CellID->25118],
+Cell[15934, 589, 1786, 52, 74, "SeeAlso",
+ CellID->15545]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17757, 646, 268, 12, 31, "TutorialsSection",
+ CellID->32216],
+Cell[18028, 660, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[18062, 662, 165, 5, 19, "Tutorials",
+ CellID->1112],
+Cell[18230, 669, 200, 6, 19, "Tutorials",
+ CellID->522604605],
+Cell[18433, 677, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18501, 682, 277, 12, 31, "MoreAboutSection",
+ CellID->157506265],
+Cell[18781, 696, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[18815, 698, 183, 5, 19, "MoreAbout",
+ CellID->24764683]
+}, Open  ]],
+Cell[19013, 706, 87, 3, 43, "History"],
+Cell[19103, 711, 23, 0, 25, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

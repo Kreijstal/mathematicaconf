@@ -1,0 +1,1959 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     58230,       1950]
+NotebookOptionsPosition[     46584,       1614]
+NotebookOutlinePosition[     50118,       1694]
+CellTagsIndexPosition[     50075,       1691]
+WindowTitle->Setting Up Input Interpreters
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Alternatives\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Alternatives"], "\<\"AmbiguityFunction\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/AmbiguityFunction"], "\<\"APIFunction\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/APIFunction"], "\<\"Association\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Association"], "\<\"DateFormat\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DateFormat"], "\<\"DelimitedSequence\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DelimitedSequence"], "\<\"EmbedCode\"\>":>
+       Documentation`HelpLookup["paclet:ref/EmbedCode"], "\<\"Failure\"\>":>
+       Documentation`HelpLookup["paclet:ref/Failure"], "\<\"FormFunction\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FormFunction"], "\<\"FormObject\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FormObject"], "\<\"HoldComplete\"\>":>
+       Documentation`HelpLookup["paclet:ref/HoldComplete"], "\<\"Import\"\>":>
+       Documentation`HelpLookup["paclet:ref/Import"], "\<\"Interpreter\"\>":>
+       Documentation`HelpLookup["paclet:ref/Interpreter"], "\<\"List\"\>":>
+       Documentation`HelpLookup["paclet:ref/List"], "\<\"NumberPoint\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/NumberPoint"], "\<\"Restricted\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Restricted"], "\<\"SemanticImport\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SemanticImport"], "\<\"SemanticInterpretation\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SemanticInterpretation"], "\<\"TimeZone\"\>":>
+       Documentation`HelpLookup["paclet:ref/TimeZone"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Free-Form & External Input\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/FreeFormAndExternalInput"], "\<\"Form Building\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/CreatingFormsAndApps"], "\<\"Creating Instant APIs\"\>":>
+       Documentation`HelpLookup["paclet:guide/CreatingAnInstantAPI"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"guide/InterpretingStrings\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/InterpretingStrings"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/\
+InterpretingStrings.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$84113], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/InterpretingStrings", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Setting Up Input Interpreters", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Language provides a uniform mechanism for specifying how inputs \
+of different types should be interpreted as Wolfram Language or WDF \
+expressions, for example in forms or APIs. The interpretations can involve \
+either structural or semantic conversions, and the specification of the \
+interpretation can be used to generate interface elements such as input \
+fields for requesting input suitable for interpretation in a form. \
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Interpreter"]],"paclet:ref/Interpreter"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " define how input should be interpreted, either directly or in APIs or forms"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[CellGroupData[{
+
+Cell["Arbitrary Inputs & Expressions", "GuideFunctionsSubsection",
+ CellID->304537616],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"SemanticExpression\""]],
+    "paclet:ref/interpreter/SemanticExpression"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " any natural language input, interpreted semantically"
+}], "GuideText",
+ CellID->910181311],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Expression\""]],"paclet:ref/interpreter/Expression"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " an expression in Wolfram Language syntax"
+}], "GuideText",
+ CellID->455250069],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"InactiveExpression\""]],
+    "paclet:ref/interpreter/InactiveExpression"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " an expression in Wolfram Language syntax, returned inactivated"
+}], "GuideText",
+ CellID->1456957761],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"HeldExpression\""]],"paclet:ref/interpreter/HeldExpression"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " an expression returned unevaluated with ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HoldComplete"]],"paclet:ref/HoldComplete"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "GuideText",
+ CellID->1480546033],
+
+Cell[TextData[{
+ ButtonBox["\"InactiveSemanticExpression\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/InactiveSemanticExpression"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"HeldSemanticExpression\""]],
+    "paclet:ref/interpreter/HeldSemanticExpression"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1607220700],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["AmbiguityFunction"]],"paclet:ref/AmbiguityFunction"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " option for handling ambiguities in semantic interpretation"
+}], "GuideText",
+ CellID->1214012102]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Strings", "GuideFunctionsSubsection",
+ CellID->1103087248],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"String\""]],"paclet:ref/interpreter/String"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " pure string, left as a string (deployed as a single-line field)"
+}], "GuideText",
+ CellID->361052585],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"TextArea\""]],"paclet:ref/interpreter/TextArea"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  FontWeight->"Bold"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " text string of any length (deployed as a multiline text field)"
+}], "GuideText",
+ CellID->1166726210],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"TextLine\""]],"paclet:ref/interpreter/TextLine"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " single-line text string"
+}], "GuideText",
+ CellID->128724817],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"URLString\""]],"paclet:ref/interpreter/URLString"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " string with URL encoding (e.g. \"a+%CE%B1\")"
+}], "GuideText",
+ CellID->1569493320],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Restricted"]],"paclet:ref/Restricted"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " restrict to strings matching a pattern, or with a maximum length"
+}], "GuideText",
+ CellID->120878024]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Numbers", "GuideFunctionsSubsection",
+ CellID->1426861095],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Number\""]],"paclet:ref/interpreter/Number"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " any number in a standard format (e.g. \"67\", \"6.78\", \"6.78e+10\")"
+}], "GuideText",
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Integer\""]],"paclet:ref/interpreter/Integer"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " whole number (with range restricted using ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Restricted"]],"paclet:ref/Restricted"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ")"
+}], "GuideText",
+ CellID->399468972],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"SemanticNumber\""]],"paclet:ref/interpreter/SemanticNumber"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " number derived semantically (e.g. \"2.5 million\", \"three quarters\")"
+}], "GuideText",
+ CellID->155560937],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"ComputedNumber\""]],"paclet:ref/interpreter/ComputedNumber"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " number derived by computation (e.g. \"2+2\", \"sqrt(13)\")"
+}], "GuideText",
+ CellID->1025069760],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"SemanticInteger\""]],
+    "paclet:ref/interpreter/SemanticInteger"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " number derived semantically (e.g. \"seventy-four\")"
+}], "GuideText",
+ CellID->1233640086],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NumberPoint"]],"paclet:ref/NumberPoint"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " option for specifying decimal number point to assume"
+}], "GuideText",
+ CellID->1020878229],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Restricted"]],"paclet:ref/Restricted"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " restrict range of numbers"
+}], "GuideText",
+ CellID->2073194642]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Math-Related", "GuideFunctionsSubsection",
+ CellID->1164103490],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"MathExpression\""]],"paclet:ref/interpreter/MathExpression"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " mathematical expression (e.g. \"sin(2x)+1\")"
+}], "GuideText",
+ CellID->1981797264],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"MathFormula\""]],"paclet:ref/interpreter/MathFormula"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " mathematical formula (e.g. \"2x+3y=0\")"
+}], "GuideText",
+ CellID->1046778933],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"HeldMathExpression\""]],
+    "paclet:ref/interpreter/HeldMathExpression"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"InactiveMathExpression\""]],
+    "paclet:ref/interpreter/InactiveMathExpression"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"HeldMathFormula\""]],
+    "paclet:ref/interpreter/HeldMathFormula"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->78759914],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"ComplexNumber\""]],"paclet:ref/interpreter/ComplexNumber"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " complex (or real) number (e.g. \"2+i\")"
+}], "GuideText",
+ CellID->677892250]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Web etc. Related", "GuideFunctionsSubsection",
+ CellID->432107101],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"URL\""]],"paclet:ref/interpreter/URL"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " correctly formatted URL (e.g. \"http://www.wolfram.com\")"
+}], "GuideText",
+ CellID->658194585],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"SemanticURL\""]],"paclet:ref/interpreter/SemanticURL"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " semantically derived URL (e.g. \"wolfram website\")"
+}], "GuideText",
+ CellID->588124398],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"IPAddress\""]],"paclet:ref/interpreter/IPAddress"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"URLQueryString\""]],"paclet:ref/interpreter/URLQueryString"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"HexInteger\""]],"paclet:ref/interpreter/HexInteger"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"URLString\""]],"paclet:ref/interpreter/URLString"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1602497871]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Email & Phone Numbers", "GuideFunctionsSubsection",
+ CellID->1352670700],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"EmailAddress\""]],"paclet:ref/interpreter/EmailAddress"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " correctly formatted email address (e.g. \"me@example.com\")"
+}], "GuideText",
+ CellID->1386797623],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"PhoneNumber\""]],"paclet:ref/interpreter/PhoneNumber"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " correctly formatted phone number"
+}], "GuideText",
+ CellID->1421951716]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Dates & Times", "GuideFunctionsSubsection",
+ CellID->1485098169],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Date\""]],"paclet:ref/interpreter/Date"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " date in any standard format, disambiguated by geo location"
+}], "GuideText",
+ CellID->1770405145],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Time\""]],"paclet:ref/interpreter/Time"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " time of day (defaulting to geo location time zone)"
+}], "GuideText",
+ CellID->1813342830],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"ComputedDate\""]],"paclet:ref/interpreter/ComputedDate"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " date derived by computation (e.g. \"next Tuesday\")"
+}], "GuideText",
+ CellID->43518350],
+
+Cell[TextData[{
+ ButtonBox["\"DateTime\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/DateTime"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"ComputedDateTime\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/ComputedDateTime"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"ComputedTime\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/ComputedTime"]
+}], "InlineGuideFunctionListing",
+ CellID->1875067238],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"StructuredDate\""]],"paclet:ref/interpreter/StructuredDate"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " date with a particular format (chosen with a date picker on forms)"
+}], "GuideText",
+ CellID->1121361931],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"StructuredTime\""]],"paclet:ref/interpreter/StructuredTime"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"StructuredDateTime\""]],
+    "paclet:ref/interpreter/StructuredDateTime"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->422603615],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DateFormat"]],"paclet:ref/DateFormat"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " option for specifying date formats to accept"
+}], "GuideText",
+ CellID->1361356081],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TimeZone"]],"paclet:ref/TimeZone"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " option for specifying time zone to assume"
+}], "GuideText",
+ CellID->1905066839],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Restricted"]],"paclet:ref/Restricted"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " restrict to dates in a certain range"
+}], "GuideText",
+ CellID->1404982305]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Colors", "GuideFunctionsSubsection",
+ CellID->1448346371],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Color\""]],"paclet:ref/interpreter/Color"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " color (specified by name, or with a picker in a form)"
+}], "GuideText",
+ CellID->1260752939],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"ComputedColor\""]],"paclet:ref/interpreter/ComputedColor"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " color derived by computation (e.g. \"red+blue\")"
+}], "GuideText",
+ CellID->2000567472],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"StructuredColor\""]],
+    "paclet:ref/interpreter/StructuredColor"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " color in a structured form (chosen with a picker on forms)"
+}], "GuideText",
+ CellID->150350488]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Quantities", "GuideFunctionsSubsection",
+ CellID->229226844],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Quantity\""]],"paclet:ref/interpreter/Quantity"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " quantity with units (e.g. \"4.5 km\", \"10 ft 6 in\", \"30C\", \"7 m/s\")"
+}], "GuideText",
+ CellID->1215991696],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"ComputedQuantity\""]],
+    "paclet:ref/interpreter/ComputedQuantity"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " quantity derived by computation (e.g. \"6.7GB / 2hrs\")"
+}], "GuideText",
+ CellID->1718049820],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"StructuredQuantity\""]],
+    "paclet:ref/interpreter/StructuredQuantity"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " quantity given specifically as number followed by unit"
+}], "GuideText",
+ CellID->198207178],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"PhysicalQuantity\""]],
+    "paclet:ref/interpreter/PhysicalQuantity"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " physical quantity (e.g. \"mass\", \"data transfer rate\")"
+}], "GuideText",
+ CellID->1252401418],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Restricted"]],"paclet:ref/Restricted"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " restrict quantities to particular units, unit types, or sizes"
+}], "GuideText",
+ CellID->666216426]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Currency", "GuideFunctionsSubsection",
+ CellID->140279527],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"CurrencyAmount\""]],"paclet:ref/interpreter/CurrencyAmount"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " any standard currency amount (e.g. \"$5\", \"45 pesos\", \"10.25 GBP\")"
+}], "GuideText",
+ CellID->504554527],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"CurrencyName\""]],"paclet:ref/interpreter/CurrencyName"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  FontWeight->"Bold"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " any currency name (e.g. \"USD\", \"US dollars\")"
+}], "GuideText",
+ CellID->1888449530],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"ComputedCurrencyAmount\""]],
+    "paclet:ref/interpreter/ComputedCurrencyAmount"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " currency amount derived by computation (e.g. \"US debt\")"
+}], "GuideText",
+ CellID->659760092]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Locations", "GuideFunctionsSubsection",
+ CellID->188734609],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Location\""]],"paclet:ref/interpreter/Location"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " anything that yields a geo location (e.g. \"eiffel tower\")"
+}], "GuideText",
+ CellID->633757062],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"GeoCoordinates\""]],"paclet:ref/interpreter/GeoCoordinates"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " latitude, longitude geo coordinates (e.g. \"17W 20.6N\")"
+}], "GuideText",
+ CellID->1622498058],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"StreetAddress\""]],"paclet:ref/interpreter/StreetAddress"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " street address (e.g. \"123 Broadway, NYC\")"
+}], "GuideText",
+ CellID->1655038212],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"ComputedLocation\""]],
+    "paclet:ref/interpreter/ComputedLocation"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " location derived by computation (e.g. \"center of illinois\")"
+}], "GuideText",
+ CellID->825803471],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Restricted"]],"paclet:ref/Restricted"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " restrict to be within a certain region (e.g. country or lat-long range)"
+}], "GuideText",
+ CellID->240424520]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Entities \[RightGuillemet]"]],
+   "paclet:guide/InterpretingEntities"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->29904390],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Country\""]],"paclet:ref/interpreter/Country"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " any country or territory (e.g. \"USA\", \"U.S.\", \"st helena\")"
+}], "GuideText",
+ CellID->68260117],
+
+Cell[TextData[{
+ ButtonBox["\"City\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/City"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"USState\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/USState"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"ZIPCode\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/ZIPCode"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"USCounty\""]],"paclet:ref/interpreter/USCounty"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"SchoolDistrict\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/SchoolDistrict"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ "..."
+}], "InlineGuideFunctionListing",
+ CellID->1500781112],
+
+Cell[TextData[{
+ ButtonBox["\"Company\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/Company"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"University\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/University"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"Language\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/Language"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"GivenName\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/GivenName"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"Person\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/Person"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ "..."
+}], "InlineGuideFunctionListing",
+ CellID->1991405068],
+
+Cell[TextData[{
+ ButtonBox["\"Animal\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/Animal"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"Chemical\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/Chemical"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"Movie\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/Movie"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"Religion\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/Religion"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ ButtonBox["\"FileFormat\"",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/interpreter/FileFormat"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ "..."
+}], "InlineGuideFunctionListing",
+ CellID->1796367488],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Restricted"]],"paclet:ref/Restricted"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " restrict to a particular class of entities of a given type"
+}], "GuideText",
+ CellID->2057337600]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Choices", "GuideFunctionsSubsection",
+ CellID->59351962],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Boolean\""]],"paclet:ref/interpreter/Boolean"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Boolean value, yielding True/False (e.g. \"true\"/\"false\", \"y\"/\"n\", \
+\"1\"/\"0\") "
+}], "GuideText",
+ CellID->1096013126],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["List"]],"paclet:ref/List"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Association"]],"paclet:ref/Association"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " rules giving choices and corresponding values"
+}], "GuideText",
+ CellID->1295631],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Alternatives"]],"paclet:ref/Alternatives"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " (|) \[LongDash] several alternative interpretation forms, tried in order"
+}], "GuideText",
+ CellID->1396003058]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Structured Input", "GuideFunctionsSubsection",
+ CellID->1542688527],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DelimitedSequence"]],"paclet:ref/DelimitedSequence"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " sequence of forms delimited by comma, space, etc."
+}], "GuideText",
+ CellID->1532921158]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Files", "GuideFunctionsSubsection",
+ CellID->1060799065],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"UploadedFile\""]],"paclet:ref/interpreter/UploadedFile"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " file to be uploaded to the cloud (returning the cloud object)"
+}], "GuideText",
+ CellID->1939469127],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"CachedFile\""]],"paclet:ref/interpreter/CachedFile"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " file to be cached in a temporary directory (returning the file name)"
+}], "GuideText",
+ CellID->1275937753],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"FileName\""]],"paclet:ref/interpreter/FileName"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " name of a file on your computer"
+}], "GuideText",
+ CellID->1964694863]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Non-Textual Input \[RightGuillemet]"]],
+   "paclet:guide/ImportingAndExporting"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1484055035],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Sound\""]],"paclet:ref/interpreter/Sound"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a sound, potentially requested from a microphone"
+}], "GuideText",
+ CellID->1996527666],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Image\""]],"paclet:ref/interpreter/Image"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " an image, potentially requested from a camera"
+}], "GuideText",
+ CellID->353411603],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"GIF\""]],"paclet:ref/format/GIF"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"PNG\""]],"paclet:ref/format/PNG"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"WAV\""]],"paclet:ref/format/WAV"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"CSV\""]],"paclet:ref/format/CSV"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"XLS\""]],"paclet:ref/format/XLS"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"TeX\""]],"paclet:ref/format/TeX"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"KML\""]],"paclet:ref/format/KML"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"SMILES\""]],"paclet:ref/format/SMILES"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"PLY\""]],"paclet:ref/format/PLY"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/ImportingAndExporting"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->664735202],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Bit\""]],"paclet:ref/format/Bit"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Byte\""]],"paclet:ref/format/Byte"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Integer8\""]],"paclet:ref/format/Integer8"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Integer32\""]],"paclet:ref/format/Integer32"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Real64\""]],"paclet:ref/format/Real64"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/ImportingAndExporting"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1034207714]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->311258892],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$InterpreterTypes"]],"paclet:ref/$InterpreterTypes"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a list of supported interpreters"
+}], "GuideText",
+ CellID->1064722280],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Restricted"]],"paclet:ref/Restricted"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " define a restriction on what to accept"
+}], "GuideText",
+ CellID->1237190366],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Failure"]],"paclet:ref/Failure"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " representation of an interpretation failure, including typical form field \
+message"
+}], "GuideText",
+ CellID->132388963]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->727498593],
+
+Cell[CellGroupData[{
+
+Cell["Using Input Interpreters", "GuideFunctionsSubsection",
+ CellID->1444450180],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FormObject"]],"paclet:ref/FormObject"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " define the structure of a form with parameters to interpret"
+}], "GuideText",
+ CellID->1719029572],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FormFunction"]],"paclet:ref/FormFunction"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " define a form to evaluate involving parameters"
+}], "GuideText",
+ CellID->779877464],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["APIFunction"]],"paclet:ref/APIFunction"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " define an API with parameters to interpret"
+}], "GuideText",
+ CellID->32831706],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EmbedCode"]],"paclet:ref/EmbedCode"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " create embed code that converts parameters from external environments"
+}], "GuideText",
+ CellID->18117979]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->791642185],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Other Input Interpretation Functions \[RightGuillemet]"]],
+   "paclet:guide/FreeFormAndExternalInput"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1469010130],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SemanticInterpretation"]],"paclet:ref/SemanticInterpretation"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Import"]],"paclet:ref/Import"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SemanticImport"]],"paclet:ref/SemanticImport"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/FreeFormAndExternalInput"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->33765351]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Free-Form & External Input"]],
+   "paclet:guide/FreeFormAndExternalInput"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Form Building"]],"paclet:guide/CreatingFormsAndApps"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->252299663],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Creating Instant APIs"]],"paclet:guide/CreatingAnInstantAPI"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->377805157]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Setting Up Input Interpreters",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Setting Up Input Interpreters", ButtonData -> 
+         "paclet:guide/InterpretingStrings", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Creating Instant APIs", ButtonData -> 
+         "paclet:guide/CreatingAnInstantAPI", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Setting Up Input Interpreters", ButtonData -> 
+         "paclet:guide/InterpretingStrings", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Creating Form Interfaces & Apps", ButtonData -> 
+         "paclet:guide/CreatingFormsAndApps", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Setting Up Input Interpreters", ButtonData -> 
+         "paclet:guide/InterpretingStrings", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 34.2966406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "input interpreter", "input interpretation", 
+      "Wolfram Language expression", "WDF expression", "interpreter", 
+      "interpretation", "semantic interpretation"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Language Guide", "language" -> "en", "paclet" -> "Mathematica", 
+    "status" -> "None", "summary" -> 
+    "The Wolfram Language provides a uniform mechanism for specifying how \
+inputs of different types should be interpreted as Wolfram Language or WDF \
+expressions, for example in forms or APIs. The interpretations can involve \
+either structural or semantic conversions, and the specification of the \
+interpretation can be used to generate interface elements such as input \
+fields for requesting input suitable for interpretation in a form. ", 
+    "synonyms" -> {}, "title" -> "Setting Up Input Interpreters", 
+    "titlemodifier" -> "", "windowtitle" -> "Setting Up Input Interpreters", 
+    "type" -> "Guide", "uri" -> "guide/InterpretingStrings"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 5370, 122, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5996, 147, 71, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[6070, 150, 494, 8, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6601, 163, 257, 11, 70, "GuideReferenceSection"],
+Cell[6861, 176, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6895, 178, 347, 10, 70, "GuideText",
+ CellID->203374175],
+Cell[CellGroupData[{
+Cell[7267, 192, 86, 1, 70, "GuideFunctionsSubsection",
+ CellID->304537616],
+Cell[7356, 195, 359, 11, 70, "GuideText",
+ CellID->910181311],
+Cell[7718, 208, 326, 10, 70, "GuideText",
+ CellID->455250069],
+Cell[8047, 220, 370, 11, 70, "GuideText",
+ CellID->1456957761],
+Cell[8420, 233, 509, 16, 70, "GuideText",
+ CellID->1480546033],
+Cell[8932, 251, 533, 15, 70, "InlineGuideFunctionListing",
+ CellID->1607220700],
+Cell[9468, 268, 343, 10, 70, "GuideText",
+ CellID->1214012102]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9848, 283, 64, 1, 70, "GuideFunctionsSubsection",
+ CellID->1103087248],
+Cell[9915, 286, 341, 10, 70, "GuideText",
+ CellID->361052585],
+Cell[10259, 298, 367, 11, 70, "GuideText",
+ CellID->1166726210],
+Cell[10629, 311, 305, 10, 70, "GuideText",
+ CellID->128724817],
+Cell[10937, 323, 329, 10, 70, "GuideText",
+ CellID->1569493320],
+Cell[11269, 335, 334, 10, 70, "GuideText",
+ CellID->120878024]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11640, 350, 64, 1, 70, "GuideFunctionsSubsection",
+ CellID->1426861095],
+Cell[11707, 353, 348, 10, 70, "GuideText",
+ CellID->1463276848],
+Cell[12058, 365, 494, 16, 70, "GuideText",
+ CellID->399468972],
+Cell[12555, 383, 368, 11, 70, "GuideText",
+ CellID->155560937],
+Cell[12926, 396, 357, 11, 70, "GuideText",
+ CellID->1025069760],
+Cell[13286, 409, 353, 11, 70, "GuideText",
+ CellID->1233640086],
+Cell[13642, 422, 325, 10, 70, "GuideText",
+ CellID->1020878229],
+Cell[13970, 434, 296, 10, 70, "GuideText",
+ CellID->2073194642]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14303, 449, 69, 1, 70, "GuideFunctionsSubsection",
+ CellID->1164103490],
+Cell[14375, 452, 343, 11, 70, "GuideText",
+ CellID->1981797264],
+Cell[14721, 465, 328, 10, 70, "GuideText",
+ CellID->1046778933],
+Cell[15052, 477, 916, 28, 70, "InlineGuideFunctionListing",
+ CellID->78759914],
+Cell[15971, 507, 331, 10, 70, "GuideText",
+ CellID->677892250]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16339, 522, 72, 1, 70, "GuideFunctionsSubsection",
+ CellID->432107101],
+Cell[16414, 525, 329, 10, 70, "GuideText",
+ CellID->658194585],
+Cell[16746, 537, 339, 10, 70, "GuideText",
+ CellID->588124398],
+Cell[17088, 549, 1162, 35, 70, "InlineGuideFunctionListing",
+ CellID->1602497871]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18287, 589, 78, 1, 70, "GuideFunctionsSubsection",
+ CellID->1352670700],
+Cell[18368, 592, 350, 10, 70, "GuideText",
+ CellID->1386797623],
+Cell[18721, 604, 321, 10, 70, "GuideText",
+ CellID->1421951716]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19079, 619, 70, 1, 70, "GuideFunctionsSubsection",
+ CellID->1485098169],
+Cell[19152, 622, 333, 10, 70, "GuideText",
+ CellID->1770405145],
+Cell[19488, 634, 325, 10, 70, "GuideText",
+ CellID->1813342830],
+Cell[19816, 646, 340, 10, 70, "GuideText",
+ CellID->43518350],
+Cell[20159, 658, 625, 19, 70, "InlineGuideFunctionListing",
+ CellID->1875067238],
+Cell[20787, 679, 365, 11, 70, "GuideText",
+ CellID->1121361931],
+Cell[21155, 692, 584, 18, 70, "InlineGuideFunctionListing",
+ CellID->422603615],
+Cell[21742, 712, 315, 10, 70, "GuideText",
+ CellID->1361356081],
+Cell[22060, 724, 308, 10, 70, "GuideText",
+ CellID->1905066839],
+Cell[22371, 736, 307, 10, 70, "GuideText",
+ CellID->1404982305]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22715, 751, 63, 1, 70, "GuideFunctionsSubsection",
+ CellID->1448346371],
+Cell[22781, 754, 330, 10, 70, "GuideText",
+ CellID->1260752939],
+Cell[23114, 766, 341, 10, 70, "GuideText",
+ CellID->2000567472],
+Cell[23458, 778, 359, 11, 70, "GuideText",
+ CellID->150350488]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23854, 794, 66, 1, 70, "GuideFunctionsSubsection",
+ CellID->229226844],
+Cell[23923, 797, 356, 10, 70, "GuideText",
+ CellID->1215991696],
+Cell[24282, 809, 359, 11, 70, "GuideText",
+ CellID->1718049820],
+Cell[24644, 822, 361, 11, 70, "GuideText",
+ CellID->198207178],
+Cell[25008, 835, 361, 11, 70, "GuideText",
+ CellID->1252401418],
+Cell[25372, 848, 331, 10, 70, "GuideText",
+ CellID->666216426]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25740, 863, 64, 1, 70, "GuideFunctionsSubsection",
+ CellID->140279527],
+Cell[25807, 866, 369, 11, 70, "GuideText",
+ CellID->504554527],
+Cell[26179, 879, 361, 11, 70, "GuideText",
+ CellID->1888449530],
+Cell[26543, 892, 372, 11, 70, "GuideText",
+ CellID->659760092]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26952, 908, 65, 1, 70, "GuideFunctionsSubsection",
+ CellID->188734609],
+Cell[27020, 911, 341, 10, 70, "GuideText",
+ CellID->633757062],
+Cell[27364, 923, 355, 11, 70, "GuideText",
+ CellID->1622498058],
+Cell[27722, 936, 336, 10, 70, "GuideText",
+ CellID->1655038212],
+Cell[28061, 948, 364, 11, 70, "GuideText",
+ CellID->825803471],
+Cell[28428, 961, 341, 10, 70, "GuideText",
+ CellID->240424520]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28806, 976, 225, 6, 70, "GuideFunctionsSubsection",
+ CellID->29904390],
+Cell[29034, 984, 343, 10, 70, "GuideText",
+ CellID->68260117],
+Cell[29380, 996, 1242, 40, 70, "InlineGuideFunctionListing",
+ CellID->1500781112],
+Cell[30625, 1038, 1162, 38, 70, "InlineGuideFunctionListing",
+ CellID->1991405068],
+Cell[31790, 1078, 1156, 38, 70, "InlineGuideFunctionListing",
+ CellID->1796367488],
+Cell[32949, 1118, 329, 10, 70, "GuideText",
+ CellID->2057337600]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33315, 1133, 62, 1, 70, "GuideFunctionsSubsection",
+ CellID->59351962],
+Cell[33380, 1136, 370, 11, 70, "GuideText",
+ CellID->1096013126],
+Cell[33753, 1149, 476, 16, 70, "GuideText",
+ CellID->1295631],
+Cell[34232, 1167, 300, 8, 70, "GuideText",
+ CellID->1396003058]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34569, 1180, 73, 1, 70, "GuideFunctionsSubsection",
+ CellID->1542688527],
+Cell[34645, 1183, 334, 10, 70, "GuideText",
+ CellID->1532921158]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35016, 1198, 62, 1, 70, "GuideFunctionsSubsection",
+ CellID->1060799065],
+Cell[35081, 1201, 352, 10, 70, "GuideText",
+ CellID->1939469127],
+Cell[35436, 1213, 355, 10, 70, "GuideText",
+ CellID->1275937753],
+Cell[35794, 1225, 314, 10, 70, "GuideText",
+ CellID->1964694863]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36145, 1240, 237, 6, 70, "GuideFunctionsSubsection",
+ CellID->1484055035],
+Cell[36385, 1248, 325, 10, 70, "GuideText",
+ CellID->1996527666],
+Cell[36713, 1260, 321, 10, 70, "GuideText",
+ CellID->353411603],
+Cell[37037, 1272, 2784, 88, 70, "InlineGuideFunctionListing",
+ CellID->664735202],
+Cell[39824, 1362, 1681, 52, 70, "InlineGuideFunctionListing",
+ CellID->1034207714]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41542, 1419, 48, 1, 70, "GuideDelimiter",
+ CellID->311258892],
+Cell[41593, 1422, 317, 10, 70, "GuideText",
+ CellID->1064722280],
+Cell[41913, 1434, 309, 10, 70, "GuideText",
+ CellID->1237190366],
+Cell[42225, 1446, 347, 11, 70, "GuideText",
+ CellID->132388963]
+}, Open  ]],
+Cell[42587, 1460, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->727498593],
+Cell[CellGroupData[{
+Cell[42670, 1465, 81, 1, 70, "GuideFunctionsSubsection",
+ CellID->1444450180],
+Cell[42754, 1468, 330, 10, 70, "GuideText",
+ CellID->1719029572],
+Cell[43087, 1480, 320, 10, 70, "GuideText",
+ CellID->779877464],
+Cell[43410, 1492, 313, 10, 70, "GuideText",
+ CellID->32831706],
+Cell[43726, 1504, 336, 10, 70, "GuideText",
+ CellID->18117979]
+}, Open  ]],
+Cell[44077, 1517, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->791642185],
+Cell[CellGroupData[{
+Cell[44160, 1522, 259, 6, 70, "GuideFunctionsSubsection",
+ CellID->1469010130],
+Cell[44422, 1530, 1125, 35, 70, "InlineGuideFunctionListing",
+ CellID->33765351]
+}, Open  ]],
+Cell[45562, 1568, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45630, 1573, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[45914, 1587, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[45948, 1589, 208, 6, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[46159, 1597, 186, 5, 70, "GuideMoreAbout",
+ CellID->252299663],
+Cell[46348, 1604, 194, 5, 70, "GuideMoreAbout",
+ CellID->377805157]
+}, Open  ]],
+Cell[46557, 1612, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

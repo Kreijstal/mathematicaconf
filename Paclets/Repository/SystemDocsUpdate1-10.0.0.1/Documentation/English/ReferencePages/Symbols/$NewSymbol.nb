@@ -1,0 +1,673 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19685,        663]
+NotebookOptionsPosition[     13825,        497]
+NotebookOutlinePosition[     17330,        580]
+CellTagsIndexPosition[     17245,        575]
+WindowTitle->$NewSymbol
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"Intercepting the Creation of New Symbols\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/InterceptingTheCreationOfNewSymbols"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"DeclarePackage\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DeclarePackage"], "\<\"$NewMessage\"\>":>
+       Documentation`HelpLookup["paclet:ref/$NewMessage"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Session Customization\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/SessionCustomization"], "\<\"Symbol Handling\"\>":>
+       Documentation`HelpLookup["paclet:guide/SymbolHandling"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$NewSymbol\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$NewSymbol"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$NewSymbol.html"], 
+                StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$66438], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "ref/$NewSymbol", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$NewSymbol", "ObjectName",
+ CellID->19775],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$NewSymbol"]],"paclet:ref/$NewSymbol"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]is a global variable which, if set, is applied to the \
+name and context of each new symbol that ",
+     "the Wolfram Language",
+     " creates. "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->5795],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->418619373],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell["The name and context of the symbol are given as strings. ", "Notes",
+ CellID->7074],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$NewSymbol"]],"paclet:ref/$NewSymbol"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is applied before the symbol is actually created. If the action of ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$NewSymbol"]],"paclet:ref/$NewSymbol"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " causes the symbol to be created, perhaps in a different context, then the \
+symbol as created will be the one used. "
+}], "Notes",
+ CellID->25812],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$NewSymbol"]],"paclet:ref/$NewSymbol"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is applied even if a symbol has already been created with a ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Stub"]],"paclet:ref/Stub"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " attribute by ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DeclarePackage"]],"paclet:ref/DeclarePackage"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->19875],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$NewSymbol"]],"paclet:ref/$NewSymbol"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is not applied to symbols automatically created by scoping constructs such \
+as ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Module"]],"paclet:ref/Module"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->7992],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->182772945],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->591550307],
+
+Cell[TextData[{
+ "Set ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$NewSymbol"]],"paclet:ref/$NewSymbol"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to a function that prints the name and context when a new symbol is \
+created:"
+}], "ExampleText",
+ CellContext->"Global`",
+ CellID->311300894],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$NewSymbol", "=", 
+  RowBox[{
+   RowBox[{"Print", "[", 
+    RowBox[{
+    "\"\<Name: \>\"", ",", "#1", ",", "\"\< Context: \>\"", ",", "#2"}], 
+    "]"}], "&"}]}]], "Input",
+ CellContext->"Global`",
+ CellLabel->"In[1]:=",
+ CellID->68445678],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\<\"Name: \"\>", ",", "#1", ",", "\<\" Context: \"\>", ",", 
+    "#2"}], "]"}], "&"}]], "Output",
+ CellContext->"Global`",
+ ImageSize->{237, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->548159982]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["sn1"], "Input",
+ CellContext->"Global`",
+ CellLabel->"In[2]:=",
+ CellID->697236679],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Name: \"\>", "\[InvisibleSpace]", "\<\"sn1\"\>", 
+   "\[InvisibleSpace]", "\<\" Context: \"\>", 
+   "\[InvisibleSpace]", "\<\"Global`\"\>"}],
+  SequenceForm["Name: ", "sn1", " Context: ", "Global`"],
+  Editable->False]], "Print",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->85206873],
+
+Cell[BoxData["sn1"], "Output",
+ CellContext->"Global`",
+ ImageSize->{25, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->29882807]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["context`sn2"], "Input",
+ CellContext->"Global`",
+ CellLabel->"In[3]:=",
+ CellID->706798101],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Name: \"\>", "\[InvisibleSpace]", "\<\"sn2\"\>", 
+   "\[InvisibleSpace]", "\<\" Context: \"\>", 
+   "\[InvisibleSpace]", "\<\"context`\"\>"}],
+  SequenceForm["Name: ", "sn2", " Context: ", "context`"],
+  Editable->False]], "Print",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->234732109],
+
+Cell[BoxData["context`sn2"], "Output",
+ CellContext->"Global`",
+ ImageSize->{81, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->612904952]
+}, Open  ]],
+
+Cell[TextData[{
+ "Restore ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$NewSymbol"]],"paclet:ref/$NewSymbol"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to its default: "
+}], "ExampleText",
+ CellID->440664273],
+
+Cell[BoxData[
+ RowBox[{"$NewSymbol", "=."}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->9444279]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->9788],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DeclarePackage"]],"paclet:ref/DeclarePackage"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$NewMessage"]],"paclet:ref/$NewMessage"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->9253]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->15073],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Intercepting the Creation of New Symbols"]],
+   "paclet:tutorial/InterceptingTheCreationOfNewSymbols"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->22875],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->2092915],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Session Customization"]],"paclet:guide/SessionCustomization"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->174267960],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Symbol Handling"]],"paclet:guide/SymbolHandling"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->66313144]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 1991",
+ Cell[" (2.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$NewSymbol",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Tuning & Debugging", ButtonData -> "paclet:guide/TuningAndDebugging",
+          BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Symbol Handling", ButtonData -> "paclet:guide/SymbolHandling", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$NewSymbol", ButtonData -> "paclet:ref/$NewSymbol", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Package Development", ButtonData -> 
+         "paclet:guide/PackageDevelopment", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Namespace Management", ButtonData -> 
+         "paclet:guide/NamespaceManagement", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Symbol Handling", ButtonData -> "paclet:guide/SymbolHandling", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$NewSymbol", ButtonData -> "paclet:ref/$NewSymbol", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 12.9246406}", 
+    "history" -> {"2", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "symbol creation", "symbol notification", "new symbol call back", 
+      "symbol table call back", "symbol hook", "symbol table hook"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Built-in Wolfram Language Symbol", "language" -> "en", 
+    "paclet" -> "Mathematica", "status" -> "None", "summary" -> 
+    "$NewSymbol is a global variable which, if set, is applied to the name \
+and context of each new symbol that the Wolfram Language creates. ", 
+    "synonyms" -> {"new symbol"}, "title" -> "$NewSymbol", "titlemodifier" -> 
+    "", "windowtitle" -> "$NewSymbol", "type" -> "Symbol", "uri" -> 
+    "ref/$NewSymbol"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8251, 255, 387, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->182772945]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 17102, 568}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[582, 21, 4456, 113, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5041, 136, 48, 1, 43, "ObjectName",
+ CellID->19775],
+Cell[CellGroupData[{
+Cell[5114, 141, 568, 17, 97, "Usage",
+ CellID->5795],
+Cell[CellGroupData[{
+Cell[5707, 162, 738, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->418619373],
+Cell[6448, 188, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6482, 190, 89, 1, 70, "Notes",
+ CellID->7074],
+Cell[6574, 193, 550, 15, 70, "Notes",
+ CellID->25812],
+Cell[7127, 210, 599, 20, 70, "Notes",
+ CellID->19875],
+Cell[7729, 232, 439, 15, 70, "Notes",
+ CellID->7992],
+Cell[8171, 249, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8251, 255, 387, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->182772945],
+Cell[CellGroupData[{
+Cell[8663, 274, 195, 6, 25, "ExampleSection",
+ CellID->591550307],
+Cell[8861, 282, 327, 11, 37, "ExampleText",
+ CellID->311300894],
+Cell[CellGroupData[{
+Cell[9213, 297, 263, 9, 28, "Input",
+ CellID->68445678],
+Cell[9479, 308, 314, 10, 36, "Output",
+ CellID->548159982]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9830, 323, 97, 3, 28, "Input",
+ CellID->697236679],
+Cell[9930, 328, 341, 8, 23, "Print",
+ CellID->85206873],
+Cell[10274, 338, 184, 6, 36, "Output",
+ CellID->29882807]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10495, 349, 105, 3, 28, "Input",
+ CellID->706798101],
+Cell[10603, 354, 344, 8, 23, "Print",
+ CellID->234732109],
+Cell[10950, 364, 193, 6, 36, "Output",
+ CellID->612904952]
+}, Open  ]],
+Cell[11158, 373, 244, 9, 37, "ExampleText",
+ CellID->440664273],
+Cell[11405, 384, 95, 3, 28, "Input",
+ CellID->9444279]
+}, Open  ]],
+Cell[11515, 390, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11583, 395, 264, 12, 31, "SeeAlsoSection",
+ CellID->9788],
+Cell[11850, 409, 539, 16, 58, "SeeAlso",
+ CellID->9253]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12426, 430, 268, 12, 70, "TutorialsSection",
+ CellID->15073],
+Cell[12697, 444, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[12731, 446, 221, 6, 70, "Tutorials",
+ CellID->22875],
+Cell[12955, 454, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13023, 459, 275, 12, 70, "MoreAboutSection",
+ CellID->2092915],
+Cell[13301, 473, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[13335, 475, 184, 5, 70, "MoreAbout",
+ CellID->174267960],
+Cell[13522, 482, 171, 5, 70, "MoreAbout",
+ CellID->66313144]
+}, Open  ]],
+Cell[13708, 490, 87, 3, 70, "History"],
+Cell[13798, 495, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

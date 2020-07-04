@@ -1,0 +1,560 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16314,        550]
+NotebookOptionsPosition[     12546,        436]
+NotebookOutlinePosition[     14453,        483]
+CellTagsIndexPosition[     14368,        478]
+WindowTitle->$InputFileName
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Naming and Finding Files\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/NamingAndFindingFiles"], "\<\"The Main Loop\"\>":>
+       Documentation`HelpLookup["paclet:tutorial/TheMainLoop"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"$Input\"\>":>Documentation`HelpLookup[
+       "paclet:ref/$Input"], "\<\"Get\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Get"], "\<\"$Path\"\>":>Documentation`HelpLookup[
+       "paclet:ref/$Path"], "\<\"DirectoryName\"\>":>Documentation`HelpLookup[
+       "paclet:ref/DirectoryName"], "\<\"$BatchInput\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$BatchInput"], "\<\"$CurrentLink\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$CurrentLink"], "\<\"$ParentLink\"\>":>
+       Documentation`HelpLookup["paclet:ref/$ParentLink"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$InputFileName\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$InputFileName"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$InputFileName.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$61722], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "ref/$InputFileName",
+              ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$InputFileName", "ObjectName",
+ CellID->1224892054],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$InputFileName"]],"paclet:ref/$InputFileName"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]is a global variable whose value is the absolute file \
+name of the input file from which input to ",
+     "the Wolfram Language",
+     " is currently being sought."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->551539247],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "During the execution of ",
+ Cell[BoxData[
+  RowBox[{"<<", 
+   StyleBox["file", "TI"]}]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$InputFileName"]],"paclet:ref/$InputFileName"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is set to the absolute file name of ",
+ Cell[BoxData[
+  StyleBox["file", "TI"]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->230133381],
+
+Cell[TextData[{
+ "During interactive input, ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$InputFileName"]],"paclet:ref/$InputFileName"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is ",
+ Cell[BoxData["\"\<\>\""], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->14956],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->189907066],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->6310247],
+
+Cell["Loading a file:", "ExampleText",
+ CellID->107026554],
+
+Cell[CellGroupData[{
+
+Cell["<<ExampleData/input.m", "Input",
+ CellLabel->"In[1]:=",
+ CellID->100232027],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"$Input is \"\>", 
+   "\[InvisibleSpace]", "\<\"ExampleData/input.m\"\>"}],
+  SequenceForm["$Input is ", "ExampleData/input.m"],
+  Editable->False]], "Print",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->116850035],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"$InputFileName is \"\>", 
+   "\[InvisibleSpace]", "\<\"C:\\\\Program Files\\\\Wolfram \
+Research\\\\Mathematica\\\\8.0\\\\Documentation\\\\English\\\\System\\\\\
+ExampleData\\\\input.m\"\>"}],
+  SequenceForm[
+  "$InputFileName is ", 
+   "C:\\Program Files\\Wolfram \
+Research\\Mathematica\\8.0\\Documentation\\English\\System\\ExampleData\\\
+input.m"],
+  Editable->False]], "Print",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->271800621]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->703350317],
+
+Cell[TextData[{
+ "During interactive input, ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$InputFileName"]],"paclet:ref/$InputFileName"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is ",
+ Cell[BoxData["\"\<\>\""], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->925695161],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$InputFileName"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->572862312],
+
+Cell[BoxData["\<\"\"\>"], "Output",
+ ImageSize->{4, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->412273514]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$Input"]],"paclet:ref/$Input"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Get"]],"paclet:ref/Get"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$Path"]],"paclet:ref/$Path"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DirectoryName"]],"paclet:ref/DirectoryName"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$BatchInput"]],"paclet:ref/$BatchInput"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$CurrentLink"]],"paclet:ref/$CurrentLink"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$ParentLink"]],"paclet:ref/$ParentLink"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->24022]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Naming and Finding Files"]],
+   "paclet:tutorial/NamingAndFindingFiles"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->9599],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["The Main Loop"]],"paclet:tutorial/TheMainLoop"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->25978]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 2010",
+ Cell[" (8.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$InputFileName",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 6.0936406}", 
+    "history" -> {"8", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {"interactive input", "file input", "source", "streams"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Built-in Wolfram Language Symbol", "language" -> "en", 
+    "paclet" -> "Mathematica", "status" -> "None", "summary" -> 
+    "$InputFileName is a global variable whose value is the absolute file \
+name of the input file from which input to the Wolfram Language is currently \
+being sought.", "synonyms" -> {}, "title" -> "$InputFileName", 
+    "titlemodifier" -> "", "windowtitle" -> "$InputFileName", "type" -> 
+    "Symbol", "uri" -> "ref/$InputFileName"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[6982, 212, 387, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->189907066]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 14225, 471}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[586, 21, 4090, 98, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[4679, 121, 57, 1, 43, "ObjectName",
+ CellID->1224892054],
+Cell[CellGroupData[{
+Cell[4761, 126, 600, 17, 97, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[5386, 147, 738, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->551539247],
+Cell[6127, 173, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6161, 175, 436, 16, 70, "Notes",
+ CellID->230133381],
+Cell[6600, 193, 299, 11, 70, "Notes",
+ CellID->14956],
+Cell[6902, 206, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6982, 212, 387, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->189907066],
+Cell[CellGroupData[{
+Cell[7394, 231, 193, 6, 25, "ExampleSection",
+ CellID->6310247],
+Cell[7590, 239, 58, 1, 33, "ExampleText",
+ CellID->107026554],
+Cell[CellGroupData[{
+Cell[7673, 244, 81, 2, 28, "Input",
+ CellID->100232027],
+Cell[CellGroupData[{
+Cell[7779, 250, 270, 7, 23, "Print",
+ CellID->116850035],
+Cell[8052, 259, 495, 13, 41, "Print",
+ CellID->271800621]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8596, 278, 125, 3, 9, "ExampleDelimiter",
+ CellID->703350317],
+Cell[8724, 283, 308, 11, 37, "ExampleText",
+ CellID->925695161],
+Cell[CellGroupData[{
+Cell[9057, 298, 83, 2, 28, "Input",
+ CellID->572862312],
+Cell[9143, 302, 164, 5, 36, "Output",
+ CellID->412273514]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[9346, 312, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9414, 317, 270, 12, 31, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[9687, 331, 2022, 61, 58, "SeeAlso",
+ CellID->24022]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11746, 397, 272, 12, 31, "TutorialsSection",
+ CellID->250839057],
+Cell[12021, 411, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[12055, 413, 190, 6, 19, "Tutorials",
+ CellID->9599],
+Cell[12248, 421, 166, 5, 19, "Tutorials",
+ CellID->25978]
+}, Open  ]],
+Cell[12429, 429, 87, 3, 43, "History"],
+Cell[12519, 434, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

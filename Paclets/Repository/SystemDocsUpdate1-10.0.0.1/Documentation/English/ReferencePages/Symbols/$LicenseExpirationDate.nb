@@ -1,0 +1,691 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24047,        681]
+NotebookOptionsPosition[     19645,        554]
+NotebookOutlinePosition[     22170,        617]
+CellTagsIndexPosition[     22085,        612]
+WindowTitle->$LicenseExpirationDate
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Mathematica System Administration\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/MathematicaSystemAdministrationOverview"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"$LicenseID\"\>":>Documentation`HelpLookup[
+       "paclet:ref/$LicenseID"], "\<\"$CreationDate\"\>":>
+       Documentation`HelpLookup["paclet:ref/$CreationDate"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"System & License Management\"\>":>
+       Documentation`HelpLookup["paclet:guide/SystemAndLicenseManagement"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$LicenseExpirationDate\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$LicenseExpirationDate"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$\
+LicenseExpirationDate.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$62611], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "ref/$LicenseExpirationDate", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[BoxData[GridBox[{
+   {Cell["$LicenseExpirationDate", "ObjectName"], Cell[BoxData[
+     TagBox[
+      TooltipBox[
+       TogglerBox[Dynamic[
+         FrontEnd`CurrentValue[
+          FrontEnd`EvaluationNotebook[], {
+          TaggingRules, "ModificationHighlight"}, False]], {True->
+        PaneSelectorBox[{False->
+         GraphicsBox[RasterBox[CompressedData["
+1:eJztWt9rXEUUDuqD/0Z99w+wb/bdl/qutKCPFasghZJHIYIgFAuF7UMtIgoN
++2SyD9IUQ5tEDF2hZmsCcbeUbCpxN5jupnH3rt/d796zJzNzN9Hemc12DSfD
+zJm58+Ob7/y4u3vq/Adn339pamrqo1dRnD33yZsXL5679PYraJy59PF7519G
+5XX8f4j/uN7z8Lcz2X+eII26tV6nGgsquQhn8yT5bdIrpFG6UJTXhk+wRGnp
+D9KEV1JOhniHdNKkT55wkHr1hCfDi7L0G54mTYKxNF8ynGAhizxCOhkwjgTS
+KFfJHYfdxlrh+pfT09Mot+vl55/QexI1lKs4DkRXtrfKz1ob1FQ3V1BCI4Oh
+sSfZb29Uf/9JmlKXCoCCDJaol/GIVCArS3MYfGehWJy9OVhLzcnZjgl4IF+a
+sTrOAtGVb74ucPMzM5+SPNBA/1tlkUSC/mFlUUjbbKzFIwuxvr5VhgbD2MXK
+ndtF9KLEgOWluYhLbK5IBTPEMxeStaB/yLUKyVpc4sqVzyHA/EjzGW1emgUp
+6iQMKoQUTQ4QjskMpbnvqKcGaOgKHncu8a/W4uS81tGyNLm+bPMfAimbqPOY
+KEEblCAMu4wZRAxI4TcAER4ExwZL9B0IK+61rh9aCzNgNjThHIaAGTTiZ0NK
+hggxBFIcCgwBA3lMVGC87dY6kCnf/0ES9eWl7zEAelRQQoOz17fuQ2JIO9Vm
+49fq5jIqWAJjUMF4DsZU6EIdl2WutVCEBgN+wVr926E3BlGH4Rnw7WnA1cOC
+42Db9FQ4O8+LY+K8dG7Qx8fsVAER6tAYPMHBMQB6IMboQ5eLkncEEPggSg4g
+CcVLYwY2k7X6Zm6shQpZaliEE1jfkA5Pe2yzNQSGyWMeX47j7rxIp+rd8BWk
+WcDakErsSCBN/dvJhzQK4Et1djFJb1K+w9Nwlr5o4jk8TeCn+r4NP7LWesEl
+Tb8DvT0d9qUHTxb3Vq9Cnj642W2u6q79RyVIFg3atZKWbqsi74OoQ/N3Y9V4
+TzzYXoRej4FGD6CS62qJ2hVuVSuN3To3Ge4j6DQX3b078+iLKS1/rV6V3iff
+vgVNp/GzM49lr5Y/iu8cbP+ILjyCZv3GG8YjHMZ6t7Vmj6HSlnZt3rlbPN5a
+v+X+dsA3S11RHlfPjYGi5OTja6/F+9+Y5YA/5y/opiHsxbN4EGPYxAxkVHPh
+ssxMAamgwUWIhssZvKKytT5rmwCuG1078xeo3L37WQp4yfmxSSCWKmz3ayXj
+jIZmr38EDYvmOQ+oWb3TRxVcEqI+vnYK1KWQ1Rgj46EUBqbsSpROhwNl3xbe
+FQ13qI8g2wuTlxpctWkDqd84DSWZxiOAfk6W2r3wdXpCEhWsAwgQzqwvaPde
+TDP4cD3tsHvs1jih1pDV3HBIX8pbs2N94tyUBmcXkhBzwQQClIQ/zhvRthy1
+KmjGrqBVkZnb6wM3QvRgv3oGIAwlFzLCk3Hj2v9khdHwL6Q8JtiVRZI07iSQ
+sim8Gn4jxmxEQ4dp25BFaYisaMx/JKvDfRKVCm1TByCSBCbpxBwV8pBpAP0e
+o7xOIfYefCURHO4UIqHczgHQ60wMnPmSDSA2T1aPENJed5BE2SEGwYLpEJvN
+25f78XeQqFBD0OwbsY9MDc3TIKTTkLOUzhvPorpEDe/hyRLnfrQ52xAxplBj
+95LVWgNkSGwnl2xD7g11j4yAdtB3Q+rz1yZOq++lqSlYoZXMdmhrxBwD+IZF
+Wkoq2K4lveA5RJyt8U6016cWzUE0+hFkVmxCHymUuKiIvnFjP+F9qRHu9XmT
+JERpmF4SNOTY1gvLaR7c2YvrQJZuf2VJW5acXLJ0Q0g2ukdb9I0f2o+NZxDD
+FyS1L31O+c+/qQgmY/RjSK845LbPIL50YBe5SN43lbt4/63+qA94pOTM85As
+nQCJPEOasDQ/oo6HLx2r8DQuEuYb0lxkDFjq/7unKIUiR0BGTsIj7/1/wx+j
+iD/Jf/8Ar1gUjA==
+           "], {{0, 0}, {113, 45}}, {0, 255},
+           ColorFunction->RGBColor],
+          ImageSize->{113, 45},
+          PlotRange->{{0, 113}, {0, 45}}], True->
+         GraphicsBox[RasterBox[CompressedData["
+1:eJztWs9vG0UUtoADfwbhzh9Q3+DeS7kHtRIcgyhIqFJunBr1wMlST6jtBQ5E
+7S0+QWlUxKEWILU1SqVgV1GdVvlFXLsN9prP++0+v8zMrgPdGcddoi+r2Tez
+8+Obb957a3vhwqfnPnmjUql8/jYu585/+f7Fi+cvffgWbj649MXHF95E4T38
+f4b/cXnk4W+n3H+eKI2G7dGgNQYKhYC9eUJxk/RKaZQOFBU14VOMKL36ozTR
+lVzLAe+Ulg2xeMJR6tUTng4vyqvf8FQ2BFNpsWI4xaCKPFJaDhpnQmlUKArn
+4Wiv8eibs79/VcG131l/9Q69J1G5WsVyAF3oP1kf9pq0dP+s4wqLNIbF7gTt
+tV3KUgBRwGSITjIEC8CzX2povP3TSvvWUtZYuD0h4YF8acboWAugC5vffsTJ
+P7iyQPHAAvtff6xSSLAfNFdFtC/3GmyJK8iHBc1YxULn9gpqcUUDDBHFQxxu
+1qWAHtgzx4Id/euxOESzVgVat5amHp/Z5qVZlKJMwaBASnHLBqIx6WGrvkw7
+LWBDF/C4c4h/NRY757bOVqXJ9mUf/xxKeYsyl4krZIMrxWb3IDAohXRBER6E
+xrIonToWekBvuIVzyCEzaMTPppQKEWHIMrEoKAQK5DJR6Ny+PHj+sFk7s/vr
+dUnUY2ktwo4CrrBg7f0nd4AxpYPWy917h5trKLQ4xKCF9myMrlDlHAvUwYJd
+2P3tBneH3hhCzeMz4NvTRKvHgeVgXQ+uvIMr1s71YplYL50b7LDADopQhsXQ
+CRYOHmDHpjD6iGPkHoEEMBN3VWUDilC8NHpIx6rSAvb4iIyFAlVqnAgnsb4p
+zU977GNrQA7jyXESd+cFg5b3g68ozSLWplQc3dxRGgXwpTq7KNOblO/wlK/S
+1w2ew1MJP9X3ffAja6zXHGn6Hejt6bgvPXq63m3UgOf3bwz3G7rqxeM6kCWD
+fruugfxH3gdRhuXvvYbxnni0vQ67bgOLbkAjx9WI+k1OVRuN2TonGe4j6DQX
+Pbh7+fHXFY3DRk1qn353FpbB3j1nHstajWc3F4+276AKj+C2c+2M8QibsTzs
+PbTb0Gij315zzhaP9za+d3874FulriiPrefEIFFqcuvqu+P5P0reSnbXlvSt
+AdbiWTyINrxFD1TU/o/L0jMBUcGCjRALhzN0RWNvY9U+AthuVO2sLdF4cHcl
+Jbzu/NgkkEoVty/adWONhqUbL0HTonXOBWpV78SsQksi1K2rC5AuQVWjzeR9
+7eaiKDBVV2J0OhwY47MwyY05Q70EmV6YvNTQqi0boHOtCiOVxiVAfk6V2rXw
+dbpDChWqAwkAe9YbdPDzWGbw4brbvH0cttmhtlDVnHBIX8pds2N94tyUBWsX
+kZBz4QQAS6If547osxz1mrgdu4L4Qzn23N+YuBGyh/OrewDDMHIgIzwZO679
+T1YYDf9CymVCXVkiSeNOQilvRVf5O2L0RjZ0mLYPshgNyIhG/1NVHe6TqBQ8
+mzoAUSQ4kk7OUaAOmQbQ7zHK6xSie/+6RHC4U0BCuZ0DoNaZGDjzJZtATJ6q
+niGlo+EkibJDDIIF0yHe7v+wHMffSaJCC0mzd8ReMi08noYgnQc5y+jc8Syp
+S9TwHp4sOOejj7NNEWMKLXYtVa0tYIbCdmrJPsijXPfICGgHfTelPn9t4jz1
+ozQ1hSq0kdkOzxo5RwO+YVGWkgr220ktdA6IszXeibqxtHgcxKIfQWbFW9gj
+xRIHFegdN+YT3pca4V6vN0lClIXpJUlDjm29sFS5cGcttgNZuv2VJc+y5OSS
+pRug2OgebegdPzYfm88gB1+Y1L70FfGff1MRDHP0Y0ivPBQ2zyC+dHIuCkHR
+O1U4vP9Wf9YLnIqCdR5SpSVA5JnSRKXFCXU+fOlchad5QZhvSAvBHKjU/3dP
+UUpFgYTMXIRT9/3/gz9HEb/Mf/8ARKwOxw==
+           "], {{0, 0}, {113, 45}}, {0, 255},
+           ColorFunction->RGBColor],
+          ImageSize->{113, 45},
+          PlotRange->{{0, 113}, {0, 45}}]}, Dynamic[
+          CurrentValue["MouseOver"]]], False->
+        PaneSelectorBox[{False->
+         GraphicsBox[RasterBox[CompressedData["
+1:eJztl7FrFFEQxg+18N+wsvKPUP+D2NgmoI2FGAVJ4fUpBCGVYAqbA22C3Vle
+IXiVXCOkSHGo4EHQIwY8RVx/7keG8c3miiTmFp2Pd8vsvHmz8773vbe3F1Zu
+L9080+l07p7nsrR8//Lq6vLatXPcXFm7d2PlLMYlfnf4/barRCKRSCQSiUQi
+kfh3sb29vbGx0e12t7a2ZrPZoss5CiaTyXg8ls0UuPWGBdjsMCzejCLhdDqV
+Pa3hDQ23JPGJXIfDIcRCKYY9yHIqmy+pVdjc3FxfX+eKMDTNXq9X1VOQMRgM
+EAy9hGlSo9EIDzazluETEk8k8f1+n9thDTMIppcYkjPWP8gM5ackrhqr8hjo
+S8LG07imi4UJg5rHNYoJUrZiTDMYOLEhTYZPKJJZHVFdUEparZ0iqyZKudqD
+MFTbrIYqsfxexu0BJXVr6OCKE9TEK0eOxGPEIiGf0OKLUd7o1ZhDqbRnqyB9
+SreKxCMl2+nUHkgSkMl2q+pqJQlNHA+32rDUT4zeHQToNJDh9z6TJYaZcq1q
+WiC/ciLHL70ZP8UTiUT/eHiinRVcsYn0OamnhccpVWnFVaQEoINLnFgA86V+
+JstRVtUTl2H71CfUQlT19JWNq5hnoPaFAuITYVtPtCR2nvtjSiotTvIWwnbf
+ScH2+3+LpDSRSCQSC8f33Z0vb57T9t/2f+z98Z959n5EO2ygeq39/LZvXdh4
+imx6liVUDB4fIGdsSq7h1mL+NmDv9ZN3jzq+wa31Tp5dx3NY5er1bffFLVHE
+EG4/Pr1aDFGYbFiKMXLGpoWI1TL8686rEyTkmLD6RSNlf3h8kVsr8tPLB/62
+gHoZy0BidEsGKerz4GGxQOKZhTCPHlektRqiSslGFw+S0xies5VOGVRSzLHw
+aAqeFo/YK1aZaXVAIPwgXTWpmhiLxxkJaXT68ggoavBTWCyibABbCadUoSl4
+EjxiL7veJ5RQjVVl9ksgmXGG+7Tz11EJvUeq9if5YuEPN8GLJCoNlkw/jSvi
+9zLT5NaOAmX2x4jYk6oNMIxTD4rvPr/igrZGe/a+pulfu4VI7L2jplvT1fwV
+KbKJDf+yixvZnEWzJ8ZjYb6qTx/am145Eokpp+AcQzoUM3FFir3shRr5r5o2
+cnWwUo3/lyKBFC9VH5+NE0GssFBO5FwekRZ7Y0J7TUdBVk0b+TCnUKx4LHjh
+aKzHyylSJB3KE3ulW++RUJUzaqnx/T7neNQbML7020Np4/9t/w9fnBOgLyzJ
+0uZb9NphW3wTSVqeajx+CBzaF1zlWJLTmsZaKl9Pe87Squn/thdJ/JyBQH9U
+Fr0sR+OngfayCS9+B9l7sDo4HmPT2OKrTQv69/hJJBKJRCKRSCQSiUTiaPgF
+e1i75A==
+           "], {{0, 0}, {113, 45}}, {0, 255},
+           ColorFunction->RGBColor],
+          ImageSize->{113, 45},
+          PlotRange->{{0, 113}, {0, 45}}], True->
+         GraphicsBox[RasterBox[CompressedData["
+1:eJztlz9rVUEQxR9q4dew0coPYfwGsUmbgDYpxChIilS2BqwEISB2mi5dtFMI
+iI0kRRAxIPEPiYRIYiCJqOvPd8g47ty8Iol5F53Dvsvc2dm5s2fP7n33zMjV
+wSsnOp3O9dNcBodvXhgbGx6/dIqbgfEbl0dOYpznd43fL7skEolEIpFIJBKJ
+xL+Ljddzr+4OLNzqLM9MfN/Z6nc5B8H2p6Wt5XnZTIFbb1iAzQ7D4s2oEu5u
+rMrGkG2GhluS+ESuay+mIRZKMexBllPZfEmtwpv7Q4u3z3JFGJrm24ejpTsF
+GSvPphAMvYRpUusLs3iwmbUMn5B4Ion/+GSSWzgRLTIIppcYkjPWP8gM5ack
+rhqr8hjoS8LG07im/YUJg5opL06QshVjmsHAiQ1pMnxCkczqiOqKUtJq7RRZ
+mijlag/CUG0MMRlbfi/j9oCSmJodXHGCmnhx5Eg8RiwS8gktvhrlDTL3UClX
+ac9WQfqUbhWJR0q206k9kCQgk+1WutVKEpo4Hm61YamfGL07CNBpIMPvfSZL
+DDPlWrq0QH5xIscvvRk/1ROJRP94eKKdFVyxifQ5qaeFxylVacVVpASgg0uc
+WADzpX4my1FWuhOXYfvUJ9RClO70lY2rmGeg9oUC4hNhW0+0JHae+2NKKq1O
+8hbCdt9Rwfb7f4ukNJFIJBJ9x9e1pS8vp2lbi7PfNv/4N7Lzfp6230D1Wvux
++/vPITaeKpueZQkVg8cHyBmbkmu4tZi/Ddh8PvXuTsc3uLXe1UdDeParXL2+
+rc2MiiKGcLvy4GI1RGGyYSnGyBmbFiJWy/DtpbkjJOSQsPpFI2V/uHeOWyty
+/fGEv62gXsYykBjdkkGK+vx0slog8cxCmEePq9JaDVGlZKOLB8lpDPfYSscM
+KqnmWHk0BU+LR+wVq8y07BEIP0hXTaomxuJxRkIanb48Aqoa/BT6iygbwFbC
+KVVoCp4Ej9jLrvcJJVRjVZn9EkhmnOE+be91VELvkar9Sd5f+MNN8CKJSoMl
+00/jivi9zDS5taNAmf0xIvakagMM49SD4rvPr7igrdGeva9p+tduJRJ776jp
+1nTVe0WqbGLDv+ziRjZn1eyJ8Vjorerjh/amV45EYsqpOMeQDsVMXJFqL3uh
+Rv5L00YueyvV+H8pEkjxUvXh2TgSxAor5UTO5RFpsTcmtNd0FGRp2sj7OYVq
+xWPBfUdjPV5OkSLpUJ7YK916j4SqnFFLje/3Hsej3oDxpd8eShv/b/t/+OKc
+AH1hSZY236rXDtvqm0jS8lTj8UPg0L7gimNJTmsaa6l8Pe05S0vT/20vkvg5
+A4H+qKx6WY7GTwPtZRNe/A6y92DZOx5j09jqq00L+vf4SSQSiUQikUgkEolE
+4mD4CVgjt/g=
+           "], {{0, 0}, {113, 45}}, {0, 255},
+           ColorFunction->RGBColor],
+          ImageSize->{113, 45},
+          PlotRange->{{0, 113}, {0, 45}}]}, Dynamic[
+          CurrentValue["MouseOver"]]]}, "\"\<Click me\>\""],
+       "Toggle changes in 10",
+       TooltipDelay->0.3],
+      MouseAppearanceTag["LinkHand"]]],
+     Magnification->1]}
+  }]], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$LicenseExpirationDate"]],
+        "paclet:ref/$LicenseExpirationDate"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     " \[LineSeparator]gives the expiration date for the license under which ",
+     "the Wolfram System",
+     " is being run."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->27080],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->81151991],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$LicenseExpirationDate"]],"paclet:ref/$LicenseExpirationDate"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " gives a ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DateObject"]],"paclet:ref/DateObject"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ "."
+}], "Notes",
+ Background->Dynamic[
+   If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+    RGBColor[1, 0.988235, 0.721569], None]],
+ CellID->382874720],
+
+Cell[TextData[{
+ "The first element of ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$LicenseExpirationDate"]],"paclet:ref/$LicenseExpirationDate"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Infinity"]],"paclet:ref/Infinity"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " if there is no explicit expiration date."
+}], "Notes",
+ CellID->31216],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->71959575],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->453337623],
+
+Cell["\<\
+Show the expiration date for the license under which the Wolfram System is \
+being run:\
+\>", "ExampleText",
+ CellID->177256167],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$LicenseExpirationDate"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->250633180],
+
+Cell[BoxData[
+ TemplateBox[{RowBox[{"\"Sat 1 Mar 2014\""}],RowBox[{"DateObject", "[", 
+     RowBox[{"{", 
+       RowBox[{"2014", ",", "3", ",", "1"}], "}"}], "]"}]},
+  "DateObject"]], "Output",
+ ImageSize->{117, 25},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->381715623]
+}, Open  ]],
+
+Cell["Show as a date string:", "ExampleText",
+ CellID->847753111],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DateString", "[", "%", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->764956983],
+
+Cell[BoxData["\<\"Sat 01 Mar 2014\"\>"], "Output",
+ ImageSize->{109, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->312669132]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->17404],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$LicenseID"]],"paclet:ref/$LicenseID"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$CreationDate"]],"paclet:ref/$CreationDate"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->2738]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->26372],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData[{
+      StyleBox["Mathematica", FontSlant -> "Italic"], 
+      " System Administration"}]],
+   "paclet:tutorial/MathematicaSystemAdministrationOverview"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->407823310],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->192153893],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["System & License Management"]],
+   "paclet:guide/SystemAndLicenseManagement"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->432430295]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 2003",
+ Cell[" (5.0)", "HistoryVersion"],
+ " | ",
+ "Updated in 2014",
+ Cell[" (10.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$LicenseExpirationDate",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Wolfram System Setup", ButtonData -> 
+         "paclet:guide/WolframSystemSetup", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "System & License Management", ButtonData -> 
+         "paclet:guide/SystemAndLicenseManagement", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$LicenseExpirationDate", ButtonData -> 
+         "paclet:ref/$LicenseExpirationDate", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 7.5746406}", 
+    "history" -> {"5", "10", "", ""}, "context" -> "System`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Built-in Wolfram Language Symbol", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "$LicenseExpirationDate gives the expiration date for the license under \
+which the Wolfram System is being run.", 
+    "synonyms" -> {"license expiration date"}, "title" -> 
+    "$LicenseExpirationDate", "titlemodifier" -> "", "windowtitle" -> 
+    "$LicenseExpirationDate", "type" -> "Symbol", "uri" -> 
+    "ref/$LicenseExpirationDate"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[15764, 378, 386, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->71959575]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 21942, 605}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[594, 21, 4378, 109, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[4975, 132, 8320, 151, 64, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[13320, 287, 562, 17, 83, "Usage",
+ CellID->27080],
+Cell[CellGroupData[{
+Cell[13907, 308, 737, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->81151991],
+Cell[14647, 334, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[14681, 336, 541, 17, 70, "Notes",
+ CellID->382874720],
+Cell[15225, 355, 456, 15, 70, "Notes",
+ CellID->31216],
+Cell[15684, 372, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15764, 378, 386, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->71959575],
+Cell[CellGroupData[{
+Cell[16175, 397, 195, 6, 25, "ExampleSection",
+ CellID->453337623],
+Cell[16373, 405, 138, 4, 33, "ExampleText",
+ CellID->177256167],
+Cell[CellGroupData[{
+Cell[16536, 413, 91, 2, 28, "Input",
+ CellID->250633180],
+Cell[16630, 417, 324, 9, 46, "Output",
+ CellID->381715623]
+}, Open  ]],
+Cell[16969, 429, 65, 1, 33, "ExampleText",
+ CellID->847753111],
+Cell[CellGroupData[{
+Cell[17059, 434, 106, 3, 28, "Input",
+ CellID->764956983],
+Cell[17168, 439, 181, 5, 36, "Output",
+ CellID->312669132]
+}, Open  ]]
+}, Open  ]],
+Cell[17376, 448, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17444, 453, 265, 12, 31, "SeeAlsoSection",
+ CellID->17404],
+Cell[17712, 467, 535, 16, 58, "SeeAlso",
+ CellID->2738]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18284, 488, 268, 12, 31, "TutorialsSection",
+ CellID->26372],
+Cell[18555, 502, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[18589, 504, 275, 8, 19, "Tutorials",
+ CellID->407823310],
+Cell[18867, 514, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18935, 519, 277, 12, 31, "MoreAboutSection",
+ CellID->192153893],
+Cell[19215, 533, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[19249, 535, 200, 6, 70, "MoreAbout",
+ CellID->432430295]
+}, Open  ]],
+Cell[19464, 544, 151, 6, 70, "History"],
+Cell[19618, 552, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,730 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     22954,        721]
+NotebookOptionsPosition[     17383,        569]
+NotebookOutlinePosition[     19768,        621]
+CellTagsIndexPosition[     19725,        618]
+WindowTitle->Life Sciences & Medicine: Data & Computation
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"CoxModelFit\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/CoxModelFit"], "\<\"DistributionFitTest\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DistributionFitTest"], "\<\"EntityValue\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityValue"], "\<\"EventData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EventData"], "\<\"FindClusters\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FindClusters"], "\<\"FormulaData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FormulaData"], "\<\"GenomeData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/GenomeData"], "\<\"GenomeLookup\"\>":>
+       Documentation`HelpLookup["paclet:ref/GenomeLookup"], "\<\"Graph\"\>":>
+       Documentation`HelpLookup["paclet:ref/Graph"], "\<\"LinearModelFit\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/LinearModelFit"], "\<\"NDSolve\"\>":>
+       Documentation`HelpLookup["paclet:ref/NDSolve"], "\<\"PlantData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PlantData"], "\<\"ProteinData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ProteinData"], "\<\"SequenceAlignment\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SequenceAlignment"], "\<\"SmithWatermanSimilarity\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SmithWatermanSimilarity"], "\<\"SpeciesData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SpeciesData"], "\<\"SurvivalModelFit\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SurvivalModelFit"], "\<\"TreePlot\"\>":>
+       Documentation`HelpLookup["paclet:ref/TreePlot"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Systems Engineering\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/Modeling"], "\<\"Scientific Models\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/ScientificModels"], "\<\"Scientific Data Analysis\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/ScientificDataAnalysis"], "\<\"Actuarial \
+Computation\"\>":>Documentation`HelpLookup[
+       "paclet:guide/ActuarialComputation"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"guide/LifeSciencesAndMedicineDataAndComputation\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/LifeSciencesAndMedicineDataAndComputation"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/\
+LifeSciencesAndMedicineDataAndComputation.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$85907], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/LifeSciencesAndMedicineDataAndComputation", ".html"]], 
+           None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Life Sciences & Medicine: Data & Computation", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Language provides immediate access to extensive life science \
+data, as well as providing powerful tools for bioinformatics and \
+biostatistics. \
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJztlkGqwjAQhlN14RFcCR7lvSPoAbSCbsvzCeqlBL2NpRtB6KIUpKs0SvWT
+qps2Uk2z82da0unM10yQGXtjrz9tCCH+29z67uJnNnNXgxYPv6v5ZNxk0eHq
+ct3WF43SNA3DMAiCXWURTAqJOiaSUhIZRZFSKsuyF5FPEUZwHMe+75Ou2y1v
+kySpAiyKRHZVunMq4tOfYXNRLJCin+OiLhMy6UCKfmqpeLY6kQ7EhPBCtsmn
+9Z/0nKLhNyTfOBMhh0KOHsYaj+fUQPac8/Fwjvd3Ox5yZy1ktV2qzeJu22WN
+5FKrhfw9Ddu/ZxsqJdvrSPa6KE2b1m1CZnCUdn4GDbWYTCuGnW7OMiJ5y6ff
+nbAUy650EzaX+b+CK3PJ5so=
+     "], {{0, 24}, {30, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSizeRaw->{30, 24},
+   PlotRange->{{0, 30}, {0, 24}}]], "InlineOutput"],
+ " (",
+ Cell["Ctrl", "KeyEvent"],
+ StyleBox["+", "KeyEventDelimiter"],
+ Cell["\[LongEqual]", "KeyEvent"],
+ ") \[LongDash] request data using free-form linguistics"
+}], "GuideText",
+ CellID->618196486],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityValue"]],"paclet:ref/EntityValue"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " general access to values of properties for all types of entities"
+}], "GuideText",
+ CellID->759792097],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->2006864507],
+
+Cell[CellGroupData[{
+
+Cell["Genomic Data", "GuideFunctionsSubsection",
+ CellID->437749169],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["GenomeData"]],"paclet:ref/GenomeData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " properties of human and other genes"
+}], "GuideText",
+ CellID->327223987],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["GenomeLookup"]],"paclet:ref/GenomeLookup"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " fast lookup of human and other genome sequences"
+}], "GuideText",
+ CellID->31807876]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Sequence Analysis"]],
+   "paclet:guide/SequenceAlignmentAndComparison"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->2118792408],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SequenceAlignment"]],"paclet:ref/SequenceAlignment"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SmithWatermanSimilarity"]],
+    "paclet:ref/SmithWatermanSimilarity"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell["...", "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->47296865]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Molecular Biology", "GuideFunctionsSubsection",
+ CellID->1846916921],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ProteinData"]],"paclet:ref/ProteinData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " protein structure and function"
+}], "GuideText",
+ CellID->25158638],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->772203353],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"Biomolecule\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], 
+  " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"MetabolicPathway\" ", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->674572261]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->1404395034],
+
+Cell[CellGroupData[{
+
+Cell["Biological Data Analysis", "GuideFunctionsSubsection",
+ CellID->1895912490],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FindClusters"]],"paclet:ref/FindClusters"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TreePlot"]],"paclet:ref/TreePlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]]
+}], "InlineGuideFunctionListing",
+ CellID->238865244]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Systems Biology", "GuideFunctionsSubsection",
+ CellID->970166702],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Graph"]],"paclet:ref/Graph"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NDSolve"]],"paclet:ref/NDSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->961219665]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->311258892],
+
+Cell[CellGroupData[{
+
+Cell["Biological Organisms", "GuideFunctionsSubsection",
+ CellID->1404057509],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SpeciesData"]],"paclet:ref/SpeciesData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " taxonomic and other data on over a million species"
+}], "GuideText",
+ CellID->510546890],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PlantData"]],"paclet:ref/PlantData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " properties of many types of plants"
+}], "GuideText",
+ CellID->1564410465]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->342875248],
+
+Cell[CellGroupData[{
+
+Cell["Medical Computation", "GuideFunctionsSubsection",
+ CellID->969818114],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FormulaData"]],"paclet:ref/FormulaData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " computations with standard medical formulas"
+}], "GuideText",
+ CellID->1324432723]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->2053091329],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Biostatistics \[RightGuillemet]"]],"paclet:guide/Statistics"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1709335192],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LinearModelFit"]],"paclet:ref/LinearModelFit"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DistributionFitTest"]],"paclet:ref/DistributionFitTest"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/Statistics"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1299836308]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Survival Analysis"]],"paclet:guide/SurvivalAnalysis"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1005668235],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EventData"]],"paclet:ref/EventData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SurvivalModelFit"]],"paclet:ref/SurvivalModelFit"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CoxModelFit"]],"paclet:ref/CoxModelFit"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/SurvivalAnalysis"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->28605615]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Systems Engineering"]],"paclet:guide/Modeling"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Scientific Models"]],"paclet:guide/ScientificModels"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1360120182],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Scientific Data Analysis"]],
+   "paclet:guide/ScientificDataAnalysis"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1723960206],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Actuarial Computation"]],"paclet:guide/ActuarialComputation"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Life Sciences & Medicine: Data & Computation",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Life Sciences & Medicine: Data & Computation", ButtonData -> 
+         "paclet:guide/LifeSciencesAndMedicineDataAndComputation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 35.0346406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "life science", "medicine", "medical data", "medical science", 
+      "medicine", "biology", "biological data", "mathematical biology", 
+      "biostatstics", "bioinformatics", "biomedical science", "biotechnology",
+       "biomedicine", "biophysics", "bioengineering", 
+      "biomedical engineering", "medical engineering", "bimolecule", 
+      "genetics", "evolutionary genetics", "genome", "genomics"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Wolfram Language Guide", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "The Wolfram Language provides immediate access to extensive life science \
+data, as well as providing powerful tools for bioinformatics and \
+biostatistics. ", "synonyms" -> {}, "title" -> 
+    "Life Sciences & Medicine: Data & Computation", "titlemodifier" -> "", 
+    "windowtitle" -> "Life Sciences & Medicine: Data & Computation", "type" -> 
+    "Guide", "uri" -> "guide/LifeSciencesAndMedicineDataAndComputation"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[616, 21, 5548, 129, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[6189, 154, 86, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[6278, 157, 211, 5, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6526, 167, 257, 11, 70, "GuideReferenceSection"],
+Cell[6786, 180, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6820, 182, 954, 24, 70, "GuideText",
+ CellID->618196486],
+Cell[7777, 208, 336, 10, 70, "GuideText",
+ CellID->759792097],
+Cell[8116, 220, 59, 1, 70, "GuideDelimiterSubsection",
+ CellID->2006864507],
+Cell[CellGroupData[{
+Cell[8200, 225, 68, 1, 70, "GuideFunctionsSubsection",
+ CellID->437749169],
+Cell[8271, 228, 305, 10, 70, "GuideText",
+ CellID->327223987],
+Cell[8579, 240, 320, 10, 70, "GuideText",
+ CellID->31807876]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8936, 255, 228, 6, 70, "GuideFunctionsSubsection",
+ CellID->2118792408],
+Cell[9167, 263, 718, 22, 70, "InlineGuideFunctionListing",
+ CellID->47296865]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9922, 290, 74, 1, 70, "GuideFunctionsSubsection",
+ CellID->1846916921],
+Cell[9999, 293, 301, 10, 70, "GuideText",
+ CellID->25158638],
+Cell[10303, 305, 140, 2, 70, "GuideText",
+ CellID->772203353],
+Cell[10446, 309, 326, 7, 70, "InlineGuideFunctionListing",
+ CellID->674572261]
+}, Open  ]],
+Cell[10787, 319, 59, 1, 70, "GuideDelimiterSubsection",
+ CellID->1404395034],
+Cell[CellGroupData[{
+Cell[10871, 324, 81, 1, 70, "GuideFunctionsSubsection",
+ CellID->1895912490],
+Cell[10955, 327, 801, 22, 70, "InlineGuideFunctionListing",
+ CellID->238865244]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11793, 354, 71, 1, 70, "GuideFunctionsSubsection",
+ CellID->970166702],
+Cell[11867, 357, 503, 16, 70, "InlineGuideFunctionListing",
+ CellID->961219665]
+}, Open  ]],
+Cell[12385, 376, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->311258892],
+Cell[CellGroupData[{
+Cell[12468, 381, 77, 1, 70, "GuideFunctionsSubsection",
+ CellID->1404057509],
+Cell[12548, 384, 322, 10, 70, "GuideText",
+ CellID->510546890],
+Cell[12873, 396, 303, 10, 70, "GuideText",
+ CellID->1564410465]
+}, Open  ]],
+Cell[13191, 409, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->342875248],
+Cell[CellGroupData[{
+Cell[13274, 414, 75, 1, 70, "GuideFunctionsSubsection",
+ CellID->969818114],
+Cell[13352, 417, 316, 10, 70, "GuideText",
+ CellID->1324432723]
+}, Open  ]],
+Cell[13683, 430, 59, 1, 70, "GuideDelimiterSubsection",
+ CellID->2053091329],
+Cell[CellGroupData[{
+Cell[13767, 435, 218, 5, 70, "GuideFunctionsSubsection",
+ CellID->1709335192],
+Cell[13988, 442, 826, 25, 70, "InlineGuideFunctionListing",
+ CellID->1299836308]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14851, 472, 210, 5, 70, "GuideFunctionsSubsection",
+ CellID->1005668235],
+Cell[15064, 479, 1101, 34, 70, "InlineGuideFunctionListing",
+ CellID->28605615]
+}, Open  ]],
+Cell[16180, 516, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16248, 521, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[16532, 535, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[16566, 537, 181, 5, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[16750, 544, 187, 5, 70, "GuideMoreAbout",
+ CellID->1360120182],
+Cell[16940, 551, 204, 6, 70, "GuideMoreAbout",
+ CellID->1723960206],
+Cell[17147, 559, 194, 5, 70, "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+Cell[17356, 567, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wolfram="https://wolfr.am/brUlpV50#" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      <wolfram:slot id="Name" /> | Wolfram Data Repository
+    </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,600italic" />
+    <link rel="stylesheet" href="https://www.wolframcdn.com/css/normalize.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header class="container">
+      <div class="wrap">
+        <h1 id="site-branding">
+          <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+            <path fill="#4d87ad" d="M11 24h3v14h-3zM16 18h3v20h-3zM21 30h3v8h-3zM26 22h3v16h-3zM31 27h3v11h-3z" />
+            <path fill="silver" d="M1 42h43v2H1zM36 18h3v20h-3zM4 39h37v2H4zM22.5 1L0 12v2h45v-2zM4.8 12l17.7-8.5L40 12H4.8zM34 15h7v2h-7zM6 18h3v20H6zM4 15h7v2H4z" />
+          </svg>
+          <span class="wordmark">Wolfram Data Repository</span>
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <p class="wl-input">ResourceObject[<wbr />"<span class="short-name"><wolfram:slot id="ShortName" /></span>"]</p>
+        <h1><wolfram:slot id="Name" /></h1>
+        <wolfram:if test="StringQ@#Description">
+          <p class="lead"><wolfram:slot id="Description" /></p>
+        </wolfram:if>
+        <ul class="source-metadata">
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Title"]'>
+            <li>Title: <span class="property"><wolfram:expr>#SourceMetadata["Title"]</wolfram:expr></span></li>
+          </wolfram:if>
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Creator"]'>
+            <li>Creator: <span class="property"><wolfram:expr>#SourceMetadata["Creator"]</wolfram:expr></span></li>
+          </wolfram:if>
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Contributor"]'>
+            <li>Contributor: <span class="property"><wolfram:expr>#SourceMetadata["Contributor"]</wolfram:expr></span></li>
+          </wolfram:if>
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Publisher"]'>
+            <li>Publisher: <span class="property"><wolfram:expr>#SourceMetadata["Publisher"]</wolfram:expr></span></li>
+          </wolfram:if>
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Date"]'>
+            <li>Date: <span class="property"><wolfram:expr>#SourceMetadata["Date"]</wolfram:expr></span></li>
+          </wolfram:if>
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Description"]'>
+            <li>Description: <span class="property"><wolfram:expr>#SourceMetadata["Description"]</wolfram:expr></span></li>
+          </wolfram:if>
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Coverage"]'>
+            <li>Coverage: <span class="property"><wolfram:expr>#SourceMetadata["Coverage"]</wolfram:expr></span></li>
+          </wolfram:if>
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Language"]'>
+            <li>Language: <span class="property"><wolfram:expr>#SourceMetadata["Language"]</wolfram:expr></span></li>
+          </wolfram:if>
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Source"]'>
+            <li>Source: <span class="property"><wolfram:expr>#SourceMetadata["Source"]</wolfram:expr></span></li>
+          </wolfram:if>
+          <wolfram:if test='MemberQ[#DisplayedSourceFields, "Rights"]'>
+            <li>Rights: <span class="property"><wolfram:expr>#SourceMetadata["Rights"]</wolfram:expr></span></li>
+          </wolfram:if>
+        </ul>
+        <wolfram:if test="StringQ@#Details">
+          <div class="details">
+            <wolfram:slot id="Details" />
+          </div>
+        </wolfram:if>
+        <wolfram:if test="ListQ@#Categories">
+          <h2>Categories</h2>
+          <ul class="keywords"><wolfram:sequence values="#Categories" slot="link"><li><wolfram:slot id="link" /></li></wolfram:sequence></ul>
+        </wolfram:if>
+      </div>
+      <div class="wrap row-frame">
+        <div class="row">
+          <div id="page-nav" class="col sidebar">
+            <nav>
+              <ul class="nav">
+                <li role="presentation"><a href="#Examples" class="nav-link">Examples</a></li>
+                <wolfram:if test="ListQ@#Keywords">
+                  <li role="presentation"><a href="#Keywords" class="nav-link">Keywords</a></li>
+                </wolfram:if>
+                <wolfram:if test="ListQ@#ExternalLinks">
+                  <li role="presentation"><a href="#External-Links" class="nav-link">External Links</a></li>
+                </wolfram:if>
+                <wolfram:if test='StringQ@#SourceMetadata["Rights"]'>
+                  <li role="presentation"><a href="#License-Information" class="nav-link">License Info</a></li>
+                </wolfram:if>
+                <wolfram:if test='AssociationQ@#SourceMetadata'>
+                  <li role="presentation"><a href="#Source-Metadata" class="nav-link">Source Metadata</a></li>
+                </wolfram:if>
+                <wolfram:if test="ListQ@#SeeAlso">
+                  <li role="presentation"><a href="#See-Also" class="nav-link">See Also</a></li>
+                </wolfram:if>
+              </ul>
+            </nav>
+          </div><div class="col main">
+            <h2 id="Examples">Examples</h2>
+            <p>
+              <a class="btn" href="#"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="18"><path d="M23.4 9.4v-1c0-1.6-1-3-2.7-3h-.4c-.7-2.7-3-4.8-5.8-4.8-2 0-3.7 1-4.8 2.6C9.2 3 8.7 3 8 3 5.3 3 3 5.3 3 8.4v1c-1.5.4-2.6 2-2.6 3.8 0 2.3 1.7 4 3.8 4h17.5c2.2 0 4-1.8 4-4 0-1.8-1-3.2-2.3-4zM13.8 15v-3c-6.3.2-7.3 3.2-7.3 3.3h-.2c0-7.3 6.2-7.7 7.5-7.7V4.8l6 5-6 5z"/></svg> <span class="text">Explore in Wolfram Cloud</span></a>
+            </p>
+            <wolfram:if test="ListQ@#ExamplesBasic">
+              <h3 data-toggle="collapse" data-target="#ExamplesBasic" aria-controls="ExamplesBasic" aria-expanded="true">Basic Examples</h3>
+              <div class="collapse in" id="ExamplesBasic">
+                <wolfram:sequence values="#ExamplesBasic" slot="group" index="counter">
+                  <div class="example-frame">
+                    <p><wolfram:slot id='Text' /></p>
+                    <table class="example">
+                      <tr class="input"><td class="in-out">In[<wolfram:slot id="counter"/>]:=</td><td><div class="img-frame"><img src="`InputImg`" alt="`InputText`" data-toggle="tooltip" title="Copy to Clipboard" tabindex="0"/></div></td></tr>
+                      <tr class="output"><td class="in-out">Out[<wolfram:slot id="counter"/>]:=</td><td><img class="output" src="`OutputImg`"/></td></tr>
+                    </table>
+                  </div>
+                </wolfram:sequence>
+              </div>
+            </wolfram:if>
+            <wolfram:if test="ListQ@#ExamplesViz">
+              <h3 data-toggle="collapse" data-target="#ExamplesViz" aria-controls="ExamplesViz" aria-expanded="true">Visualization</h3>
+              <div class="collapse in" id="ExamplesViz">
+                <wolfram:sequence values="#ExamplesViz" slot="group" index="counter">
+                  <div class="example-frame">
+                    <p><wolfram:slot id='Text' /></p>
+                    <table class="example">
+                      <tr class="input"><td class="in-out">In[<wolfram:slot id="counter"/>]:=</td><td><div class="img-frame"><img src="`InputImg`" alt="`InputText`" data-toggle="tooltip" title="Copy to Clipboard" tabindex="0"/></div></td></tr>
+                      <tr class="output"><td class="in-out">Out[<wolfram:slot id="counter"/>]:=</td><td><img class="output" src="`OutputImg`"/></td></tr>
+                    </table>
+                  </div>
+                </wolfram:sequence>
+              </div>
+            </wolfram:if>
+            <wolfram:if test="ListQ@#ExamplesAnalysis">
+              <h3 data-toggle="collapse" data-target="#ExamplesAnalysis" aria-controls="ExamplesAnalysis" aria-expanded="true">Analysis</h3>
+              <div class="collapse in" id="ExamplesAnalysis">
+                <wolfram:sequence values="#ExamplesAnalysis" slot="group" index="counter">
+                  <div class="example-frame">
+                    <p><wolfram:slot id='Text' /></p>
+                    <table class="example">
+                      <tr class="input"><td class="in-out">In[<wolfram:slot id="counter"/>]:=</td><td><div class="img-frame"><img src="`InputImg`" alt="`InputText`" data-toggle="tooltip" title="Copy to Clipboard" tabindex="0"/></div></td></tr>
+                      <tr class="output"><td class="in-out">Out[<wolfram:slot id="counter"/>]:=</td><td><img src="`OutputImg`"/></td></tr>
+                    </table>
+                  </div>
+                </wolfram:sequence>
+              </div>
+            </wolfram:if>
+            <wolfram:if test="ListQ@#Keywords">
+              <h2 id="Keywords">Keywords</h2>
+              <ul class="keywords"><wolfram:sequence values="#Keywords" slot="link"><li><wolfram:slot id="link" /></li></wolfram:sequence></ul>
+            </wolfram:if>
+            <wolfram:if test="ListQ@#ExternalLinks">
+              <h2 id="External-Links">External Links</h2>
+              <ul>
+                <wolfram:sequence values="#ExternalLinks" slot="link">
+                  <li><wolfram:slot id="link" /></li>
+                </wolfram:sequence>
+              </ul>
+            </wolfram:if>
+            <wolfram:if test='StringQ@#SourceMetadata["Rights"]'>
+              <h2 id="License-Information">License Information</h2>
+              <p><wolfram:expr>#SourceMetadata["Rights"]</wolfram:expr></p>
+            </wolfram:if>
+            <wolfram:if test='AssociationQ@#SourceMetadata'>
+              <h2 id="Source-Metadata">Source Metadata</h2>
+              <ul class="source-metadata">
+                <wolfram:if test='StringQ@#SourceMetadata["Title"]'>
+                  <li>Title: <span class="property"><wolfram:expr>#SourceMetadata["Title"]</wolfram:expr></span></li>
+                </wolfram:if>
+                <wolfram:if test='StringQ@#SourceMetadata["Creator"]'>
+                  <li>Creator: <span class="property"><wolfram:expr>#SourceMetadata["Creator"]</wolfram:expr></span></li>
+                </wolfram:if>
+                <wolfram:if test='StringQ@#SourceMetadata["Contributor"]'>
+                  <li>Contributor: <span class="property"><wolfram:expr>#SourceMetadata["Contributor"]</wolfram:expr></span></li>
+                </wolfram:if>
+                <wolfram:if test='StringQ@#SourceMetadata["Publisher"]'>
+                  <li>Publisher: <span class="property"><wolfram:expr>#SourceMetadata["Publisher"]</wolfram:expr></span></li>
+                </wolfram:if>
+                <wolfram:if test='StringQ@#SourceMetadata["Date"]'>
+                  <li>Date: <span class="property"><wolfram:expr>#SourceMetadata["Date"]</wolfram:expr></span></li>
+                </wolfram:if>
+                <wolfram:if test='StringQ@#SourceMetadata["Description"]'>
+                  <li>Description: <span class="property"><wolfram:expr>#SourceMetadata["Description"]</wolfram:expr></span></li>
+                </wolfram:if>
+                <wolfram:if test='StringQ@#SourceMetadata["Coverage"]'>
+                  <li>Coverage: <span class="property"><wolfram:expr>#SourceMetadata["Coverage"]</wolfram:expr></span></li>
+                </wolfram:if>
+                <wolfram:if test='StringQ@#SourceMetadata["Language"]'>
+                  <li>Language: <span class="property"><wolfram:expr>#SourceMetadata["Language"]</wolfram:expr></span></li>
+                </wolfram:if>
+                <wolfram:if test='StringQ@#SourceMetadata["Source"]'>
+                  <li>Source: <span class="property"><wolfram:expr>#SourceMetadata["Source"]</wolfram:expr></span></li>
+                </wolfram:if>
+              </ul>
+            </wolfram:if>
+            <wolfram:if test="ListQ@#SeeAlso">
+              <h2 id="See-Also">See Also</h2>
+              <ul>
+                <wolfram:sequence values="#SeeAlso" slot="link">
+                  <li><wolfram:slot id="link" /></li>
+                </wolfram:sequence>
+              </ul>
+            </wolfram:if>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://www.wolframcdn.com/javascript/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+    <!--<script src="bootstrap.js"></script>-->
+    <script src="main.js"></script>
+  </body>
+</html>

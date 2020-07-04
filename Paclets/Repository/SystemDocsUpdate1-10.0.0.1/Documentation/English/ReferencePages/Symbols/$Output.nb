@@ -1,0 +1,926 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     35112,        916]
+NotebookOptionsPosition[     29358,        761]
+NotebookOutlinePosition[     33397,        857]
+CellTagsIndexPosition[     33312,        852]
+WindowTitle->$Output
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"The Main Loop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/TheMainLoop"], "\<\"Streams and Low\[Hyphen]Level \
+Input and Output\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/StreamsAndLowLevelInputAndOutput"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Streams\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Streams"], "\<\"OutputStream\"\>":>
+       Documentation`HelpLookup["paclet:ref/OutputStream"], "\<\"Write\"\>":>
+       Documentation`HelpLookup["paclet:ref/Write"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Session Customization\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/SessionCustomization"], "\<\"Standalone Wolfram Language \
+Kernels\"\>":>Documentation`HelpLookup[
+       "paclet:guide/StandaloneWolframLanguageKernels"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$Output\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$Output"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$Output.html"], 
+                StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$67664], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "ref/$Output", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$Output", "ObjectName",
+ CellID->7765],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$Output"]],"paclet:ref/$Output"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]gives the list of files and pipes to which standard \
+output from ",
+     "the Wolfram Language",
+     " is sent. "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->157],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->291607969],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "Output from ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Print"]],"paclet:ref/Print"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is always given on the ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$Output"]],"paclet:ref/$Output"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " channel. "
+}], "Notes",
+ CellID->31873],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->992913364],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->70301474],
+
+Cell["Typical value for output for the Wolfram Language: ", "ExampleText",
+ CellID->644516372],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$Output"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->29586499],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   RowBox[{
+    TagBox["OutputStream",
+     "SummaryHead",
+     Selectable->True], "[", 
+    DynamicModuleBox[{Typeset`open$$ = False}, 
+     PanelBox[
+      PaneSelectorBox[{False->GridBox[{
+         {
+          PaneBox[
+           ButtonBox[
+            
+            DynamicBox[FEPrivate`FrontEndResource[
+             "FEBitmaps", "SquarePlusIconMedium"],
+             ImageSizeCache->{12., {0., 12.}}],
+            Appearance->None,
+            ButtonFunction:>(Typeset`open$$ = True),
+            Evaluator->Automatic,
+            Method->"Preemptive"],
+           Alignment->{Center, Center},
+           
+           ImageSize->
+            Dynamic[{
+             Automatic, 3.5 CurrentValue["FontCapHeight"]/
+              AbsoluteCurrentValue[Magnification]}]], 
+          GraphicsBox[
+           {Thickness[0.0016806722689075631`], 
+            {FaceForm[{GrayLevel[0.93], Opacity[1.]}], 
+             FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 
+              3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+              25.499999999999996`, 2.5}, {25.499999999999996`, 
+              1.3953100000000003`}, {24.604699999999998`, 
+              0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+              0.49999999999999994`}, {1.3953100000000003`, 
+              0.49999999999999994`}, {0.49999999999999994`, 
+              1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+              0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+              24.604699999999998`}, {1.3953100000000003`, 
+              25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+              25.499999999999996`}, {24.604699999999998`, 
+              25.499999999999996`}, {25.499999999999996`, 
+              24.604699999999998`}, {25.499999999999996`, 23.5}, {
+              25.499999999999996`, 2.5}}}]}, 
+            {RGBColor[0.699951, 0.699951, 0.699951], Opacity[1.], 
+             JoinForm[{ElisionsDump`Miter, 10.}], 
+             JoinedCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 
+              3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+              25.499999999999996`, 2.5}, {25.499999999999996`, 
+              1.3953100000000003`}, {24.604699999999998`, 
+              0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+              0.49999999999999994`}, {1.3953100000000003`, 
+              0.49999999999999994`}, {0.49999999999999994`, 
+              1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+              0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+              24.604699999999998`}, {1.3953100000000003`, 
+              25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+              25.499999999999996`}, {24.604699999999998`, 
+              25.499999999999996`}, {25.499999999999996`, 
+              24.604699999999998`}, {25.499999999999996`, 23.5}, {
+              25.499999999999996`, 2.5}}}]}, 
+            {FaceForm[{RGBColor[0.5, 0.5, 0.5], Opacity[1.]}], 
+             FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 
+              1, 0}, {1, 3, 3}, {1, 3, 3}}}, {{{3.52539, 
+              1.0035199999999997`}, {2.5250000000000004`, 
+              1.0035199999999997`}, {1.6828099999999997`, 
+              1.0035199999999997`}, {0.9999999999999999, 
+              1.6863299999999997`}, {0.9999999999999999, 
+              2.5285199999999994`}, {0.9999999999999999, 
+              23.474999999999998`}, {0.9999999999999999, 
+              24.317199999999996`}, {1.6828099999999997`, 
+              24.999999999999996`}, {2.5250000000000004`, 
+              24.999999999999996`}, {3.52539, 24.999999999999996`}, {3.52539, 
+              24.999999999999993`}, {5.523440000000001, 
+              22.421099999999996`}, {5.523440000000001, 13.0039}, {
+              5.523440000000001, 3.5867199999999992`}, {3.52539, 
+              1.0035199999999997`}, {3.52539, 1.0035199999999997`}}}], 
+             FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 
+              1, 0}, {0, 1, 0}}}, {{{22.4977, 12.9016}, {17.740599999999997`, 
+              16.8398}, {17.740599999999997`, 14.856599999999998`}, {
+              19.980900000000002`, 12.947299999999997`}, {17.740599999999997`,
+               10.946100000000001`}, {17.740599999999997`, 8.96289}, {22.4977,
+               12.9016}}}]}, 
+            {FaceForm[{RGBColor[
+             0.46093800000000007`, 0.46093800000000007`, 
+              0.46093800000000007`], Opacity[1.]}], 
+             FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+              3}}}, {{{9.202339999999998, 12.8969}, {9.202339999999998, 
+              12.335499999999998`}, {8.747660000000002, 
+              11.880899999999999`}, {8.186329999999998, 
+              11.880899999999999`}, {7.624999999999999, 
+              11.880899999999999`}, {7.169920000000001, 
+              12.335499999999998`}, {7.169920000000001, 12.8969}, {
+              7.169920000000001, 13.458200000000003`}, {7.624999999999999, 
+              13.9133}, {8.186329999999998, 13.9133}, {8.747660000000002, 
+              13.9133}, {9.202339999999998, 13.458200000000003`}, {
+              9.202339999999998, 12.8969}}}], 
+             FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+              3}}}, {{{12.6227, 12.8969}, {12.6227, 12.335499999999998`}, {
+              12.167599999999998`, 11.880899999999999`}, {11.606200000000001`,
+               11.880899999999999`}, {11.0449, 11.880899999999999`}, {
+              10.589799999999999`, 12.335499999999998`}, {10.589799999999999`,
+               12.8969}, {10.589799999999999`, 13.458200000000003`}, {11.0449,
+               13.9133}, {11.606200000000001`, 13.9133}, {12.167599999999998`,
+               13.9133}, {12.6227, 13.458200000000003`}, {12.6227, 
+              12.8969}}}], 
+             FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+              3}}}, {{{16.042600000000004`, 12.8969}, {16.042600000000004`, 
+              12.335499999999998`}, {15.587499999999999`, 
+              11.880899999999999`}, {15.026199999999998`, 
+              11.880899999999999`}, {14.464799999999997`, 
+              11.880899999999999`}, {14.010199999999998`, 
+              12.335499999999998`}, {14.010199999999998`, 12.8969}, {
+              14.010199999999998`, 13.458200000000003`}, {14.464799999999997`,
+               13.9133}, {15.026199999999998`, 13.9133}, {15.587499999999999`,
+               13.9133}, {16.042600000000004`, 13.458200000000003`}, {
+              16.042600000000004`, 12.8969}}}]}},
+           AspectRatio->1,
+           Axes->False,
+           Background->GrayLevel[0.5],
+           Frame->True,
+           FrameStyle->Directive[
+             Thickness[Tiny], 
+             GrayLevel[0.7]],
+           FrameTicks->None,
+           ImageSize->{Automatic, 
+             Dynamic[
+             3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+               Magnification])]}], GridBox[{
+            {
+             RowBox[{
+              StyleBox["\<\"Name: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox[
+               StyleBox[
+                PaneBox["\<\"stdout\"\>",
+                 BaselinePosition->Baseline,
+                 ContentPadding->False,
+                 FrameMargins->0,
+                 ImageSize->{{1, 300}, Automatic},
+                 StripOnInput->True],
+                LineBreakWithin->False],
+               "SummaryItem",
+               Selectable->True]}]},
+            {
+             RowBox[{
+              StyleBox["\<\"Unique ID: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox["1",
+               "SummaryItem",
+               Selectable->True]}]}
+           },
+           AutoDelete->False,
+           
+           BaseStyle->{
+            ShowStringCharacters -> False, NumberMarks -> False, 
+             PrintPrecision -> 3, ShowSyntaxStyles -> False},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+        },
+        AutoDelete->False,
+        BaselinePosition->{1, 1},
+        GridBoxAlignment->{"Rows" -> {{Top}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True->GridBox[{
+         {
+          PaneBox[
+           ButtonBox[
+            
+            DynamicBox[FEPrivate`FrontEndResource[
+             "FEBitmaps", "SquareMinusIconMedium"]],
+            Appearance->None,
+            ButtonFunction:>(Typeset`open$$ = False),
+            Evaluator->Automatic,
+            Method->"Preemptive"],
+           Alignment->{Center, Center},
+           
+           ImageSize->
+            Dynamic[{
+             Automatic, 3.5 CurrentValue["FontCapHeight"]/
+              AbsoluteCurrentValue[Magnification]}]], 
+          GraphicsBox[
+           {Thickness[0.0016806722689075631`], 
+            {FaceForm[{GrayLevel[0.93], Opacity[1.]}], 
+             FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 
+              3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+              25.499999999999996`, 2.5}, {25.499999999999996`, 
+              1.3953100000000003`}, {24.604699999999998`, 
+              0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+              0.49999999999999994`}, {1.3953100000000003`, 
+              0.49999999999999994`}, {0.49999999999999994`, 
+              1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+              0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+              24.604699999999998`}, {1.3953100000000003`, 
+              25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+              25.499999999999996`}, {24.604699999999998`, 
+              25.499999999999996`}, {25.499999999999996`, 
+              24.604699999999998`}, {25.499999999999996`, 23.5}, {
+              25.499999999999996`, 2.5}}}]}, 
+            {RGBColor[0.699951, 0.699951, 0.699951], Opacity[1.], 
+             JoinForm[{ElisionsDump`Miter, 10.}], 
+             JoinedCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 
+              3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+              25.499999999999996`, 2.5}, {25.499999999999996`, 
+              1.3953100000000003`}, {24.604699999999998`, 
+              0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+              0.49999999999999994`}, {1.3953100000000003`, 
+              0.49999999999999994`}, {0.49999999999999994`, 
+              1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+              0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+              24.604699999999998`}, {1.3953100000000003`, 
+              25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+              25.499999999999996`}, {24.604699999999998`, 
+              25.499999999999996`}, {25.499999999999996`, 
+              24.604699999999998`}, {25.499999999999996`, 23.5}, {
+              25.499999999999996`, 2.5}}}]}, 
+            {FaceForm[{RGBColor[0.5, 0.5, 0.5], Opacity[1.]}], 
+             FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 
+              1, 0}, {1, 3, 3}, {1, 3, 3}}}, {{{3.52539, 
+              1.0035199999999997`}, {2.5250000000000004`, 
+              1.0035199999999997`}, {1.6828099999999997`, 
+              1.0035199999999997`}, {0.9999999999999999, 
+              1.6863299999999997`}, {0.9999999999999999, 
+              2.5285199999999994`}, {0.9999999999999999, 
+              23.474999999999998`}, {0.9999999999999999, 
+              24.317199999999996`}, {1.6828099999999997`, 
+              24.999999999999996`}, {2.5250000000000004`, 
+              24.999999999999996`}, {3.52539, 24.999999999999996`}, {3.52539, 
+              24.999999999999993`}, {5.523440000000001, 
+              22.421099999999996`}, {5.523440000000001, 13.0039}, {
+              5.523440000000001, 3.5867199999999992`}, {3.52539, 
+              1.0035199999999997`}, {3.52539, 1.0035199999999997`}}}], 
+             FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 
+              1, 0}, {0, 1, 0}}}, {{{22.4977, 12.9016}, {17.740599999999997`, 
+              16.8398}, {17.740599999999997`, 14.856599999999998`}, {
+              19.980900000000002`, 12.947299999999997`}, {17.740599999999997`,
+               10.946100000000001`}, {17.740599999999997`, 8.96289}, {22.4977,
+               12.9016}}}]}, 
+            {FaceForm[{RGBColor[
+             0.46093800000000007`, 0.46093800000000007`, 
+              0.46093800000000007`], Opacity[1.]}], 
+             FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+              3}}}, {{{9.202339999999998, 12.8969}, {9.202339999999998, 
+              12.335499999999998`}, {8.747660000000002, 
+              11.880899999999999`}, {8.186329999999998, 
+              11.880899999999999`}, {7.624999999999999, 
+              11.880899999999999`}, {7.169920000000001, 
+              12.335499999999998`}, {7.169920000000001, 12.8969}, {
+              7.169920000000001, 13.458200000000003`}, {7.624999999999999, 
+              13.9133}, {8.186329999999998, 13.9133}, {8.747660000000002, 
+              13.9133}, {9.202339999999998, 13.458200000000003`}, {
+              9.202339999999998, 12.8969}}}], 
+             FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+              3}}}, {{{12.6227, 12.8969}, {12.6227, 12.335499999999998`}, {
+              12.167599999999998`, 11.880899999999999`}, {11.606200000000001`,
+               11.880899999999999`}, {11.0449, 11.880899999999999`}, {
+              10.589799999999999`, 12.335499999999998`}, {10.589799999999999`,
+               12.8969}, {10.589799999999999`, 13.458200000000003`}, {11.0449,
+               13.9133}, {11.606200000000001`, 13.9133}, {12.167599999999998`,
+               13.9133}, {12.6227, 13.458200000000003`}, {12.6227, 
+              12.8969}}}], 
+             FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+              3}}}, {{{16.042600000000004`, 12.8969}, {16.042600000000004`, 
+              12.335499999999998`}, {15.587499999999999`, 
+              11.880899999999999`}, {15.026199999999998`, 
+              11.880899999999999`}, {14.464799999999997`, 
+              11.880899999999999`}, {14.010199999999998`, 
+              12.335499999999998`}, {14.010199999999998`, 12.8969}, {
+              14.010199999999998`, 13.458200000000003`}, {14.464799999999997`,
+               13.9133}, {15.026199999999998`, 13.9133}, {15.587499999999999`,
+               13.9133}, {16.042600000000004`, 13.458200000000003`}, {
+              16.042600000000004`, 12.8969}}}]}},
+           AspectRatio->1,
+           Axes->False,
+           Background->GrayLevel[0.5],
+           Frame->True,
+           FrameStyle->Directive[
+             Thickness[Tiny], 
+             GrayLevel[0.7]],
+           FrameTicks->None,
+           ImageSize->{Automatic, 
+             Dynamic[
+             3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+               Magnification])]}], GridBox[{
+            {
+             RowBox[{
+              StyleBox["\<\"Name: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox[
+               PaneBox["\<\"stdout\"\>",
+                BaselinePosition->Baseline,
+                ContentPadding->False,
+                FrameMargins->0,
+                ImageSize->{{1, 500}, Automatic},
+                StripOnInput->True],
+               "SummaryItem",
+               Selectable->True]}]},
+            {
+             RowBox[{
+              StyleBox["\<\"Unique ID: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox["1",
+               "SummaryItem",
+               Selectable->True]}]},
+            {
+             RowBox[{
+              StyleBox["\<\"Binary: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox["False",
+               "SummaryItem",
+               Selectable->True]}]},
+            {
+             RowBox[{
+              StyleBox["\<\"Open: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox[
+               DynamicBox[ToBoxes[Options[
+                   OutputStream["stdout", 1]] =!= {}, StandardForm],
+                UpdateInterval->1],
+               "SummaryItem",
+               Selectable->True]}]},
+            {
+             RowBox[{
+              StyleBox["\<\"Encoding: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox["\<\"Unicode\"\>",
+               "SummaryItem",
+               Selectable->True]}]},
+            {
+             RowBox[{
+              StyleBox["\<\"Format: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox["StandardForm",
+               "SummaryItem",
+               Selectable->True]}]},
+            {
+             RowBox[{
+              StyleBox["\<\"Page width: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox["67",
+               "SummaryItem",
+               Selectable->True]}]},
+            {
+             RowBox[{
+              StyleBox["\<\"Number marks: \"\>",
+               FontColor->GrayLevel[0.5]], "\[InvisibleSpace]", 
+              TagBox["Automatic",
+               "SummaryItem",
+               Selectable->True]}]}
+           },
+           AutoDelete->False,
+           
+           BaseStyle->{
+            ShowStringCharacters -> False, NumberMarks -> False, 
+             PrintPrecision -> 3, ShowSyntaxStyles -> False},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}
+        },
+        AutoDelete->False,
+        BaselinePosition->{1, 1},
+        GridBoxAlignment->{"Rows" -> {{Top}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, Dynamic[
+       Typeset`open$$],
+       ImageSize->Automatic],
+      BaselinePosition->Baseline],
+     DynamicModuleValues:>{}], "]"}],
+   OutputStream["stdout", 1],
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False], "}"}]], "Output",
+ ImageSize->{267, 58},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->1579035237]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->14773],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Streams"]],"paclet:ref/Streams"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["OutputStream"]],"paclet:ref/OutputStream"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Write"]],"paclet:ref/Write"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->17808]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->16975],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["The Main Loop"]],"paclet:tutorial/TheMainLoop"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->8037],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Streams and Low\[Hyphen]Level Input and Output"]],
+   "paclet:tutorial/StreamsAndLowLevelInputAndOutput"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->13834],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->21777628],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Session Customization"]],"paclet:guide/SessionCustomization"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->73106920],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Standalone Wolfram Language Kernels"]],
+   "paclet:guide/StandaloneWolframLanguageKernels"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->607670209]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 1988",
+ Cell[" (1.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$Output",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Standalone Wolfram Language Kernels", ButtonData -> 
+         "paclet:guide/StandaloneWolframLanguageKernels", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$Output", ButtonData -> "paclet:ref/$Output", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Package Development", ButtonData -> 
+         "paclet:guide/PackageDevelopment", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Standalone Wolfram Language Kernels", ButtonData -> 
+         "paclet:guide/StandaloneWolframLanguageKernels", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$Output", ButtonData -> "paclet:ref/$Output", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Wolfram System Sessions", ButtonData -> 
+         "paclet:guide/WolframSystemSessions", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Session Customization", ButtonData -> 
+         "paclet:guide/SessionCustomization", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Standalone Wolfram Language Kernels", ButtonData -> 
+         "paclet:guide/StandaloneWolframLanguageKernels", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$Output", ButtonData -> "paclet:ref/$Output", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 15.0236406}", 
+    "history" -> {"1", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {"standard output", "output channel", "output streams"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Built-in Wolfram Language Symbol", "language" -> "en", 
+    "paclet" -> "Mathematica", "status" -> "None", "summary" -> 
+    "$Output gives the list of files and pipes to which standard output from \
+the Wolfram Language is sent. ", "synonyms" -> {}, "title" -> "$Output", 
+    "titlemodifier" -> "", "windowtitle" -> "$Output", "type" -> "Symbol", 
+    "uri" -> "ref/$Output"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7084, 215, 387, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->992913364]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 33169, 845}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[579, 21, 4620, 115, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5202, 138, 44, 1, 43, "ObjectName",
+ CellID->7765],
+Cell[CellGroupData[{
+Cell[5271, 143, 530, 17, 83, "Usage",
+ CellID->157],
+Cell[CellGroupData[{
+Cell[5826, 164, 738, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->291607969],
+Cell[6567, 190, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6601, 192, 400, 15, 70, "Notes",
+ CellID->31873],
+Cell[7004, 209, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7084, 215, 387, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->992913364],
+Cell[CellGroupData[{
+Cell[7496, 234, 194, 6, 25, "ExampleSection",
+ CellID->70301474],
+Cell[7693, 242, 94, 1, 33, "ExampleText",
+ CellID->644516372],
+Cell[CellGroupData[{
+Cell[7812, 247, 75, 2, 28, "Input",
+ CellID->29586499],
+Cell[7890, 251, 18635, 382, 79, "Output",
+ CellID->1579035237]
+}, Open  ]]
+}, Open  ]],
+Cell[26552, 637, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26620, 642, 265, 12, 31, "SeeAlsoSection",
+ CellID->14773],
+Cell[26888, 656, 820, 25, 58, "SeeAlso",
+ CellID->17808]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27745, 686, 268, 12, 31, "TutorialsSection",
+ CellID->16975],
+Cell[28016, 700, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[28050, 702, 165, 5, 19, "Tutorials",
+ CellID->8037],
+Cell[28218, 709, 224, 6, 19, "Tutorials",
+ CellID->13834],
+Cell[28445, 717, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28513, 722, 276, 12, 31, "MoreAboutSection",
+ CellID->21777628],
+Cell[28792, 736, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[28826, 738, 183, 5, 19, "MoreAbout",
+ CellID->73106920],
+Cell[29012, 745, 214, 6, 70, "MoreAbout",
+ CellID->607670209]
+}, Open  ]],
+Cell[29241, 754, 87, 3, 70, "History"],
+Cell[29331, 759, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

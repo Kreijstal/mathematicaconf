@@ -1,0 +1,987 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     31133,        977]
+NotebookOptionsPosition[     24446,        792]
+NotebookOutlinePosition[     28527,        886]
+CellTagsIndexPosition[     28442,        881]
+WindowTitle->$OutputSizeLimit
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Memory Management\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/MemoryManagement"], "\<\"Short and Shallow \
+Output\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/ShortAndShallowOutput"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Short\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Short"], "\<\"Shallow\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Shallow"], "\<\"$PrePrint\"\>":>Documentation`HelpLookup[
+       "paclet:ref/$PrePrint"], "\<\"$HistoryLength\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$HistoryLength"], "\<\"OutputSizeLimit\"\>":>
+       Documentation`HelpLookup["paclet:ref/OutputSizeLimit"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Evaluation Options in Notebooks\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/EvaluationOptionsInNotebooks"], "\<\"Managing \
+Computations in Notebooks\"\>":>Documentation`HelpLookup[
+       "paclet:guide/ManagingComputationsInNotebooks"], "\<\"Session \
+Customization\"\>":>Documentation`HelpLookup[
+       "paclet:guide/SessionCustomization"], "\<\"Wolfram System Session \
+History\"\>":>Documentation`HelpLookup[
+       "paclet:guide/WolframSystemSessionHistory"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$OutputSizeLimit\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$OutputSizeLimit"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$OutputSizeLimit.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$68088], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "ref/$OutputSizeLimit", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$OutputSizeLimit", "ObjectName",
+ CellID->30188],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$OutputSizeLimit"]],"paclet:ref/$OutputSizeLimit"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     " \[LineSeparator]specifies the maximum size in bytes of expressions \
+that will automatically be output in their entirety in a ",
+     "Wolfram System",
+     " notebook. "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->18960],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->84983616],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "For expressions larger than ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$OutputSizeLimit"]],"paclet:ref/$OutputSizeLimit"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ", portions of the expression are displayed, together with controls to allow \
+more to be displayed."
+}], "Notes",
+ CellID->637],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$OutputSizeLimit"]],"paclet:ref/$OutputSizeLimit"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is not affected by constructs such as ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Graphics"]],"paclet:ref/Graphics"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SparseArray"]],"paclet:ref/SparseArray"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " whose displayed form does not grow with the amount of data they contain."
+}], "Notes",
+ CellID->4185],
+
+Cell[TextData[{
+ "Larger portions of expressions elided as a result of ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$OutputSizeLimit"]],"paclet:ref/$OutputSizeLimit"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " can only be displayed while the corresponding ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Out"]],"paclet:ref/Out"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   StyleBox["n", "TI"], "]"}]], "InlineFormula"],
+ " is accessible in a single kernel session."
+}], "Notes",
+ CellID->77],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->534431623],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->435145051],
+
+Cell["This produces output that is somewhat lengthy:", "ExampleText",
+ CellID->647125461],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"x", "+", 
+     RowBox[{"3", "y"}]}], ")"}], "^", "27"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->452437229],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "27"], "+", 
+  RowBox[{"81", " ", 
+   SuperscriptBox["x", "26"], " ", "y"}], "+", 
+  RowBox[{"3159", " ", 
+   SuperscriptBox["x", "25"], " ", 
+   SuperscriptBox["y", "2"]}], "+", 
+  RowBox[{"78975", " ", 
+   SuperscriptBox["x", "24"], " ", 
+   SuperscriptBox["y", "3"]}], "+", 
+  RowBox[{"1421550", " ", 
+   SuperscriptBox["x", "23"], " ", 
+   SuperscriptBox["y", "4"]}], "+", 
+  RowBox[{"19617390", " ", 
+   SuperscriptBox["x", "22"], " ", 
+   SuperscriptBox["y", "5"]}], "+", 
+  RowBox[{"215791290", " ", 
+   SuperscriptBox["x", "21"], " ", 
+   SuperscriptBox["y", "6"]}], "+", 
+  RowBox[{"1942121610", " ", 
+   SuperscriptBox["x", "20"], " ", 
+   SuperscriptBox["y", "7"]}], "+", 
+  RowBox[{"14565912075", " ", 
+   SuperscriptBox["x", "19"], " ", 
+   SuperscriptBox["y", "8"]}], "+", 
+  RowBox[{"92250776475", " ", 
+   SuperscriptBox["x", "18"], " ", 
+   SuperscriptBox["y", "9"]}], "+", 
+  RowBox[{"498154192965", " ", 
+   SuperscriptBox["x", "17"], " ", 
+   SuperscriptBox["y", "10"]}], "+", 
+  RowBox[{"2309623985565", " ", 
+   SuperscriptBox["x", "16"], " ", 
+   SuperscriptBox["y", "11"]}], "+", 
+  RowBox[{"9238495942260", " ", 
+   SuperscriptBox["x", "15"], " ", 
+   SuperscriptBox["y", "12"]}], "+", 
+  RowBox[{"31979409030900", " ", 
+   SuperscriptBox["x", "14"], " ", 
+   SuperscriptBox["y", "13"]}], "+", 
+  RowBox[{"95938227092700", " ", 
+   SuperscriptBox["x", "13"], " ", 
+   SuperscriptBox["y", "14"]}], "+", 
+  RowBox[{"249439390441020", " ", 
+   SuperscriptBox["x", "12"], " ", 
+   SuperscriptBox["y", "15"]}], "+", 
+  RowBox[{"561238628492295", " ", 
+   SuperscriptBox["x", "11"], " ", 
+   SuperscriptBox["y", "16"]}], "+", 
+  RowBox[{"1089463220014455", " ", 
+   SuperscriptBox["x", "10"], " ", 
+   SuperscriptBox["y", "17"]}], "+", 
+  RowBox[{"1815772033357425", " ", 
+   SuperscriptBox["x", "9"], " ", 
+   SuperscriptBox["y", "18"]}], "+", 
+  RowBox[{"2580307626350025", " ", 
+   SuperscriptBox["x", "8"], " ", 
+   SuperscriptBox["y", "19"]}], "+", 
+  RowBox[{"3096369151620030", " ", 
+   SuperscriptBox["x", "7"], " ", 
+   SuperscriptBox["y", "20"]}], "+", 
+  RowBox[{"3096369151620030", " ", 
+   SuperscriptBox["x", "6"], " ", 
+   SuperscriptBox["y", "21"]}], "+", 
+  RowBox[{"2533392942234570", " ", 
+   SuperscriptBox["x", "5"], " ", 
+   SuperscriptBox["y", "22"]}], "+", 
+  RowBox[{"1652212788413850", " ", 
+   SuperscriptBox["x", "4"], " ", 
+   SuperscriptBox["y", "23"]}], "+", 
+  RowBox[{"826106394206925", " ", 
+   SuperscriptBox["x", "3"], " ", 
+   SuperscriptBox["y", "24"]}], "+", 
+  RowBox[{"297398301914493", " ", 
+   SuperscriptBox["x", "2"], " ", 
+   SuperscriptBox["y", "25"]}], "+", 
+  RowBox[{"68630377364883", " ", "x", " ", 
+   SuperscriptBox["y", "26"]}], "+", 
+  RowBox[{"7625597484987", " ", 
+   SuperscriptBox["y", "27"]}]}]], "Output",
+ ImageSize->{528, 135},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->634412914]
+}, Open  ]],
+
+Cell[TextData[{
+ "Set ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$OutputSizeLimit"]],"paclet:ref/$OutputSizeLimit"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to be rather small:"
+}], "ExampleText",
+ CellID->546020555],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$OutputSizeLimit", "=", "4000"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->95201795],
+
+Cell[BoxData["4000"], "Output",
+ ImageSize->{32, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->321538243]
+}, Open  ]],
+
+Cell["Now the same output as before is shown in a shortened form:", \
+"ExampleText",
+ CellID->50949985],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"x", "+", 
+     RowBox[{"3", "y"}]}], ")"}], "^", "27"}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->12973506],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   PanelBox[
+    TagBox[GridBox[{
+       {
+        StyleBox[
+         StyleBox[
+          DynamicBox[ToBoxes[
+            FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+            StandardForm],
+           ImageSizeCache->{345., {3., 10.}}],
+          StripOnInput->False,
+          DynamicUpdating->True], "Panel",
+         StripOnInput->False,
+         FontSize->1 + Inherited,
+         Background->None]},
+       {
+        ItemBox[
+         TagBox[
+          RowBox[{
+           SuperscriptBox["x", "27"], "+", 
+           RowBox[{"81", " ", 
+            SuperscriptBox["x", "26"], " ", "y"}], "+", 
+           RowBox[{"3159", " ", 
+            SuperscriptBox["x", "25"], " ", 
+            SuperscriptBox["y", "2"]}], "+", 
+           RowBox[{"78975", " ", 
+            SuperscriptBox["x", "24"], " ", 
+            SuperscriptBox["y", "3"]}], "+", 
+           RowBox[{"1421550", " ", 
+            SuperscriptBox["x", "23"], " ", 
+            SuperscriptBox["y", "4"]}], "+", 
+           RowBox[{"19617390", " ", 
+            SuperscriptBox["x", "22"], " ", 
+            SuperscriptBox["y", "5"]}], "+", 
+           RowBox[{"215791290", " ", 
+            SuperscriptBox["x", "21"], " ", 
+            SuperscriptBox["y", "6"]}], "+", 
+           RowBox[{"1942121610", " ", 
+            SuperscriptBox["x", "20"], " ", 
+            SuperscriptBox["y", "7"]}], "+", 
+           RowBox[{"\[LeftSkeleton]", "13", "\[RightSkeleton]"}], "+", 
+           RowBox[{"3096369151620030", " ", 
+            SuperscriptBox["x", "6"], " ", 
+            SuperscriptBox["y", "21"]}], "+", 
+           RowBox[{"2533392942234570", " ", 
+            SuperscriptBox["x", "5"], " ", 
+            SuperscriptBox["y", "22"]}], "+", 
+           RowBox[{"1652212788413850", " ", 
+            SuperscriptBox["x", "4"], " ", 
+            SuperscriptBox["y", "23"]}], "+", 
+           RowBox[{"826106394206925", " ", 
+            SuperscriptBox["x", "3"], " ", 
+            SuperscriptBox["y", "24"]}], "+", 
+           RowBox[{"297398301914493", " ", 
+            SuperscriptBox["x", "2"], " ", 
+            SuperscriptBox["y", "25"]}], "+", 
+           RowBox[{"68630377364883", " ", "x", " ", 
+            SuperscriptBox["y", "26"]}], "+", 
+           RowBox[{"7625597484987", " ", 
+            SuperscriptBox["y", "27"]}]}],
+          Short[#, 5]& ],
+         Background->GrayLevel[1],
+         BaseStyle->{Deployed -> False},
+         Frame->True,
+         FrameStyle->GrayLevel[0, 0.2],
+         StripOnInput->False]},
+       {
+        RowBox[{
+         ButtonBox[
+          StyleBox[
+           StyleBox[
+            DynamicBox[ToBoxes[
+              FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+              StandardForm],
+             ImageSizeCache->{56., {1., 10.}}],
+            StripOnInput->False,
+            DynamicUpdating->True], "Panel",
+           StripOnInput->False,
+           FontSize->1 + Inherited,
+           Background->None],
+          Appearance->{Automatic, "DialogBox"},
+          
+          ButtonFunction:>OutputSizeLimit`ButtonFunction[
+           Identity, 15, 22181396556087408643, 5/2],
+          Enabled->True,
+          Evaluator->Automatic,
+          Method->"Queued"], "\[ThinSpace]", 
+         ButtonBox[
+          StyleBox[
+           StyleBox[
+            DynamicBox[ToBoxes[
+              FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+              StandardForm],
+             ImageSizeCache->{65., {1., 10.}}],
+            StripOnInput->False,
+            DynamicUpdating->True], "Panel",
+           StripOnInput->False,
+           FontSize->1 + Inherited,
+           Background->None],
+          Appearance->{Automatic, "DialogBox"},
+          
+          ButtonFunction:>OutputSizeLimit`ButtonFunction[
+           Identity, 15, 22181396556087408643, 5 2],
+          Enabled->True,
+          Evaluator->Automatic,
+          Method->"Queued"], "\[ThinSpace]", 
+         ButtonBox[
+          StyleBox[
+           StyleBox[
+            DynamicBox[ToBoxes[
+              FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+              StandardForm],
+             ImageSizeCache->{47., {1., 10.}}],
+            StripOnInput->False,
+            DynamicUpdating->True], "Panel",
+           StripOnInput->False,
+           FontSize->1 + Inherited,
+           Background->None],
+          Appearance->{Automatic, "DialogBox"},
+          
+          ButtonFunction:>OutputSizeLimit`ButtonFunction[
+           Identity, 15, 22181396556087408643, Infinity],
+          Enabled->True,
+          Evaluator->Automatic,
+          Method->"Queued"], "\[ThinSpace]", 
+         ButtonBox[
+          StyleBox[
+           StyleBox[
+            DynamicBox[ToBoxes[
+              FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+              StandardForm],
+             ImageSizeCache->{80., {1., 10.}}],
+            StripOnInput->False,
+            DynamicUpdating->True], "Panel",
+           StripOnInput->False,
+           FontSize->1 + Inherited,
+           Background->None],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>FrontEndExecute[{
+             FrontEnd`SetOptions[
+             FrontEnd`$FrontEnd, 
+              FrontEnd`PreferencesSettings -> {"Page" -> "Evaluation"}], 
+             FrontEnd`FrontEndToken["PreferencesDialog"]}],
+          Evaluator->None,
+          Method->"Preemptive"]}]}
+      },
+      ColumnsEqual->False,
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxDividers->{
+       "Columns" -> {{False}}, "ColumnsIndexed" -> {}, "Rows" -> {{False}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{
+       "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.5599999999999999]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[1.2]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}},
+      RowsEqual->False],
+     "Column"],
+    DefaultBaseStyle->{},
+    FrameMargins->5],
+   Deployed->True,
+   StripOnInput->False],
+  Out[15]]], "Output",
+ ImageSize->{543, 157},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->1024394249]
+}, Open  ]],
+
+Cell[TextData[{
+ "This resets the ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$OutputSizeLimit"]],"paclet:ref/$OutputSizeLimit"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " option to its global setting:"
+}], "ExampleText",
+ CellID->868192494],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"$OutputSizeLimit", "=", "Inherited"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->653057950],
+
+Cell[BoxData["Inherited"], "Output",
+ ImageSize->{67, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->617744944]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->8698],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Short"]],"paclet:ref/Short"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Shallow"]],"paclet:ref/Shallow"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$PrePrint"]],"paclet:ref/$PrePrint"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$HistoryLength"]],"paclet:ref/$HistoryLength"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["OutputSizeLimit"]],"paclet:ref/OutputSizeLimit"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->20192]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->26380],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Memory Management"]],"paclet:tutorial/MemoryManagement"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->20907],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Short and Shallow Output"]],
+   "paclet:tutorial/ShortAndShallowOutput"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->152397031],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->230058155],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Evaluation Options in Notebooks"]],
+   "paclet:guide/EvaluationOptionsInNotebooks"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->9062525],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Managing Computations in Notebooks"]],
+   "paclet:guide/ManagingComputationsInNotebooks"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->125845175],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Session Customization"]],"paclet:guide/SessionCustomization"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->149353806],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Wolfram System Session History"]],
+   "paclet:guide/WolframSystemSessionHistory"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->764703465]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 2007",
+ Cell[" (6.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$OutputSizeLimit",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Notebook Formatting & Styling", ButtonData -> 
+         "paclet:guide/NotebookFormattingAndStyling", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Stylesheets", ButtonData -> "paclet:guide/Stylesheets", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Evaluation Options in Notebooks", ButtonData -> 
+         "paclet:guide/EvaluationOptionsInNotebooks", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$OutputSizeLimit", ButtonData -> "paclet:ref/$OutputSizeLimit", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Automated Reports", ButtonData -> "paclet:guide/AutomatedReports", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Notebook Formatting & Styling", ButtonData -> 
+         "paclet:guide/NotebookFormattingAndStyling", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Stylesheets", ButtonData -> "paclet:guide/Stylesheets", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Evaluation Options in Notebooks", ButtonData -> 
+         "paclet:guide/EvaluationOptionsInNotebooks", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$OutputSizeLimit", ButtonData -> "paclet:ref/$OutputSizeLimit", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 15.7766406}", 
+    "history" -> {"6", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "output overflow", "formula overflow", "short output", "long output", 
+      "large output", "suppressing large output", 
+      "controlling output display"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Built-in Wolfram Language Symbol", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "$OutputSizeLimit specifies the maximum size in bytes of expressions that \
+will automatically be output in their entirety in a Wolfram System notebook. \
+", "synonyms" -> {"output size limit"}, "title" -> "$OutputSizeLimit", 
+    "titlemodifier" -> "", "windowtitle" -> "$OutputSizeLimit", "type" -> 
+    "Symbol", "uri" -> "ref/$OutputSizeLimit"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8749, 258, 387, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->534431623]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 28299, 874}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[588, 21, 5044, 122, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5635, 145, 54, 1, 43, "ObjectName",
+ CellID->30188],
+Cell[CellGroupData[{
+Cell[5714, 150, 590, 17, 97, "Usage",
+ CellID->18960],
+Cell[CellGroupData[{
+Cell[6329, 171, 737, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->84983616],
+Cell[7069, 197, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7103, 199, 346, 10, 70, "Notes",
+ CellID->637],
+Cell[7452, 211, 652, 20, 70, "Notes",
+ CellID->4185],
+Cell[8107, 233, 559, 17, 70, "Notes",
+ CellID->77],
+Cell[8669, 252, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8749, 258, 387, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->534431623],
+Cell[CellGroupData[{
+Cell[9161, 277, 195, 6, 25, "ExampleSection",
+ CellID->435145051],
+Cell[9359, 285, 89, 1, 33, "ExampleText",
+ CellID->647125461],
+Cell[CellGroupData[{
+Cell[9473, 290, 196, 7, 28, "Input",
+ CellID->452437229],
+Cell[9672, 299, 2963, 85, 156, "Output",
+ CellID->634412914]
+}, Open  ]],
+Cell[12650, 387, 255, 9, 37, "ExampleText",
+ CellID->546020555],
+Cell[CellGroupData[{
+Cell[12930, 400, 109, 3, 28, "Input",
+ CellID->95201795],
+Cell[13042, 405, 161, 5, 36, "Output",
+ CellID->321538243]
+}, Open  ]],
+Cell[13218, 413, 103, 2, 33, "ExampleText",
+ CellID->50949985],
+Cell[CellGroupData[{
+Cell[13346, 419, 195, 7, 28, "Input",
+ CellID->12973506],
+Cell[13544, 428, 6458, 176, 178, "Output",
+ CellID->1024394249]
+}, Open  ]],
+Cell[20017, 607, 277, 9, 37, "ExampleText",
+ CellID->868192494],
+Cell[CellGroupData[{
+Cell[20319, 620, 115, 3, 28, "Input",
+ CellID->653057950],
+Cell[20437, 625, 166, 5, 36, "Output",
+ CellID->617744944]
+}, Open  ]]
+}, Open  ]],
+Cell[20630, 634, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20698, 639, 264, 12, 31, "SeeAlsoSection",
+ CellID->8698],
+Cell[20965, 653, 1436, 43, 58, "SeeAlso",
+ CellID->20192]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22438, 701, 268, 12, 31, "TutorialsSection",
+ CellID->26380],
+Cell[22709, 715, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[22743, 717, 175, 5, 19, "Tutorials",
+ CellID->20907],
+Cell[22921, 724, 195, 6, 19, "Tutorials",
+ CellID->152397031],
+Cell[23119, 732, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23187, 737, 277, 12, 31, "MoreAboutSection",
+ CellID->230058155],
+Cell[23467, 751, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[23501, 753, 204, 6, 19, "MoreAbout",
+ CellID->9062525],
+Cell[23708, 761, 212, 6, 19, "MoreAbout",
+ CellID->125845175],
+Cell[23923, 769, 184, 5, 19, "MoreAbout",
+ CellID->149353806],
+Cell[24110, 776, 204, 6, 19, "MoreAbout",
+ CellID->764703465]
+}, Open  ]],
+Cell[24329, 785, 87, 3, 43, "History"],
+Cell[24419, 790, 23, 0, 25, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

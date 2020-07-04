@@ -1,0 +1,524 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17947,        515]
+NotebookOptionsPosition[     13713,        409]
+NotebookOutlinePosition[     16551,        471]
+CellTagsIndexPosition[     16508,        468]
+WindowTitle->Symbolic Execution History
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Assert\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Assert"], "\<\"Stack\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Stack"], "\<\"StackBegin\"\>":>Documentation`HelpLookup[
+       "paclet:ref/StackBegin"], "\<\"StackComplete\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/StackComplete"], "\<\"StackInhibit\"\>":>
+       Documentation`HelpLookup["paclet:ref/StackInhibit"], "\<\"Trace\"\>":>
+       Documentation`HelpLookup["paclet:ref/Trace"], "\<\"TraceDialog\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TraceDialog"], "\<\"TracePrint\"\>":>
+       Documentation`HelpLookup["paclet:ref/TracePrint"], "\<\"TraceScan\"\>":>
+       Documentation`HelpLookup["paclet:ref/TraceScan"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Tuning & Debugging\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/TuningAndDebugging"], "\<\"Evaluation Control\"\>":>
+       Documentation`HelpLookup["paclet:guide/EvaluationControl"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"The Standard Evaluation Procedure\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/TheStandardEvaluationProcedure"], "\<\"Tracing \
+Evaluation\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/TracingEvaluation"], "\<\"The Evaluation Stack\"\>":>
+       Documentation`HelpLookup["paclet:tutorial/TheEvaluationStack"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideTutorial"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"guide/SymbolicExecutionHistory\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/SymbolicExecutionHistory"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/\
+SymbolicExecutionHistory.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$99217], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/SymbolicExecutionHistory", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Symbolic Execution History", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Language can represent not only data and programs, but also the \
+execution history of programs, as symbolic expressions\[LongDash]which can be \
+displayed, manipulated, and analyzed using the full power of the Wolfram \
+Language. \
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Learning Resources"
+}], "GuideLearningResourcesSection",
+ WholeCellGroupOpener->True],
+
+Cell[BoxData[GridBox[{
+   {Cell[BoxData[GridBox[{
+       {Cell[BoxData[GridBox[{
+           {
+            GraphicsBox[RasterBox[CompressedData["
+1:eJztlOly2mYUhj2T2+ifTu+ol5AbyF0krZ04TZvNrDa7EGIVAoxBCIHYkYTZ
+wdhxiBcapz96A32FBMEfOEnT6Ux+5MyLRsNIzznnPefTj/cf/Hz/3tbW1k/4
+/YCfdv/39/jfQhDyuXXllhLWxa9oHXhzc+NwumNxbqF4jI1HDbGaYmzEUExT
+NBZe0YuXrwmgLCtWm33n8e7DR9sBJpjLi3NpdfKGtEqyhnJZXlPGEA/tmSwE
+8/We2e32Pn7y9NGvOxTN5MWCoEkUDLjB/0QKk9lKMOkAIyuK2+NLH2XEoiQW
+i2KhmDdUuCvFKt9kthFMj5dSFHX/wBkKR/F6QSrNJc35X5TCYrETTLPF5vVR
+T3afPfxl2x9gpHJZKpWLmkpFg39HClFPIVqs+wTTYrVbrLbfnv3x/OWrdCZb
+qlTnqkhlXYsUH/mlQvFWCqvtgGCGQpGrq6tIlK3W6hVd1VpZl8FfT3GrBbvd
+QTBdbi88d7l9bDyB12v1RlXXJ1KUb6XALAgmw4QDTAidb+/sJpKHjaZcbzRr
+uhZ8tGnwa7VFiuoiReXA4SKYlD/gdHn3zDa3l8IzSutYabVkVcV9Q1bqTRmE
+PbM1wwsfW6jXV1M4nJ5V4PX1jONSuEln+E6vD7W7veNOt9XupNIZl8eXL0hx
+LonV9dMML4gujzcSixNdwD2iTh8VOMpk3R4qHIkB2B8M8ev2B6VKDf/zuTwT
+ipyfn2eyORiO0bBcUlbUpqLoXcAonBeCGQzh28Bho35/jl3ih+OT4Wg8GI2l
+cvUwnbm8vLy4uHg3j+l0qrZaSFGQyoViST1uwyhZbXl9NMFk4xzKofwMThnK
+HE9OKVrLI5Uq/cFgNptdzwP7Bj4Kbnc6yVTaR9Gdbq/d7cIomg4SzFQq/eHD
+X0K+AJqu/nCEYhS19X4Rf85jNo+zszc0EwKwPxz2BkO4xAQj673DEF21elPH
+YlgeH/1+U7Q7XZZLjE4mI7g0PoFLGATBBAql6ky9WtSJr/FkcrqRicjyAtw2
++jqZRGPceu9oE2NqKqr+WLXWSB4exROpvFgkaEiUTB1hqDlBXHqFd9eZcGnV
+z2X7pXIVnLdvp7hiQPr9Ku0uJvyEbHYHPllY9eWTDVnFKmIng+EogOgXhuCK
+Fj7L9NMBrBOAJottOSMI9eAQwVvAw1FWR6nHnc/WiS1C76dnZ1hvvE48vMrv
+zFd3owgmnESRmBGXSC1n9G+1sXeUit5fvDLhxP13JroGE7LvO33+wOqMvpoJ
+P6fTd7jCz6b2tfkahcLkOVoWTKjb7dXrjS/URua3HP8Abdya4A==
+              "], {{0, 
+              0}, {28, 35}}, {0, 255},
+              ColorFunction->RGBColor],
+             Background->GrayLevel[0.952941],
+             ImageSize->{28, 35},
+             PlotRange->{{0, 28}, {0, 35}}], GridBox[{
+              {""},
+              {Cell["Tutorials", "GuideTutorialsSection",
+                WholeCellGroupOpener->True]},
+              {Cell[BoxData[
+                TemplateBox[{
+                 Cell["The Standard Evaluation Procedure"],
+                  "paclet:tutorial/TheStandardEvaluationProcedure"},
+                 "RefLink",
+                 BaseStyle->{"GuideTutorial"}]], "GuideTutorial"]},
+              {Cell[BoxData[
+                
+                TemplateBox[{
+                 Cell["Tracing Evaluation"],
+                  "paclet:tutorial/TracingEvaluation"},
+                 "RefLink",
+                 BaseStyle->{"GuideTutorial"}]], "GuideTutorial"]},
+              {Cell[BoxData[
+                
+                TemplateBox[{
+                 Cell["The Evaluation Stack"],
+                  "paclet:tutorial/TheEvaluationStack"},
+                 "RefLink",
+                 BaseStyle->{"GuideTutorial"}]], "GuideTutorial"]}
+             },
+             GridBoxDividers->{"Rows" -> {{False}}}]}
+          },
+          GridBoxAlignment->{"Rows" -> {{Top}}},
+          GridBoxSpacings->{"Columns" -> {{0.3}}}]], "GuideWebResource"]},
+       {""}
+      },
+      GridBoxSpacings->{"Rows" -> {{2}}}]], "GuideWebResource"]}
+  },
+  GridBoxAlignment->{
+   "Columns" -> {{Left, Center}}, 
+    "Rows" -> {{Top}}}]], "GuideLearningResourcesGrid"]
+}, Closed]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Trace"]],"paclet:ref/Trace"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "generate symbolic execution history filtered with various criteria"
+}], "GuideText",
+ CellID->472364746],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TracePrint"]],"paclet:ref/TracePrint"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " print whenever execution-history criteria are satisfied"
+}], "GuideText",
+ CellID->51859030],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TraceDialog"]],"paclet:ref/TraceDialog"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " enter a dialog whenever execution-history criteria are satisfied"
+}], "GuideText",
+ CellID->3189887],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TraceScan"]],"paclet:ref/TraceScan"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " apply any function whenever execution-history criteria are satisfied"
+}], "GuideText",
+ CellID->366777133],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->928904944],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Stack"]],"paclet:ref/Stack"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " full or filtered symbolic version of the current evaluation stack"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["StackBegin"]],"paclet:ref/StackBegin"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["StackInhibit"]],"paclet:ref/StackInhibit"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["StackComplete"]],"paclet:ref/StackComplete"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->368244624]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->329675839],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Assert"]],"paclet:ref/Assert"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " give an assertion to be checked when code is executed"
+}], "GuideText",
+ CellID->515952459]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Tuning & Debugging"]],"paclet:guide/TuningAndDebugging"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Evaluation Control"]],"paclet:guide/EvaluationControl"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->470815129]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Symbolic Execution History",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Tuning & Debugging", ButtonData -> "paclet:guide/TuningAndDebugging",
+          BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Symbolic Execution History", ButtonData -> 
+         "paclet:guide/SymbolicExecutionHistory", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 44.7326406}", 
+    "history" -> {"6", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "call stack", "computation history", "debug", "evaluation of functions", 
+      "functions being evaluated", "history of computation", 
+      "monitoring evaluation", "pending evaluations", 
+      "print trace of evaluation", "real-time monitoring", "stack begin", 
+      "stack complete", "stack inhibit", "trace dialog", "trace print", 
+      "trace scan", "tracing assignments", "tracing based on tags", 
+      "tracing calls to functions", "tracing messages", 
+      "tracing of built-in functions", "tracing of conditions", 
+      "tracing of recursion", "tracing of rules", 
+      "tracing of system functions", "tracing of transformation rules", 
+      "watch evaluation"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Language Guide", "language" -> "en", "paclet" -> "Mathematica", 
+    "status" -> "None", "summary" -> 
+    "The Wolfram Language can represent not only data and programs, but also \
+the execution history of programs, as symbolic expressions\[LongDash]which \
+can be displayed, manipulated, and analyzed using the full power of the \
+Wolfram Language. ", "synonyms" -> {}, "title" -> 
+    "Symbolic Execution History", "titlemodifier" -> "", "windowtitle" -> 
+    "Symbolic Execution History", "type" -> "Guide", "uri" -> 
+    "guide/SymbolicExecutionHistory"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[598, 21, 5247, 123, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5870, 148, 68, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[5941, 151, 297, 6, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6275, 162, 274, 11, 70, "GuideLearningResourcesSection"],
+Cell[6552, 175, 3085, 67, 70, "GuideLearningResourcesGrid"]
+}, Closed]],
+Cell[9652, 245, 257, 11, 70, "GuideReferenceSection"],
+Cell[9912, 258, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[9946, 260, 331, 11, 70, "GuideText",
+ CellID->472364746],
+Cell[10280, 273, 324, 10, 70, "GuideText",
+ CellID->51859030],
+Cell[10607, 285, 334, 10, 70, "GuideText",
+ CellID->3189887],
+Cell[10944, 297, 336, 10, 70, "GuideText",
+ CellID->366777133],
+Cell[CellGroupData[{
+Cell[11305, 311, 48, 1, 70, "GuideDelimiter",
+ CellID->928904944],
+Cell[11356, 314, 325, 10, 70, "GuideText",
+ CellID->203374175],
+Cell[11684, 326, 814, 25, 70, "InlineGuideFunctionListing",
+ CellID->368244624]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12535, 356, 48, 1, 70, "GuideDelimiter",
+ CellID->329675839],
+Cell[12586, 359, 315, 10, 70, "GuideText",
+ CellID->515952459]
+}, Open  ]],
+Cell[12916, 372, 31, 0, 70, "SectionFooterSpacer"],
+Cell[CellGroupData[{
+Cell[12972, 376, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[13256, 390, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[13290, 392, 190, 5, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[13483, 399, 188, 5, 70, "GuideMoreAbout",
+ CellID->470815129]
+}, Open  ]],
+Cell[13686, 407, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

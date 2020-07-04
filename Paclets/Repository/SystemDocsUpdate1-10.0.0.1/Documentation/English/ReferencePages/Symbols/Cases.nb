@@ -1,0 +1,2164 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     63591,       2154]
+NotebookOptionsPosition[     52248,       1784]
+NotebookOutlinePosition[     55218,       1852]
+CellTagsIndexPosition[     55132,       1847]
+WindowTitle->Cases
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"Finding Expressions That Match a Pattern\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/FindingExpressionsThatMatchAPattern"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"FirstCase\"\>":>Documentation`HelpLookup[
+       "paclet:ref/FirstCase"], "\<\"Select\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Select"], "\<\"BinLists\"\>":>Documentation`HelpLookup[
+       "paclet:ref/BinLists"], "\<\"GatherBy\"\>":>Documentation`HelpLookup[
+       "paclet:ref/GatherBy"], "\<\"Position\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Position"], "\<\"MemberQ\"\>":>Documentation`HelpLookup[
+       "paclet:ref/MemberQ"], "\<\"Count\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Count"], "\<\"StringCases\"\>":>Documentation`HelpLookup[
+       "paclet:ref/StringCases"], "\<\"ReplaceList\"\>":>
+       Documentation`HelpLookup["paclet:ref/ReplaceList"], "\<\"Collect\"\>":>
+       Documentation`HelpLookup["paclet:ref/Collect"], "\<\"DeleteCases\"\>":>
+       Documentation`HelpLookup["paclet:ref/DeleteCases"], "\<\"Except\"\>":>
+       Documentation`HelpLookup["paclet:ref/Except"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Conditionals\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/Conditionals"], "\<\"Discrete & Integer Data\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/DiscreteAndIntegerData"], "\<\"Elements of Lists\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/ElementsOfLists"], "\<\"Expressions\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/Expressions"], "\<\"Functional Programming\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/FunctionalProgramming"], "\<\"Function Composition & \
+Operator Forms\"\>":>Documentation`HelpLookup[
+       "paclet:guide/FunctionCompositionAndOperatorForms"], "\<\"List \
+Manipulation\"\>":>Documentation`HelpLookup[
+       "paclet:guide/ListManipulation"], "\<\"Parts of Expressions\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/PartsOfExpressions"], "\<\"Pattern Matching \
+Functions\"\>":>Documentation`HelpLookup[
+       "paclet:guide/PatternMatchingFunctions"], "\<\"Rules & Patterns\"\>":>
+       Documentation`HelpLookup["paclet:guide/RulesAndPatterns"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/Cases\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/Cases"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/Cases.html"], 
+                StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$25660], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "ref/Cases", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[BoxData[GridBox[{
+   {Cell["Cases", "ObjectName"], Cell[BoxData[
+     TagBox[
+      TooltipBox[
+       TogglerBox[Dynamic[
+         FrontEnd`CurrentValue[
+          FrontEnd`EvaluationNotebook[], {
+          TaggingRules, "ModificationHighlight"}, False]], {True->
+        PaneSelectorBox[{False->
+         GraphicsBox[RasterBox[CompressedData["
+1:eJztWt9rXEUUDuqD/0Z99w+wb/bdl/qutKCPFasghZJHIYIgFAuF7UMtIgoN
++2SyD9IUQ5tEDF2hZmsCcbeUbCpxN5jupnH3rt/d796zJzNzN9Hemc12DSfD
+zJm58+Ob7/y4u3vq/Adn339pamrqo1dRnD33yZsXL5679PYraJy59PF7519G
+5XX8f4j/uN7z8Lcz2X+eII26tV6nGgsquQhn8yT5bdIrpFG6UJTXhk+wRGnp
+D9KEV1JOhniHdNKkT55wkHr1hCfDi7L0G54mTYKxNF8ynGAhizxCOhkwjgTS
+KFfJHYfdxlrh+pfT09Mot+vl55/QexI1lKs4DkRXtrfKz1ob1FQ3V1BCI4Oh
+sSfZb29Uf/9JmlKXCoCCDJaol/GIVCArS3MYfGehWJy9OVhLzcnZjgl4IF+a
+sTrOAtGVb74ucPMzM5+SPNBA/1tlkUSC/mFlUUjbbKzFIwuxvr5VhgbD2MXK
+ndtF9KLEgOWluYhLbK5IBTPEMxeStaB/yLUKyVpc4sqVzyHA/EjzGW1emgUp
+6iQMKoQUTQ4QjskMpbnvqKcGaOgKHncu8a/W4uS81tGyNLm+bPMfAimbqPOY
+KEEblCAMu4wZRAxI4TcAER4ExwZL9B0IK+61rh9aCzNgNjThHIaAGTTiZ0NK
+hggxBFIcCgwBA3lMVGC87dY6kCnf/0ES9eWl7zEAelRQQoOz17fuQ2JIO9Vm
+49fq5jIqWAJjUMF4DsZU6EIdl2WutVCEBgN+wVr926E3BlGH4Rnw7WnA1cOC
+42Db9FQ4O8+LY+K8dG7Qx8fsVAER6tAYPMHBMQB6IMboQ5eLkncEEPggSg4g
+CcVLYwY2k7X6Zm6shQpZaliEE1jfkA5Pe2yzNQSGyWMeX47j7rxIp+rd8BWk
+WcDakErsSCBN/dvJhzQK4Et1djFJb1K+w9Nwlr5o4jk8TeCn+r4NP7LWesEl
+Tb8DvT0d9qUHTxb3Vq9Cnj642W2u6q79RyVIFg3atZKWbqsi74OoQ/N3Y9V4
+TzzYXoRej4FGD6CS62qJ2hVuVSuN3To3Ge4j6DQX3b078+iLKS1/rV6V3iff
+vgVNp/GzM49lr5Y/iu8cbP+ILjyCZv3GG8YjHMZ6t7Vmj6HSlnZt3rlbPN5a
+v+X+dsA3S11RHlfPjYGi5OTja6/F+9+Y5YA/5y/opiHsxbN4EGPYxAxkVHPh
+ssxMAamgwUWIhssZvKKytT5rmwCuG1078xeo3L37WQp4yfmxSSCWKmz3ayXj
+jIZmr38EDYvmOQ+oWb3TRxVcEqI+vnYK1KWQ1Rgj46EUBqbsSpROhwNl3xbe
+FQ13qI8g2wuTlxpctWkDqd84DSWZxiOAfk6W2r3wdXpCEhWsAwgQzqwvaPde
+TDP4cD3tsHvs1jih1pDV3HBIX8pbs2N94tyUBmcXkhBzwQQClIQ/zhvRthy1
+KmjGrqBVkZnb6wM3QvRgv3oGIAwlFzLCk3Hj2v9khdHwL6Q8JtiVRZI07iSQ
+sim8Gn4jxmxEQ4dp25BFaYisaMx/JKvDfRKVCm1TByCSBCbpxBwV8pBpAP0e
+o7xOIfYefCURHO4UIqHczgHQ60wMnPmSDSA2T1aPENJed5BE2SEGwYLpEJvN
+25f78XeQqFBD0OwbsY9MDc3TIKTTkLOUzhvPorpEDe/hyRLnfrQ52xAxplBj
+95LVWgNkSGwnl2xD7g11j4yAdtB3Q+rz1yZOq++lqSlYoZXMdmhrxBwD+IZF
+Wkoq2K4lveA5RJyt8U6016cWzUE0+hFkVmxCHymUuKiIvnFjP+F9qRHu9XmT
+JERpmF4SNOTY1gvLaR7c2YvrQJZuf2VJW5acXLJ0Q0g2ukdb9I0f2o+NZxDD
+FyS1L31O+c+/qQgmY/RjSK845LbPIL50YBe5SN43lbt4/63+qA94pOTM85As
+nQCJPEOasDQ/oo6HLx2r8DQuEuYb0lxkDFjq/7unKIUiR0BGTsIj7/1/wx+j
+iD/Jf/8Ar1gUjA==
+           "], {{0, 0}, {113, 45}}, {0, 255},
+           ColorFunction->RGBColor],
+          ImageSize->{113, 45},
+          PlotRange->{{0, 113}, {0, 45}}], True->
+         GraphicsBox[RasterBox[CompressedData["
+1:eJztWs9vG0UUtoADfwbhzh9Q3+DeS7kHtRIcgyhIqFJunBr1wMlST6jtBQ5E
+7S0+QWlUxKEWILU1SqVgV1GdVvlFXLsN9prP++0+v8zMrgPdGcddoi+r2Tez
+8+Obb957a3vhwqfnPnmjUql8/jYu585/+f7Fi+cvffgWbj649MXHF95E4T38
+f4b/cXnk4W+n3H+eKI2G7dGgNQYKhYC9eUJxk/RKaZQOFBU14VOMKL36ozTR
+lVzLAe+Ulg2xeMJR6tUTng4vyqvf8FQ2BFNpsWI4xaCKPFJaDhpnQmlUKArn
+4Wiv8eibs79/VcG131l/9Q69J1G5WsVyAF3oP1kf9pq0dP+s4wqLNIbF7gTt
+tV3KUgBRwGSITjIEC8CzX2povP3TSvvWUtZYuD0h4YF8acboWAugC5vffsTJ
+P7iyQPHAAvtff6xSSLAfNFdFtC/3GmyJK8iHBc1YxULn9gpqcUUDDBHFQxxu
+1qWAHtgzx4Id/euxOESzVgVat5amHp/Z5qVZlKJMwaBASnHLBqIx6WGrvkw7
+LWBDF/C4c4h/NRY757bOVqXJ9mUf/xxKeYsyl4krZIMrxWb3IDAohXRBER6E
+xrIonToWekBvuIVzyCEzaMTPppQKEWHIMrEoKAQK5DJR6Ny+PHj+sFk7s/vr
+dUnUY2ktwo4CrrBg7f0nd4AxpYPWy917h5trKLQ4xKCF9myMrlDlHAvUwYJd
+2P3tBneH3hhCzeMz4NvTRKvHgeVgXQ+uvIMr1s71YplYL50b7LDADopQhsXQ
+CRYOHmDHpjD6iGPkHoEEMBN3VWUDilC8NHpIx6rSAvb4iIyFAlVqnAgnsb4p
+zU977GNrQA7jyXESd+cFg5b3g68ozSLWplQc3dxRGgXwpTq7KNOblO/wlK/S
+1w2ew1MJP9X3ffAja6zXHGn6Hejt6bgvPXq63m3UgOf3bwz3G7rqxeM6kCWD
+fruugfxH3gdRhuXvvYbxnni0vQ67bgOLbkAjx9WI+k1OVRuN2TonGe4j6DQX
+Pbh7+fHXFY3DRk1qn353FpbB3j1nHstajWc3F4+276AKj+C2c+2M8QibsTzs
+PbTb0Gij315zzhaP9za+d3874FulriiPrefEIFFqcuvqu+P5P0reSnbXlvSt
+AdbiWTyINrxFD1TU/o/L0jMBUcGCjRALhzN0RWNvY9U+AthuVO2sLdF4cHcl
+Jbzu/NgkkEoVty/adWONhqUbL0HTonXOBWpV78SsQksi1K2rC5AuQVWjzeR9
+7eaiKDBVV2J0OhwY47MwyY05Q70EmV6YvNTQqi0boHOtCiOVxiVAfk6V2rXw
+dbpDChWqAwkAe9YbdPDzWGbw4brbvH0cttmhtlDVnHBIX8pds2N94tyUBWsX
+kZBz4QQAS6If547osxz1mrgdu4L4Qzn23N+YuBGyh/OrewDDMHIgIzwZO679
+T1YYDf9CymVCXVkiSeNOQilvRVf5O2L0RjZ0mLYPshgNyIhG/1NVHe6TqBQ8
+mzoAUSQ4kk7OUaAOmQbQ7zHK6xSie/+6RHC4U0BCuZ0DoNaZGDjzJZtATJ6q
+niGlo+EkibJDDIIF0yHe7v+wHMffSaJCC0mzd8ReMi08noYgnQc5y+jc8Syp
+S9TwHp4sOOejj7NNEWMKLXYtVa0tYIbCdmrJPsijXPfICGgHfTelPn9t4jz1
+ozQ1hSq0kdkOzxo5RwO+YVGWkgr220ktdA6IszXeibqxtHgcxKIfQWbFW9gj
+xRIHFegdN+YT3pca4V6vN0lClIXpJUlDjm29sFS5cGcttgNZuv2VJc+y5OSS
+pRug2OgebegdPzYfm88gB1+Y1L70FfGff1MRDHP0Y0ivPBQ2zyC+dHIuCkHR
+O1U4vP9Wf9YLnIqCdR5SpSVA5JnSRKXFCXU+fOlchad5QZhvSAvBHKjU/3dP
+UUpFgYTMXIRT9/3/gz9HEb/Mf/8ARKwOxw==
+           "], {{0, 0}, {113, 45}}, {0, 255},
+           ColorFunction->RGBColor],
+          ImageSize->{113, 45},
+          PlotRange->{{0, 113}, {0, 45}}]}, Dynamic[
+          CurrentValue["MouseOver"]]], False->
+        PaneSelectorBox[{False->
+         GraphicsBox[RasterBox[CompressedData["
+1:eJztl7FrFFEQxg+18N+wsvKPUP+D2NgmoI2FGAVJ4fUpBCGVYAqbA22C3Vle
+IXiVXCOkSHGo4EHQIwY8RVx/7keG8c3miiTmFp2Pd8vsvHmz8773vbe3F1Zu
+L9080+l07p7nsrR8//Lq6vLatXPcXFm7d2PlLMYlfnf4/barRCKRSCQSiUQi
+kfh3sb29vbGx0e12t7a2ZrPZoss5CiaTyXg8ls0UuPWGBdjsMCzejCLhdDqV
+Pa3hDQ23JPGJXIfDIcRCKYY9yHIqmy+pVdjc3FxfX+eKMDTNXq9X1VOQMRgM
+EAy9hGlSo9EIDzazluETEk8k8f1+n9thDTMIppcYkjPWP8gM5ackrhqr8hjo
+S8LG07imi4UJg5rHNYoJUrZiTDMYOLEhTYZPKJJZHVFdUEparZ0iqyZKudqD
+MFTbrIYqsfxexu0BJXVr6OCKE9TEK0eOxGPEIiGf0OKLUd7o1ZhDqbRnqyB9
+SreKxCMl2+nUHkgSkMl2q+pqJQlNHA+32rDUT4zeHQToNJDh9z6TJYaZcq1q
+WiC/ciLHL70ZP8UTiUT/eHiinRVcsYn0OamnhccpVWnFVaQEoINLnFgA86V+
+JstRVtUTl2H71CfUQlT19JWNq5hnoPaFAuITYVtPtCR2nvtjSiotTvIWwnbf
+ScH2+3+LpDSRSCQSC8f33Z0vb57T9t/2f+z98Z959n5EO2ygeq39/LZvXdh4
+imx6liVUDB4fIGdsSq7h1mL+NmDv9ZN3jzq+wa31Tp5dx3NY5er1bffFLVHE
+EG4/Pr1aDFGYbFiKMXLGpoWI1TL8686rEyTkmLD6RSNlf3h8kVsr8tPLB/62
+gHoZy0BidEsGKerz4GGxQOKZhTCPHlektRqiSslGFw+S0xies5VOGVRSzLHw
+aAqeFo/YK1aZaXVAIPwgXTWpmhiLxxkJaXT68ggoavBTWCyibABbCadUoSl4
+EjxiL7veJ5RQjVVl9ksgmXGG+7Tz11EJvUeq9if5YuEPN8GLJCoNlkw/jSvi
+9zLT5NaOAmX2x4jYk6oNMIxTD4rvPr/igrZGe/a+pulfu4VI7L2jplvT1fwV
+KbKJDf+yixvZnEWzJ8ZjYb6qTx/am145Eokpp+AcQzoUM3FFir3shRr5r5o2
+cnWwUo3/lyKBFC9VH5+NE0GssFBO5FwekRZ7Y0J7TUdBVk0b+TCnUKx4LHjh
+aKzHyylSJB3KE3ulW++RUJUzaqnx/T7neNQbML7020Np4/9t/w9fnBOgLyzJ
+0uZb9NphW3wTSVqeajx+CBzaF1zlWJLTmsZaKl9Pe87Squn/thdJ/JyBQH9U
+Fr0sR+OngfayCS9+B9l7sDo4HmPT2OKrTQv69/hJJBKJRCKRSCQSiUTiaPgF
+e1i75A==
+           "], {{0, 0}, {113, 45}}, {0, 255},
+           ColorFunction->RGBColor],
+          ImageSize->{113, 45},
+          PlotRange->{{0, 113}, {0, 45}}], True->
+         GraphicsBox[RasterBox[CompressedData["
+1:eJztlz9rVUEQxR9q4dew0coPYfwGsUmbgDYpxChIilS2BqwEISB2mi5dtFMI
+iI0kRRAxIPEPiYRIYiCJqOvPd8g47ty8Iol5F53Dvsvc2dm5s2fP7n33zMjV
+wSsnOp3O9dNcBodvXhgbGx6/dIqbgfEbl0dOYpznd43fL7skEolEIpFIJBKJ
+xL+Ljddzr+4OLNzqLM9MfN/Z6nc5B8H2p6Wt5XnZTIFbb1iAzQ7D4s2oEu5u
+rMrGkG2GhluS+ESuay+mIRZKMexBllPZfEmtwpv7Q4u3z3JFGJrm24ejpTsF
+GSvPphAMvYRpUusLs3iwmbUMn5B4Ion/+GSSWzgRLTIIppcYkjPWP8gM5ack
+rhqr8hjoS8LG07im/YUJg5opL06QshVjmsHAiQ1pMnxCkczqiOqKUtJq7RRZ
+mijlag/CUG0MMRlbfi/j9oCSmJodXHGCmnhx5Eg8RiwS8gktvhrlDTL3UClX
+ac9WQfqUbhWJR0q206k9kCQgk+1WutVKEpo4Hm61YamfGL07CNBpIMPvfSZL
+DDPlWrq0QH5xIscvvRk/1ROJRP94eKKdFVyxifQ5qaeFxylVacVVpASgg0uc
+WADzpX4my1FWuhOXYfvUJ9RClO70lY2rmGeg9oUC4hNhW0+0JHae+2NKKq1O
+8hbCdt9Rwfb7f4ukNJFIJBJ9x9e1pS8vp2lbi7PfNv/4N7Lzfp6230D1Wvux
++/vPITaeKpueZQkVg8cHyBmbkmu4tZi/Ddh8PvXuTsc3uLXe1UdDeParXL2+
+rc2MiiKGcLvy4GI1RGGyYSnGyBmbFiJWy/DtpbkjJOSQsPpFI2V/uHeOWyty
+/fGEv62gXsYykBjdkkGK+vx0slog8cxCmEePq9JaDVGlZKOLB8lpDPfYSscM
+KqnmWHk0BU+LR+wVq8y07BEIP0hXTaomxuJxRkIanb48Aqoa/BT6iygbwFbC
+KVVoCp4Ej9jLrvcJJVRjVZn9EkhmnOE+be91VELvkar9Sd5f+MNN8CKJSoMl
+00/jivi9zDS5taNAmf0xIvakagMM49SD4rvPr7igrdGeva9p+tduJRJ776jp
+1nTVe0WqbGLDv+ziRjZn1eyJ8Vjorerjh/amV45EYsqpOMeQDsVMXJFqL3uh
+Rv5L00YueyvV+H8pEkjxUvXh2TgSxAor5UTO5RFpsTcmtNd0FGRp2sj7OYVq
+xWPBfUdjPV5OkSLpUJ7YK916j4SqnFFLje/3Hsej3oDxpd8eShv/b/t/+OKc
+AH1hSZY236rXDtvqm0jS8lTj8UPg0L7gimNJTmsaa6l8Pe05S0vT/20vkvg5
+A4H+qKx6WY7GTwPtZRNe/A6y92DZOx5j09jqq00L+vf4SSQSiUQikUgkEolE
+4mD4CVgjt/g=
+           "], {{0, 0}, {113, 45}}, {0, 255},
+           ColorFunction->RGBColor],
+          ImageSize->{113, 45},
+          PlotRange->{{0, 113}, {0, 45}}]}, Dynamic[
+          CurrentValue["MouseOver"]]]}, "\"\<Click me\>\""],
+       "Toggle changes in 10",
+       TooltipDelay->0.3],
+      MouseAppearanceTag["LinkHand"]]],
+     Magnification->1]}
+  }]], "ObjectNameGrid"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["Cases"]],"paclet:ref/Cases"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["e", "TI"], 
+           StyleBox["1", "TR"]], ",", 
+          SubscriptBox[
+           StyleBox["e", "TI"], 
+           StyleBox["2", "TR"]], ",", 
+          StyleBox["\[Ellipsis]", "TR"]}], "}"}], ",", 
+        StyleBox["pattern", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives a list of the ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["e", "TI"], 
+       StyleBox["i", "TI"]]], "InlineFormula"],
+     " that match the pattern. "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["Cases"]],"paclet:ref/Cases"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox[
+           StyleBox["e", "TI"], 
+           StyleBox["1", "TR"]], ",", 
+          StyleBox["\[Ellipsis]", "TR"]}], "}"}], ",", 
+        RowBox[{
+         StyleBox["pattern", "TI"], "\[Rule]", 
+         StyleBox["rhs", "TI"]}]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives a list of the values of ",
+     Cell[BoxData[
+      StyleBox["rhs", "TI"]], "InlineFormula"],
+     " corresponding to the ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["e", "TI"], 
+       StyleBox["i", "TI"]]], "InlineFormula"],
+     " that match the pattern. "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["Cases"]],"paclet:ref/Cases"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["expr", "TI"], ",", 
+        StyleBox["pattern", "TI"], ",", 
+        StyleBox["levelspec", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives a list of all parts of ",
+     Cell[BoxData[
+      StyleBox["expr", "TI"]], "InlineFormula"],
+     " on levels specified by ",
+     Cell[BoxData[
+      StyleBox["levelspec", "TI"]], "InlineFormula"],
+     " that match the pattern. "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["Cases"]],"paclet:ref/Cases"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["expr", "TI"], ",", 
+        RowBox[{
+         StyleBox["pattern", "TI"], "\[Rule]", 
+         StyleBox["rhs", "TI"]}], ",", 
+        StyleBox["levelspec", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives the values of ",
+     Cell[BoxData[
+      StyleBox["rhs", "TI"]], "InlineFormula"],
+     " that match the pattern. "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["Cases"]],"paclet:ref/Cases"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["expr", "TI"], ",", 
+        StyleBox["pattern", "TI"], ",", 
+        StyleBox["levelspec", "TI"], ",", 
+        StyleBox["n", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives the first ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula"],
+     " parts in ",
+     Cell[BoxData[
+      StyleBox["expr", "TI"]], "InlineFormula"],
+     " that match the pattern. "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["Cases"]],"paclet:ref/Cases"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       StyleBox["pattern", "TI"], "]"}]], "InlineFormula"],
+     "\[LineSeparator]represents an operator form of ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["Cases"]],"paclet:ref/Cases"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     " that can be applied to an expression."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, None, None, {
+      Dynamic[
+       If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+        RGBColor[1, 0.988235, 0.721569], None]]}}, "RowsIndexed" -> {}}},
+ CellID->28069],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details and Options"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->10605414],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "The first argument to ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cases"]],"paclet:ref/Cases"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " need not have head ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["List"]],"paclet:ref/List"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->21999],
+
+Cell[TextData[{
+ "When used on an ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Association"]],"paclet:ref/Association"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cases"]],"paclet:ref/Cases"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " picks out elements according to their values."
+}], "Notes",
+ Background->Dynamic[
+   If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+    RGBColor[1, 0.988235, 0.721569], None]],
+ CellID->353688898],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Cases"]],"paclet:ref/Cases"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    RowBox[{
+     StyleBox["pattern", "TI"], ":>", 
+     StyleBox["rhs", "TI"]}]}], "]"}]], "InlineFormula"],
+ " evaluates ",
+ Cell[BoxData[
+  StyleBox["rhs", "TI"]], "InlineFormula"],
+ " only when the pattern is found. "
+}], "Notes",
+ CellID->2380],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{
+    TemplateBox[{Cell[
+       TextData["Cases"]],"paclet:ref/Cases"},
+     "RefLink",
+     BaseStyle->"InlineFormula"], "[", 
+    StyleBox["pattern", "TI"], "]"}], "[", 
+   StyleBox["list", "TI"], "]"}]], "InlineFormula"],
+ " is equivalent to ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Cases"]],"paclet:ref/Cases"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   RowBox[{
+    StyleBox["list", "TI"], ",", 
+    StyleBox["pattern", "TI"]}], "]"}]], "InlineFormula"],
+ "."
+}], "Notes",
+ Background->Dynamic[
+   If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+    RGBColor[1, 0.988235, 0.721569], None]],
+ CellID->336694225],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cases"]],"paclet:ref/Cases"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " uses standard level specifications:"
+}], "Notes",
+ CellID->12789],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], 
+    StyleBox["n", "TI"], Cell[TextData[{
+     "levels ",
+     Cell[BoxData["1"], "InlineFormula"],
+     " through ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula"]
+    }], "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    ButtonBox["Infinity",
+     BaseStyle->"Link",
+     ButtonData->"paclet:ref/Infinity"], Cell[TextData[{
+     "levels ",
+     Cell[BoxData["1"], "InlineFormula"],
+     " through ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["Infinity"]],"paclet:ref/Infinity"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"]
+    }], "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    RowBox[{"{", 
+     StyleBox["n", "TI"], "}"}], Cell[TextData[{
+     "level ",
+     Cell[BoxData[
+      StyleBox["n", "TI"]], "InlineFormula"],
+     " only"
+    }], "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    RowBox[{"{", 
+     RowBox[{
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["1", "TR"]], ",", 
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["2", "TR"]]}], "}"}], Cell[TextData[{
+     "levels ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula"],
+     " through ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["2", "TR"]]], "InlineFormula"]
+    }], "TableText"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, {None}}, "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True, True, True}}}},
+ CellID->6509],
+
+Cell[TextData[{
+ "The default value for ",
+ Cell[BoxData[
+  StyleBox["levelspec", "TI"]], "InlineFormula"],
+ " in ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cases"]],"paclet:ref/Cases"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is ",
+ Cell[BoxData[
+  RowBox[{"{", "1", "}"}]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->410],
+
+Cell[TextData[{
+ "A positive level ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "InlineFormula"],
+ " consists of all parts of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " specified by ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "InlineFormula"],
+ " indices."
+}], "Notes",
+ CellID->25734],
+
+Cell[TextData[{
+ "A negative level ",
+ Cell[BoxData[
+  RowBox[{"-", 
+   StyleBox["n", "TI"]}]], "InlineFormula"],
+ " consists of all parts of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " with depth ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->17366],
+
+Cell[TextData[{
+ "Level ",
+ Cell[BoxData[
+  RowBox[{"-", "1"}]], "InlineFormula"],
+ " consists of numbers, symbols and other objects that do not have subparts."
+}], "Notes",
+ CellID->15962],
+
+Cell[TextData[{
+ "Level ",
+ Cell[BoxData["0"], "InlineFormula"],
+ " corresponds to the whole expression."
+}], "Notes",
+ CellID->13158],
+
+Cell[TextData[{
+ "With the option setting ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Heads"]],"paclet:ref/Heads"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "->", 
+   TemplateBox[{Cell[
+      TextData["True"]],"paclet:ref/True"},
+    "RefLink",
+    BaseStyle->"InlineFormula"]}]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cases"]],"paclet:ref/Cases"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " looks at heads of expressions, and their parts."
+}], "Notes",
+ CellID->23722],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cases"]],"paclet:ref/Cases"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " traverses the parts of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " in a depth-first order, with leaves visited before roots."
+}], "Notes",
+ CellID->25878],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(14)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->277906564],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(4)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->50429468],
+
+Cell["Find cases that explicitly match integers:", "ExampleText",
+ CellID->10797],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", 
+     RowBox[{"f", "[", "a", "]"}], ",", "2", ",", "3", ",", "y", ",", 
+     RowBox[{"f", "[", "8", "]"}], ",", "9", ",", 
+     RowBox[{"f", "[", "10", "]"}]}], "}"}], ",", "_Integer"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->22106],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "1", ",", "2", ",", "3", ",", "9"}], "}"}]], "Output",
+ ImageSize->{97, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->53200324]
+}, Open  ]],
+
+Cell["Find cases that do not match integers:", "ExampleText",
+ CellID->453223069],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", 
+     RowBox[{"f", "[", "a", "]"}], ",", "2", ",", "3", ",", "y", ",", 
+     RowBox[{"f", "[", "8", "]"}], ",", "9", ",", 
+     RowBox[{"f", "[", "10", "]"}]}], "}"}], ",", 
+   RowBox[{"Except", "[", "_Integer", "]"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->648587074],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"f", "[", "a", "]"}], ",", "y", ",", 
+   RowBox[{"f", "[", "8", "]"}], ",", 
+   RowBox[{"f", "[", "10", "]"}]}], "}"}]], "Output",
+ ImageSize->{149, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->444563054]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->242796],
+
+Cell[TextData[{
+ "Return the ",
+ Cell[BoxData["x"], "InlineFormula"],
+ " from inside each ",
+ Cell[BoxData[
+  RowBox[{"f", "[", "x_", "]"}]], "InlineFormula"],
+ " matched:"
+}], "ExampleText",
+ CellID->300609140],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", 
+     RowBox[{"f", "[", "a", "]"}], ",", "2", ",", "3", ",", "y", ",", 
+     RowBox[{"f", "[", "8", "]"}], ",", "9", ",", 
+     RowBox[{"f", "[", "10", "]"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"f", "[", "x_", "]"}], "\[Rule]", "x"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->35598688],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"a", ",", "8", ",", "10"}], "}"}]], "Output",
+ ImageSize->{68, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->207500830]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->1781708685],
+
+Cell[TextData[{
+ "Use the operator form of ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cases"]],"paclet:ref/Cases"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->665895027],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Cases", "[", "_Integer", "]"}], "[", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "1", ",", 
+    RowBox[{"f", "[", "a", "]"}], ",", "2", ",", "3", ",", "y", ",", 
+    RowBox[{"f", "[", "8", "]"}], ",", "9", ",", 
+    RowBox[{"f", "[", "10", "]"}]}], "}"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->2106077639],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "1", ",", "2", ",", "3", ",", "9"}], "}"}]], "Output",
+ ImageSize->{97, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->1804220712]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->86527238],
+
+Cell[TextData[{
+ "Pick elements from an ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Association"]],"paclet:ref/Association"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula",
+  ShowStringCharacters->False],
+ ":"
+}], "ExampleText",
+ CellID->117162917],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"1", "->", "\"\<a\>\""}], ",", 
+     RowBox[{"2", "->", "\"\<b\>\""}], ",", 
+     RowBox[{"3", "->", "c"}], ",", 
+     RowBox[{"4", "->", "d"}]}], "|>"}], ",", "_Symbol"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->88758188],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"c", ",", "d"}], "}"}]], "Output",
+ ImageSize->{43, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->38676522]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Scope",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(7)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->24763],
+
+Cell["Find all cases of lists of two elements:", "ExampleText",
+ CellID->28683],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "3"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"_", ",", "_"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->10704],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}]}], "}"}]], "Output",
+ ImageSize->{157, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->26899]
+}, Open  ]],
+
+Cell["Find the sum of every pair of elements:", "ExampleText",
+ CellID->2709955],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", "2", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "3"}], "}"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a_", ",", "b_"}], "}"}], "\[Rule]", 
+    RowBox[{"a", "+", "b"}]}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->430360617],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "9", ",", "6"}], "}"}]], "Output",
+ ImageSize->{61, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->202667832]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->132188852],
+
+Cell[TextData[{
+ "Pick out elements that are not ",
+ Cell[BoxData["0"], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->1936973],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "0", ",", "2", ",", "0", ",", "3", ",", "5", ",", "6", ",", "7",
+      ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+   RowBox[{"Except", "[", "0", "]"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->66138594],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3", ",", "5", ",", "6", ",", "7"}], 
+  "}"}]], "Output",
+ ImageSize->{115, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->9619458]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->354120046],
+
+Cell["Pick out cases of integers down to level 2:", "ExampleText",
+ CellID->364299321],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "4", ",", "a", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"b", ",", "3", ",", "2", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"c", ",", "c", ",", "5", ",", "5"}], "}"}]}], "}"}], ",", 
+   "_Integer", ",", "2"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->7534488],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "4", ",", "0", ",", "3", ",", "2", ",", "2", ",", "5", ",", "5"}],
+   "}"}]], "Output",
+ ImageSize->{151, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->423681827]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->2077762639],
+
+Cell["Return only the first three matching elements:", "ExampleText",
+ CellID->1053126319],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"Range", "[", "100", "]"}], "]"}], ",", "_Integer", ",", 
+   RowBox[{"{", "1", "}"}], ",", "3"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->906951604],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3"}], "}"}]], "Output",
+ ImageSize->{61, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->632548175]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->116758099],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[":>"], "InlineFormula"],
+ " to evaluate only after explicit elements have been found:"
+}], "ExampleText",
+ CellID->413113842],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"{", 
+       RowBox[{"a", ",", "b"}], "}"}], "]"}], ",", 
+     RowBox[{"f", "[", 
+      RowBox[{"{", "a", "}"}], "]"}], ",", 
+     RowBox[{"g", "[", 
+      RowBox[{"{", "a", "}"}], "]"}], ",", 
+     RowBox[{"f", "[", 
+      RowBox[{"{", 
+       RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{
+    RowBox[{"f", "[", "x_", "]"}], "\[RuleDelayed]", 
+    RowBox[{"Length", "[", "x", "]"}]}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->32714369],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "1", ",", "4"}], "}"}]], "Output",
+ ImageSize->{61, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->658770389]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->618901495],
+
+Cell["Find all possible subexpressions at any level:", "ExampleText",
+ CellID->1613000417],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", 
+     RowBox[{"f", "[", 
+      RowBox[{"a", ",", "b"}], "]"}]}], "}"}], ",", "_", ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "Infinity"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1032693991],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "a", ",", "b", ",", 
+   RowBox[{"f", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", 
+     RowBox[{"f", "[", 
+      RowBox[{"a", ",", "b"}], "]"}]}], "}"}]}], "}"}]], "Output",
+ ImageSize->{243, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->282357734]
+}, Open  ]],
+
+Cell["\<\
+Find all possible subexpressions at any level, including the head of the \
+expression:\
+\>", "ExampleText",
+ CellID->617137564],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", 
+     RowBox[{"f", "[", 
+      RowBox[{"a", ",", "b"}], "]"}]}], "}"}], ",", "_", ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "Infinity"}], "}"}], ",", 
+   RowBox[{"Heads", "->", "True"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->370167755],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"List", ",", "1", ",", "2", ",", "f", ",", "a", ",", "b", ",", 
+   RowBox[{"f", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", 
+     RowBox[{"f", "[", 
+      RowBox[{"a", ",", "b"}], "]"}]}], "}"}]}], "}"}]], "Output",
+ ImageSize->{300, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->733144877]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->1259995],
+
+Cell["Pick elements from nested associations:", "ExampleText",
+ CellID->37693631],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"1", "->", "c"}], ",", 
+     RowBox[{"2", "->", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"3", "\[Rule]", "1"}], ",", " ", 
+        RowBox[{"a", "\[Rule]", "b"}]}], "|>"}]}]}], "|>"}], ",", "_Symbol", 
+   ",", "Infinity"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->199759574],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"c", ",", "b"}], "}"}]], "Output",
+ ImageSize->{43, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->86064197]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Options",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->251981107],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Heads",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CellID->47240170],
+
+Cell["Find symbols among the elements of an expression:", "ExampleText",
+ CellID->1922167521],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "5", ",", "\[Pi]"}], "}"}], ",", "_Symbol"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1972536738],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"a", ",", "\[Pi]"}], "}"}]], "Output",
+ ImageSize->{44, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->1463539063]
+}, Open  ]],
+
+Cell["Also include the head of the expression in the search:", "ExampleText",
+ CellID->143814394],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "5", ",", "\[Pi]"}], "}"}], ",", "_Symbol", ",", 
+   RowBox[{"Heads", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->910100272],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"List", ",", "a", ",", "\[Pi]"}], "}"}]], "Output",
+ ImageSize->{83, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->681449411]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->25927],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Count"]],"paclet:ref/Count"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " returns the length of the result given by ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cases"]],"paclet:ref/Cases"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->806218328],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"Cases", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "\"\<f\>\"", ",", "g", ",", "\"\<h\>\"", ",", "\"\<7\>\""}], 
+     "}"}], ",", 
+    RowBox[{"_", "?", "StringQ"}]}], "]"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->374586186],
+
+Cell[BoxData["3"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->353025868]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Count", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "\"\<f\>\"", ",", "g", ",", "\"\<h\>\"", ",", "\"\<7\>\""}], 
+    "}"}], ",", 
+   RowBox[{"_", "?", "StringQ"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->1480025922],
+
+Cell[BoxData["3"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->1955930462]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Possible Issues",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->6916],
+
+Cell["A rule transforms the matching elements into its right side:", \
+"ExampleText",
+ CellID->1710626741],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     RowBox[{"b", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"c", "\[Rule]", "3"}]}], "}"}], ",", 
+   RowBox[{"_", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1035294583],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"Automatic", ",", "Automatic", ",", "Automatic"}], "}"}]], "Output",
+ ImageSize->{229, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->193625296]
+}, Open  ]],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HoldPattern"]],"paclet:ref/HoldPattern"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to treat the rule itself as a pattern:"
+}], "ExampleText",
+ CellID->1050585973],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     RowBox[{"b", "\[Rule]", "Automatic"}], ",", 
+     RowBox[{"c", "\[Rule]", "3"}]}], "}"}], ",", 
+   RowBox[{"HoldPattern", "[", 
+    RowBox[{"_", "\[Rule]", "Automatic"}], "]"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->2101566150],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"b", "\[Rule]", "Automatic"}], "}"}]], "Output",
+ ImageSize->{105, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->88789059]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->17318],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FirstCase"]],"paclet:ref/FirstCase"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Select"]],"paclet:ref/Select"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BinLists"]],"paclet:ref/BinLists"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["GatherBy"]],"paclet:ref/GatherBy"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Position"]],"paclet:ref/Position"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MemberQ"]],"paclet:ref/MemberQ"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Count"]],"paclet:ref/Count"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["StringCases"]],"paclet:ref/StringCases"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ReplaceList"]],"paclet:ref/ReplaceList"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Collect"]],"paclet:ref/Collect"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DeleteCases"]],"paclet:ref/DeleteCases"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Except"]],"paclet:ref/Except"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->6043]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->9951],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Finding Expressions That Match a Pattern"]],
+   "paclet:tutorial/FindingExpressionsThatMatchAPattern"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->22859],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->1374684],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Conditionals"]],"paclet:guide/Conditionals"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->290103710],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Discrete & Integer Data"]],
+   "paclet:guide/DiscreteAndIntegerData"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->30816759],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Elements of Lists"]],"paclet:guide/ElementsOfLists"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->87648128],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Expressions"]],"paclet:guide/Expressions"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->493713],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Functional Programming"]],"paclet:guide/FunctionalProgramming"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->117417305],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Function Composition & Operator Forms"]],
+   "paclet:guide/FunctionCompositionAndOperatorForms"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->10201080],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["List Manipulation"]],"paclet:guide/ListManipulation"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->215756593],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Parts of Expressions"]],"paclet:guide/PartsOfExpressions"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->129821314],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Pattern Matching Functions"]],
+   "paclet:guide/PatternMatchingFunctions"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->334016595],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Rules & Patterns"]],"paclet:guide/RulesAndPatterns"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->72839735]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 1988",
+ Cell[" (1.0)", "HistoryVersion"],
+ " | ",
+ "Updated in 2014",
+ Cell[" (10.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Cases",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Rules & Patterns", ButtonData -> "paclet:guide/RulesAndPatterns", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Pattern Matching Functions", ButtonData -> 
+         "paclet:guide/PatternMatchingFunctions", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Cases", ButtonData -> "paclet:ref/Cases", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> True, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 41, 53.6106406}", 
+    "history" -> {"1", "10", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "criteria", "patterns", "occurrences", "instances", "examples", "CASE", 
+      "selectremove"}, "specialkeywords" -> {"CASE", "selectremove"}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Built-in Wolfram Language Symbol", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "Cases[{e1, e2, ...}, pattern] gives a list of the ei that match the \
+pattern. Cases[{e1, ...}, pattern -> rhs] gives a list of the values of rhs \
+corresponding to the ei that match the pattern. Cases[expr, pattern, \
+levelspec] gives a list of all parts of expr on levels specified by levelspec \
+that match the pattern. Cases[expr, pattern -> rhs, levelspec] gives the \
+values of rhs that match the pattern. Cases[expr, pattern, levelspec, n] \
+gives the first n parts in expr that match the pattern. Cases[pattern] \
+represents an operator form of Cases that can be applied to an expression.", 
+    "synonyms" -> {}, "title" -> "Cases", "titlemodifier" -> "", 
+    "windowtitle" -> "Cases", "type" -> "Symbol", "uri" -> "ref/Cases"}, 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[26501, 735, 388, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->277906564]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 54988, 1840}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[577, 21, 6053, 138, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[6633, 161, 8303, 151, 64, "ObjectNameGrid"],
+Cell[CellGroupData[{
+Cell[14961, 316, 4327, 134, 402, "Usage",
+ CellID->28069],
+Cell[CellGroupData[{
+Cell[19313, 454, 749, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->10605414],
+Cell[20065, 480, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[20099, 482, 392, 15, 70, "Notes",
+ CellID->21999],
+Cell[20494, 499, 568, 18, 70, "Notes",
+ CellID->353688898],
+Cell[21065, 519, 459, 17, 70, "Notes",
+ CellID->2380],
+Cell[21527, 538, 728, 25, 70, "Notes",
+ CellID->336694225],
+Cell[22258, 565, 230, 8, 70, "Notes",
+ CellID->12789],
+Cell[22491, 575, 1700, 56, 70, "2ColumnTableMod",
+ CellID->6509],
+Cell[24194, 633, 365, 15, 70, "Notes",
+ CellID->410],
+Cell[24562, 650, 303, 12, 70, "Notes",
+ CellID->25734],
+Cell[24868, 664, 312, 13, 70, "Notes",
+ CellID->17366],
+Cell[25183, 679, 189, 6, 70, "Notes",
+ CellID->15962],
+Cell[25375, 687, 134, 5, 70, "Notes",
+ CellID->13158],
+Cell[25512, 694, 562, 20, 70, "Notes",
+ CellID->23722],
+Cell[26077, 716, 341, 11, 70, "Notes",
+ CellID->25878],
+Cell[26421, 729, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26501, 735, 388, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->277906564],
+Cell[CellGroupData[{
+Cell[26914, 754, 194, 6, 25, "ExampleSection",
+ CellID->50429468],
+Cell[27111, 762, 81, 1, 33, "ExampleText",
+ CellID->10797],
+Cell[CellGroupData[{
+Cell[27217, 767, 343, 10, 28, "Input",
+ CellID->22106],
+Cell[27563, 779, 232, 7, 36, "Output",
+ CellID->53200324]
+}, Open  ]],
+Cell[27810, 789, 81, 1, 33, "ExampleText",
+ CellID->453223069],
+Cell[CellGroupData[{
+Cell[27916, 794, 378, 10, 28, "Input",
+ CellID->648587074],
+Cell[28297, 806, 312, 10, 36, "Output",
+ CellID->444563054]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28646, 821, 122, 3, 9, "ExampleDelimiter",
+ CellID->242796],
+Cell[28771, 826, 211, 8, 35, "ExampleText",
+ CellID->300609140],
+Cell[CellGroupData[{
+Cell[29007, 838, 397, 11, 28, "Input",
+ CellID->35598688],
+Cell[29407, 851, 214, 7, 36, "Output",
+ CellID->207500830]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29670, 864, 126, 3, 9, "ExampleDelimiter",
+ CellID->1781708685],
+Cell[29799, 869, 235, 9, 37, "ExampleText",
+ CellID->665895027],
+Cell[CellGroupData[{
+Cell[30059, 882, 345, 9, 28, "Input",
+ CellID->2106077639],
+Cell[30407, 893, 234, 7, 36, "Output",
+ CellID->1804220712]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30690, 906, 124, 3, 9, "ExampleDelimiter",
+ CellID->86527238],
+Cell[30817, 911, 275, 10, 37, "ExampleText",
+ CellID->117162917],
+Cell[CellGroupData[{
+Cell[31117, 925, 324, 10, 28, "Input",
+ CellID->88758188],
+Cell[31444, 937, 202, 7, 36, "Output",
+ CellID->38676522]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31707, 951, 182, 6, 25, "ExampleSection",
+ CellID->24763],
+Cell[31892, 959, 79, 1, 70, "ExampleText",
+ CellID->28683],
+Cell[CellGroupData[{
+Cell[31996, 964, 496, 17, 70, "Input",
+ CellID->10704],
+Cell[32495, 983, 357, 13, 36, "Output",
+ CellID->26899]
+}, Open  ]],
+Cell[32867, 999, 80, 1, 70, "ExampleText",
+ CellID->2709955],
+Cell[CellGroupData[{
+Cell[32972, 1004, 559, 19, 70, "Input",
+ CellID->430360617],
+Cell[33534, 1025, 213, 7, 36, "Output",
+ CellID->202667832]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33784, 1037, 125, 3, 70, "ExampleDelimiter",
+ CellID->132188852],
+Cell[33912, 1042, 131, 5, 70, "ExampleText",
+ CellID->1936973],
+Cell[CellGroupData[{
+Cell[34068, 1051, 307, 9, 70, "Input",
+ CellID->66138594],
+Cell[34378, 1062, 245, 8, 36, "Output",
+ CellID->9619458]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34672, 1076, 125, 3, 70, "ExampleDelimiter",
+ CellID->354120046],
+Cell[34800, 1081, 86, 1, 70, "ExampleText",
+ CellID->364299321],
+Cell[CellGroupData[{
+Cell[34911, 1086, 421, 13, 70, "Input",
+ CellID->7534488],
+Cell[35335, 1101, 270, 9, 36, "Output",
+ CellID->423681827]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35654, 1116, 126, 3, 70, "ExampleDelimiter",
+ CellID->2077762639],
+Cell[35783, 1121, 90, 1, 70, "ExampleText",
+ CellID->1053126319],
+Cell[CellGroupData[{
+Cell[35898, 1126, 243, 7, 70, "Input",
+ CellID->906951604],
+Cell[36144, 1135, 213, 7, 36, "Output",
+ CellID->632548175]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36406, 1148, 125, 3, 70, "ExampleDelimiter",
+ CellID->116758099],
+Cell[36534, 1153, 164, 5, 70, "ExampleText",
+ CellID->413113842],
+Cell[CellGroupData[{
+Cell[36723, 1162, 607, 20, 70, "Input",
+ CellID->32714369],
+Cell[37333, 1184, 213, 7, 36, "Output",
+ CellID->658770389]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37595, 1197, 125, 3, 70, "ExampleDelimiter",
+ CellID->618901495],
+Cell[37723, 1202, 90, 1, 70, "ExampleText",
+ CellID->1613000417],
+Cell[CellGroupData[{
+Cell[37838, 1207, 308, 10, 70, "Input",
+ CellID->1032693991],
+Cell[38149, 1219, 415, 13, 36, "Output",
+ CellID->282357734]
+}, Open  ]],
+Cell[38579, 1235, 137, 4, 70, "ExampleText",
+ CellID->617137564],
+Cell[CellGroupData[{
+Cell[38741, 1243, 349, 11, 70, "Input",
+ CellID->370167755],
+Cell[39093, 1256, 438, 13, 36, "Output",
+ CellID->733144877]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39580, 1275, 123, 3, 70, "ExampleDelimiter",
+ CellID->1259995],
+Cell[39706, 1280, 81, 1, 70, "ExampleText",
+ CellID->37693631],
+Cell[CellGroupData[{
+Cell[39812, 1285, 388, 13, 70, "Input",
+ CellID->199759574],
+Cell[40203, 1300, 202, 7, 36, "Output",
+ CellID->86064197]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[40466, 1314, 188, 6, 19, "ExampleSection",
+ CellID->251981107],
+Cell[CellGroupData[{
+Cell[40679, 1324, 191, 6, 70, "ExampleSubsection",
+ CellID->47240170],
+Cell[40873, 1332, 93, 1, 70, "ExampleText",
+ CellID->1922167521],
+Cell[CellGroupData[{
+Cell[40991, 1337, 197, 7, 70, "Input",
+ CellID->1972536738],
+Cell[41191, 1346, 208, 7, 36, "Output",
+ CellID->1463539063]
+}, Open  ]],
+Cell[41414, 1356, 97, 1, 70, "ExampleText",
+ CellID->143814394],
+Cell[CellGroupData[{
+Cell[41536, 1361, 240, 7, 70, "Input",
+ CellID->910100272],
+Cell[41779, 1370, 220, 7, 36, "Output",
+ CellID->681449411]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[42060, 1384, 199, 6, 19, "ExampleSection",
+ CellID->25927],
+Cell[42262, 1392, 399, 14, 70, "ExampleText",
+ CellID->806218328],
+Cell[CellGroupData[{
+Cell[42686, 1410, 306, 10, 70, "Input",
+ CellID->374586186],
+Cell[42995, 1422, 158, 5, 36, "Output",
+ CellID->353025868]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43190, 1432, 268, 9, 70, "Input",
+ CellID->1480025922],
+Cell[43461, 1443, 159, 5, 36, "Output",
+ CellID->1955930462]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[43669, 1454, 191, 6, 19, "ExampleSection",
+ CellID->6916],
+Cell[43863, 1462, 106, 2, 70, "ExampleText",
+ CellID->1710626741],
+Cell[CellGroupData[{
+Cell[43994, 1468, 294, 9, 70, "Input",
+ CellID->1035294583],
+Cell[44291, 1479, 238, 7, 36, "Output",
+ CellID->193625296]
+}, Open  ]],
+Cell[44544, 1489, 265, 9, 70, "ExampleText",
+ CellID->1050585973],
+Cell[CellGroupData[{
+Cell[44834, 1502, 334, 10, 70, "Input",
+ CellID->2101566150],
+Cell[45171, 1514, 217, 7, 36, "Output",
+ CellID->88789059]
+}, Open  ]]
+}, Closed]],
+Cell[45415, 1525, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45483, 1530, 265, 12, 31, "SeeAlsoSection",
+ CellID->17318],
+Cell[45751, 1544, 3503, 106, 75, "SeeAlso",
+ CellID->6043]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49291, 1655, 267, 12, 31, "TutorialsSection",
+ CellID->9951],
+Cell[49561, 1669, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[49595, 1671, 221, 6, 19, "Tutorials",
+ CellID->22859],
+Cell[49819, 1679, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49887, 1684, 275, 12, 31, "MoreAboutSection",
+ CellID->1374684],
+Cell[50165, 1698, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[50199, 1700, 167, 5, 19, "MoreAbout",
+ CellID->290103710],
+Cell[50369, 1707, 191, 6, 19, "MoreAbout",
+ CellID->30816759],
+Cell[50563, 1715, 174, 5, 19, "MoreAbout",
+ CellID->87648128],
+Cell[50740, 1722, 162, 5, 19, "MoreAbout",
+ CellID->493713],
+Cell[50905, 1729, 186, 5, 19, "MoreAbout",
+ CellID->117417305],
+Cell[51094, 1736, 218, 6, 19, "MoreAbout",
+ CellID->10201080],
+Cell[51315, 1744, 176, 5, 19, "MoreAbout",
+ CellID->215756593],
+Cell[51494, 1751, 181, 5, 19, "MoreAbout",
+ CellID->129821314],
+Cell[51678, 1758, 197, 6, 19, "MoreAbout",
+ CellID->334016595],
+Cell[51878, 1766, 174, 5, 19, "MoreAbout",
+ CellID->72839735]
+}, Open  ]],
+Cell[52067, 1774, 151, 6, 43, "History"],
+Cell[52221, 1782, 23, 0, 25, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

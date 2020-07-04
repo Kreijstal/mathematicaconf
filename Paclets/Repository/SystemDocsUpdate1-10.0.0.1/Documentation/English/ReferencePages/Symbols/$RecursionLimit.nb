@@ -1,0 +1,1051 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30337,       1041]
+NotebookOptionsPosition[     22620,        805]
+NotebookOutlinePosition[     25823,        880]
+CellTagsIndexPosition[     25738,        875]
+WindowTitle->$RecursionLimit
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Evaluation\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/Evaluation"], "\<\"Controlling Infinite \
+Evaluation\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/ControllingInfiniteEvaluation"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"$IterationLimit\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$IterationLimit"], "\<\"MemoryConstrained\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MemoryConstrained"], "\<\"TimeConstrained\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TimeConstrained"], "\<\"MaxRecursion\"\>":>
+       Documentation`HelpLookup["paclet:ref/MaxRecursion"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Evaluation Control\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/EvaluationControl"], "\<\"Global Computation Settings & \
+Parameters\"\>":>Documentation`HelpLookup[
+       "paclet:guide/GlobalComputationSettingsAndParameters"], "\<\"Memory \
+Measurement & Optimization\"\>":>Documentation`HelpLookup[
+       "paclet:guide/MemoryMeasurementAndOptimization"], "\<\"Session \
+Customization\"\>":>Documentation`HelpLookup[
+       "paclet:guide/SessionCustomization"], "\<\"Wolfram System \
+Sessions\"\>":>Documentation`HelpLookup[
+       "paclet:guide/WolframSystemSessions"], "\<\"Wolfram System Setup\"\>":>
+       Documentation`HelpLookup["paclet:guide/WolframSystemSetup"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$RecursionLimit\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$RecursionLimit"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$RecursionLimit.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$71764], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "ref/$RecursionLimit", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$RecursionLimit", "ObjectName",
+ CellID->4136],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$RecursionLimit"]],"paclet:ref/$RecursionLimit"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]gives the current limit on the number of levels of \
+recursion that ",
+     "the Wolfram Language",
+     " can use. "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->7318],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->90632518],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{"$RecursionLimit", "=", 
+   StyleBox["n", "TI"]}]], "InlineFormula"],
+ " sets the limit on the number of recursion levels that ",
+ "the Wolfram Language",
+ " can use to be ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->21979],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{"$RecursionLimit", "=", 
+   TemplateBox[{Cell[
+      TextData["Infinity"]],"paclet:ref/Infinity"},
+    "RefLink",
+    BaseStyle->"InlineFormula"]}]], "InlineFormula"],
+ " removes any limit on the number of recursion levels. "
+}], "Notes",
+ CellID->10644],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$RecursionLimit"]],"paclet:ref/$RecursionLimit"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " gives the maximum length of the stack returned by ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Stack"]],"paclet:ref/Stack"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", "]"}]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->7742],
+
+Cell["\<\
+Each time the evaluation of a function requires the nested evaluation of the \
+same or another function, one recursion level is used up. \
+\>", "Notes",
+ CellID->25968],
+
+Cell[TextData[{
+ "On most computers, each level of recursion uses a certain amount of stack \
+space. ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$RecursionLimit"]],"paclet:ref/$RecursionLimit"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " allows you to control the amount of stack space that ",
+ "the Wolfram Language",
+ " can use from within ",
+ "the Wolfram Language",
+ ". On some computer systems, your whole ",
+ "Wolfram Language",
+ " session may crash if you allow it to use more stack space than the \
+computer system allows. "
+}], "Notes",
+ CellID->569],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MemoryInUse"]],"paclet:ref/MemoryInUse"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " and related functions do not count stack space. "
+}], "Notes",
+ CellID->28396],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(6)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->86893019],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->16419447],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$RecursionLimit"]],"paclet:ref/$RecursionLimit"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " limits infinite recursion with circular definitions:"
+}], "ExampleText",
+ CellID->464822300],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x", "=", 
+  RowBox[{"x", "+", "1"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->394515242],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], ":", 
+  " ", "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] exceeded. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->28217531],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"1", "+", "x"}], "]"}]], "Output",
+ ImageSize->{73, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->199621992]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->426247176],
+
+Cell[TextData[{
+ "Temporarily reset ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$RecursionLimit"]],"paclet:ref/$RecursionLimit"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->70467657],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"$RecursionLimit", "=", "1000"}], "}"}], ",", 
+   RowBox[{"x", "=", 
+    RowBox[{"x", "+", "1"}]}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->818636673],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], ":", 
+  " ", "\<\"Recursion depth of \[NoBreak]\\!\\(1000\\)\[NoBreak] exceeded. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->427228159],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"1", "+", "x"}], "]"}]], "Output",
+ ImageSize->{73, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->601176326]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Scope",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->32322],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ReleaseHold"]],"paclet:ref/ReleaseHold"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to keep going with the recursion:"
+}], "ExampleText",
+ CellID->199380079],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x", "=", 
+  RowBox[{"x", "+", "1"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->104126791],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], ":", 
+  " ", "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] exceeded. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->149065266],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"1", "+", "x"}], "]"}]], "Output",
+ ImageSize->{73, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->43409622]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ReleaseHold", "[", "%", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->510979399],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], ":", 
+  " ", "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] exceeded. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->16403661],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"1", "+", "x"}], "]"}]], "Output",
+ ImageSize->{73, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->27090574]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Generalizations & Extensions",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->17407],
+
+Cell[TextData[{
+ "The recursion limit can be set to ",
+ Cell[BoxData[
+  FormBox["\[Infinity]", TraditionalForm]], "InlineMath"],
+ " to allow any number of recursion steps:"
+}], "ExampleText",
+ CellID->231470838],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "0", "]"}], "=", "0"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"f", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"n", "-", "1"}], "]"}], "+", "1"}]}]}], "Input",
+ CellLabel->"In[1]:=",
+ CellID->16368944],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"$RecursionLimit", "=", "Infinity"}], "}"}], ",", 
+   RowBox[{"f", "[", 
+    RowBox[{"10", "^", "4"}], "]"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->8023482],
+
+Cell[BoxData["10000"], "Output",
+ ImageSize->{41, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->531560078]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(2)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->32313],
+
+Cell["\<\
+The recursion limit protects against recursive runaway definitions:\
+\>", "ExampleText",
+ CellID->738962059],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"Floor", "[", 
+     RowBox[{"x", "/", "2"}], "]"}], "]"}], "+", "1"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->2125860283],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "[", "10", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->1993220647],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$RecursionLimit", "::", "reclim"}], "MessageName"], ":", 
+  " ", "\<\"Recursion depth of \[NoBreak]\\!\\(1024\\)\[NoBreak] exceeded. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/$RecursionLimit/reclim\\\", ButtonNote -> \
+\\\"$RecursionLimit::reclim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->468368407],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"f", "[", 
+   RowBox[{"Floor", "[", 
+    FractionBox["0", "2"], "]"}], "]"}], "]"}]], "Output",
+ ImageSize->{128, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->57968674]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->130488592],
+
+Cell["The iteration limit protects against runaway definitions:", \
+"ExampleText",
+ CellID->450264515],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{"f", "[", 
+   RowBox[{"x", "+", "1"}], "]"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1609391322],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "[", "1", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->268254547],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$IterationLimit", "::", "itlim"}], "MessageName"], ":", 
+  " ", "\<\"Iteration limit of \[NoBreak]\\!\\(4096\\)\[NoBreak] exceeded. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/$IterationLimit/itlim\\\
+\", ButtonNote -> \\\"$IterationLimit::itlim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->37939636],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"f", "[", 
+   RowBox[{"4096", "+", "1"}], "]"}], "]"}]], "Output",
+ ImageSize->{115, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->329045930]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->11968],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$IterationLimit"]],"paclet:ref/$IterationLimit"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MemoryConstrained"]],"paclet:ref/MemoryConstrained"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TimeConstrained"]],"paclet:ref/TimeConstrained"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MaxRecursion"]],"paclet:ref/MaxRecursion"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->6492]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->20762],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Evaluation"]],"paclet:tutorial/Evaluation"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->959752411],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Controlling Infinite Evaluation"]],
+   "paclet:tutorial/ControllingInfiniteEvaluation"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->7532],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->372883610],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Evaluation Control"]],"paclet:guide/EvaluationControl"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->237844530],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Global Computation Settings & Parameters"]],
+   "paclet:guide/GlobalComputationSettingsAndParameters"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->560940738],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Memory Measurement & Optimization"]],
+   "paclet:guide/MemoryMeasurementAndOptimization"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->110929003],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Session Customization"]],"paclet:guide/SessionCustomization"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->644009768],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Wolfram System Sessions"]],"paclet:guide/WolframSystemSessions"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->78468023],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Wolfram System Setup"]],"paclet:guide/WolframSystemSetup"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->737939544]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 1988",
+ Cell[" (1.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$RecursionLimit",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Expressions", ButtonData -> "paclet:guide/Expressions", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Evaluation Control", ButtonData -> "paclet:guide/EvaluationControl", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$RecursionLimit", ButtonData -> "paclet:ref/$RecursionLimit", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Tuning & Debugging", ButtonData -> "paclet:guide/TuningAndDebugging",
+          BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Evaluation Control", ButtonData -> "paclet:guide/EvaluationControl", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$RecursionLimit", ButtonData -> "paclet:ref/$RecursionLimit", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 22.3556406}", 
+    "history" -> {"1", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {"stopping recursion", "infinite evaluation"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Built-in Wolfram Language Symbol", "language" -> "en", 
+    "paclet" -> "Mathematica", "status" -> "None", "summary" -> 
+    "$RecursionLimit gives the current limit on the number of levels of \
+recursion that the Wolfram Language can use. ", 
+    "synonyms" -> {"recursion limit"}, "title" -> "$RecursionLimit", 
+    "titlemodifier" -> "", "windowtitle" -> "$RecursionLimit", "type" -> 
+    "Symbol", "uri" -> "ref/$RecursionLimit"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[9400, 284, 386, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->86893019]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 25596, 868}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[587, 21, 5214, 125, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5804, 148, 52, 1, 43, "ObjectName",
+ CellID->4136],
+Cell[CellGroupData[{
+Cell[5881, 153, 549, 17, 83, "Usage",
+ CellID->7318],
+Cell[CellGroupData[{
+Cell[6455, 174, 737, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->90632518],
+Cell[7195, 200, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7229, 202, 307, 11, 70, "Notes",
+ CellID->21979],
+Cell[7539, 215, 295, 9, 70, "Notes",
+ CellID->10644],
+Cell[7837, 226, 444, 15, 70, "Notes",
+ CellID->7742],
+Cell[8284, 243, 178, 4, 70, "Notes",
+ CellID->25968],
+Cell[8465, 249, 594, 17, 70, "Notes",
+ CellID->569],
+Cell[9062, 268, 255, 8, 70, "Notes",
+ CellID->28396],
+Cell[9320, 278, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9400, 284, 386, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->86893019],
+Cell[CellGroupData[{
+Cell[9811, 303, 194, 6, 25, "ExampleSection",
+ CellID->16419447],
+Cell[10008, 311, 277, 8, 37, "ExampleText",
+ CellID->464822300],
+Cell[CellGroupData[{
+Cell[10310, 323, 115, 4, 28, "Input",
+ CellID->394515242],
+Cell[10428, 329, 482, 10, 19, "Message",
+ CellID->28217531],
+Cell[10913, 341, 211, 7, 36, "Output",
+ CellID->199621992]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11161, 353, 125, 3, 9, "ExampleDelimiter",
+ CellID->426247176],
+Cell[11289, 358, 247, 9, 37, "ExampleText",
+ CellID->70467657],
+Cell[CellGroupData[{
+Cell[11561, 371, 239, 8, 28, "Input",
+ CellID->818636673],
+Cell[11803, 381, 483, 10, 19, "Message",
+ CellID->427228159],
+Cell[12289, 393, 211, 7, 36, "Output",
+ CellID->601176326]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12561, 407, 182, 6, 25, "ExampleSection",
+ CellID->32322],
+Cell[12746, 415, 259, 9, 70, "ExampleText",
+ CellID->199380079],
+Cell[CellGroupData[{
+Cell[13030, 428, 115, 4, 70, "Input",
+ CellID->104126791],
+Cell[13148, 434, 483, 10, 70, "Message",
+ CellID->149065266],
+Cell[13634, 446, 210, 7, 36, "Output",
+ CellID->43409622]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13881, 458, 107, 3, 70, "Input",
+ CellID->510979399],
+Cell[13991, 463, 482, 10, 70, "Message",
+ CellID->16403661],
+Cell[14476, 475, 210, 7, 36, "Output",
+ CellID->27090574]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[14735, 488, 205, 6, 19, "ExampleSection",
+ CellID->17407],
+Cell[14943, 496, 211, 6, 70, "ExampleText",
+ CellID->231470838],
+Cell[15157, 504, 280, 10, 70, "Input",
+ CellID->16368944],
+Cell[CellGroupData[{
+Cell[15462, 518, 247, 8, 70, "Input",
+ CellID->8023482],
+Cell[15712, 528, 162, 5, 36, "Output",
+ CellID->531560078]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[15923, 539, 199, 6, 19, "ExampleSection",
+ CellID->32313],
+Cell[16125, 547, 118, 3, 70, "ExampleText",
+ CellID->738962059],
+Cell[16246, 552, 235, 8, 70, "Input",
+ CellID->2125860283],
+Cell[CellGroupData[{
+Cell[16506, 564, 99, 3, 70, "Input",
+ CellID->1993220647],
+Cell[16608, 569, 483, 10, 70, "Message",
+ CellID->468368407],
+Cell[17094, 581, 272, 9, 53, "Output",
+ CellID->57968674]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17403, 595, 125, 3, 70, "ExampleDelimiter",
+ CellID->130488592],
+Cell[17531, 600, 102, 2, 70, "ExampleText",
+ CellID->450264515],
+Cell[17636, 604, 175, 6, 70, "Input",
+ CellID->1609391322],
+Cell[CellGroupData[{
+Cell[17836, 614, 97, 3, 70, "Input",
+ CellID->268254547],
+Cell[17936, 619, 477, 9, 70, "Message",
+ CellID->37939636],
+Cell[18416, 630, 244, 8, 36, "Output",
+ CellID->329045930]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[18699, 643, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18767, 648, 265, 12, 31, "SeeAlsoSection",
+ CellID->11968],
+Cell[19035, 662, 1171, 34, 58, "SeeAlso",
+ CellID->6492]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20243, 701, 268, 12, 31, "TutorialsSection",
+ CellID->20762],
+Cell[20514, 715, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[20548, 717, 166, 5, 19, "Tutorials",
+ CellID->959752411],
+Cell[20717, 724, 205, 6, 19, "Tutorials",
+ CellID->7532],
+Cell[20925, 732, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20993, 737, 277, 12, 31, "MoreAboutSection",
+ CellID->372883610],
+Cell[21273, 751, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[21307, 753, 178, 5, 19, "MoreAbout",
+ CellID->237844530],
+Cell[21488, 760, 225, 6, 19, "MoreAbout",
+ CellID->560940738],
+Cell[21716, 768, 212, 6, 19, "MoreAbout",
+ CellID->110929003],
+Cell[21931, 776, 184, 5, 19, "MoreAbout",
+ CellID->644009768],
+Cell[22118, 783, 186, 5, 19, "MoreAbout",
+ CellID->78468023],
+Cell[22307, 790, 181, 5, 19, "MoreAbout",
+ CellID->737939544]
+}, Open  ]],
+Cell[22503, 798, 87, 3, 43, "History"],
+Cell[22593, 803, 23, 0, 25, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

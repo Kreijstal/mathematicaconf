@@ -1,0 +1,630 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19604,        621]
+NotebookOptionsPosition[     15848,        514]
+NotebookOutlinePosition[     17492,        555]
+CellTagsIndexPosition[     17449,        552]
+WindowTitle->Systems Modeling
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Disk\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Disk"], "\<\"FailureDistribution\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FailureDistribution"], "\<\"LeastSquares\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/LeastSquares"], "\<\"LinearSolve\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/LinearSolve"], "\<\"MeshRegion\"\>":>
+       Documentation`HelpLookup["paclet:ref/MeshRegion"], "\<\"NDSolve\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/NDSolve"], "\<\"ParametricNDSolve\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ParametricNDSolve"], "\<\"ParametricRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ParametricRegion"], "\<\"QueueingNetworkProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/QueueingNetworkProcess"], "\<\"QueueingProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/QueueingProcess"], "\<\"QueueProperties\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/QueueProperties"], "\<\"ReliabilityDistribution\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ReliabilityDistribution"], "\<\"SparseArray\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SparseArray"], "\<\"StandbyDistribution\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/StandbyDistribution"], "\<\"StateFeedbackGains\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/StateFeedbackGains"], "\<\"StateSpaceModel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/StateSpaceModel"], "\<\"TransferFunctionModel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TransferFunctionModel"], "\<\"WhenEvent\"\>":>
+       Documentation`HelpLookup["paclet:ref/WhenEvent"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Scientific Models\"\>":>
+       Documentation`HelpLookup["paclet:guide/ScientificModels"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"guide/SystemsModeling\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/SystemsModeling"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/SystemsModeling.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$100283], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/SystemsModeling", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Systems Modeling", "GuideTitle",
+ CellID->942062912],
+
+Cell["\[NonBreakingSpace]", "GuideAbstract",
+ CellID->1]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Differential Equations \[RightGuillemet]"]],
+   "paclet:guide/DifferentialEquations"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1028835264],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NDSolve"]],"paclet:ref/NDSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " solve systems of ODEs, DAEs, DDEs, and PDEs"
+}], "GuideText",
+ CellID->95956404],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WhenEvent"]],"paclet:ref/WhenEvent"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ParametricNDSolve"]],"paclet:ref/ParametricNDSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/DifferentialEquations"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->2126546778]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Geometric Structures", "GuideFunctionsSubsection",
+ CellID->301360825],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Disk"]],"paclet:ref/Disk"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ParametricRegion"]],"paclet:ref/ParametricRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRegion"]],"paclet:ref/MeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell["...", "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->759135033]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Matrices & Linear Algebra \[RightGuillemet]"]],
+   "paclet:guide/MatricesAndLinearAlgebra"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->428427672],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LinearSolve"]],"paclet:ref/LinearSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LeastSquares"]],"paclet:ref/LeastSquares"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SparseArray"]],"paclet:ref/SparseArray"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/MatricesAndLinearAlgebra"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->71214913]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Control Systems \[RightGuillemet]"]],
+   "paclet:guide/ControlSystems"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1118715307],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TransferFunctionModel"]],"paclet:ref/TransferFunctionModel"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["StateSpaceModel"]],"paclet:ref/StateSpaceModel"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["StateFeedbackGains"]],"paclet:ref/StateFeedbackGains"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/ControlSystems"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->760651412]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Queueing Systems \[RightGuillemet]"]],
+   "paclet:guide/QueueingProcesses"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1605448068],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["QueueingProcess"]],"paclet:ref/QueueingProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["QueueingNetworkProcess"]],"paclet:ref/QueueingNetworkProcess"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["QueueProperties"]],"paclet:ref/QueueProperties"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/QueuingProcesses"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1781137968]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->582152804],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Reliability \[RightGuillemet]"]],"paclet:guide/Reliability"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->298130893],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ReliabilityDistribution"]],
+    "paclet:ref/ReliabilityDistribution"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FailureDistribution"]],"paclet:ref/FailureDistribution"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["StandbyDistribution"]],"paclet:ref/StandbyDistribution"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/Reliability"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->606570200]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Scientific Models"]],"paclet:guide/ScientificModels"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "GuideRelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->415694148],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData[
+     StyleBox[{"Wolfram ", 
+       StyleBox["SystemModeler", FontSlant -> "Italic"]}]]],
+   "http://www.wolfram.com/system-modeler/"},
+  "WebLink",
+  BaseStyle->{"GuideRelatedLinks"}]]]], "GuideRelatedLinks",
+ CellID->444206097]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Systems Modeling",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 44.9516406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "system modeling", "systems modeling", "mathematical modeling", 
+      "function modeling", "functional flow", "functional decomposition", 
+      "simulation", "data modeling"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Language Guide", "language" -> "en", "paclet" -> "Mathematica", 
+    "status" -> "None", "summary" -> "\[NonBreakingSpace]", "synonyms" -> {}, 
+    "title" -> "Systems Modeling", "titlemodifier" -> "", "windowtitle" -> 
+    "Systems Modeling", "type" -> "Guide", "uri" -> 
+    "guide/SystemsModeling"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[588, 21, 5184, 120, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5797, 145, 58, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[5858, 148, 56, 1, 70, "GuideAbstract",
+ CellID->1]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5951, 154, 257, 11, 70, "GuideReferenceSection"],
+Cell[6211, 167, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[CellGroupData[{
+Cell[6267, 171, 242, 6, 70, "GuideFunctionsSubsection",
+ CellID->1028835264],
+Cell[6512, 179, 306, 10, 70, "GuideText",
+ CellID->95956404],
+Cell[6821, 191, 823, 25, 70, "InlineGuideFunctionListing",
+ CellID->2126546778]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7681, 221, 76, 1, 70, "GuideFunctionsSubsection",
+ CellID->301360825],
+Cell[7760, 224, 959, 30, 70, "InlineGuideFunctionListing",
+ CellID->759135033]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8756, 259, 247, 6, 70, "GuideFunctionsSubsection",
+ CellID->428427672],
+Cell[9006, 267, 1246, 37, 70, "InlineGuideFunctionListing",
+ CellID->71214913]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10289, 309, 228, 6, 70, "GuideFunctionsSubsection",
+ CellID->1118715307],
+Cell[10520, 317, 1136, 34, 70, "InlineGuideFunctionListing",
+ CellID->760651412]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11693, 356, 232, 6, 70, "GuideFunctionsSubsection",
+ CellID->1605448068],
+Cell[11928, 364, 1139, 35, 70, "InlineGuideFunctionListing",
+ CellID->1781137968]
+}, Open  ]],
+Cell[13082, 402, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->582152804],
+Cell[CellGroupData[{
+Cell[13165, 407, 216, 5, 70, "GuideFunctionsSubsection",
+ CellID->298130893],
+Cell[13384, 414, 1152, 35, 70, "InlineGuideFunctionListing",
+ CellID->606570200]
+}, Open  ]],
+Cell[14551, 452, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14619, 457, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[14903, 471, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[14937, 473, 187, 5, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[15127, 480, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15195, 485, 284, 12, 70, "GuideRelatedLinksSection",
+ CellID->415694148],
+Cell[15482, 499, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[15516, 501, 290, 8, 70, "GuideRelatedLinks",
+ CellID->444206097]
+}, Open  ]],
+Cell[15821, 512, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

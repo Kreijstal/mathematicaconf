@@ -1,0 +1,649 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19893,        639]
+NotebookOptionsPosition[     13332,        463]
+NotebookOutlinePosition[     17904,        570]
+CellTagsIndexPosition[     17819,        565]
+WindowTitle->$SystemID
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"Reading and Writing Wolfram System Files\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/ReadingAndWritingWolframSystemFiles"], \
+"\<\"Portability of WSTP Programs\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/PortabilityOfWSTPPrograms"], "\<\"Global System \
+Information\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/GlobalSystemInformation"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"$System\"\>":>Documentation`HelpLookup[
+       "paclet:ref/$System"], "\<\"$Version\"\>":>Documentation`HelpLookup[
+       "paclet:ref/$Version"], "\<\"$MachineType\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$MachineType"], "\<\"$OperatingSystem\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$OperatingSystem"], "\<\"$MachineID\"\>":>
+       Documentation`HelpLookup["paclet:ref/$MachineID"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Package Bulletproofing\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/PackageBulletproofing"], "\<\"Package Development\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/PackageDevelopment"], "\<\"System Information\"\>":>
+       Documentation`HelpLookup["paclet:guide/SystemInformation"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$SystemID\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$SystemID"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$SystemID.html"], 
+                StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$74389], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "ref/$SystemID", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$SystemID", "ObjectName",
+ CellID->8456],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$SystemID"]],"paclet:ref/$SystemID"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]is a short string that identifies the type of computer \
+system on which ",
+     "the Wolfram System",
+     " is being run. "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->17245],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->254829212],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "Computer systems with the same ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$SystemID"]],"paclet:ref/$SystemID"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " should be binary compatible, so that the same external programs and .mx \
+files can be used. "
+}], "Notes",
+ CellID->32015],
+
+Cell["\<\
+Sometimes binary compatibility may only be complete when the same version of \
+the operating system is used. \
+\>", "Notes",
+ CellID->27157],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$SystemID"]],"paclet:ref/$SystemID"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is used in naming directories generated by ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DumpSave"]],"paclet:ref/DumpSave"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData["mcc"], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->8224],
+
+Cell[TextData[{
+ "Values for ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$SystemID"]],"paclet:ref/$SystemID"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " contain only alphanumeric characters and dashes. "
+}], "Notes",
+ CellID->25691],
+
+Cell[TextData[{
+ "Typical values are ",
+ Cell[BoxData["\"\<Windows\>\""], "InlineFormula"],
+ ", ",
+ Cell[BoxData["\"\<MacOSX-x86-64\>\""], "InlineFormula"],
+ ", and ",
+ Cell[BoxData["\"\<Linux\>\""], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->2949],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->945047694],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->106090135],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$SystemID"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->29074972],
+
+Cell[BoxData["\<\"Windows\"\>"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->534125422]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->20875],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$System"]],"paclet:ref/$System"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$Version"]],"paclet:ref/$Version"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$MachineType"]],"paclet:ref/$MachineType"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$OperatingSystem"]],"paclet:ref/$OperatingSystem"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$MachineID"]],"paclet:ref/$MachineID"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->23058]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->1450],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Reading and Writing Wolfram System Files"]],
+   "paclet:tutorial/ReadingAndWritingWolframSystemFiles"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->14771],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData[{"Portability of ", "WSTP", " Programs"}]],
+   "paclet:tutorial/PortabilityOfWSTPPrograms"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->85486369],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Global System Information"]],
+   "paclet:tutorial/GlobalSystemInformation"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->28732],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->427741356],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Package Bulletproofing"]],"paclet:guide/PackageBulletproofing"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->88939501],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Package Development"]],"paclet:guide/PackageDevelopment"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->699157320],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["System Information"]],"paclet:guide/SystemInformation"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->487748556]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 1996",
+ Cell[" (3.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$SystemID",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Wolfram System Setup", ButtonData -> 
+         "paclet:guide/WolframSystemSetup", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "System Information", ButtonData -> "paclet:guide/SystemInformation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$SystemID", ButtonData -> "paclet:ref/$SystemID", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Cloud Functions & Deployment", ButtonData -> 
+         "paclet:guide/CloudFunctionsAndDeployment", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Cloud Execution Metadata", ButtonData -> 
+         "paclet:guide/CloudExecutionMetadata", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "System Information", ButtonData -> "paclet:guide/SystemInformation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$SystemID", ButtonData -> "paclet:ref/$SystemID", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Creating Instant APIs", ButtonData -> 
+         "paclet:guide/CreatingAnInstantAPI", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Cloud Execution Metadata", ButtonData -> 
+         "paclet:guide/CloudExecutionMetadata", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "System Information", ButtonData -> "paclet:guide/SystemInformation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$SystemID", ButtonData -> "paclet:ref/$SystemID", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 26.3406406}", 
+    "history" -> {"3", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "compatibility", "system number", "system type", "system platform", 
+      "computer platform", "computer type", "code-compatible", 
+      "hostid (matlab)", "ispc (matlab)", "isunix (matlab)", "machine-type"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Built-in Wolfram Language Symbol", "language" -> "en", 
+    "paclet" -> "Mathematica", "status" -> "None", "summary" -> 
+    "$SystemID is a short string that identifies the type of computer system \
+on which the Wolfram System is being run. ", "synonyms" -> {"system ID"}, 
+    "title" -> "$SystemID", "titlemodifier" -> "", "windowtitle" -> 
+    "$SystemID", "type" -> "Symbol", "uri" -> "ref/$SystemID"}, 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[8603, 264, 387, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->945047694]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 17676, 558}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[581, 21, 5052, 123, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5636, 146, 46, 1, 43, "ObjectName",
+ CellID->8456],
+Cell[CellGroupData[{
+Cell[5707, 151, 546, 17, 83, "Usage",
+ CellID->17245],
+Cell[CellGroupData[{
+Cell[6278, 172, 738, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->254829212],
+Cell[7019, 198, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7053, 200, 332, 10, 70, "Notes",
+ CellID->32015],
+Cell[7388, 212, 150, 4, 70, "Notes",
+ CellID->27157],
+Cell[7541, 218, 454, 16, 70, "Notes",
+ CellID->8224],
+Cell[7998, 236, 268, 9, 70, "Notes",
+ CellID->25691],
+Cell[8269, 247, 251, 9, 70, "Notes",
+ CellID->2949],
+Cell[8523, 258, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8603, 264, 387, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->945047694],
+Cell[CellGroupData[{
+Cell[9015, 283, 195, 6, 25, "ExampleSection",
+ CellID->106090135],
+Cell[CellGroupData[{
+Cell[9235, 293, 77, 2, 28, "Input",
+ CellID->29074972],
+Cell[9315, 297, 172, 5, 36, "Output",
+ CellID->534125422]
+}, Open  ]]
+}, Open  ]],
+Cell[9514, 306, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9582, 311, 265, 12, 31, "SeeAlsoSection",
+ CellID->20875],
+Cell[9850, 325, 1442, 43, 58, "SeeAlso",
+ CellID->23058]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11329, 373, 267, 12, 31, "TutorialsSection",
+ CellID->1450],
+Cell[11599, 387, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[11633, 389, 221, 6, 19, "Tutorials",
+ CellID->14771],
+Cell[11857, 397, 212, 6, 19, "Tutorials",
+ CellID->85486369],
+Cell[12072, 405, 194, 6, 19, "Tutorials",
+ CellID->28732],
+Cell[12269, 413, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12337, 418, 277, 12, 31, "MoreAboutSection",
+ CellID->427741356],
+Cell[12617, 432, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[12651, 434, 185, 5, 19, "MoreAbout",
+ CellID->88939501],
+Cell[12839, 441, 180, 5, 19, "MoreAbout",
+ CellID->699157320],
+Cell[13022, 448, 178, 5, 19, "MoreAbout",
+ CellID->487748556]
+}, Open  ]],
+Cell[13215, 456, 87, 3, 43, "History"],
+Cell[13305, 461, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

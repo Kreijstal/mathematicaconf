@@ -1,0 +1,581 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18193,        572]
+NotebookOptionsPosition[     14652,        470]
+NotebookOutlinePosition[     16227,        508]
+CellTagsIndexPosition[     16184,        505]
+WindowTitle->New in 10.0: Visualization & Graphics
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ArrayPlot\"\>":>Documentation`HelpLookup[
+       "paclet:ref/ArrayPlot"], "\<\"CandlestickChart\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/CandlestickChart"], "\<\"GeoGraphics\"\>":>
+       Documentation`HelpLookup["paclet:ref/GeoGraphics"], "\<\"GeoPath\"\>":>
+       Documentation`HelpLookup["paclet:ref/GeoPath"], "\<\"JuliaSetPlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/JuliaSetPlot"], "\<\"KagiChart\"\>":>
+       Documentation`HelpLookup["paclet:ref/KagiChart"], "\<\"LABColor\"\>":>
+       Documentation`HelpLookup["paclet:ref/LABColor"], "\<\"Legended\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Legended"], "\<\"LineBreakChart\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/LineBreakChart"], "\<\"ListLogLinearPlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ListLogLinearPlot"], "\<\"ListLogLogPlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ListLogLogPlot"], "\<\"ListLogPlot\"\>":>
+       Documentation`HelpLookup["paclet:ref/ListLogPlot"], "\<\"LUVColor\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/LUVColor"], "\<\"MandelbrotSetPlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MandelbrotSetPlot"], "\<\"MatrixPlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MatrixPlot"], "\<\"NumberLinePlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/NumberLinePlot"], "\<\"PlotLegends\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PlotLegends"], "\<\"PlotTheme\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PlotTheme"], "\<\"PointFigureChart\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PointFigureChart"], "\<\"ProbabilityPlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ProbabilityPlot"], "\<\"ProbabilityScalePlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ProbabilityScalePlot"], "\<\"QuantilePlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/QuantilePlot"], "\<\"RenkoChart\"\>":>
+       Documentation`HelpLookup["paclet:ref/RenkoChart"], "\<\"XYZColor\"\>":>
+       Documentation`HelpLookup["paclet:ref/XYZColor"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"guide/NewIn100VisualizationAndGraphics\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/NewIn100VisualizationAndGraphics"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/\
+NewIn100VisualizationAndGraphics.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$90883], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/NewIn100VisualizationAndGraphics", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["New in 10.0: Visualization & Graphics", "GuideTitle",
+ CellID->942062912],
+
+Cell["\[NonBreakingSpace]", "GuideAbstract",
+ CellID->1]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LABColor"]],"paclet:ref/LABColor"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LUVColor"]],"paclet:ref/LUVColor"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["XYZColor"]],"paclet:ref/XYZColor"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " use CIE color spaces for styles and color functions"
+}], "GuideText",
+ CellID->1073190696],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->243757724],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Geographic Images \[RightGuillemet]"]],
+   "paclet:guide/MapsAndCartography"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->673449279],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["GeoGraphics"]],"paclet:ref/GeoGraphics"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "construct maps and geographic images from primitives and directives"
+}], "GuideText",
+ CellID->2129363442],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["GeoPath"]],"paclet:ref/GeoPath"},
+  "RefLink",
+  BaseStyle->
+   "InlineFunctionSans"]], "InlineFunctionSans"]], \
+"InlineGuideFunctionListing",
+ CellID->396392439]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->1423212463],
+
+Cell[CellGroupData[{
+
+Cell["Specialized Plots", "GuideFunctionsSubsection",
+ CellID->1411115382],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NumberLinePlot"]],"paclet:ref/NumberLinePlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "plot numbers, intervals, and predicates on a number line"
+}], "GuideText",
+ CellID->1954311453],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MandelbrotSetPlot"]],"paclet:ref/MandelbrotSetPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "plot the Mandelbrot set over a region"
+}], "GuideText",
+ CellID->350209706],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["JuliaSetPlot"]],"paclet:ref/JuliaSetPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "plot the Julia set for a function"
+}], "GuideText",
+ CellID->1869335962]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->1259005355],
+
+Cell[CellGroupData[{
+
+Cell["Enhanced Legends", "GuideFunctionsSubsection",
+ CellID->546583868],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PlotLegends"]],"paclet:ref/PlotLegends"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "improved legends using dashing, thickness, plot markers, and label styles"
+}], "GuideText",
+ CellID->1736334817],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ArrayPlot"]],"paclet:ref/ArrayPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "improved automatic legends"
+}], "GuideText",
+ CellID->423990236],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MatrixPlot"]],"paclet:ref/MatrixPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "improved automatic legends"
+}], "GuideText",
+ CellID->653155706],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Legended"]],"paclet:ref/Legended"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " improved placement of multiple legends and wider support as a wrapper for \
+data"
+}], "GuideText",
+ CellID->1799030925],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ListLogPlot"]],"paclet:ref/ListLogPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ListLogLinearPlot"]],"paclet:ref/ListLogLinearPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ListLogLogPlot"]],"paclet:ref/ListLogLogPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["QuantilePlot"]],"paclet:ref/QuantilePlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ProbabilityPlot"]],"paclet:ref/ProbabilityPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ProbabilityScalePlot"]],"paclet:ref/ProbabilityScalePlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1173915955]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Enhanced Units", "GuideFunctionsSubsection",
+ CellID->1976512249],
+
+Cell["Create financial plots from data with units", "GuideText",
+ CellID->875454194],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CandlestickChart"]],"paclet:ref/CandlestickChart"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["KagiChart"]],"paclet:ref/KagiChart"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PointFigureChart"]],"paclet:ref/PointFigureChart"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RenkoChart"]],"paclet:ref/RenkoChart"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LineBreakChart"]],"paclet:ref/LineBreakChart"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1591867983]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->42282313],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PlotTheme"]],"paclet:ref/PlotTheme"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " specify an overall theme for visualizations"
+}], "GuideText",
+ CellID->257488451]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"New in 10.0: Visualization & Graphics",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 38.0826406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {"new in 10", "new in version 10"}, "specialkeywords" -> {},
+     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Language Guide", "language" -> "en", "paclet" -> "Mathematica", 
+    "status" -> "None", "summary" -> "\[NonBreakingSpace]", "synonyms" -> {}, 
+    "title" -> "New in 10.0: Visualization & Graphics", "titlemodifier" -> "",
+     "windowtitle" -> "New in 10.0: Visualization & Graphics", "type" -> 
+    "Guide", "uri" -> "guide/NewIn100VisualizationAndGraphics"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[609, 21, 5157, 114, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5791, 139, 79, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[5873, 142, 56, 1, 70, "GuideAbstract",
+ CellID->1]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5966, 148, 257, 11, 70, "GuideReferenceSection"],
+Cell[6226, 161, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6260, 163, 656, 22, 70, "GuideText",
+ CellID->1073190696],
+Cell[6919, 187, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->243757724],
+Cell[CellGroupData[{
+Cell[7002, 192, 233, 6, 70, "GuideFunctionsSubsection",
+ CellID->673449279],
+Cell[7238, 200, 345, 11, 70, "GuideText",
+ CellID->2129363442],
+Cell[7586, 213, 225, 7, 70, "InlineGuideFunctionListing",
+ CellID->396392439]
+}, Open  ]],
+Cell[7826, 223, 59, 1, 70, "GuideDelimiterSubsection",
+ CellID->1423212463],
+Cell[CellGroupData[{
+Cell[7910, 228, 74, 1, 70, "GuideFunctionsSubsection",
+ CellID->1411115382],
+Cell[7987, 231, 340, 11, 70, "GuideText",
+ CellID->1954311453],
+Cell[8330, 244, 326, 11, 70, "GuideText",
+ CellID->350209706],
+Cell[8659, 257, 313, 11, 70, "GuideText",
+ CellID->1869335962]
+}, Open  ]],
+Cell[8987, 271, 59, 1, 70, "GuideDelimiterSubsection",
+ CellID->1259005355],
+Cell[CellGroupData[{
+Cell[9071, 276, 72, 1, 70, "GuideFunctionsSubsection",
+ CellID->546583868],
+Cell[9146, 279, 351, 11, 70, "GuideText",
+ CellID->1736334817],
+Cell[9500, 292, 299, 11, 70, "GuideText",
+ CellID->423990236],
+Cell[9802, 305, 301, 11, 70, "GuideText",
+ CellID->653155706],
+Cell[10106, 318, 347, 11, 70, "GuideText",
+ CellID->1799030925],
+Cell[10456, 331, 2141, 61, 70, "InlineGuideFunctionListing",
+ CellID->1173915955]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12634, 397, 71, 1, 70, "GuideFunctionsSubsection",
+ CellID->1976512249],
+Cell[12708, 400, 84, 1, 70, "GuideText",
+ CellID->875454194],
+Cell[12795, 403, 1405, 43, 70, "InlineGuideFunctionListing",
+ CellID->1591867983]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14237, 451, 47, 1, 70, "GuideDelimiter",
+ CellID->42282313],
+Cell[14287, 454, 311, 10, 70, "GuideText",
+ CellID->257488451]
+}, Open  ]]
+}, Open  ]],
+Cell[14625, 468, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

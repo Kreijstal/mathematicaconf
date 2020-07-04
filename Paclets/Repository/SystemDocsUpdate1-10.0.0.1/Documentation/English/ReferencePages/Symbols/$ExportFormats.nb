@@ -1,0 +1,607 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20309,        597]
+NotebookOptionsPosition[     14625,        443]
+NotebookOutlinePosition[     18651,        540]
+CellTagsIndexPosition[     18566,        535]
+WindowTitle->$ExportFormats
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Importing and Exporting Data\"\>":>
+       Documentation`HelpLookup["paclet:tutorial/ImportingAndExportingData"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"$ImportFormats\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$ImportFormats"], "\<\"Export\"\>":>
+       Documentation`HelpLookup["paclet:ref/Export"], "\<\"ExportForm\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ExportForm"], "\<\"$EmbedCodeEnvironments\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$EmbedCodeEnvironments"], "\<\"$Packages\"\>":>
+       Documentation`HelpLookup["paclet:ref/$Packages"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Importing and Exporting\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/ImportingAndExporting"], "\<\"System Information\"\>":>
+       Documentation`HelpLookup["paclet:guide/SystemInformation"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$ExportFormats\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$ExportFormats"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$ExportFormats.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$59024], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "ref/$ExportFormats",
+              ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$ExportFormats", "ObjectName",
+ CellID->5361],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$ExportFormats"]],"paclet:ref/$ExportFormats"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]gives a list of export formats currently supported in \
+your ",
+     "Wolfram Language session",
+     ". "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->12045],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->144671945],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "The strings that appear in ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$ExportFormats"]],"paclet:ref/$ExportFormats"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " are the possible third arguments to ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Export"]],"paclet:ref/Export"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->1680],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->16685316],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->546984964],
+
+Cell["The currently supported export formats:", "ExampleText",
+ CellID->894721731],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$ExportFormats"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->230758655],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"3DS\"\>", ",", "\<\"ACO\"\>", ",", "\<\"AIFF\"\>", 
+   ",", "\<\"AU\"\>", ",", "\<\"AVI\"\>", ",", "\<\"Base64\"\>", 
+   ",", "\<\"Binary\"\>", ",", "\<\"Bit\"\>", ",", "\<\"BMP\"\>", 
+   ",", "\<\"Byte\"\>", ",", "\<\"BYU\"\>", ",", "\<\"BZIP2\"\>", 
+   ",", "\<\"C\"\>", ",", "\<\"Character16\"\>", ",", "\<\"Character8\"\>", 
+   ",", "\<\"Complex128\"\>", ",", "\<\"Complex256\"\>", 
+   ",", "\<\"Complex64\"\>", ",", "\<\"CSV\"\>", ",", "\<\"DICOM\"\>", 
+   ",", "\<\"DIF\"\>", ",", "\<\"DIMACS\"\>", ",", "\<\"DOT\"\>", 
+   ",", "\<\"DXF\"\>", ",", "\<\"EMF\"\>", ",", "\<\"EPS\"\>", 
+   ",", "\<\"ExpressionML\"\>", ",", "\<\"FASTA\"\>", ",", "\<\"FITS\"\>", 
+   ",", "\<\"FLAC\"\>", ",", "\<\"FLV\"\>", ",", "\<\"GIF\"\>", 
+   ",", "\<\"Graph6\"\>", ",", "\<\"Graphlet\"\>", ",", "\<\"GraphML\"\>", 
+   ",", "\<\"GXL\"\>", ",", "\<\"GZIP\"\>", ",", "\<\"HarwellBoeing\"\>", 
+   ",", "\<\"HDF\"\>", ",", "\<\"HDF5\"\>", ",", "\<\"HTML\"\>", 
+   ",", "\<\"Integer128\"\>", ",", "\<\"Integer16\"\>", 
+   ",", "\<\"Integer24\"\>", ",", "\<\"Integer32\"\>", 
+   ",", "\<\"Integer64\"\>", ",", "\<\"Integer8\"\>", ",", "\<\"JPEG\"\>", 
+   ",", "\<\"JPEG2000\"\>", ",", "\<\"JSON\"\>", ",", "\<\"JVX\"\>", 
+   ",", "\<\"KML\"\>", ",", "\<\"LEDA\"\>", ",", "\<\"List\"\>", 
+   ",", "\<\"LWO\"\>", ",", "\<\"MAT\"\>", ",", "\<\"MathML\"\>", 
+   ",", "\<\"Maya\"\>", ",", "\<\"MGF\"\>", ",", "\<\"MIDI\"\>", 
+   ",", "\<\"MOL\"\>", ",", "\<\"MOL2\"\>", ",", "\<\"MTX\"\>", 
+   ",", "\<\"MX\"\>", ",", "\<\"NASACDF\"\>", ",", "\<\"NB\"\>", 
+   ",", "\<\"NetCDF\"\>", ",", "\<\"NEXUS\"\>", ",", "\<\"NOFF\"\>", 
+   ",", "\<\"OBJ\"\>", ",", "\<\"OFF\"\>", ",", "\<\"Package\"\>", 
+   ",", "\<\"Pajek\"\>", ",", "\<\"PBM\"\>", ",", "\<\"PCX\"\>", 
+   ",", "\<\"PDB\"\>", ",", "\<\"PDF\"\>", ",", "\<\"PGM\"\>", 
+   ",", "\<\"PICT\"\>", ",", "\<\"PLY\"\>", ",", "\<\"PNG\"\>", 
+   ",", "\<\"PNM\"\>", ",", "\<\"POV\"\>", ",", "\<\"PPM\"\>", 
+   ",", "\<\"PXR\"\>", ",", "\<\"QuickTime\"\>", ",", "\<\"RawBitmap\"\>", 
+   ",", "\<\"Real128\"\>", ",", "\<\"Real32\"\>", ",", "\<\"Real64\"\>", 
+   ",", "\<\"RIB\"\>", ",", "\<\"RTF\"\>", ",", "\<\"SCT\"\>", 
+   ",", "\<\"SDF\"\>", ",", "\<\"SND\"\>", ",", "\<\"Sparse6\"\>", 
+   ",", "\<\"STL\"\>", ",", "\<\"String\"\>", ",", "\<\"SurferGrid\"\>", 
+   ",", "\<\"SVG\"\>", ",", "\<\"SWF\"\>", ",", "\<\"Table\"\>", 
+   ",", "\<\"TAR\"\>", ",", "\<\"TerminatedString\"\>", ",", "\<\"TeX\"\>", 
+   ",", "\<\"Text\"\>", ",", "\<\"TGA\"\>", ",", "\<\"TGF\"\>", 
+   ",", "\<\"TIFF\"\>", ",", "\<\"TSV\"\>", ",", "\<\"UnsignedInteger128\"\>",
+    ",", "\<\"UnsignedInteger16\"\>", ",", "\<\"UnsignedInteger24\"\>", 
+   ",", "\<\"UnsignedInteger32\"\>", ",", "\<\"UnsignedInteger64\"\>", 
+   ",", "\<\"UnsignedInteger8\"\>", ",", "\<\"UUE\"\>", 
+   ",", "\<\"VideoFrames\"\>", ",", "\<\"VRML\"\>", ",", "\<\"VTK\"\>", 
+   ",", "\<\"WAV\"\>", ",", "\<\"Wave64\"\>", ",", "\<\"WDX\"\>", 
+   ",", "\<\"WMF\"\>", ",", "\<\"X3D\"\>", ",", "\<\"XBM\"\>", 
+   ",", "\<\"XHTML\"\>", ",", "\<\"XHTMLMathML\"\>", ",", "\<\"XLS\"\>", 
+   ",", "\<\"XLSX\"\>", ",", "\<\"XML\"\>", ",", "\<\"XYZ\"\>", 
+   ",", "\<\"ZIP\"\>", ",", "\<\"ZPR\"\>"}], "}"}]], "Output",
+ ImageSize->{535, 220},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->551411728]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->12943],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$ImportFormats"]],"paclet:ref/$ImportFormats"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Export"]],"paclet:ref/Export"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ExportForm"]],"paclet:ref/ExportForm"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$EmbedCodeEnvironments"]],"paclet:ref/$EmbedCodeEnvironments"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$Packages"]],"paclet:ref/$Packages"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->13776]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->16241],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Importing and Exporting Data"]],
+   "paclet:tutorial/ImportingAndExportingData"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->961],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->464143716],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Importing and Exporting"]],"paclet:guide/ImportingAndExporting"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->102635893],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["System Information"]],"paclet:guide/SystemInformation"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->789726025]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 1999",
+ Cell[" (4.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$ExportFormats",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Importing and Exporting", ButtonData -> 
+         "paclet:guide/ImportingAndExporting", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$ExportFormats", ButtonData -> "paclet:ref/$ExportFormats", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Setting Up Input Interpreters", ButtonData -> 
+         "paclet:guide/InterpretingStrings", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Importing and Exporting", ButtonData -> 
+         "paclet:guide/ImportingAndExporting", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$ExportFormats", ButtonData -> "paclet:ref/$ExportFormats", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Creating Instant APIs", ButtonData -> 
+         "paclet:guide/CreatingAnInstantAPI", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Setting Up Input Interpreters", ButtonData -> 
+         "paclet:guide/InterpretingStrings", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Importing and Exporting", ButtonData -> 
+         "paclet:guide/ImportingAndExporting", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$ExportFormats", ButtonData -> "paclet:ref/$ExportFormats", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 1.8526406}", 
+    "history" -> {"4", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {"formats"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Built-in Wolfram Language Symbol", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "$ExportFormats gives a list of export formats currently supported in \
+your Wolfram Language session. ", "synonyms" -> {"export formats"}, "title" -> 
+    "$ExportFormats", "titlemodifier" -> "", "windowtitle" -> 
+    "$ExportFormats", "type" -> "Symbol", "uri" -> "ref/$ExportFormats"}, 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7218, 216, 386, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->16685316]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 18424, 528}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[586, 21, 4698, 116, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5287, 139, 51, 1, 43, "ObjectName",
+ CellID->5361],
+Cell[CellGroupData[{
+Cell[5363, 144, 537, 17, 83, "Usage",
+ CellID->12045],
+Cell[CellGroupData[{
+Cell[5925, 165, 738, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->144671945],
+Cell[6666, 191, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6700, 193, 435, 15, 70, "Notes",
+ CellID->1680],
+Cell[7138, 210, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7218, 216, 386, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->16685316],
+Cell[CellGroupData[{
+Cell[7629, 235, 195, 6, 25, "ExampleSection",
+ CellID->546984964],
+Cell[7827, 243, 82, 1, 33, "ExampleText",
+ CellID->894721731],
+Cell[CellGroupData[{
+Cell[7934, 248, 83, 2, 28, "Input",
+ CellID->230758655],
+Cell[8020, 252, 3360, 53, 241, "Output",
+ CellID->551411728]
+}, Open  ]]
+}, Open  ]],
+Cell[11407, 309, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11475, 314, 265, 12, 31, "SeeAlsoSection",
+ CellID->12943],
+Cell[11743, 328, 1458, 43, 58, "SeeAlso",
+ CellID->13776]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13238, 376, 268, 12, 31, "TutorialsSection",
+ CellID->16241],
+Cell[13509, 390, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[13543, 392, 197, 6, 70, "Tutorials",
+ CellID->961],
+Cell[13743, 400, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13811, 405, 277, 12, 70, "MoreAboutSection",
+ CellID->464143716],
+Cell[14091, 419, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[14125, 421, 187, 5, 70, "MoreAbout",
+ CellID->102635893],
+Cell[14315, 428, 178, 5, 70, "MoreAbout",
+ CellID->789726025]
+}, Open  ]],
+Cell[14508, 436, 87, 3, 70, "History"],
+Cell[14598, 441, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

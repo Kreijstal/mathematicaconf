@@ -1,0 +1,661 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20772,        652]
+NotebookOptionsPosition[     15927,        519]
+NotebookOutlinePosition[     18160,        570]
+CellTagsIndexPosition[     18117,        567]
+WindowTitle->Engineering Data
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"AircraftData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/AircraftData"], "\<\"AirportData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/AirportData"], "\<\"BridgeData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/BridgeData"], "\<\"BroadcastStationData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/BroadcastStationData"], "\<\"BuildingData\"\>":>
+       Documentation`HelpLookup["paclet:ref/BuildingData"], "\<\"DamData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DamData"], "\<\"DimensionalCombinations\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DimensionalCombinations"], "\<\"EntityValue\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EntityValue"], "\<\"FormulaData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FormulaData"], "\<\"NuclearReactorData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/NuclearReactorData"], "\<\"Quantity\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Quantity"], "\<\"SatelliteData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SatelliteData"], "\<\"ThermodynamicData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ThermodynamicData"], "\<\"TunnelData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TunnelData"], "\<\"UnitConvert\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/UnitConvert"], "\<\"UnitSimplify\"\>":>
+       Documentation`HelpLookup["paclet:ref/UnitSimplify"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Transportation Data\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/TransportationData"], "\<\"Units & Measures\"\>":>
+       Documentation`HelpLookup["paclet:guide/Units"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"guide/EngineeringData\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/EngineeringData"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/EngineeringData.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$78314], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/EngineeringData", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Engineering Data", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Language provides seamless access to the curated and continuously \
+updated Wolfram Knowledgebase, which includes a wide range of types of \
+engineering data. Free-form linguistics provide a convenient mechanism for \
+accessing all available data; more common categories also have specific \
+associated Wolfram Language functions.\
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJztlkGqwjAQhlN14RFcCR7lvSPoAbSCbsvzCeqlBL2NpRtB6KIUpKs0SvWT
+qps2Uk2z82da0unM10yQGXtjrz9tCCH+29z67uJnNnNXgxYPv6v5ZNxk0eHq
+ct3WF43SNA3DMAiCXWURTAqJOiaSUhIZRZFSKsuyF5FPEUZwHMe+75Ou2y1v
+kySpAiyKRHZVunMq4tOfYXNRLJCin+OiLhMy6UCKfmqpeLY6kQ7EhPBCtsmn
+9Z/0nKLhNyTfOBMhh0KOHsYaj+fUQPac8/Fwjvd3Ox5yZy1ktV2qzeJu22WN
+5FKrhfw9Ddu/ZxsqJdvrSPa6KE2b1m1CZnCUdn4GDbWYTCuGnW7OMiJ5y6ff
+nbAUy650EzaX+b+CK3PJ5so=
+     "], {{0, 24}, {30, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSizeRaw->{30, 24},
+   PlotRange->{{0, 30}, {0, 24}}]], "InlineOutput"],
+ " (",
+ Cell["Ctrl", "KeyEvent"],
+ StyleBox["+", "KeyEventDelimiter"],
+ Cell["\[LongEqual]", "KeyEvent"],
+ ") \[LongDash] request data using free-form linguistics"
+}], "GuideText",
+ CellID->618196486],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EntityValue"]],"paclet:ref/EntityValue"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " general access to values of properties for all types of entities"
+}], "GuideText",
+ CellID->759792097],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Units & Measures \[RightGuillemet]"]],"paclet:guide/Units"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->916936133],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Quantity"]],"paclet:ref/Quantity"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " representation of a quantity with over 10,000 possible units"
+}], "GuideText",
+ CellID->1725219867],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["UnitConvert"]],"paclet:ref/UnitConvert"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["UnitSimplify"]],"paclet:ref/UnitSimplify"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DimensionalCombinations"]],
+    "paclet:ref/DimensionalCombinations"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/Units"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->205220942]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->1907047116],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FormulaData"]],"paclet:ref/FormulaData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " computable access to named engineering formulas"
+}], "GuideText",
+ CellID->844300257],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ThermodynamicData"]],"paclet:ref/ThermodynamicData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " steam tables and other thermodynamic data for common fluids"
+}], "GuideText",
+ CellID->1463276848]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->311258892],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["BroadcastStationData"]],"paclet:ref/BroadcastStationData"},
+  "RefLink",
+  BaseStyle->
+   "InlineFunctionSans"]], "InlineFunctionSans"]], \
+"InlineGuideFunctionListing",
+ CellID->325296668],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->225567095],
+
+Cell[BoxData[Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"FrequencyAllocationData\""]],
+    "paclet:ref/FrequencyAllocationData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], 
+  "InlineFunctionSans"]], "InlineGuideFunctionListing",
+ CellID->733938608]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Electronics & Computer Systems Data", "GuideFunctionsSubsection",
+ CellID->1395046169],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->297113332],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"FileFormat\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], 
+  " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"Character\"", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->1114815058]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Engineered Systems", "GuideFunctionsSubsection",
+ CellID->291605819],
+
+Cell[TextData[Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["AircraftData"]],"paclet:ref/AircraftData"},
+  "RefLink",
+  BaseStyle->
+   "InlineFunctionSans"]], "InlineFunctionSans"]], \
+"InlineGuideFunctionListing",
+ CellID->461317479],
+
+Cell["Accessible via free-form linguistics and EntityValue:", "GuideText", "EntityValueGuideText",
+ FontSlant->"Italic",
+ CellID->1507444231],
+
+Cell[BoxData[Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Rocket\""]],"paclet:ref/Rocket"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], 
+  "InlineFunctionSans"]], "InlineGuideFunctionListing",
+ CellID->1750606758]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Engineering Structures", "GuideFunctionsSubsection",
+ CellID->568770389],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DamData"]],"paclet:ref/DamData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BridgeData"]],"paclet:ref/BridgeData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TunnelData"]],"paclet:ref/TunnelData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MineData"]],"paclet:ref/MineData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["AirportData"]],"paclet:ref/AirportData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NuclearReactorData"]],"paclet:ref/NuclearReactorData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BuildingData"]],"paclet:ref/BuildingData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["StadiumData"]],"paclet:ref/StadiumData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->196642139]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Transportation Data"]],"paclet:guide/TransportationData"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1993522660],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Units & Measures"]],"paclet:guide/Units"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->252299663],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "GuideRelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->415694148],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "Wolfram ",
+ StyleBox["SystemModeler",
+  FontSlant->"Italic"]
+}], "GuideRelatedLinks",
+ CellID->1473774444]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Engineering Data",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Engineering Data", ButtonData -> "paclet:guide/EngineeringData", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 29.2706406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "engineering", "technology", "engineering data", "technology data", 
+      "technologigical data", "telecommunications", "unit tables", 
+      "character listing", "tables of structures", "man-made structures", 
+      "engineered structures"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Language Guide", "language" -> "en", "paclet" -> "Mathematica", 
+    "status" -> "None", "summary" -> 
+    "The Wolfram Language provides seamless access to the curated and \
+continuously updated Wolfram Knowledgebase, which includes a wide range of \
+types of engineering data. Free-form linguistics provide a convenient \
+mechanism for accessing all available data; more common categories also have \
+specific associated Wolfram Language functions.", "synonyms" -> {}, "title" -> 
+    "Engineering Data", "titlemodifier" -> "", "windowtitle" -> 
+    "Engineering Data", "type" -> "Guide", "uri" -> 
+    "guide/EngineeringData"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[588, 21, 5033, 119, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5646, 144, 58, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[5707, 147, 396, 7, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6140, 159, 257, 11, 70, "GuideReferenceSection"],
+Cell[6400, 172, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6434, 174, 954, 24, 70, "GuideText",
+ CellID->618196486],
+Cell[7391, 200, 336, 10, 70, "GuideText",
+ CellID->759792097],
+Cell[CellGroupData[{
+Cell[7752, 214, 215, 5, 70, "GuideFunctionsSubsection",
+ CellID->916936133],
+Cell[7970, 221, 327, 10, 70, "GuideText",
+ CellID->1725219867],
+Cell[8300, 233, 1116, 35, 70, "InlineGuideFunctionListing",
+ CellID->205220942]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9453, 273, 49, 1, 70, "GuideDelimiter",
+ CellID->1907047116],
+Cell[9505, 276, 319, 10, 70, "GuideText",
+ CellID->844300257],
+Cell[9827, 288, 344, 10, 70, "GuideText",
+ CellID->1463276848]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10208, 303, 48, 1, 70, "GuideDelimiter",
+ CellID->311258892],
+Cell[10259, 306, 251, 7, 70, "InlineGuideFunctionListing",
+ CellID->325296668],
+Cell[10513, 315, 140, 2, 70, "GuideText",
+ CellID->225567095],
+Cell[10656, 319, 266, 7, 70, "InlineGuideFunctionListing",
+ CellID->733938608]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10959, 331, 92, 1, 70, "GuideFunctionsSubsection",
+ CellID->1395046169],
+Cell[11054, 334, 140, 2, 70, "GuideText",
+ CellID->297113332],
+Cell[11197, 338, 318, 7, 70, "InlineGuideFunctionListing",
+ CellID->1114815058]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11552, 350, 74, 1, 70, "GuideFunctionsSubsection",
+ CellID->291605819],
+Cell[11629, 353, 235, 7, 70, "InlineGuideFunctionListing",
+ CellID->461317479],
+Cell[11867, 362, 141, 2, 70, "GuideText",
+ CellID->1507444231],
+Cell[12011, 366, 228, 6, 70, "InlineGuideFunctionListing",
+ CellID->1750606758]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12276, 377, 78, 1, 70, "GuideFunctionsSubsection",
+ CellID->568770389],
+Cell[12357, 380, 2243, 70, 70, "InlineGuideFunctionListing",
+ CellID->196642139]
+}, Open  ]],
+Cell[14615, 453, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14683, 458, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[14967, 472, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[15001, 474, 191, 5, 70, "GuideMoreAbout",
+ CellID->1993522660],
+Cell[15195, 481, 174, 5, 70, "GuideMoreAbout",
+ CellID->252299663],
+Cell[15372, 488, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15440, 493, 284, 12, 70, "GuideRelatedLinksSection",
+ CellID->415694148],
+Cell[15727, 507, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[15761, 509, 124, 5, 70, "GuideRelatedLinks",
+ CellID->1473774444]
+}, Open  ]],
+Cell[15900, 517, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

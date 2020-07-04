@@ -1,0 +1,602 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19091,        593]
+NotebookOptionsPosition[     13723,        448]
+NotebookOutlinePosition[     16910,        523]
+CellTagsIndexPosition[     16867,        520]
+WindowTitle->Using the Wolfram Data Drop
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Association\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Association"], "\<\"CreateDatabin\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/CreateDatabin"], "\<\"Databin\"\>":>
+       Documentation`HelpLookup["paclet:ref/Databin"], "\<\"DatabinAdd\"\>":>
+       Documentation`HelpLookup["paclet:ref/DatabinAdd"], "\<\"Databins\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Databins"], "\<\"DateListPlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DateListPlot"], "\<\"EventSeries\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/EventSeries"], "\<\"FindPeaks\"\>":>
+       Documentation`HelpLookup["paclet:ref/FindPeaks"], "\<\"Get\"\>":>
+       Documentation`HelpLookup["paclet:ref/Get"], "\<\"Histogram\"\>":>
+       Documentation`HelpLookup["paclet:ref/Histogram"], "\<\"Mean\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Mean"], "\<\"TimeSeriesModelFit\"\>":>
+       Documentation`HelpLookup["paclet:ref/TimeSeriesModelFit"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Cloud Operations\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/CloudFunctionsAndDeployment"], "\<\"Database \
+Connectivity\"\>":>Documentation`HelpLookup[
+       "paclet:guide/DatabaseConnectivity"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"guide/UsingTheWolframDataDrop\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/UsingTheWolframDataDrop"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/\
+UsingTheWolframDataDrop.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$102697], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/UsingTheWolframDataDrop", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Using the Wolfram Data Drop", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Data Drop is a general repository for data that is incrementally \
+added, typically from external sources, through APIs as well as web, email, \
+and other interfaces. \
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Databin"]],"paclet:ref/Databin"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "symbolic representation of a Wolfram Data Drop databin"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CreateDatabin"]],"paclet:ref/CreateDatabin"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " create a new databin, potentially specifying an interpretation to use"
+}], "GuideText",
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Databins"]],"paclet:ref/Databins"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a listing of your currently active databins"
+}], "GuideText",
+ CellID->2068535945],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->687031631],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DatabinAdd"]],"paclet:ref/DatabinAdd"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "add data to a databin"
+}], "GuideText",
+ CellID->432464244],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Get"]],"paclet:ref/Get"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " get data from a databin"
+}], "GuideText",
+ CellID->1332584071]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Databin Requests", "GuideFunctionsSubsection",
+ CellID->35427539],
+
+Cell[BoxData[
+ RowBox[{Cell[
+  "\"ShortID\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"LatestDate\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], 
+  " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"CreationDate\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"],
+   " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"FullRecords\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], 
+  " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"Information\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], 
+  " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"Report\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], " ", 
+  
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "\"WebForm\"", "InlineFunctionSans", "InlineGuideFunctionListingGray"], " ", 
+  StyleBox["\[FilledVerySmallSquare]", "InlineSeparator"], " ", Cell[
+  "...", "InlineFunctionSans", 
+   "InlineGuideFunctionListingGray"]}]], "InlineGuideFunctionListing",
+ CellID->169096412]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Databin Contents", "GuideFunctionsSubsection",
+ CellID->1915346633],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Association"]],"paclet:ref/Association"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EventSeries"]],"paclet:ref/EventSeries"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1315900820]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->311258892],
+
+Cell[CellGroupData[{
+
+Cell["External Access to the Wolfram Data Drop", "GuideFunctionsSubsection",
+ CellID->1309257748],
+
+Cell[TextData[{
+ "datadrop.wolfram.com/",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["command", "TI"], "?", 
+   StyleBox["\[Ellipsis]", "TR"]}]], "InlineFormula"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " RESTful API access"
+}], "GuideText",
+ CellID->1422772785],
+
+Cell[TextData[{
+ "datadrop.wolfram.com/",
+ Cell[BoxData[
+  StyleBox["bin", "TI"]], "InlineFormula"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " web interface"
+}], "GuideText",
+ CellID->1577523474],
+
+Cell["datadrop@wolfram.com \[LongDash] email address", "GuideText",
+ CellID->1539995417],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox["binid", "TI"]], "InlineFormula"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Wolfram|Alpha interface"
+}], "GuideText",
+ CellID->977766903],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["\"Databin\""]],"paclet:ref/interpreter/Databin"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " interpreter type, e.g. for forms, APIs, etc."
+}], "GuideText",
+ CellID->94613833]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->242765913],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Databin Analysis \[RightGuillemet]"]],"paclet:guide/TimeSeries"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->2095254138],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DateListPlot"]],"paclet:ref/DateListPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FindPeaks"]],"paclet:ref/FindPeaks"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Histogram"]],"paclet:ref/Histogram"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TimeSeriesModelFit"]],"paclet:ref/TimeSeriesModelFit"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Mean"]],"paclet:ref/Mean"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/TimeSeries"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->154833200]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Cloud Operations"]],"paclet:guide/CloudFunctionsAndDeployment"},
+  
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Database Connectivity"]],"paclet:guide/DatabaseConnectivity"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Using the Wolfram Data Drop",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Using the Wolfram Data Drop", ButtonData -> 
+         "paclet:guide/UsingTheWolframDataDrop", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Accessing External Services & APIs", ButtonData -> 
+         "paclet:guide/AccessingExternalServicesAndAPIs", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Using the Wolfram Data Drop", ButtonData -> 
+         "paclet:guide/UsingTheWolframDataDrop", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Time Series", ButtonData -> "paclet:guide/TimeSeries", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Using the Wolfram Data Drop", ButtonData -> 
+         "paclet:guide/UsingTheWolframDataDrop", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 46.3966406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "data drop", "drag-and-drog", "databin", "data repository", 
+      "remote data repository"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Language Guide", "language" -> "en", "paclet" -> "Mathematica", 
+    "status" -> "None", "summary" -> 
+    "The Wolfram Data Drop is a general repository for data that is \
+incrementally added, typically from external sources, through APIs as well as \
+web, email, and other interfaces. ", "synonyms" -> {}, "title" -> 
+    "Using the Wolfram Data Drop", "titlemodifier" -> "", "windowtitle" -> 
+    "Using the Wolfram Data Drop", "type" -> "Guide", "uri" -> 
+    "guide/UsingTheWolframDataDrop"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[599, 21, 4605, 108, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[5229, 133, 69, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[5301, 136, 233, 5, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5571, 146, 257, 11, 70, "GuideReferenceSection"],
+Cell[5831, 159, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[5865, 161, 323, 11, 70, "GuideText",
+ CellID->203374175],
+Cell[6191, 174, 346, 10, 70, "GuideText",
+ CellID->1463276848],
+Cell[6540, 186, 310, 10, 70, "GuideText",
+ CellID->2068535945],
+Cell[CellGroupData[{
+Cell[6875, 200, 48, 1, 70, "GuideDelimiter",
+ CellID->687031631],
+Cell[6926, 203, 296, 11, 70, "GuideText",
+ CellID->432464244],
+Cell[7225, 216, 280, 10, 70, "GuideText",
+ CellID->1332584071]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7542, 231, 71, 1, 70, "GuideFunctionsSubsection",
+ CellID->35427539],
+Cell[7616, 234, 1231, 23, 70, "InlineGuideFunctionListing",
+ CellID->169096412]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8884, 262, 73, 1, 70, "GuideFunctionsSubsection",
+ CellID->1915346633],
+Cell[8960, 265, 524, 16, 70, "InlineGuideFunctionListing",
+ CellID->1315900820]
+}, Open  ]],
+Cell[9499, 284, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->311258892],
+Cell[CellGroupData[{
+Cell[9582, 289, 97, 1, 70, "GuideFunctionsSubsection",
+ CellID->1309257748],
+Cell[9682, 292, 266, 10, 70, "GuideText",
+ CellID->1422772785],
+Cell[9951, 304, 203, 8, 70, "GuideText",
+ CellID->1577523474],
+Cell[10157, 314, 88, 1, 70, "GuideText",
+ CellID->1539995417],
+Cell[10248, 317, 188, 7, 70, "GuideText",
+ CellID->977766903],
+Cell[10439, 326, 323, 10, 70, "GuideText",
+ CellID->94613833]
+}, Open  ]],
+Cell[10777, 339, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->242765913],
+Cell[CellGroupData[{
+Cell[10860, 344, 221, 5, 70, "GuideFunctionsSubsection",
+ CellID->2095254138],
+Cell[11084, 351, 1799, 55, 70, "InlineGuideFunctionListing",
+ CellID->154833200]
+}, Open  ]],
+Cell[12898, 409, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12966, 414, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[13250, 428, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[13284, 430, 200, 6, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[13487, 438, 194, 5, 70, "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+Cell[13696, 446, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

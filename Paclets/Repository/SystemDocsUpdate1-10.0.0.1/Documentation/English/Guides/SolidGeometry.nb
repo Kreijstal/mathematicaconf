@@ -1,0 +1,970 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     31339,        961]
+NotebookOptionsPosition[     25991,        817]
+NotebookOutlinePosition[     28655,        877]
+CellTagsIndexPosition[     28612,        874]
+WindowTitle->Solid Geometry
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ArcLength\"\>":>Documentation`HelpLookup[
+       "paclet:ref/ArcLength"], "\<\"Area\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Area"], "\<\"Ball\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Ball"], "\<\"Circle\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Circle"], "\<\"Circumsphere\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Circumsphere"], "\<\"Cone\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Cone"], "\<\"Cuboid\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Cuboid"], "\<\"Cylinder\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Cylinder"], "\<\"Disk\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Disk"], "\<\"FindInstance\"\>":>Documentation`HelpLookup[
+       "paclet:ref/FindInstance"], "\<\"Graphics3D\"\>":>
+       Documentation`HelpLookup["paclet:ref/Graphics3D"], "\<\"HalfLine\"\>":>
+       Documentation`HelpLookup["paclet:ref/HalfLine"], "\<\"HalfPlane\"\>":>
+       Documentation`HelpLookup["paclet:ref/HalfPlane"], "\<\"Hexahedron\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Hexahedron"], "\<\"ImplicitRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ImplicitRegion"], "\<\"InfiniteLine\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/InfiniteLine"], "\<\"InfinitePlane\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/InfinitePlane"], "\<\"LaminaData\"\>":>
+       Documentation`HelpLookup["paclet:ref/LaminaData"], "\<\"Line\"\>":>
+       Documentation`HelpLookup["paclet:ref/Line"], "\<\"MeshRegion\"\>":>
+       Documentation`HelpLookup["paclet:ref/MeshRegion"], "\<\"Minimize\"\>":>
+       Documentation`HelpLookup["paclet:ref/Minimize"], "\<\"NMinimize\"\>":>
+       Documentation`HelpLookup["paclet:ref/NMinimize"], "\<\"NSolve\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/NSolve"], "\<\"Parallelepiped\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Parallelepiped"], "\<\"PlaneCurveData\"\>":>
+       Documentation`HelpLookup["paclet:ref/PlaneCurveData"], "\<\"Point\"\>":>
+       Documentation`HelpLookup["paclet:ref/Point"], "\<\"Polygon\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Polygon"], "\<\"PolyhedronData\"\>":>
+       Documentation`HelpLookup["paclet:ref/PolyhedronData"], "\<\"Prism\"\>":>
+       Documentation`HelpLookup["paclet:ref/Prism"], "\<\"Pyramid\"\>":>
+       Documentation`HelpLookup["paclet:ref/Pyramid"], "\<\"Reduce\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Reduce"], "\<\"RegionDimension\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionDimension"], "\<\"RegionDistance\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionDistance"], "\<\"RegionMember\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionMember"], "\<\"RegionNearest\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionNearest"], "\<\"RegionQ\"\>":>
+       Documentation`HelpLookup["paclet:ref/RegionQ"], "\<\"RegionUnion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionUnion"], "\<\"SASTriangle\"\>":>
+       Documentation`HelpLookup["paclet:ref/SASTriangle"], "\<\"Simplex\"\>":>
+       Documentation`HelpLookup["paclet:ref/Simplex"], "\<\"SolidData\"\>":>
+       Documentation`HelpLookup["paclet:ref/SolidData"], "\<\"Solve\"\>":>
+       Documentation`HelpLookup["paclet:ref/Solve"], "\<\"Sphere\"\>":>
+       Documentation`HelpLookup["paclet:ref/Sphere"], "\<\"Tetrahedron\"\>":>
+       Documentation`HelpLookup["paclet:ref/Tetrahedron"], "\<\"Triangle\"\>":>
+       Documentation`HelpLookup["paclet:ref/Triangle"], "\<\"Volume\"\>":>
+       Documentation`HelpLookup["paclet:ref/Volume"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Plane Geometry\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/PlaneGeometry"], "\<\"Operations on Geometric \
+Regions\"\>":>Documentation`HelpLookup[
+       "paclet:guide/DerivedRegions"], "\<\"General Geometric Computing\"\>":>
+       Documentation`HelpLookup["paclet:guide/GeometricComputation"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"guide/SolidGeometry\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/SolidGeometry"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/SolidGeometry.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$98610], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/SolidGeometry", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Solid Geometry", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Language provides fully integrated support for solid geometry, \
+including basic regions such as points, lines, planes, and spheres; functions \
+for computing basic properties such as arc length, surface area, and volume; \
+and nearest points to solvers to find the intersection of regions or \
+integrals over regions. \
+\>", "GuideAbstract",
+ CellID->362416180]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["3D Geometrical Objects \[RightGuillemet]"]],
+   "paclet:guide/GeometricSpecialRegions"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->491860864],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Point"]],"paclet:ref/Point"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Line"]],"paclet:ref/Line"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HalfLine"]],"paclet:ref/HalfLine"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InfiniteLine"]],"paclet:ref/InfiniteLine"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->394501940],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Triangle"]],"paclet:ref/Triangle"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Polygon"]],"paclet:ref/Polygon"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HalfPlane"]],"paclet:ref/HalfPlane"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InfinitePlane"]],"paclet:ref/InfinitePlane"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Sphere"]],"paclet:ref/Sphere"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Circumsphere"]],"paclet:ref/Circumsphere"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->440770093],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Tetrahedron"]],"paclet:ref/Tetrahedron"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cuboid"]],"paclet:ref/Cuboid"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Hexahedron"]],"paclet:ref/Hexahedron"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Pyramid"]],"paclet:ref/Pyramid"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Prism"]],"paclet:ref/Prism"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Parallelepiped"]],"paclet:ref/Parallelepiped"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Ball"]],"paclet:ref/Ball"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cylinder"]],"paclet:ref/Cylinder"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Cone"]],"paclet:ref/Cone"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Simplex"]],"paclet:ref/Simplex"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->381971943]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["3D Visualization", "GuideFunctionsSubsection",
+ CellID->674147053],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Graphics3D"]],"paclet:ref/Graphics3D"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "visualize regions with different styles"
+}], "GuideText",
+ CellID->22934549]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Measures & Tests \[RightGuillemet]"]],
+   "paclet:guide/GeometricPropertiesAndMeasures"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->455362236],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ArcLength"]],"paclet:ref/ArcLength"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " length of a curve"
+}], "GuideText",
+ CellID->474866522],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Area"]],"paclet:ref/Area"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " area of a surface"
+}], "GuideText",
+ CellID->205226382],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Volume"]],"paclet:ref/Volume"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " volume of a solid"
+}], "GuideText",
+ CellID->6079211],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionMember"]],"paclet:ref/RegionMember"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "test whether a point is in a region"
+}], "GuideText",
+ CellID->120660043],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionNearest"]],"paclet:ref/RegionNearest"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " nearest point in a region to a given point"
+}], "GuideText",
+ CellID->80869852],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionQ"]],"paclet:ref/RegionQ"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionDimension"]],"paclet:ref/RegionDimension"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionDistance"]],"paclet:ref/RegionDistance"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/GeometricPropertiesAndMeasures"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->82278487]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Solving with Regions \[RightGuillemet]"]],
+   "paclet:guide/GeometricSolvers"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->50173974],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FindInstance"]],"paclet:ref/FindInstance"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "find examples of points in a region"
+}], "GuideText",
+ CellID->12175820],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Solve"]],"paclet:ref/Solve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "find curve crossings, surface intersections, etc. "
+}], "GuideText",
+ CellID->52249939],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NSolve"]],"paclet:ref/NSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Reduce"]],"paclet:ref/Reduce"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Minimize"]],"paclet:ref/Minimize"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NMinimize"]],"paclet:ref/NMinimize"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/GeometricSolvers"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->35245960]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->63817748],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Plane Geometry \[RightGuillemet]"]],
+   "paclet:guide/PlaneGeometry"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->8866039],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HalfLine"]],"paclet:ref/HalfLine"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SASTriangle"]],"paclet:ref/SASTriangle"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Polygon"]],"paclet:ref/Polygon"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Circle"]],"paclet:ref/Circle"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Disk"]],"paclet:ref/Disk"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/PlaneGeometry"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->129775384]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["General Geometry \[RightGuillemet]"]],
+   "paclet:guide/GeometricComputation"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->85345445],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ImplicitRegion"]],"paclet:ref/ImplicitRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRegion"]],"paclet:ref/MeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionUnion"]],"paclet:ref/RegionUnion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/GeometricComputation"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->278311519]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Geometric Data", "GuideFunctionsSubsection",
+ CellID->329166407],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PlaneCurveData"]],"paclet:ref/PlaneCurveData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LaminaData"]],"paclet:ref/LaminaData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PolyhedronData"]],"paclet:ref/PolyhedronData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans",
+  Background->Dynamic[
+    If[CurrentValue[{TaggingRules, "ModificationHighlight"}] === True, 
+     RGBColor[1, 0.988235, 0.721569], None]]],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SolidData"]],"paclet:ref/SolidData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->504997200]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Plane Geometry"]],"paclet:guide/PlaneGeometry"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Operations on Geometric Regions"]],
+   "paclet:guide/DerivedRegions"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1771151848],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["General Geometric Computing"]],
+   "paclet:guide/GeometricComputation"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Solid Geometry",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Solid Geometry", ButtonData -> "paclet:guide/SolidGeometry", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Plane Geometry", ButtonData -> "paclet:guide/PlaneGeometry", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Solid Geometry", ButtonData -> "paclet:guide/SolidGeometry", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 43.9776406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "elementary geometry", "solid geometry", "3d geometry", "3d regions", 
+      "point", "line", "triangle", "polygon", "tetrahedron", "hexahedron", 
+      "volume"}, "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, 
+    "index" -> True, "label" -> "Wolfram Language Guide", "language" -> "en", 
+    "paclet" -> "Mathematica", "status" -> "None", "summary" -> 
+    "The Wolfram Language provides fully integrated support for solid \
+geometry, including basic regions such as points, lines, planes, and spheres; \
+functions for computing basic properties such as arc length, surface area, \
+and volume; and nearest points to solvers to find the intersection of regions \
+or integrals over regions. ", "synonyms" -> {}, "title" -> "Solid Geometry", 
+    "titlemodifier" -> "", "windowtitle" -> "Solid Geometry", "type" -> 
+    "Guide", "uri" -> "guide/SolidGeometry"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[586, 21, 7298, 149, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[7909, 174, 56, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[7968, 177, 384, 7, 70, "GuideAbstract",
+ CellID->362416180]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8389, 189, 257, 11, 70, "GuideReferenceSection"],
+Cell[8649, 202, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[CellGroupData[{
+Cell[8705, 206, 243, 6, 70, "GuideFunctionsSubsection",
+ CellID->491860864],
+Cell[8951, 214, 1067, 34, 70, "InlineGuideFunctionListing",
+ CellID->394501940],
+Cell[10021, 250, 1790, 55, 70, "InlineGuideFunctionListing",
+ CellID->440770093],
+Cell[11814, 307, 2892, 91, 70, "InlineGuideFunctionListing",
+ CellID->381971943]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14743, 403, 72, 1, 70, "GuideFunctionsSubsection",
+ CellID->674147053],
+Cell[14818, 406, 313, 11, 70, "GuideText",
+ CellID->22934549]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15168, 422, 244, 6, 70, "GuideFunctionsSubsection",
+ CellID->455362236],
+Cell[15415, 430, 285, 10, 70, "GuideText",
+ CellID->474866522],
+Cell[15703, 442, 275, 10, 70, "GuideText",
+ CellID->205226382],
+Cell[15981, 454, 277, 10, 70, "GuideText",
+ CellID->6079211],
+Cell[16261, 466, 314, 11, 70, "GuideText",
+ CellID->120660043],
+Cell[16578, 479, 317, 10, 70, "GuideText",
+ CellID->80869852],
+Cell[16898, 491, 1115, 34, 70, "InlineGuideFunctionListing",
+ CellID->82278487]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18050, 530, 233, 6, 70, "GuideFunctionsSubsection",
+ CellID->50173974],
+Cell[18286, 538, 313, 11, 70, "GuideText",
+ CellID->12175820],
+Cell[18602, 551, 314, 11, 70, "GuideText",
+ CellID->52249939],
+Cell[18919, 564, 1352, 43, 70, "InlineGuideFunctionListing",
+ CellID->35245960]
+}, Open  ]],
+Cell[20286, 610, 57, 1, 70, "GuideDelimiterSubsection",
+ CellID->63817748],
+Cell[CellGroupData[{
+Cell[20368, 615, 223, 6, 70, "GuideFunctionsSubsection",
+ CellID->8866039],
+Cell[20594, 623, 1629, 52, 70, "InlineGuideFunctionListing",
+ CellID->129775384]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22260, 680, 233, 6, 70, "GuideFunctionsSubsection",
+ CellID->85345445],
+Cell[22496, 688, 1104, 34, 70, "InlineGuideFunctionListing",
+ CellID->278311519]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23637, 727, 70, 1, 70, "GuideFunctionsSubsection",
+ CellID->329166407],
+Cell[23710, 730, 1244, 37, 70, "InlineGuideFunctionListing",
+ CellID->504997200]
+}, Open  ]],
+Cell[24969, 770, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25037, 775, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[25321, 789, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[25355, 791, 181, 5, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[25539, 798, 203, 6, 70, "GuideMoreAbout",
+ CellID->1771151848],
+Cell[25745, 806, 204, 6, 70, "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+Cell[25964, 815, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

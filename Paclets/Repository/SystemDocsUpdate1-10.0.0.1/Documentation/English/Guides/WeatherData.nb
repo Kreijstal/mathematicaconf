@@ -1,0 +1,773 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24688,        764]
+NotebookOptionsPosition[     18470,        598]
+NotebookOutlinePosition[     21857,        676]
+CellTagsIndexPosition[     21814,        673]
+WindowTitle->Weather Data
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"AirPressureData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/AirPressureData"], "\<\"AirTemperatureData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/AirTemperatureData"], "\<\"DateListPlot\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DateListPlot"], "\<\"DateObject\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DateObject"], "\<\"DeviceOpen\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DeviceOpen"], "\<\"DeviceRead\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DeviceRead"], "\<\"DeviceReadTimeSeries\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DeviceReadTimeSeries"], "\<\"Entity\"\>":>
+       Documentation`HelpLookup["paclet:ref/Entity"], "\<\"GeoGraphics\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/GeoGraphics"], "\<\"GeoPosition\"\>":>
+       Documentation`HelpLookup["paclet:ref/GeoPosition"], "\<\"IconData\"\>":>
+       Documentation`HelpLookup["paclet:ref/IconData"], "\<\"LocalTime\"\>":>
+       Documentation`HelpLookup["paclet:ref/LocalTime"], "\<\"MoonPhase\"\>":>
+       Documentation`HelpLookup["paclet:ref/MoonPhase"], "\<\"Now\"\>":>
+       Documentation`HelpLookup["paclet:ref/Now"], "\<\"Quantity\"\>":>
+       Documentation`HelpLookup["paclet:ref/Quantity"], "\<\"SunPosition\"\>":>
+       Documentation`HelpLookup["paclet:ref/SunPosition"], "\<\"Sunrise\"\>":>
+       Documentation`HelpLookup["paclet:ref/Sunrise"], "\<\"Sunset\"\>":>
+       Documentation`HelpLookup["paclet:ref/Sunset"], "\<\"TimeSeries\"\>":>
+       Documentation`HelpLookup["paclet:ref/TimeSeries"], "\<\"Today\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Today"], "\<\"TropicalStormData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TropicalStormData"], "\<\"UnitConvert\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/UnitConvert"], "\<\"WeatherData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/WeatherData"], "\<\"WindDirectionData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/WindDirectionData"], "\<\"WindSpeedData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/WindSpeedData"], "\<\"WindVectorData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/WindVectorData"], "\<\"Yesterday\"\>":>
+       Documentation`HelpLookup["paclet:ref/Yesterday"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Time Series Analysis\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/TimeSeries"], "\<\"Astronomical Computation & Data\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/AstronomicalComputationAndData"], "\<\"Earth \
+Sciences\"\>":>Documentation`HelpLookup[
+       "paclet:guide/EarthSciencesDataAndComputation"], "\<\"Socioeconomic \
+Data\"\>":>Documentation`HelpLookup[
+       "paclet:guide/SocioeconomicAndDemographicData"], "\<\"Transportation \
+Data\"\>":>Documentation`HelpLookup["paclet:guide/TransportationData"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideMoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"guide/WeatherData\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/WeatherData"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/WeatherData.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$103151], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], "guide/WeatherData", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Weather Data", "GuideTitle",
+ CellID->942062912],
+
+Cell["\<\
+The Wolfram Language has direct access to a worldwide feed of real-time \
+weather data, together with complete historical data, stretching back more \
+than a century in many locations. Within the Wolfram Language, weather data \
+immediately becomes fully computable, using symbolic representations for \
+measured quantities, geo positions, dates, time series, etc.\
+\>", "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WeatherData"]],"paclet:ref/WeatherData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " complete current and historical worldwide weather data"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["AirTemperatureData"]],"paclet:ref/AirTemperatureData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["AirPressureData"]],"paclet:ref/AirPressureData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1630057003],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WindSpeedData"]],"paclet:ref/WindSpeedData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WindDirectionData"]],"paclet:ref/WindDirectionData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WindVectorData"]],"paclet:ref/WindVectorData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->671453788],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->1280240697],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Entity"]],"paclet:ref/Entity"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " give a geographic entity to specify a position (use ",
+ Cell["Ctrl", "KeyEvent"],
+ StyleBox["+", "KeyEventDelimiter"],
+ Cell["\[LongEqual]", "KeyEvent"],
+ " for free-form input)"
+}], "GuideText",
+ CellID->1105405987],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["GeoPosition"]],"paclet:ref/GeoPosition"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " give a lat-long geo position"
+}], "GuideText",
+ CellID->1804095140],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DateObject"]],"paclet:ref/DateObject"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " specify a date and time"
+}], "GuideText",
+ CellID->244985627],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Now"]],"paclet:ref/Now"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Today"]],"paclet:ref/Today"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Yesterday"]],"paclet:ref/Yesterday"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1952427941],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LocalTime"]],"paclet:ref/LocalTime"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " find the local time for any location"
+}], "GuideText",
+ CellID->1078996174]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->1507064094],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Quantity"]],"paclet:ref/Quantity"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " representation of a quantity with units"
+}], "GuideText",
+ CellID->393447936],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["UnitConvert"]],"paclet:ref/UnitConvert"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " convert between different units and unit systems"
+}], "GuideText",
+ CellID->968148439],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["IconData"]],"paclet:ref/IconData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " access graphical icons for common weather measurements"
+}], "GuideText",
+ CellID->1366735186],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TimeSeries"]],"paclet:ref/TimeSeries"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " represent a time series of data, suitable for further computation"
+}], "GuideText",
+ CellID->1508560305],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DateListPlot"]],"paclet:ref/DateListPlot"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " plot data that is tagged with dates"
+}], "GuideText",
+ CellID->1449689921],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["GeoGraphics"]],"paclet:ref/GeoGraphics"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " plot data on geographical maps"
+}], "GuideText",
+ CellID->1155658253]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->311258892],
+
+Cell[CellGroupData[{
+
+Cell["Historical Severe Weather", "GuideFunctionsSubsection",
+ CellID->1230118718],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TropicalStormData"]],"paclet:ref/TropicalStormData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " full historical data on hurricanes and other tropical storms"
+}], "GuideText",
+ CellID->1466770337]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->449180292],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Astronomical Computations \[RightGuillemet]"]],
+   "paclet:guide/AstronomicalComputationAndData"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1733758709],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Sunrise"]],"paclet:ref/Sunrise"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Sunset"]],"paclet:ref/Sunset"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SunPosition"]],"paclet:ref/SunPosition"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MoonPhase"]],"paclet:ref/MoonPhase"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/AstronomicalComputationAndData"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1438815259]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->603681806],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Local Data Acquisition \[RightGuillemet]"]],
+   "paclet:guide/UsingConnectedDevices"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->1367365014],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DeviceOpen"]],"paclet:ref/DeviceOpen"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " connect to a real-time measuring device"
+}], "GuideText",
+ CellID->1081283751],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DeviceRead"]],"paclet:ref/DeviceRead"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DeviceReadTimeSeries"]],"paclet:ref/DeviceReadTimeSeries"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->1193895179]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Time Series Analysis"]],"paclet:guide/TimeSeries"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->2120701865],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Astronomical Computation & Data"]],
+   "paclet:guide/AstronomicalComputationAndData"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Earth Sciences"]],
+   "paclet:guide/EarthSciencesDataAndComputation"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->252299663],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Socioeconomic Data"]],
+   "paclet:guide/SocioeconomicAndDemographicData"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->1728431642],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Transportation Data"]],"paclet:guide/TransportationData"},
+  "RefLink",
+  BaseStyle->"GuideMoreAbout"]], "GuideMoreAbout",
+ CellID->2070430810]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Weather Data",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Weather Data", ButtonData -> "paclet:guide/WeatherData", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Earth Sciences: Data & Computation", ButtonData -> 
+         "paclet:guide/EarthSciencesDataAndComputation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Weather Data", ButtonData -> "paclet:guide/WeatherData", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Geographic Data & Entities", ButtonData -> 
+         "paclet:guide/GeographicData", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Earth Sciences: Data & Computation", ButtonData -> 
+         "paclet:guide/EarthSciencesDataAndComputation", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Weather Data", ButtonData -> "paclet:guide/WeatherData", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 46.6406406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {"meteorology"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Language Guide", "language" -> "en", "paclet" -> "Mathematica", 
+    "status" -> "None", "summary" -> 
+    "The Wolfram Language has direct access to a worldwide feed of real-time \
+weather data, together with complete historical data, stretching back more \
+than a century in many locations. Within the Wolfram Language, weather data \
+immediately becomes fully computable, using symbolic representations for \
+measured quantities, geo positions, dates, time series, etc.", 
+    "synonyms" -> {}, "title" -> "Weather Data", "titlemodifier" -> "", 
+    "windowtitle" -> "Weather Data", "type" -> "Guide", "uri" -> 
+    "guide/WeatherData"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[584, 21, 6226, 137, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[6835, 162, 54, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[6892, 165, 418, 7, 70, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7347, 177, 257, 11, 70, "GuideReferenceSection"],
+Cell[7607, 190, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[7641, 192, 326, 10, 70, "GuideText",
+ CellID->203374175],
+Cell[7970, 204, 546, 16, 70, "InlineGuideFunctionListing",
+ CellID->1630057003],
+Cell[8519, 222, 832, 25, 70, "InlineGuideFunctionListing",
+ CellID->671453788],
+Cell[CellGroupData[{
+Cell[9376, 251, 49, 1, 70, "GuideDelimiter",
+ CellID->1280240697],
+Cell[9428, 254, 440, 14, 70, "GuideText",
+ CellID->1105405987],
+Cell[9871, 270, 301, 10, 70, "GuideText",
+ CellID->1804095140],
+Cell[10175, 282, 293, 10, 70, "GuideText",
+ CellID->244985627],
+Cell[10471, 294, 779, 25, 70, "InlineGuideFunctionListing",
+ CellID->1952427941],
+Cell[11253, 321, 305, 10, 70, "GuideText",
+ CellID->1078996174]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11595, 336, 49, 1, 70, "GuideDelimiter",
+ CellID->1507064094],
+Cell[11647, 339, 305, 10, 70, "GuideText",
+ CellID->393447936],
+Cell[11955, 351, 320, 10, 70, "GuideText",
+ CellID->968148439],
+Cell[12278, 363, 321, 10, 70, "GuideText",
+ CellID->1366735186],
+Cell[12602, 375, 336, 10, 70, "GuideText",
+ CellID->1508560305],
+Cell[12941, 387, 310, 10, 70, "GuideText",
+ CellID->1449689921],
+Cell[13254, 399, 303, 10, 70, "GuideText",
+ CellID->1155658253]
+}, Open  ]],
+Cell[13572, 412, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->311258892],
+Cell[CellGroupData[{
+Cell[13655, 417, 82, 1, 70, "GuideFunctionsSubsection",
+ CellID->1230118718],
+Cell[13740, 420, 345, 10, 70, "GuideText",
+ CellID->1466770337]
+}, Open  ]],
+Cell[14100, 433, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->449180292],
+Cell[CellGroupData[{
+Cell[14183, 438, 254, 6, 70, "GuideFunctionsSubsection",
+ CellID->1733758709],
+Cell[14440, 446, 1376, 43, 70, "InlineGuideFunctionListing",
+ CellID->1438815259]
+}, Open  ]],
+Cell[15831, 492, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->603681806],
+Cell[CellGroupData[{
+Cell[15914, 497, 242, 6, 70, "GuideFunctionsSubsection",
+ CellID->1367365014],
+Cell[16159, 505, 310, 10, 70, "GuideText",
+ CellID->1081283751],
+Cell[16472, 517, 540, 16, 70, "InlineGuideFunctionListing",
+ CellID->1193895179]
+}, Open  ]],
+Cell[17027, 536, 31, 0, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17095, 541, 281, 12, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[17379, 555, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[17413, 557, 184, 5, 70, "GuideMoreAbout",
+ CellID->2120701865],
+Cell[17600, 564, 219, 6, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[17822, 572, 202, 6, 70, "GuideMoreAbout",
+ CellID->252299663],
+Cell[18027, 580, 207, 6, 70, "GuideMoreAbout",
+ CellID->1728431642],
+Cell[18237, 588, 191, 5, 70, "GuideMoreAbout",
+ CellID->2070430810]
+}, Open  ]],
+Cell[18443, 596, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

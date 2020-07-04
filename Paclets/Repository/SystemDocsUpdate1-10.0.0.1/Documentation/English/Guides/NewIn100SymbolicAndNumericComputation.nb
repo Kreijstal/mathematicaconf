@@ -1,0 +1,1938 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     59505,       1929]
+NotebookOptionsPosition[     50896,       1666]
+NotebookOutlinePosition[     52499,       1705]
+CellTagsIndexPosition[     52456,       1702]
+WindowTitle->New in 10.0: Symbolic & Numeric Computation
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["WOLFRAM LANGUAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Activate\"\>":>Documentation`HelpLookup[
+       "paclet:ref/Activate"], "\<\"AffineStateSpaceModel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/AffineStateSpaceModel"], "\<\"AlternatingFactorial\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/AlternatingFactorial"], "\<\"ArcCurvature\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ArcCurvature"], "\<\"ARCHProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ARCHProcess"], "\<\"ArcLength\"\>":>
+       Documentation`HelpLookup["paclet:ref/ArcLength"], "\<\"Area\"\>":>
+       Documentation`HelpLookup["paclet:ref/Area"], "\<\"ARMAProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ARMAProcess"], "\<\"ARProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ARProcess"], "\<\"AsymptoticOutputTracker\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/AsymptoticOutputTracker"], "\<\"AutocorrelationTest\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/AutocorrelationTest"], "\<\"Ball\"\>":>
+       Documentation`HelpLookup["paclet:ref/Ball"], "\<\"BooleanRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/BooleanRegion"], "\<\"BoundaryDiscretizeGraphics\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/BoundaryDiscretizeGraphics"], \
+"\<\"BoundaryDiscretizeRegion\"\>":>Documentation`HelpLookup[
+       "paclet:ref/BoundaryDiscretizeRegion"], "\<\"BoundaryMeshRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/BoundaryMeshRegion"], "\<\"CantorStaircase\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/CantorStaircase"], "\<\"ConvexHullMesh\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ConvexHullMesh"], "\<\"DelaunayMesh\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DelaunayMesh"], "\<\"DifferenceDelta\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DifferenceDelta"], "\<\"DirichletBeta\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DirichletBeta"], "\<\"DirichletEta\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DirichletEta"], "\<\"DirichletLambda\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DirichletLambda"], "\<\"DiscreteRatio\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DiscreteRatio"], "\<\"DiscretizeGraphics\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DiscretizeGraphics"], "\<\"DiscretizeRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DiscretizeRegion"], "\<\"DSolve\"\>":>
+       Documentation`HelpLookup["paclet:ref/DSolve"], "\<\"DSolveValue\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/DSolveValue"], "\<\"FareySequence\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FareySequence"], "\<\"FARIMAProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FARIMAProcess"], "\<\"FeedbackLinearize\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FeedbackLinearize"], "\<\"Fibonorial\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Fibonorial"], "\<\"FindHiddenMarkovStates\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FindHiddenMarkovStates"], "\<\"FindInstance\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FindInstance"], "\<\"FrenetSerretSystem\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FrenetSerretSystem"], "\<\"FresnelF\"\>":>
+       Documentation`HelpLookup["paclet:ref/FresnelF"], "\<\"FresnelG\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FresnelG"], "\<\"FullInformationOutputRegulator\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FullInformationOutputRegulator"], "\<\"FunctionDomain\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FunctionDomain"], "\<\"FunctionPeriod\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FunctionPeriod"], "\<\"FunctionRange\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/FunctionRange"], "\<\"GARCHProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/GARCHProcess"], "\<\"GeometricBrownianMotionProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/GeometricBrownianMotionProcess"], "\<\"Hexahedron\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Hexahedron"], "\<\"HiddenMarkovProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/HiddenMarkovProcess"], "\<\"HighlightMesh\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/HighlightMesh"], "\<\"IgnoringInactive\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/IgnoringInactive"], "\<\"ImplicitRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ImplicitRegion"], "\<\"Inactivate\"\>":>
+       Documentation`HelpLookup["paclet:ref/Inactivate"], "\<\"Inactive\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Inactive"], "\<\"InfiniteLine\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/InfiniteLine"], "\<\"Integrate\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Integrate"], "\<\"LogisticSigmoid\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/LogisticSigmoid"], "\<\"MAProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MAProcess"], "\<\"MeshCellLabel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellLabel"], "\<\"MeshCellStyle\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MeshCellStyle"], "\<\"MeshRegion\"\>":>
+       Documentation`HelpLookup["paclet:ref/MeshRegion"], "\<\"Minimize\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Minimize"], "\<\"MinkowskiQuestionMark\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/MinkowskiQuestionMark"], "\<\"NDSolve\"\>":>
+       Documentation`HelpLookup["paclet:ref/NDSolve"], "\<\"NIntegrate\"\>":>
+       Documentation`HelpLookup["paclet:ref/NIntegrate"], "\<\"NMinimize\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/NMinimize"], "\<\"NonlinearStateSpaceModel\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/NonlinearStateSpaceModel"], "\<\"NormalMatrixQ\"\>":>
+       Documentation`HelpLookup["paclet:ref/NormalMatrixQ"], "\<\"NSolve\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/NSolve"], "\<\"OrthogonalMatrixQ\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/OrthogonalMatrixQ"], "\<\"ParametricRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/ParametricRegion"], "\<\"PoissonProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PoissonProcess"], "\<\"PositiveSemidefiniteMatrixQ\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PositiveSemidefiniteMatrixQ"], "\<\"Product\"\>":>
+       Documentation`HelpLookup["paclet:ref/Product"], "\<\"Reduce\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Reduce"], "\<\"RegionBoundary\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionBoundary"], "\<\"RegionCentroid\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionCentroid"], "\<\"RegionDistance\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionDistance"], "\<\"RegionIntersection\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionIntersection"], "\<\"RegionMeasure\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionMeasure"], "\<\"RegionMember\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionMember"], "\<\"RegionNearest\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionNearest"], "\<\"RegionUnion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RegionUnion"], "\<\"RiemannXi\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RiemannXi"], "\<\"RSolveValue\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/RSolveValue"], "\<\"SARMAProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SARMAProcess"], "\<\"ScorerGi\"\>":>
+       Documentation`HelpLookup["paclet:ref/ScorerGi"], "\<\"ScorerHi\"\>":>
+       Documentation`HelpLookup["paclet:ref/ScorerHi"], "\<\"Simplex\"\>":>
+       Documentation`HelpLookup["paclet:ref/Simplex"], "\<\"Solve\"\>":>
+       Documentation`HelpLookup["paclet:ref/Solve"], "\<\"SquareMatrixQ\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SquareMatrixQ"], "\<\"SSSTriangle\"\>":>
+       Documentation`HelpLookup["paclet:ref/SSSTriangle"], "\<\"Sum\"\>":>
+       Documentation`HelpLookup["paclet:ref/Sum"], "\<\"Tetrahedron\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Tetrahedron"], "\<\"TimeSeriesModelFit\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TimeSeriesModelFit"], "\<\"TransformedProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TransformedProcess"], "\<\"TransformedRegion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/TransformedRegion"], "\<\"Volume\"\>":>
+       Documentation`HelpLookup["paclet:ref/Volume"], "\<\"VoronoiMesh\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/VoronoiMesh"], "\<\"WhiteNoiseProcess\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/WhiteNoiseProcess"], "\<\"WienerProcess\"\>":>
+       Documentation`HelpLookup["paclet:ref/WienerProcess"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"guide/NewIn100SymbolicAndNumericComputation\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["guide/NewIn100SymbolicAndNumericComputation"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/guide/\
+NewIn100SymbolicAndNumericComputation.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$89732], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "guide/NewIn100SymbolicAndNumericComputation", ".html"]], 
+           None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["New in 10.0: Symbolic & Numeric Computation", "GuideTitle",
+ CellID->942062912],
+
+Cell["\[NonBreakingSpace]", "GuideAbstract",
+ CellID->1]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Reference"
+}], "GuideReferenceSection",
+ WholeCellGroupOpener->True],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Geometric Computation"]],"paclet:guide/GeometricComputation"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->80920574],
+
+Cell["\<\
+Geometric computation framework for modeling and computing with geometric \
+regions. \
+\>", "GuideText",
+ CellID->653378780]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Plane Geometry \[RightGuillemet]"]],
+   "paclet:guide/PlaneGeometry"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->931543423],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SSSTriangle"]],"paclet:ref/SSSTriangle"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ArcLength"]],"paclet:ref/ArcLength"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Area"]],"paclet:ref/Area"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/PlaneGeometry"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->555469410]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Solid Geometry \[RightGuillemet]"]],
+   "paclet:guide/SolidGeometry"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->192384792],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Tetrahedron"]],"paclet:ref/Tetrahedron"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Volume"]],"paclet:ref/Volume"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionMember"]],"paclet:ref/RegionMember"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/SolidGeometry"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->9686091]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Properties and Measures \[RightGuillemet]"]],
+   "paclet:guide/GeometricPropertiesAndMeasures"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->344580318],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionNearest"]],"paclet:ref/RegionNearest"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " find the nearest point in a region"
+}], "GuideText",
+ CellID->388888596],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionMeasure"]],"paclet:ref/RegionMeasure"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionCentroid"]],"paclet:ref/RegionCentroid"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionDistance"]],"paclet:ref/RegionDistance"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/GeometricPropertiesAndMeasures"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->277367868]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Solvers over Regions \[RightGuillemet]"]],
+   "paclet:guide/GeometricSolvers"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->239442620],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Integrate"]],"paclet:ref/Integrate"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NIntegrate"]],"paclet:ref/NIntegrate"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " integrate over regions"
+}], "GuideText",
+ CellID->6213835],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NDSolve"]],"paclet:ref/NDSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " solve partial differential equations over regions"
+}], "GuideText",
+ CellID->341232512],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Solve"]],"paclet:ref/Solve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NSolve"]],"paclet:ref/NSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Minimize"]],"paclet:ref/Minimize"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NMinimize"]],"paclet:ref/NMinimize"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/GeometricSolvers"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->131327818]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Special Regions \[RightGuillemet]"]],
+   "paclet:guide/GeometricSpecialRegions"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->138890573],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Ball"]],"paclet:ref/Ball"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a ball given by center and radius"
+}], "GuideText",
+ CellID->405850686],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Simplex"]],"paclet:ref/Simplex"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Hexahedron"]],"paclet:ref/Hexahedron"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InfiniteLine"]],"paclet:ref/InfiniteLine"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/GeometricSpecialRegions"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->415556290]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Formula Regions", "GuideFunctionsSubsection",
+ CellID->628235429],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ImplicitRegion"]],"paclet:ref/ImplicitRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a region given by combinations of inequalities and equalities"
+}], "GuideText",
+ CellID->365328998],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ParametricRegion"]],"paclet:ref/ParametricRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a region given by parametric functions"
+}], "GuideText",
+ CellID->62591182]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Mesh Regions \[RightGuillemet]"]],"paclet:guide/MeshRegions"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->120088487],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshRegion"]],"paclet:ref/MeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a region specified by a collection of mesh cells"
+}], "GuideText",
+ CellID->744630409],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryMeshRegion"]],"paclet:ref/BoundaryMeshRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a region boundary specified by a collection of mesh cells"
+}], "GuideText",
+ CellID->838989435],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HighlightMesh"]],"paclet:ref/HighlightMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellStyle"]],"paclet:ref/MeshCellStyle"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MeshCellLabel"]],"paclet:ref/MeshCellLabel"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/MeshRegions"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->87486286]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Data Regions \[RightGuillemet]"]],"paclet:guide/MeshRegions"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->25419778],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DelaunayMesh"]],"paclet:ref/DelaunayMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a Delaunay triangulation mesh constructed from points"
+}], "GuideText",
+ CellID->46605566],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["VoronoiMesh"]],"paclet:ref/VoronoiMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ConvexHullMesh"]],"paclet:ref/ConvexHullMesh"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/MeshRegions"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->10442744]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Region Converters \[RightGuillemet]"]],
+   "paclet:guide/MeshRegions"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->124736826],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DiscretizeGraphics"]],"paclet:ref/DiscretizeGraphics"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryDiscretizeGraphics"]],
+    "paclet:ref/BoundaryDiscretizeGraphics"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " discretize 2D or 3D graphics"
+}], "GuideText",
+ CellID->197028585],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DiscretizeRegion"]],"paclet:ref/DiscretizeRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BoundaryDiscretizeRegion"]],
+    "paclet:ref/BoundaryDiscretizeRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " discretize a region "
+}], "GuideText",
+ CellID->269441133]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Derived Regions \[RightGuillemet]"]],
+   "paclet:guide/DerivedRegions"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->236217721],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionUnion"]],"paclet:ref/RegionUnion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " the union of regions"
+}], "GuideText",
+ CellID->10394159],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TransformedRegion"]],"paclet:ref/TransformedRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " a region as the image of a transformation"
+}], "GuideText",
+ CellID->24141881],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionIntersection"]],"paclet:ref/RegionIntersection"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["BooleanRegion"]],"paclet:ref/BooleanRegion"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RegionBoundary"]],"paclet:ref/RegionBoundary"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/DerivedRegions"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->84221610]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->80590351],
+
+Cell[CellGroupData[{
+
+Cell["Inactive Operators", "GuideFunctionsSubsection",
+ CellID->86164475],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Inactive"]],"paclet:ref/Inactive"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "new inactive operator for working with formal operations"
+}], "GuideText",
+ CellID->506194050],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Inactivate"]],"paclet:ref/Inactivate"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " inactivate parts of expressions"
+}], "GuideText",
+ CellID->556207825],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Activate"]],"paclet:ref/Activate"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["IgnoringInactive"]],"paclet:ref/IgnoringInactive"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->369373776]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Enhanced Calculus", "GuideFunctionsSubsection",
+ CellID->546583868],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DSolveValue"]],"paclet:ref/DSolveValue"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RSolveValue"]],"paclet:ref/RSolveValue"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " new functions that can directly return functions of solutions"
+}], "GuideText",
+ CellID->356776126],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DSolve"]],"paclet:ref/DSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " now solves delay differential and hybrid differential equations"
+}], "GuideText",
+ CellID->328936374],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Sum"]],"paclet:ref/Sum"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "new algorithms for functional telescoping, multiple sums, and special \
+functions"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Product"]],"paclet:ref/Product"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "new algorithms for functional telescoping"
+}], "GuideText",
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DifferenceDelta"]],"paclet:ref/DifferenceDelta"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "new results for differences of special functions"
+}], "GuideText",
+ CellID->611561271],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DiscreteRatio"]],"paclet:ref/DiscreteRatio"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "new results for ratios of special functions"
+}], "GuideText",
+ CellID->96790877]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Enhanced Algebraic Computation", "GuideFunctionsSubsection",
+ CellID->874994786],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NSolve"]],"paclet:ref/NSolve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " new homotopy-based algorithm for fast solution of polynomial systems"
+}], "GuideText",
+ CellID->25766256],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Reduce"]],"paclet:ref/Reduce"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Solve"]],"paclet:ref/Solve"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FindInstance"]],"paclet:ref/FindInstance"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " new fast solving over the reals"
+}], "GuideText",
+ CellID->184729196]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Function Properties", "GuideFunctionsSubsection",
+ CellID->56477119],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FunctionPeriod"]],"paclet:ref/FunctionPeriod"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " find the period of functions over the reals, integers, and complexes"
+}], "GuideText",
+ CellID->431217323],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FunctionDomain"]],"paclet:ref/FunctionDomain"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " find the domain of a function"
+}], "GuideText",
+ CellID->153201848],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FunctionRange"]],"paclet:ref/FunctionRange"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " find the range of a function"
+}], "GuideText",
+ CellID->8501925]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Vector Analysis", "GuideFunctionsSubsection",
+ CellID->822377871],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ArcLength"]],"paclet:ref/ArcLength"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "length"
+}], "GuideText",
+ CellID->500125805],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ArcCurvature"]],"paclet:ref/ArcCurvature"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "curvature"
+}], "GuideText",
+ CellID->363410277],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FrenetSerretSystem"]],"paclet:ref/FrenetSerretSystem"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "generalized curvatures and associated basis"
+}], "GuideText",
+ CellID->393033471]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Linear Algebra \[RightGuillemet]"]],
+   "paclet:guide/MatrixPredicates"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->437183216],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PositiveSemidefiniteMatrixQ"]],
+    "paclet:ref/PositiveSemidefiniteMatrixQ"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " new and improved matrix predicates"
+}], "GuideText",
+ CellID->780820745],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NormalMatrixQ"]],"paclet:ref/NormalMatrixQ"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["OrthogonalMatrixQ"]],"paclet:ref/OrthogonalMatrixQ"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SquareMatrixQ"]],"paclet:ref/SquareMatrixQ"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/MatrixPredicates"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->566181810]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["New Special Functions", "GuideFunctionsSubsection",
+ CellID->55183401],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["LogisticSigmoid"]],"paclet:ref/LogisticSigmoid"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " the logistic function"
+}], "GuideText",
+ CellID->163527612],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["CantorStaircase"]],"paclet:ref/CantorStaircase"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " the Cantor ternary function"
+}], "GuideText",
+ CellID->455297112],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MinkowskiQuestionMark"]],"paclet:ref/MinkowskiQuestionMark"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ScorerHi"]],"paclet:ref/ScorerHi"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ScorerGi"]],"paclet:ref/ScorerGi"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FresnelF"]],"paclet:ref/FresnelF"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FresnelG"]],"paclet:ref/FresnelG"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RiemannXi"]],"paclet:ref/RiemannXi"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DirichletBeta"]],"paclet:ref/DirichletBeta"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DirichletEta"]],"paclet:ref/DirichletEta"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DirichletLambda"]],"paclet:ref/DirichletLambda"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Fibonorial"]],"paclet:ref/Fibonorial"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["AlternatingFactorial"]],"paclet:ref/AlternatingFactorial"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FareySequence"]],"paclet:ref/FareySequence"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->218329242]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->49003414],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Nonlinear Control Systems \[RightGuillemet]"]],
+   "paclet:guide/NonlinearControlSystems"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->76769185],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["AffineStateSpaceModel"]],"paclet:ref/AffineStateSpaceModel"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "affine model ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "\[Prime]",
+     MultilineFunction->None], "\[LongEqual]", 
+    RowBox[{
+     RowBox[{"a", "(", "x", ")"}], "+", 
+     RowBox[{
+      RowBox[{"b", "(", "x", ")"}], " ", "u"}]}]}], TraditionalForm]], 
+  "InlineMath"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "\[LongEqual]", 
+    RowBox[{
+     RowBox[{"c", "(", "x", ")"}], "+", 
+     RowBox[{
+      RowBox[{"d", "(", "x", ")"}], "u"}]}]}], TraditionalForm]], "InlineMath"]
+}], "GuideText",
+ CellID->119363705],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FeedbackLinearize"]],"paclet:ref/FeedbackLinearize"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " linearization through nonlinear feedback and state transformation"
+}], "GuideText",
+ CellID->321764610],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["AsymptoticOutputTracker"]],
+    "paclet:ref/AsymptoticOutputTracker"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "tracker with state feedback"
+}], "GuideText",
+ CellID->596402336],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NonlinearStateSpaceModel"]],
+    "paclet:ref/NonlinearStateSpaceModel"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FullInformationOutputRegulator"]],
+    "paclet:ref/FullInformationOutputRegulator"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/NonlinearControlSystems"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->465885278]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->250569190],
+
+Cell[CellGroupData[{
+
+Cell["Probability & Statistics", "GuideFunctionsSubsection",
+ CellID->234380011],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["AutocorrelationTest"]],"paclet:ref/AutocorrelationTest"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "test for autocorrelation in data"
+}], "GuideText",
+ CellID->545697651]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Time Series Processes \[RightGuillemet]"]],
+   "paclet:guide/TimeSeriesProcesses"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->91141237],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TimeSeriesModelFit"]],"paclet:ref/TimeSeriesModelFit"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "automatic fitting, diagnostics, and forecasting for time series"
+}], "GuideText",
+ CellID->58456722],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ARCHProcess"]],"paclet:ref/ARCHProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["GARCHProcess"]],"paclet:ref/GARCHProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " new classes of time series processes"
+}], "GuideText",
+ CellID->1325042829],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ARProcess"]],"paclet:ref/ARProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ ", ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ARMAProcess"]],"paclet:ref/ARMAProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " full support for vector processes"
+}], "GuideText",
+ CellID->1979171727],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["MAProcess"]],"paclet:ref/MAProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SARMAProcess"]],"paclet:ref/SARMAProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FARIMAProcess"]],"paclet:ref/FARIMAProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->944427634]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Markov Processes", "GuideFunctionsSubsection",
+ CellID->369894494],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["HiddenMarkovProcess"]],"paclet:ref/HiddenMarkovProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " hidden Markov process with discrete or continuous emissions"
+}], "GuideText",
+ CellID->313299750],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FindHiddenMarkovStates"]],"paclet:ref/FindHiddenMarkovStates"},
+   
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " hidden state decoding (Viterbi decoding etc.)"
+}], "GuideText",
+ CellID->6003390]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Parametric Processes \[RightGuillemet]"]],
+   "paclet:guide/ParametricRandomProcesses"},
+  "OrangeLink",
+  BaseStyle->"GuideFunctionsSubsection"]], "GuideFunctionsSubsection",
+ CellID->73867248],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["TransformedProcess"]],"paclet:ref/TransformedProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "transformations of random processes"
+}], "GuideText",
+ CellID->247854630],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WhiteNoiseProcess"]],"paclet:ref/WhiteNoiseProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "new and improved capabilities for parametric processes"
+}], "GuideText",
+ CellID->65501088],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PoissonProcess"]],"paclet:ref/PoissonProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["WienerProcess"]],"paclet:ref/WienerProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["GeometricBrownianMotionProcess"]],
+    "paclet:ref/GeometricBrownianMotionProcess"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["..."]],"paclet:guide/ParametricRandomProcesses"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"]
+}], "InlineGuideFunctionListing",
+ CellID->36499739]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"New in 10.0: Symbolic & Numeric Computation",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 45, 37.7656406}", 
+    "history" -> {"10", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {"new in 10", "new in version 10"}, "specialkeywords" -> {},
+     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Wolfram Language Guide", "language" -> "en", "paclet" -> "Mathematica", 
+    "status" -> "None", "summary" -> "\[NonBreakingSpace]", "synonyms" -> {}, 
+    "title" -> "New in 10.0: Symbolic & Numeric Computation", "titlemodifier" -> 
+    "", "windowtitle" -> "New in 10.0: Symbolic & Numeric Computation", 
+    "type" -> "Guide", "uri" -> 
+    "guide/NewIn100SymbolicAndNumericComputation"}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[615, 21, 12130, 249, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[12770, 274, 85, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[12858, 277, 56, 1, 70, "GuideAbstract",
+ CellID->1]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12951, 283, 257, 11, 70, "GuideReferenceSection"],
+Cell[13211, 296, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[CellGroupData[{
+Cell[13267, 300, 216, 5, 70, "GuideFunctionsSubsection",
+ CellID->80920574],
+Cell[13486, 307, 134, 4, 70, "GuideText",
+ CellID->653378780]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13657, 316, 225, 6, 70, "GuideFunctionsSubsection",
+ CellID->931543423],
+Cell[13885, 324, 1075, 34, 70, "InlineGuideFunctionListing",
+ CellID->555469410]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14997, 363, 225, 6, 70, "GuideFunctionsSubsection",
+ CellID->192384792],
+Cell[15225, 371, 1083, 34, 70, "InlineGuideFunctionListing",
+ CellID->9686091]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16345, 410, 251, 6, 70, "GuideFunctionsSubsection",
+ CellID->344580318],
+Cell[16599, 418, 310, 10, 70, "GuideText",
+ CellID->388888596],
+Cell[16912, 430, 1126, 34, 70, "InlineGuideFunctionListing",
+ CellID->277367868]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18075, 469, 234, 6, 70, "GuideFunctionsSubsection",
+ CellID->239442620],
+Cell[18312, 477, 461, 16, 70, "GuideText",
+ CellID->6213835],
+Cell[18776, 495, 313, 10, 70, "GuideText",
+ CellID->341232512],
+Cell[19092, 507, 1351, 43, 70, "InlineGuideFunctionListing",
+ CellID->131327818]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20480, 555, 236, 6, 70, "GuideFunctionsSubsection",
+ CellID->138890573],
+Cell[20719, 563, 291, 10, 70, "GuideText",
+ CellID->405850686],
+Cell[21013, 575, 1095, 34, 70, "InlineGuideFunctionListing",
+ CellID->415556290]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22145, 614, 71, 1, 70, "GuideFunctionsSubsection",
+ CellID->628235429],
+Cell[22219, 617, 339, 10, 70, "GuideText",
+ CellID->365328998],
+Cell[22561, 629, 319, 10, 70, "GuideText",
+ CellID->62591182]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22917, 644, 217, 5, 70, "GuideFunctionsSubsection",
+ CellID->120088487],
+Cell[23137, 651, 318, 10, 70, "GuideText",
+ CellID->744630409],
+Cell[23458, 663, 343, 10, 70, "GuideText",
+ CellID->838989435],
+Cell[23804, 675, 1102, 34, 70, "InlineGuideFunctionListing",
+ CellID->87486286]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24943, 714, 216, 5, 70, "GuideFunctionsSubsection",
+ CellID->25419778],
+Cell[25162, 721, 326, 10, 70, "GuideText",
+ CellID->46605566],
+Cell[25491, 733, 809, 25, 70, "InlineGuideFunctionListing",
+ CellID->10442744]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26337, 763, 226, 6, 70, "GuideFunctionsSubsection",
+ CellID->124736826],
+Cell[26566, 771, 524, 17, 70, "GuideText",
+ CellID->197028585],
+Cell[27093, 790, 508, 17, 70, "GuideText",
+ CellID->269441133]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27638, 812, 227, 6, 70, "GuideFunctionsSubsection",
+ CellID->236217721],
+Cell[27868, 820, 291, 10, 70, "GuideText",
+ CellID->10394159],
+Cell[28162, 832, 324, 10, 70, "GuideText",
+ CellID->24141881],
+Cell[28489, 844, 1117, 34, 70, "InlineGuideFunctionListing",
+ CellID->84221610]
+}, Open  ]],
+Cell[29621, 881, 57, 1, 70, "GuideDelimiterSubsection",
+ CellID->80590351],
+Cell[CellGroupData[{
+Cell[29703, 886, 73, 1, 70, "GuideFunctionsSubsection",
+ CellID->86164475],
+Cell[29779, 889, 327, 11, 70, "GuideText",
+ CellID->506194050],
+Cell[30109, 902, 301, 10, 70, "GuideText",
+ CellID->556207825],
+Cell[30413, 914, 527, 16, 70, "InlineGuideFunctionListing",
+ CellID->369373776]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30977, 935, 73, 1, 70, "GuideFunctionsSubsection",
+ CellID->546583868],
+Cell[31053, 938, 508, 16, 70, "GuideText",
+ CellID->356776126],
+Cell[31564, 956, 325, 10, 70, "GuideText",
+ CellID->328936374],
+Cell[31892, 968, 342, 12, 70, "GuideText",
+ CellID->203374175],
+Cell[32237, 982, 311, 11, 70, "GuideText",
+ CellID->1463276848],
+Cell[32551, 995, 333, 11, 70, "GuideText",
+ CellID->611561271],
+Cell[32887, 1008, 323, 11, 70, "GuideText",
+ CellID->96790877]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33247, 1024, 86, 1, 70, "GuideFunctionsSubsection",
+ CellID->874994786],
+Cell[33336, 1027, 329, 10, 70, "GuideText",
+ CellID->25766256],
+Cell[33668, 1039, 633, 22, 70, "GuideText",
+ CellID->184729196]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34338, 1066, 74, 1, 70, "GuideFunctionsSubsection",
+ CellID->56477119],
+Cell[34415, 1069, 346, 10, 70, "GuideText",
+ CellID->431217323],
+Cell[34764, 1081, 307, 10, 70, "GuideText",
+ CellID->153201848],
+Cell[35074, 1093, 302, 10, 70, "GuideText",
+ CellID->8501925]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35413, 1108, 71, 1, 70, "GuideFunctionsSubsection",
+ CellID->822377871],
+Cell[35487, 1111, 279, 11, 70, "GuideText",
+ CellID->500125805],
+Cell[35769, 1124, 288, 11, 70, "GuideText",
+ CellID->363410277],
+Cell[36060, 1137, 334, 11, 70, "GuideText",
+ CellID->393033471]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36431, 1153, 228, 6, 70, "GuideFunctionsSubsection",
+ CellID->437183216],
+Cell[36662, 1161, 343, 11, 70, "GuideText",
+ CellID->780820745],
+Cell[37008, 1174, 1116, 34, 70, "InlineGuideFunctionListing",
+ CellID->566181810]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38161, 1213, 76, 1, 70, "GuideFunctionsSubsection",
+ CellID->55183401],
+Cell[38240, 1216, 301, 10, 70, "GuideText",
+ CellID->163527612],
+Cell[38544, 1228, 307, 10, 70, "GuideText",
+ CellID->455297112],
+Cell[38854, 1240, 3419, 106, 70, "InlineGuideFunctionListing",
+ CellID->218329242]
+}, Open  ]],
+Cell[42288, 1349, 57, 1, 70, "GuideDelimiterSubsection",
+ CellID->49003414],
+Cell[CellGroupData[{
+Cell[42370, 1354, 245, 6, 70, "GuideFunctionsSubsection",
+ CellID->76769185],
+Cell[42618, 1362, 807, 29, 70, "GuideText",
+ CellID->119363705],
+Cell[43428, 1393, 349, 10, 70, "GuideText",
+ CellID->321764610],
+Cell[43780, 1405, 333, 12, 70, "GuideText",
+ CellID->596402336],
+Cell[44116, 1419, 890, 27, 70, "InlineGuideFunctionListing",
+ CellID->465885278]
+}, Open  ]],
+Cell[45021, 1449, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->250569190],
+Cell[CellGroupData[{
+Cell[45104, 1454, 80, 1, 70, "GuideFunctionsSubsection",
+ CellID->234380011],
+Cell[45187, 1457, 325, 11, 70, "GuideText",
+ CellID->545697651]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45549, 1473, 237, 6, 70, "GuideFunctionsSubsection",
+ CellID->91141237],
+Cell[45789, 1481, 353, 11, 70, "GuideText",
+ CellID->58456722],
+Cell[46145, 1494, 486, 16, 70, "GuideText",
+ CellID->1325042829],
+Cell[46634, 1512, 477, 16, 70, "GuideText",
+ CellID->1979171727],
+Cell[47114, 1530, 812, 25, 70, "InlineGuideFunctionListing",
+ CellID->944427634]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47963, 1560, 72, 1, 70, "GuideFunctionsSubsection",
+ CellID->369894494],
+Cell[48038, 1563, 347, 10, 70, "GuideText",
+ CellID->313299750],
+Cell[48388, 1575, 341, 11, 70, "GuideText",
+ CellID->6003390]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48766, 1591, 242, 6, 70, "GuideFunctionsSubsection",
+ CellID->73867248],
+Cell[49011, 1599, 326, 11, 70, "GuideText",
+ CellID->247854630],
+Cell[49340, 1612, 342, 11, 70, "GuideText",
+ CellID->65501088],
+Cell[49685, 1625, 1157, 35, 70, "InlineGuideFunctionListing",
+ CellID->36499739]
+}, Open  ]]
+}, Open  ]],
+Cell[50869, 1664, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

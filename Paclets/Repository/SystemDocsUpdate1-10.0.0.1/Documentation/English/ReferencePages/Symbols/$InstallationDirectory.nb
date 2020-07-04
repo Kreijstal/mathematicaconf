@@ -1,0 +1,654 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21115,        644]
+NotebookOptionsPosition[     13990,        459]
+NotebookOutlinePosition[     19278,        581]
+CellTagsIndexPosition[     19193,        576]
+WindowTitle->$InstallationDirectory
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN WOLFRAM LANGUAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Naming and Finding Files\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/NamingAndFindingFiles"], "\<\"Wolfram System File \
+Organization\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/WolframSystemFileOrganization"], "\<\"Notebook \
+Security\"\>":>Documentation`HelpLookup["paclet:tutorial/NotebookSecurity"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"$BaseDirectory\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$BaseDirectory"], "\<\"$HomeDirectory\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$HomeDirectory"], "\<\"$InitialDirectory\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/$InitialDirectory"], "\<\"$UserBaseDirectory\"\>":>
+       Documentation`HelpLookup["paclet:ref/$UserBaseDirectory"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Directories & Directory Operations\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/DirectoriesAndDirectoryOperations"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/$InstallationDirectory\"\>":>
+       None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/$InstallationDirectory"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/language/ref/$\
+InstallationDirectory.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+             If[
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$62174], 
+              "http://reference.wolfram.com/system-modeler/", 
+              "http://reference.wolfram.com/language/"], 
+             "ref/$InstallationDirectory", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["$InstallationDirectory", "ObjectName",
+ CellID->20856],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["$InstallationDirectory"]],
+        "paclet:ref/$InstallationDirectory"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     "\[LineSeparator]gives the top\[Hyphen]level directory in which your ",
+     "Wolfram System",
+     " installation resides. "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->26218],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->88104701],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$InstallationDirectory"]],"paclet:ref/$InstallationDirectory"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " returns the full name of the directory as a string. "
+}], "Notes",
+ CellID->9605],
+
+Cell["Typical values are: ", "Notes",
+ CellID->28623],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], 
+    RowBox[{
+     StyleBox["C",
+      GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+     StyleBox[":",
+      GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+     RowBox[{
+      StyleBox[
+       RowBox[{"\[Backslash]", "Program"}],
+       GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+      StyleBox["\[SpaceIndicator]",
+       GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+      StyleBox[
+       RowBox[{"Files", "\[Backslash]", "Wolfram"}],
+       GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+      StyleBox["\[SpaceIndicator]",
+       GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+      RowBox[{"Research", "\[Backslash]", 
+       StyleBox["Mathematica",
+        FontSlant->"Plain"], "\[Backslash]", "10.0"}]}]}], "\[SpanFromLeft]"},
+   {Cell["      ", "TableRowIcon"], "", Cell["Windows ", "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    RowBox[{
+     RowBox[{
+      RowBox[{"/", "Applications"}], 
+      StyleBox["/",
+       GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+      StyleBox["Mathematica",
+       FontSlant->"Plain",
+       GridElementStyleOptions -> {ColumnAlignments -> Left}]}], 
+     StyleBox["\[SpaceIndicator]",
+      GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+     RowBox[{
+      StyleBox[
+       RowBox[{
+        StyleBox["10",
+         GridElementStyleOptions -> {ColumnAlignments -> Left}], ".0"}]], ".",
+       "app"}]}], Cell["Macintosh ", "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"/", "usr"}], "/", "local"}], "/", "Wolfram"}], 
+      StyleBox["/",
+       GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+      StyleBox["Mathematica",
+       FontSlant->"Plain",
+       GridElementStyleOptions -> {ColumnAlignments -> Left}]}], 
+     StyleBox["/",
+      GridElementStyleOptions -> {ColumnAlignments -> Left}], 
+     StyleBox["10.0",
+      GridElementStyleOptions -> {ColumnAlignments -> Left}]}], Cell[
+    "Linux ", "TableText"]}
+  },
+  GridBoxAlignment->{
+   "Columns" -> {Left, {Left}}, "ColumnsIndexed" -> {}, 
+    "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, {None}}, "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, False, True, True, True}}}},
+ CellID->13775],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->175227842],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->20745907],
+
+Cell["A standard installation directory:", "ExampleText",
+ CellID->118513893],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$InstallationDirectory"], "Input",
+ CellLabel->"In[1]:=",
+ CellID->43346770],
+
+Cell[BoxData["\<\"/Applications/Mathematica 10.0.app\"\>"], "Output",
+ ImageSize->{242, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->165321393]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->11639],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$BaseDirectory"]],"paclet:ref/$BaseDirectory"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$HomeDirectory"]],"paclet:ref/$HomeDirectory"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$InitialDirectory"]],"paclet:ref/$InitialDirectory"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["$UserBaseDirectory"]],"paclet:ref/$UserBaseDirectory"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->20365]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->549],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Naming and Finding Files"]],
+   "paclet:tutorial/NamingAndFindingFiles"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->23382],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Wolfram System File Organization"]],
+   "paclet:tutorial/WolframSystemFileOrganization"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->126070248],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Notebook Security"]],"paclet:tutorial/NotebookSecurity"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->273254257],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->578673369],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Directories & Directory Operations"]],
+   "paclet:guide/DirectoriesAndDirectoryOperations"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->4244393]
+}, Open  ]],
+
+Cell[TextData[{
+ "Introduced in 2003",
+ Cell[" (5.0)", "HistoryVersion"]
+}], "History"],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"$InstallationDirectory",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "File Operations", ButtonData -> "paclet:guide/FileOperations", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Directories & Directory Operations", ButtonData -> 
+         "paclet:guide/DirectoriesAndDirectoryOperations", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$InstallationDirectory", ButtonData -> 
+         "paclet:ref/$InstallationDirectory", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Cloud Functions & Deployment", ButtonData -> 
+         "paclet:guide/CloudFunctionsAndDeployment", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Managing Content in the Cloud", ButtonData -> 
+         "paclet:guide/ManagingContentInTheCloud", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "File Operations", ButtonData -> "paclet:guide/FileOperations", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Directories & Directory Operations", ButtonData -> 
+         "paclet:guide/DirectoriesAndDirectoryOperations", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$InstallationDirectory", ButtonData -> 
+         "paclet:ref/$InstallationDirectory", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}, {
+      RowBox[{
+        ButtonBox[
+        "Wolfram Language", ButtonData -> "paclet:guide/WolframRoot", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Automated Reports", ButtonData -> "paclet:guide/AutomatedReports", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Cloud Functions & Deployment", ButtonData -> 
+         "paclet:guide/CloudFunctionsAndDeployment", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Managing Content in the Cloud", ButtonData -> 
+         "paclet:guide/ManagingContentInTheCloud", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "File Operations", ButtonData -> "paclet:guide/FileOperations", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "Directories & Directory Operations", ButtonData -> 
+         "paclet:guide/DirectoriesAndDirectoryOperations", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"], 
+        ButtonBox[
+        "$InstallationDirectory", ButtonData -> 
+         "paclet:ref/$InstallationDirectory", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
+  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2014, 7, 18, 17, 43, 6.7686406}", 
+    "history" -> {"5", "", "", ""}, "context" -> "System`", 
+    "keywords" -> {"application directory", "main directory"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Built-in Wolfram Language Symbol", "language" -> "en", 
+    "paclet" -> "Mathematica", "status" -> "None", "summary" -> 
+    "$InstallationDirectory gives the top-level directory in which your \
+Wolfram System installation resides. ", 
+    "synonyms" -> {"installation directory"}, "title" -> 
+    "$InstallationDirectory", "titlemodifier" -> "", "windowtitle" -> 
+    "$InstallationDirectory", "type" -> "Symbol", "uri" -> 
+    "ref/$InstallationDirectory"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[9787, 280, 387, 15, 31, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->175227842]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 19050, 569}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[594, 21, 4821, 118, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[5418, 141, 60, 1, 43, "ObjectName",
+ CellID->20856],
+Cell[CellGroupData[{
+Cell[5503, 146, 564, 17, 83, "Usage",
+ CellID->26218],
+Cell[CellGroupData[{
+Cell[6092, 167, 737, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->88104701],
+Cell[6832, 193, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[6866, 195, 280, 8, 70, "Notes",
+ CellID->9605],
+Cell[7149, 205, 53, 1, 70, "Notes",
+ CellID->28623],
+Cell[7205, 208, 2499, 64, 70, "2ColumnTableMod",
+ CellID->13775],
+Cell[9707, 274, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9787, 280, 387, 15, 31, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->175227842],
+Cell[CellGroupData[{
+Cell[10199, 299, 194, 6, 25, "ExampleSection",
+ CellID->20745907],
+Cell[10396, 307, 77, 1, 33, "ExampleText",
+ CellID->118513893],
+Cell[CellGroupData[{
+Cell[10498, 312, 90, 2, 28, "Input",
+ CellID->43346770],
+Cell[10591, 316, 200, 5, 36, "Output",
+ CellID->165321393]
+}, Open  ]]
+}, Open  ]],
+Cell[10818, 325, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10886, 330, 265, 12, 31, "SeeAlsoSection",
+ CellID->11639],
+Cell[11154, 344, 1180, 34, 58, "SeeAlso",
+ CellID->20365]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12371, 383, 266, 12, 31, "TutorialsSection",
+ CellID->549],
+Cell[12640, 397, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[12674, 399, 191, 6, 19, "Tutorials",
+ CellID->23382],
+Cell[12868, 407, 211, 6, 19, "Tutorials",
+ CellID->126070248],
+Cell[13082, 415, 179, 5, 19, "Tutorials",
+ CellID->273254257],
+Cell[13264, 422, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13332, 427, 277, 12, 31, "MoreAboutSection",
+ CellID->578673369],
+Cell[13612, 441, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[13646, 443, 212, 6, 19, "MoreAbout",
+ CellID->4244393]
+}, Open  ]],
+Cell[13873, 452, 87, 3, 43, "History"],
+Cell[13963, 457, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
