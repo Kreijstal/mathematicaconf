@@ -1,0 +1,382 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12473,        372]
+NotebookOptionsPosition[     10222,        309]
+NotebookOutlinePosition[     11817,        350]
+CellTagsIndexPosition[     11774,        347]
+WindowTitle->Customizing TeX conversion - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["TEX UTILITIES GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"Functions \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"TeXCommand\"\>":>Documentation`HelpLookup[
+       "paclet:TeXUtilities/ref/TeXCommand"], "\<\"TeXDelimited\"\>":>
+       Documentation`HelpLookup[
+       "paclet:TeXUtilities/ref/TeXDelimited"], "\<\"TeXEnvironment\"\>":>
+       Documentation`HelpLookup[
+       "paclet:TeXUtilities/ref/TeXEnvironment"], "\<\"TeXVerbatim\"\>":>
+       Documentation`HelpLookup["paclet:TeXUtilities/ref/TeXVerbatim"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"Tutorials \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Customizing TeX conversion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:TeXUtilities/tutorial/CustomizingTeXConversion"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->
+         False], {"\<\"TeXUtilities/guide/Customizing TeX conversion\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["TeXUtilities/guide/Customizing TeX conversion"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/TeXUtilities/guide/\
+Customizing TeX conversion.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "TeXUtilities/guide/Customizing TeX conversion", ".html"]], 
+           None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Customizing TeX conversion", "GuideTitle",
+ CellID->942062912],
+
+Cell["Functions that can be used to customize TeX conversion.", \
+"GuideAbstract",
+ CellFrame->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {{0, 0}, {1, 0}}, 
+   Inherited],
+ CellID->2001916300],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TeXVerbatim",
+  BaseStyle->"Link",
+  ButtonData->"paclet:TeXUtilities/ref/TeXVerbatim"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "converted to ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]],
+ "  returns its argument verbatim"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TeXDelimited",
+  BaseStyle->"Link",
+  ButtonData->"paclet:TeXUtilities/ref/TeXDelimited"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "converted to ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]],
+ "  returns delimited environment with body converted to ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]]
+}], "GuideText",
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TeXCommand",
+  BaseStyle->"Link",
+  ButtonData->"paclet:TeXUtilities/ref/TeXCommand"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "converted to ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]],
+ "  returns ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]],
+ " command possibly with arguments"
+}], "GuideText",
+ CellID->719544643],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TeXEnvironment",
+  BaseStyle->"Link",
+  ButtonData->"paclet:TeXUtilities/ref/TeXEnvironment"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "converted to ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]],
+ "  returns environment with body converted to ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]]
+}], "GuideText",
+ CellID->192362843]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "GuideMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 
+   Inherited, {{Inherited, Inherited}, {Inherited, 20}}],
+ CellElementSpacings->{"CellMinHeight"->3},
+ CellFrameLabels->{{
+    FEPrivate`If[
+     FEPrivate`Or[
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 
+     Cell[
+     "TUTORIALS", "GuideMoreAboutSection", CellSize -> {5000, Inherited}], 
+     Cell[
+      TextData[{
+        Cell[
+         BoxData[
+          InterpretationBox[
+           StyleBox[
+            
+            GraphicsBox[{}, ImageSize -> {24, 0}, BaselinePosition -> 
+             Baseline], "CacheGraphics" -> False], 
+           Spacer[24]]]], "Tutorials"}], "GuideMoreAboutSection", 
+      CellSize -> {5000, Inherited}]], None}, {None, None}},
+ CellFrameLabelMargins->0,
+ CellSize->{Inherited, 
+   FEPrivate`If[
+    FEPrivate`Or[
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 11, 14]},
+ CellID->415694126],
+
+Cell["", "SectionHeaderSpacer",
+ Editable->False,
+ Selectable->False,
+ Deletable->False,
+ ShowCellBracket->False,
+ ShowSelection->False,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 0, Inherited],
+ CellElementSpacings->{"CellMinHeight"->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 1, Inherited]},
+ CellSize->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {Inherited, 1}, 
+   Inherited]],
+
+Cell[TextData[ButtonBox["Customizing TeX conversion",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:TeXUtilities/tutorial/CustomizingTeXConversion"]], "GuideMoreAbout",\
+
+ CellID->806871991],
+
+Cell["", "SectionFooterSpacer",
+ Editable->False,
+ Selectable->False,
+ Deletable->False,
+ ShowCellBracket->False,
+ ShowSelection->False,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 0, Inherited],
+ CellElementSpacings->{"CellMinHeight"->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 1, Inherited]},
+ CellSize->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {Inherited, 1}, 
+   Inherited]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Customizing TeX conversion - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        StyleBox[
+         ButtonBox[
+         "Mathematica", ButtonData -> "paclet:guide/Mathematica", 
+          BaseStyle -> {"Link", "DockedLinkTrail"}], FontSlant -> "Italic"], 
+        Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
+  "Metadata" -> {
+   "built" -> "{2014, 5, 18, 14, 20, 5.682168}", 
+    "history" -> {"1.0", "", "", ""}, "context" -> "TeXUtilities`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Te X Utilities Guide", "language" -> "en", "paclet" -> "TeXUtilities", 
+    "status" -> "None", "summary" -> 
+    "Functions that can be used to customize TeX conversion.", 
+    "synonyms" -> {}, "title" -> "Customizing TeX conversion", 
+    "titlemodifier" -> "", "windowtitle" -> "Customizing TeX conversion", 
+    "type" -> "Guide", "uri" -> 
+    "TeXUtilities/guide/Customizing TeX conversion"}, "SearchTextTranslated" -> 
+  ""},
+FrontEndVersion->"6.0",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[619, 21, 3023, 68, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3667, 93, 68, 1, 46, "GuideTitle",
+ CellID->942062912],
+Cell[3738, 96, 348, 8, 47, "GuideAbstract",
+ CellID->2001916300],
+Cell[4089, 106, 513, 18, 22, "GuideText",
+ CellID->203374175],
+Cell[4605, 126, 759, 27, 22, "GuideText",
+ CellID->1463276848],
+Cell[5367, 155, 743, 27, 22, "GuideText",
+ CellID->719544643],
+Cell[6113, 184, 752, 27, 22, "GuideText",
+ CellID->192362843]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6902, 216, 1359, 35, 49, "GuideMoreAboutSection",
+ CellID->415694126],
+Cell[8264, 253, 861, 21, 14, "SectionHeaderSpacer"],
+Cell[9128, 276, 188, 5, 18, "GuideMoreAbout",
+ CellID->806871991],
+Cell[9319, 283, 861, 21, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[10195, 307, 23, 0, 40, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

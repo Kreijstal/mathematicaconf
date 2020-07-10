@@ -1,14 +1,13 @@
 {"ManagerDataVersion" -> 2, "AllowInternet" -> True, 
  "LastUpdatedSite" -> "http://pacletserver.wolfram.com", 
- "LastUpdatedSiteDate" -> {2020, 7, 2, 12, 37, 20.8120246`9.070889265173639}, 
+ "LastUpdatedSiteDate" -> {2020, 7, 9, 16, 5, 21.6763219`9.088560523675756}, 
  "LastUsedSite" -> Null, "LastUsedSiteDate" -> Null, 
- "LastWolframAutoUpdate" -> {2020, 7, 2, 12, 36, 
-   57.4908658`9.51217368276693}, "NumPacletsDownloaded" -> 0, 
- "IsDataAutoUpdate" -> True, "IsDocAutoUpdate" -> True, 
- "UseProxy" -> Automatic, "HTTPProxyHost" -> Null, "HTTPProxyPort" -> 0, 
- "HTTPSProxyHost" -> Null, "HTTPSProxyPort" -> 0, "FTPProxyHost" -> Null, 
- "FTPProxyPort" -> 0, "SocksProxyHost" -> Null, "SocksProxyPort" -> 0, 
- "Disabled" -> {}, "DisabledTransient" -> {}, 
+ "LastWolframAutoUpdate" -> {2020, 7, 9, 16, 5, 7.4426187`8.624300739868225}, 
+ "NumPacletsDownloaded" -> 0, "IsDataAutoUpdate" -> True, 
+ "IsDocAutoUpdate" -> True, "UseProxy" -> Automatic, "HTTPProxyHost" -> Null, 
+ "HTTPProxyPort" -> 0, "HTTPSProxyHost" -> Null, "HTTPSProxyPort" -> 0, 
+ "FTPProxyHost" -> Null, "FTPProxyPort" -> 0, "SocksProxyHost" -> Null, 
+ "SocksProxyPort" -> 0, "Disabled" -> {}, "DisabledTransient" -> {}, 
  "LoadingAutomatic" -> {{"ChannelFramework-0.6.1807031425", "C:\\Users\\R\\Ap\
 pData\\Roaming\\Mathematica\\Paclets\\Repository\\ChannelFramework-0.6.180703\
 1425"}, {"ResourceSystemClient-1.3.3", "C:\\Users\\R\\AppData\\Roaming\\Mathe\

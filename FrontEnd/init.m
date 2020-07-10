@@ -4,7 +4,7 @@ AutoOpenPalettes->{},
 ConversionOptions->{"ExportOptions"->{
  "EPS" -> {"IncludeSpecialFonts" -> True}}},
 Language->"German",
-"DisplayImagePixels"->"DetailExploreView",
+"DisplayImagePixels"->"Automatic",
 Current2DTool->"Select",
 Default2DTool->"Select",
 IsPersistent2DTool->False,
@@ -13,19 +13,7 @@ Default3DTool->"RotateView",
 IsPersistent3DTool->False,
 PrivateFrontEndOptions->{"LicensesAgreed"->{"10.", "11."}},
 VersionsLaunched->{"10.0.0", "11.0.0"},
-NotebooksMenu->{"asdf.tex" -> {
-    FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
-      "Wolfram"}, "asdf.tex", CharacterEncoding -> "UTF-8"], True, False, 
-    True}, "asdf.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
-      "Wolfram"}, "asdf.nb", CharacterEncoding -> "UTF-8"], True, False, 
-    True}, "itpdg7.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
-      "Wolfram"}, "itpdg7.nb", CharacterEncoding -> "UTF-8"], True, False, 
-    True}, "elnw3.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
-      "Wolfram Mathematica"}, "elnw3.nb", CharacterEncoding -> "UTF-8"], True,
-     False, True}, "itpdg8.nb" -> {
+NotebooksMenu->{"itpdg8.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
       "Wolfram Mathematica"}, "itpdg8.nb", CharacterEncoding -> "UTF-8"], 
     True, False, True}, "itpdg9.tex" -> {
@@ -34,10 +22,22 @@ NotebooksMenu->{"asdf.tex" -> {
     True, False, True}, "itpdg9.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
       "Wolfram Mathematica"}, "itpdg9.nb", CharacterEncoding -> "UTF-8"], 
-    True, False, True}, "elnw4.nb" -> {
+    True, False, True}, "itpdg6.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
+      "Wolfram Mathematica"}, "itpdg6.nb", CharacterEncoding -> "UTF-8"], 
+    True, False, True}, "test.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
+      "Wolfram Mathematica"}, "test.nb", CharacterEncoding -> "UTF-8"], True, 
+    False, True}, "physikaltklausur.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
+      "Wolfram Mathematica"}, "physikaltklausur.nb", CharacterEncoding -> 
+     "UTF-8"], True, False, True}, "elnw4.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
       "Wolfram Mathematica"}, "elnw4.nb", CharacterEncoding -> "UTF-8"], True,
-     False, True}},
+     False, True}, "Untitled-8.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "C:", "Users", "R", "Documents", 
+      "Wolfram Mathematica"}, "Untitled-8.nb", CharacterEncoding -> "UTF-8"], 
+    True, False, True}},
 PalettesMenuSettings->{
  "BasicMathAssistant.nb" -> {
    TaggingRules -> {
@@ -53,17 +53,15 @@ PalettesMenuSettings->{
      "ShowWritingTools" -> True, "ShowBasicTypesetting" -> False, 
       "ShowHelpLinks" -> False, "PaletteMode" -> 1}}},
 PreferencesSettings->{"Page"->"Advanced"},
-FindSettings->{"FindBoxes":>SubscriptBox["v", "\[CurlyPhi]"],
+FindSettings->{"FindBoxes":>"/.",
 "FindHistory":>{
   SubscriptBox["v", "\[Rho]"], 
   SubscriptBox["v", "\[Theta]"], 
   SubscriptBox["v", "\[CurlyPhi]"], 
   SubscriptBox["v", 
-   FormBox["\[CurlyTheta]", TraditionalForm]]},
-"FindString"->"\\!\\(\n \\*SubscriptBox[\\(v\\), \\(\[CurlyPhi]\\)]\\)",
-"ReplaceBoxes"->FormBox[
-  SubscriptBox[
-   OverscriptBox["v", "~"], "\[CurlyPhi]"], TraditionalForm],
+   FormBox["\[CurlyTheta]", TraditionalForm]], "/."},
+"FindString"->"/.",
+"ReplaceBoxes"->",",
 "ReplaceHistory":>{
   FormBox[
    SubscriptBox[
@@ -77,9 +75,9 @@ FindSettings->{"FindBoxes":>SubscriptBox["v", "\[CurlyPhi]"],
     FormBox["\[CurlyTheta]", TraditionalForm]], TraditionalForm], 
   FormBox[
    SubscriptBox[
-    OverscriptBox["v", "~"], "\[CurlyPhi]"], TraditionalForm]},
+    OverscriptBox["v", "~"], "\[CurlyPhi]"], TraditionalForm], ","},
 "SearchType"->LiteralSearch,
-"WindowMargins"->{{Automatic, 354}, {Automatic, 62}},
+"WindowMargins"->{{525, 354}, {454, 62}},
 "Wraparound"->True},
 EditCellTagsSettings->{"WindowMargins"->{{450, Automatic}, {Automatic, 175}}},
 OptionInspectorSettings->{"Scope"->"Selection",
@@ -247,6 +245,67 @@ PrivateFrontEndOptions->{"DialogSettings"->{
   Automatic, "MathematicaFormsFormatType" -> "MostlyInputForm", "Recalculate" -> 
   True, "Asynchronous" -> True, "ExtrusionClickClose" -> False, 
   "ExtrusionClickEvaluate" -> False}},
+InputAliases->{"intt" -> RowBox[{"\[Integral]", 
+     RowBox[{"\[SelectionPlaceholder]", 
+       RowBox[{"\[DifferentialD]", "\[Placeholder]"}]}]}], "dintt" -> RowBox[{
+     SubsuperscriptBox[
+     "\[Integral]", "\[SelectionPlaceholder]", "\[Placeholder]"], 
+     RowBox[{"\[Placeholder]", 
+       RowBox[{"\[DifferentialD]", "\[Placeholder]"}]}]}], "sumt" -> RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"\[SelectionPlaceholder]", "=", "\[Placeholder]"}], 
+      "\[Placeholder]"], "\[Placeholder]"}], "prodt" -> RowBox[{
+     UnderoverscriptBox["\[Product]", 
+      RowBox[{"\[SelectionPlaceholder]", "=", "\[Placeholder]"}], 
+      "\[Placeholder]"], "\[Placeholder]"}], "dt" -> RowBox[{
+     SubscriptBox["\[PartialD]", "\[Placeholder]"], " ", 
+     "\[SelectionPlaceholder]"}], "ia" -> 
+  TemplateBox[{"\[SelectionPlaceholder]"}, "Inactive"], "cbrt" -> 
+  RadicalBox[
+   "\[SelectionPlaceholder]", "3", SurdForm -> True, MultilineFunction -> 
+    None], "surd" -> 
+  RadicalBox[
+   "\[SelectionPlaceholder]", "\[Placeholder]", SurdForm -> True, 
+    MultilineFunction -> None], "ket" -> 
+  TemplateBox[{"\[SelectionPlaceholder]"}, "Ket"], "bra" -> 
+  TemplateBox[{"\[SelectionPlaceholder]"}, "Bra"], "braket" -> 
+  TemplateBox[{"\[SelectionPlaceholder]", "\[Placeholder]"}, "BraKet"], 
+  "delay" -> TemplateBox[{"\[SelectionPlaceholder]"}, "SystemsModelDelay"], 
+  "grad" -> RowBox[{
+     SubscriptBox["\[Del]", "\[SelectionPlaceholder]"], "\[Placeholder]"}], 
+  "del." -> RowBox[{
+     SubscriptBox["\[Del]", "\[SelectionPlaceholder]"], ".", 
+     "\[Placeholder]"}], "delx" -> RowBox[{
+     SubscriptBox["\[Del]", "\[SelectionPlaceholder]"], "\[Cross]", 
+     "\[Placeholder]"}], "del2" -> RowBox[{
+     SubsuperscriptBox["\[Del]", "\[SelectionPlaceholder]", 2], 
+     "\[Placeholder]"}], "notation" -> RowBox[{"Notation", "[", 
+     RowBox[{
+       TemplateBox[{"\[SelectionPlaceholder]"}, "NotationTemplateTag"], " ", 
+       "\[DoubleLongLeftRightArrow]", " ", 
+       TemplateBox[{"\[Placeholder]"}, "NotationTemplateTag"]}], "]"}], 
+  "notation>" -> RowBox[{"Notation", "[", 
+     RowBox[{
+       TemplateBox[{"\[SelectionPlaceholder]"}, "NotationTemplateTag"], " ", 
+       "\[DoubleLongRightArrow]", " ", 
+       TemplateBox[{"\[Placeholder]"}, "NotationTemplateTag"]}], "]"}], 
+  "notation<" -> RowBox[{"Notation", "[", 
+     RowBox[{
+       TemplateBox[{"\[SelectionPlaceholder]"}, "NotationTemplateTag"], " ", 
+       "\[DoubleLongLeftArrow]", " ", 
+       TemplateBox[{"\[Placeholder]"}, "NotationTemplateTag"]}], "]"}], 
+  "symb" -> RowBox[{"Symbolize", "[", 
+     TemplateBox[{"\[SelectionPlaceholder]"}, "NotationTemplateTag"], "]"}], 
+  "infixnotation" -> RowBox[{"InfixNotation", "[", 
+     RowBox[{
+       TemplateBox[{"\[SelectionPlaceholder]"}, "NotationTemplateTag"], ",", 
+       "\[Placeholder]"}], "]"}], "addia" -> RowBox[{"AddInputAlias", "[", 
+     RowBox[{"\"\[SelectionPlaceholder]\"", "\[Rule]", 
+       TemplateBox[{"\[Placeholder]"}, "NotationTemplateTag"]}], "]"}], 
+  "pattwraper" -> 
+  TemplateBox[{"\[SelectionPlaceholder]"}, "NotationPatternTag"], 
+  "madeboxeswraper" -> 
+  TemplateBox[{"\[SelectionPlaceholder]"}, "NotationMadeBoxesTag"]},
 ShowAutoSpellCheck->False,
 SpellingDictionaries->{"CorrectWords"->{
  "Masse", "Anfangsbedingungen", "Leiter", "ger\[ADoubleDot]t", "der", "siehe",

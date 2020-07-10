@@ -1,0 +1,65 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      1486,         56]
+NotebookOptionsPosition[      1004,         39]
+NotebookOutlinePosition[      1372,         54]
+CellTagsIndexPosition[      1329,         51]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> "Default.nb"]],
+
+Cell[StyleData["TeXOutput"],
+ Editable->False,
+ MenuPosition->10000],
+
+Cell[StyleData["TeX"],
+ Evaluatable->True,
+ CellProlog:>(Get[
+    StringJoin[$UserBaseDirectory, "\\MaTeXmatica\\MaTeXmatica.m"]]; ww = 3; 
+  CompileTeXCell),
+ MenuPosition->10000,
+ FontFamily->"Comic Sans MS",
+ FontSize->12,
+ FontWeight->"Plain",
+ FontSlant->"Plain",
+ FontVariations->{"StrikeThrough"->False,
+ "Underline"->False}]
+},
+WindowSize->{607, 505},
+WindowMargins->{{-1009, Automatic}, {Automatic, 25}},
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (February 18, 2009)",
+StyleDefinitions->"PrivateStylesheetFormatting.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 49, 0, 40, 49, 0, "StyleData", "StyleDefinitions", ""],
+Cell[597, 22, 68, 2, 40, 28, 0, "StyleData", "TeXOutput", "All",
+ MenuPosition->10000],
+Cell[668, 26, 332, 11, 42, 22, 0, "StyleData", "TeX", "All",
+ MenuPosition->10000]
+}
+]
+*)
+
+(* End of internal cache information *)

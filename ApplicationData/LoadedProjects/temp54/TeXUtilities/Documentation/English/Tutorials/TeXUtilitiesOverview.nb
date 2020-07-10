@@ -1,0 +1,197 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6525,        187]
+NotebookOptionsPosition[      3914,        116]
+NotebookOutlinePosition[      6080,        172]
+CellTagsIndexPosition[      6037,        169]
+WindowTitle->TeXUtilities Overview - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["TEX UTILITIES PACKAGE OVERVIEW", "PacletNameCell"], Cell[TextData[
+    Cell[BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->
+        False], {"\<\"TeXUtilities/tutorial/TeXUtilitiesOverview\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["TeXUtilities/tutorial/TeXUtilitiesOverview"]}, Visible -> 
+           False]]; SelectionMove[
+        DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/TeXUtilities/\
+tutorial/TeXUtilitiesOverview.html"], StandardForm]], "Input", 
+             TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "TeXUtilities/tutorial/TeXUtilitiesOverview", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["TeXUtilities Overview", "TOCDocumentTitle"],
+
+Cell[TextData[ButtonBox["Customizing TeX conversion",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:TeXUtilities/tutorial/CustomizingTeXConversion#509267359"]], \
+"TOCChapter"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Guides",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:TeXUtilities/guide/CustomizingTeXConversion"]], "TOCChapter"],
+
+Cell[TextData[ButtonBox["Customizing TeX conversion",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:TeXUtilities/guide/CustomizingTeXConversion"]], "TOCSection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["ReferencePages/Symbols",
+ BaseStyle->"Link",
+ ButtonData->"paclet:TeXUtilities/ref/TeXVerbatim"]], "TOCChapter"],
+
+Cell[TextData[ButtonBox["TeXVerbatim",
+ BaseStyle->"Link",
+ ButtonData->"paclet:TeXUtilities/ref/TeXVerbatim"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["TeXDelimited",
+ BaseStyle->"Link",
+ ButtonData->"paclet:TeXUtilities/ref/TeXDelimited"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["TeXCommand",
+ BaseStyle->"Link",
+ ButtonData->"paclet:TeXUtilities/ref/TeXCommand"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["TeXEnvironment",
+ BaseStyle->"Link",
+ ButtonData->"paclet:TeXUtilities/ref/TeXEnvironment"]], "TOCSection"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"TeXUtilities Overview - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "TutorialColor", 
+  "LinkTrails" -> GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:TeXUtilities/guide/TeXUtilities",
+          BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
+  "Metadata" -> {
+   "built" -> "{2014, 5, 18, 14, 20, 55.138507}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "TeXUtilities`", 
+    "keywords" -> {"TeX"}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Te X Utilities Package Overview", "language" -> "en", "paclet" -> 
+    "TeXUtilities Package", "status" -> "None", "summary" -> 
+    "Customizing TeX conversion Guides ReferencePages/Symbols", 
+    "synonyms" -> {}, "title" -> "TeXUtilities Overview", "titlemodifier" -> 
+    "", "windowtitle" -> "TeXUtilities Overview", "type" -> "Overview", "uri" -> 
+    "TeXUtilities/tutorial/TeXUtilitiesOverview"}, "SearchTextTranslated" -> 
+  ""},
+FrontEndVersion->"6.0",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "6.0", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[614, 21, 1973, 44, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2612, 69, 49, 0, 55, "TOCDocumentTitle"],
+Cell[2664, 71, 174, 4, 44, "TOCChapter"],
+Cell[CellGroupData[{
+Cell[2863, 79, 139, 3, 24, "TOCChapter"],
+Cell[3005, 84, 159, 3, 26, "TOCSection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3201, 92, 137, 2, 44, "TOCChapter"],
+Cell[3341, 96, 126, 2, 26, "TOCSection"],
+Cell[3470, 100, 128, 2, 20, "TOCSection"],
+Cell[3601, 104, 124, 2, 20, "TOCSection"],
+Cell[3728, 108, 132, 2, 20, "TOCSection"]
+}, Open  ]]
+}, Open  ]],
+Cell[3887, 114, 23, 0, 40, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

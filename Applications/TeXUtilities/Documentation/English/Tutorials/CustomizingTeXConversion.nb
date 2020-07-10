@@ -1,0 +1,472 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     15333,        462]
+NotebookOptionsPosition[     12135,        372]
+NotebookOutlinePosition[     14397,        430]
+CellTagsIndexPosition[     14354,        427]
+WindowTitle->Customizing TeX conversion - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["TEX UTILITIES TUTORIAL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Customizing TeX conversion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:TeXUtilities/guide/CustomizingTeXConversion"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"Functions \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"TeXCommand\"\>":>Documentation`HelpLookup[
+       "paclet:TeXUtilities/ref/TeXCommand"], "\<\"TeXDelimited\"\>":>
+       Documentation`HelpLookup[
+       "paclet:TeXUtilities/ref/TeXDelimited"], "\<\"TeXEnvironment\"\>":>
+       Documentation`HelpLookup[
+       "paclet:TeXUtilities/ref/TeXEnvironment"], "\<\"TeXVerbatim\"\>":>
+       Documentation`HelpLookup["paclet:TeXUtilities/ref/TeXVerbatim"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->
+         False], {"\<\"TeXUtilities/tutorial/Customizing TeX conversion\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["TeXUtilities/tutorial/Customizing TeX conversion"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/TeXUtilities/\
+tutorial/Customizing TeX conversion.html"], StandardForm]], "Input", 
+              TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "TeXUtilities/tutorial/Customizing TeX conversion", ".html"]], 
+           None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Customizing TeX conversion", "Title",
+ CellID->509267359],
+
+Cell[BoxData[GridBox[{
+   {
+    ButtonBox["TeXVerbatim",
+     BaseStyle->"Link",
+     ButtonData->"paclet:TeXUtilities/ref/TeXVerbatim"], Cell[TextData[{
+     "converted to ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{"T", 
+         AdjustmentBox["E",
+          BoxBaselineShift->0.5,
+          BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+        SingleLetterItalics->False], TraditionalForm]]],
+     "  returns its argument verbatim"
+    }], "TableText"]},
+   {
+    ButtonBox["TeXDelimited",
+     BaseStyle->"Link",
+     ButtonData->"paclet:TeXUtilities/ref/TeXDelimited"], Cell[TextData[{
+     "converted to ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{"T", 
+         AdjustmentBox["E",
+          BoxBaselineShift->0.5,
+          BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+        SingleLetterItalics->False], TraditionalForm]]],
+     "  returns delimited environment with body converted to ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{"T", 
+         AdjustmentBox["E",
+          BoxBaselineShift->0.5,
+          BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+        SingleLetterItalics->False], TraditionalForm]]],
+     " "
+    }], "TableText"]},
+   {
+    ButtonBox["TeXCommand",
+     BaseStyle->"Link",
+     ButtonData->"paclet:TeXUtilities/ref/TeXCommand"], Cell[TextData[{
+     "converted to ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{"T", 
+         AdjustmentBox["E",
+          BoxBaselineShift->0.5,
+          BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+        SingleLetterItalics->False], TraditionalForm]]],
+     "  returns ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{"T", 
+         AdjustmentBox["E",
+          BoxBaselineShift->0.5,
+          BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+        SingleLetterItalics->False], TraditionalForm]]],
+     " command ",
+     "possibly with arguments"
+    }], "TableText"]},
+   {
+    ButtonBox["TeXEnvironment",
+     BaseStyle->"Link",
+     ButtonData->"paclet:TeXUtilities/ref/TeXEnvironment"], Cell[TextData[{
+     "converted to ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{"T", 
+         AdjustmentBox["E",
+          BoxBaselineShift->0.5,
+          BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+        SingleLetterItalics->False], TraditionalForm]]],
+     "  returns environment with body converted to ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{"T", 
+         AdjustmentBox["E",
+          BoxBaselineShift->0.5,
+          BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+        SingleLetterItalics->False], TraditionalForm]]],
+     " "
+    }], "TableText"]}
+  }]], "DefinitionBox",
+ CellID->2096742444],
+
+Cell["Functions that can be used to customize TeX conversion.", "Caption",
+ CellID->1891092685],
+
+Cell["Import package:", "MathCaption",
+ CellID->819791414],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<TeXUtilities`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->287674000],
+
+Cell["Define custom TeX formatting for some symbols:", "MathCaption",
+ CellID->836781195],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Format", "[", 
+     RowBox[{"something", ",", "TeXForm"}], "]"}], "=", 
+    RowBox[{
+    "TeXVerbatim", "[", "\"\<\\\\macro $1+1$ \\\\command[a=b]{c}\>\"", 
+     "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Format", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "x__", "]"}], ",", "TeXForm"}], "]"}], ":=", 
+   RowBox[{"TeXDelimited", "[", 
+    RowBox[{"\"\<\\\\left(\>\"", ",", "x", ",", "\"\<\\\\right)\>\"", ",", 
+     RowBox[{"\"\<DelimSeparator\>\"", "\[Rule]", "\"\<\>\""}]}], "]"}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Format", "[", 
+    RowBox[{
+     RowBox[{"g", "[", "x__", "]"}], ",", "TeXForm"}], "]"}], ":=", 
+   RowBox[{"TeXCommand", "[", 
+    RowBox[{"\"\<g\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", "\[Rule]", "b"}], "}"}], ",", "x"}], "}"}]}], "]"}]}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Format", "[", 
+   RowBox[{
+    RowBox[{"h", "[", "x__", "]"}], ",", "TeXForm"}], "]"}], ":=", 
+  RowBox[{"TeXEnvironment", "[", 
+   RowBox[{"\"\<myEnv\>\"", ",", "x"}], "]"}]}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->2058623809],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  ButtonBox["TeXForm",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/TeXForm"]], "InlineFormula",
+  ShowStringCharacters->False],
+ " to convert expressions to TeX:"
+}], "MathCaption",
+ CellID->1028391188],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"h", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"1", "+", "alpha"}], "]"}], ",", 
+    RowBox[{"5", "-", 
+     RowBox[{"g", "[", 
+      RowBox[{"3", ",", 
+       RowBox[{"g", "[", "2", "]"}]}], "]"}]}], ",", "something"}], "]"}], "//",
+   "TeXForm"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->2084343758],
+
+Cell["\<\
+\\begin{myEnv}
+    \\left(\\alpha +1\\right)
+    5-\\g[a=b]{3}{\\g[a=b]{2}}
+    \\macro $1+1$ \\command[a=b]{c}
+\\end{myEnv}\
+\>", "Output",
+ ImageSize->{264, 79},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TeXForm=",
+ CellID->1839196167]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "TutorialMoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellElementSpacings->{"CellMinHeight"->3},
+ CellFrameLabels->{{
+    FEPrivate`If[
+     FEPrivate`Or[
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 
+     Cell[
+     "MORE ABOUT", "TutorialMoreAboutSection", CellSize -> {5000, Inherited}], 
+     Cell[
+      TextData[{
+        Cell[
+         BoxData[
+          InterpretationBox[
+           StyleBox[
+            
+            GraphicsBox[{}, ImageSize -> {24, 0}, BaselinePosition -> 
+             Baseline], "CacheGraphics" -> False], 
+           Spacer[24]]]], "More About"}], "TutorialMoreAboutSection", 
+      CellSize -> {5000, Inherited}]], None}, {None, None}},
+ CellFrameLabelMargins->0,
+ CellSize->{Inherited, 
+   FEPrivate`If[
+    FEPrivate`Or[
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 11, 14]},
+ CellID->23220180],
+
+Cell["", "SectionHeaderSpacer",
+ Editable->False,
+ Selectable->False,
+ Deletable->False,
+ ShowCellBracket->False,
+ ShowSelection->False,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 0, Inherited],
+ CellElementSpacings->{"CellMinHeight"->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 1, Inherited]},
+ CellSize->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {Inherited, 1}, 
+   Inherited]],
+
+Cell[TextData[ButtonBox["Customizing TeX conversion",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:TeXUtilities/guide/CustomizingTeXConversion"]], "TutorialMoreAbout",\
+
+ CellID->1567025153],
+
+Cell["", "SectionFooterSpacer",
+ Editable->False,
+ Selectable->False,
+ Deletable->False,
+ ShowCellBracket->False,
+ ShowSelection->False,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 0, Inherited],
+ CellElementSpacings->{"CellMinHeight"->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 1, Inherited]},
+ CellSize->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {Inherited, 1}, 
+   Inherited]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Customizing TeX conversion - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "TutorialColor", 
+  "LinkTrails" -> GridBox[{{
+      RowBox[{
+        StyleBox[
+         ButtonBox[
+         "Mathematica", ButtonData -> "paclet:guide/Mathematica", 
+          BaseStyle -> {"Link", "DockedLinkTrail"}], FontSlant -> "Italic"], 
+        Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
+  "Metadata" -> {
+   "built" -> "{2014, 5, 18, 14, 20, 52.495137}", 
+    "history" -> {"1.0", "", "", ""}, "context" -> "TeXUtilities`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Te X Utilities Tutorial", "language" -> "en", "paclet" -> "TeXUtilities",
+     "status" -> "None", "summary" -> 
+    "Functions that can be used to customize TeX conversion. Import package: \
+Define custom TeX formatting for some symbols:", "synonyms" -> {}, "title" -> 
+    "Customizing TeX conversion", "titlemodifier" -> "", "windowtitle" -> 
+    "Customizing TeX conversion", "type" -> "Tutorial", "uri" -> 
+    "TeXUtilities/tutorial/Customizing TeX conversion"}, 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"6.0",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> "6.0", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[619, 21, 3035, 68, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3679, 93, 63, 1, 46, "Title",
+ CellID->509267359],
+Cell[3745, 96, 2755, 90, 175, "DefinitionBox",
+ CellID->2096742444],
+Cell[6503, 188, 95, 1, 31, "Caption",
+ CellID->1891092685],
+Cell[6601, 191, 58, 1, 31, "MathCaption",
+ CellID->819791414],
+Cell[6662, 194, 121, 3, 27, "Input",
+ CellID->287674000],
+Cell[6786, 199, 89, 1, 31, "MathCaption",
+ CellID->836781195],
+Cell[6878, 202, 1231, 37, 168, "Input",
+ CellID->2058623809],
+Cell[8112, 241, 247, 9, 33, "MathCaption",
+ CellID->1028391188],
+Cell[CellGroupData[{
+Cell[8384, 254, 349, 12, 27, "Input",
+ CellID->2084343758],
+Cell[8736, 268, 291, 11, 112, "Output",
+ CellID->1839196167]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9064, 284, 1097, 29, 70, "TutorialMoreAboutSection",
+ CellID->23220180],
+Cell[10164, 315, 861, 21, 70, "SectionHeaderSpacer"],
+Cell[11028, 338, 189, 5, 70, "TutorialMoreAbout",
+ CellID->1567025153],
+Cell[11220, 345, 861, 21, 70, "SectionFooterSpacer"]
+}, Open  ]]
+}, Open  ]],
+Cell[12108, 370, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

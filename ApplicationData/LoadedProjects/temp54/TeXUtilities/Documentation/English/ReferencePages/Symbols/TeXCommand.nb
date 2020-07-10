@@ -1,0 +1,1285 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     38762,       1245]
+NotebookOptionsPosition[     32436,       1047]
+NotebookOutlinePosition[     34751,       1105]
+CellTagsIndexPosition[     34665,       1100]
+WindowTitle->TeXCommand - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["TEX UTILITIES PACKAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"TeXVerbatim\"\>":>
+       Documentation`HelpLookup[
+       "paclet:TeXUtilities/ref/TeXVerbatim"], "\<\"TeXDelimited\"\>":>
+       Documentation`HelpLookup[
+       "paclet:TeXUtilities/ref/TeXDelimited"], "\<\"TeXEnvironment\"\>":>
+       Documentation`HelpLookup["paclet:TeXUtilities/ref/TeXEnvironment"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Customizing TeX conversion\"\>":>
+       Documentation`HelpLookup[
+       "paclet:TeXUtilities/guide/CustomizingTeXConversion"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"TeXUtilities/ref/TeXCommand\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["TeXUtilities/ref/TeXCommand"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/TeXUtilities/ref/\
+TeXCommand.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "TeXUtilities/ref/TeXCommand", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["TeXCommand", "ObjectName",
+ CellID->1224892054],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       RowBox[{"TeXCommand", "[", "\"\<\>", 
+        StyleBox["name", "TI"]}], "\"\<\>", "]"}]], "InlineFormula",
+      ShowStringCharacters->False],
+     "\[LineSeparator]represents TeX command \\",
+     Cell[BoxData[
+      StyleBox[
+       RowBox[{"name", " "}], "TI"]], "InlineFormula",
+      ShowStringCharacters->False],
+     ". "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       RowBox[{
+        RowBox[{"TeXCommand", "[", "\"\<\>", 
+         StyleBox["name", "TI"]}], "\"\<\>", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox[
+           SubscriptBox[
+            StyleBox["arg", "TI"], 
+            StyleBox["1", "TR"]], "TI"], ",", 
+          StyleBox[
+           SubscriptBox[
+            StyleBox["arg", "TI"], 
+            StyleBox["2", "TR"]], "TI"], ",", "..."}], "}"}]}], "]"}]], 
+      "InlineFormula",
+      ShowStringCharacters->False],
+     "\[LineSeparator]represents TeX command with arguments \\",
+     Cell[BoxData[
+      StyleBox[
+       RowBox[{"name", " "}], "TI"]], "InlineFormula",
+      ShowStringCharacters->False],
+     "{",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["arg", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",
+      ShowStringCharacters->False],
+     "}{",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["arg", "TI"], 
+       StyleBox["2", "TR"]]], "InlineFormula",
+      ShowStringCharacters->False],
+     "}",
+     Cell[BoxData["\[Ellipsis]"], "InlineFormula",
+      ShowStringCharacters->False],
+     ". "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       RowBox[{
+        RowBox[{"TeXCommand", "[", "\"\<\>", 
+         StyleBox["name", "TI"]}], "\"\<\>", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             StyleBox[
+              SubscriptBox[
+               StyleBox["opt", "TI"], 
+               StyleBox["1", "TR"]], "TI"], "\[Rule]", 
+             SubscriptBox[
+              StyleBox["val", "TI"], 
+              StyleBox["1", "TR"]]}], ",", 
+            SubscriptBox[
+             StyleBox["opt", "TI"], 
+             StyleBox["2", "TR"]], ",", 
+            RowBox[{
+             StyleBox[
+              SubscriptBox[
+               StyleBox["opt", "TI"], 
+               StyleBox["3", "TR"]], "TI"], "\[Rule]", 
+             SubscriptBox[
+              StyleBox["val", "TI"], 
+              StyleBox["3", "TR"]]}], ",", "..."}], "}"}], ",", 
+          StyleBox[
+           SubscriptBox[
+            StyleBox["arg", "TI"], 
+            StyleBox["1", "TR"]], "TI"], ",", 
+          StyleBox[
+           SubscriptBox[
+            StyleBox["arg", "TI"], 
+            StyleBox["2", "TR"]], "TI"], ",", "..."}], "}"}]}], "]"}]], 
+      "InlineFormula",
+      ShowStringCharacters->False],
+     "\[LineSeparator]represents TeX command with optional arguments \\",
+     Cell[BoxData[
+      StyleBox[
+       RowBox[{"name", " "}], "TI"]], "InlineFormula",
+      ShowStringCharacters->False],
+     "[",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["opt", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",
+      ShowStringCharacters->False],
+     "=",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["val", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",
+      ShowStringCharacters->False],
+     ",",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["opt", "TI"], 
+       StyleBox["2", "TR"]]], "InlineFormula",
+      ShowStringCharacters->False],
+     ",",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["opt", "TI"], 
+       StyleBox["3", "TR"]]], "InlineFormula",
+      ShowStringCharacters->False],
+     "=",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["val", "TI"], 
+       StyleBox["3", "TR"]]], "InlineFormula",
+      ShowStringCharacters->False],
+     "]{",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["arg", "TI"], 
+       StyleBox["1", "TR"]]], "InlineFormula",
+      ShowStringCharacters->False],
+     "}{",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["arg", "TI"], 
+       StyleBox["2", "TR"]]], "InlineFormula",
+      ShowStringCharacters->False],
+     "}",
+     Cell[BoxData["\[Ellipsis]"], "InlineFormula",
+      ShowStringCharacters->False],
+     ". "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, {None}}, "RowsIndexed" -> {}}}],
+
+Cell[CellGroupData[{
+
+Cell["", "NotesSection",
+ WholeCellGroupOpener->True,
+ CellElementSpacings->{"CellMinHeight"->3},
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellFrameLabels->{{
+    FEPrivate`If[
+     FEPrivate`Or[
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 
+     Cell[
+      TextData[
+       Cell[
+        BoxData[
+         ButtonBox[
+          FrameBox[
+           StyleBox[
+            RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"], 
+           StripOnInput -> False], Appearance -> {Automatic, None}, BaseStyle -> 
+          None, ButtonFunction :> (FrontEndExecute[{
+             FrontEnd`SelectionMove[
+              FrontEnd`SelectedNotebook[], All, ButtonCell], 
+             FrontEndToken["OpenCloseGroup"], 
+             FrontEnd`SelectionMove[
+              FrontEnd`SelectedNotebook[], After, CellContents]}]& ), 
+          Evaluator -> None, Method -> "Preemptive"]]]], "NotesSection", 
+      CellSize -> {5000, Inherited}], 
+     TextData[
+      ButtonBox[
+       Cell[
+        TextData[{
+          Cell[
+           BoxData[
+            InterpretationBox[
+             StyleBox[
+              
+              GraphicsBox[{}, ImageSize -> {24, 0}, BaselinePosition -> 
+               Baseline], "CacheGraphics" -> False], 
+             Spacer[24]]]], "Details and Options"}], "NotesSection", 
+        CellSize -> {5000, Inherited}], Appearance -> {Automatic, None}, 
+       BaseStyle -> None, ButtonFunction :> (FrontEndExecute[{
+          FrontEnd`SelectionMove[
+           FrontEnd`SelectedNotebook[], All, ButtonCell], 
+          FrontEndToken["OpenCloseGroup"], 
+          FrontEnd`SelectionMove[
+           FrontEnd`SelectedNotebook[], After, CellContents]}]& ), Evaluator -> 
+       None, Method -> "Preemptive"]]], None}, {None, None}},
+ CellFrameLabelMargins->0,
+ CellSize->{Inherited, 
+   FEPrivate`If[
+    FEPrivate`Or[
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 11, 14]},
+ CellID->1554794967],
+
+Cell["", "SectionHeaderSpacer",
+ Editable->False,
+ Selectable->False,
+ Deletable->False,
+ ShowCellBracket->False,
+ ShowSelection->False,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 0, Inherited],
+ CellElementSpacings->{"CellMinHeight"->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 1, Inherited]},
+ CellSize->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {Inherited, 1}, 
+   Inherited]],
+
+Cell["The following options can be given: ", "Notes"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], "\"\<ArgumentConverter\>\"", 
+    RowBox[{
+     RowBox[{
+      ButtonBox["Function",
+       BaseStyle->"Link",
+       ButtonData->"paclet:ref/Function"], "[", 
+      RowBox[{",", 
+       RowBox[{
+        ButtonBox["ToString",
+         BaseStyle->"Link",
+         ButtonData->"paclet:ref/ToString"], "[", 
+        RowBox[{
+         RowBox[{
+          ButtonBox["Unevaluated",
+           BaseStyle->"Link",
+           ButtonData->"paclet:ref/Unevaluated"], "@", "#"}], ",", 
+         ButtonBox["TeXForm",
+          BaseStyle->"Link",
+          ButtonData->"paclet:ref/TeXForm"]}], "]"}], ",", 
+       ButtonBox["HoldAllComplete",
+        BaseStyle->"Link",
+        ButtonData->"paclet:ref/HoldAllComplete"]}], "]"}], " "}], Cell[
+    TextData[{
+     "function used to convert command arguments, optional argument names and \
+values, to ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox[
+        RowBox[{"T", 
+         AdjustmentBox["E",
+          BoxBaselineShift->0.5,
+          BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+        SingleLetterItalics->False], TraditionalForm]]],
+     ". This function should accept one argument and return a string"
+    }], "TableText"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True}}}}],
+
+Cell["", "SectionFooterSpacer",
+ Editable->False,
+ Selectable->False,
+ Deletable->False,
+ ShowCellBracket->False,
+ ShowSelection->False,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 0, Inherited],
+ CellElementSpacings->{"CellMinHeight"->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 1, Inherited]},
+ CellSize->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {Inherited, 1}, 
+   Inherited]]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellElementSpacings->{"CellMinHeight"->3},
+ CellFrameLabels->{{
+    FEPrivate`If[
+     FEPrivate`Or[
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 
+     Cell[
+      TextData[
+       ButtonBox[
+       "EXAMPLES", BaseStyle -> None, Appearance -> {Automatic, None}, 
+        Evaluator -> None, Method -> "Preemptive", 
+        ButtonFunction :> (FrontEndExecute[{
+           FrontEnd`SelectionMove[
+            FrontEnd`SelectedNotebook[], All, ButtonCell], 
+           FrontEndToken["OpenCloseGroup"], 
+           FrontEnd`SelectionMove[
+            FrontEnd`SelectedNotebook[], After, CellContents]}]& )]], 
+      "PrimaryExamplesSection", CellSize -> {5000, Inherited}], 
+     TextData[
+      ButtonBox[
+       Cell[
+        TextData[{
+          Cell[
+           BoxData[
+            InterpretationBox[
+             StyleBox[
+              
+              GraphicsBox[{}, ImageSize -> {24, 0}, BaselinePosition -> 
+               Baseline], "CacheGraphics" -> False], 
+             Spacer[24]]]], "Examples", "  ", 
+          Cell["(9)", "ExampleCount"]}], "PrimaryExamplesSection", 
+        CellSize -> {5000, Inherited}], BaseStyle -> None, 
+       Appearance -> {Automatic, None}, Evaluator -> None, Method -> 
+       "Preemptive", ButtonFunction :> (FrontEndExecute[{
+          FrontEnd`SelectionMove[
+           FrontEnd`SelectedNotebook[], All, ButtonCell], 
+          FrontEndToken["OpenCloseGroup"], 
+          FrontEnd`SelectionMove[
+           FrontEnd`SelectedNotebook[], After, CellContents]}]& )]]], None}, {
+   None, None}},
+ CellFrameLabelMargins->0,
+ CellSize->{Inherited, 
+   FEPrivate`If[
+    FEPrivate`Or[
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 11, 14]},
+ CellTags->"PrimaryExamplesSection",
+ CellID->1354278249],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1966896009],
+
+Cell["Command without arguments:", "ExampleText",
+ CellID->1189277203],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<TeXUtilities`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1323670272],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TeXCommand", "[", "\"\<comm\>\"", "]"}], "//", 
+  "TeXForm"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->1406218119],
+
+Cell["\\comm", "Output",
+ ImageSize->{40, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TeXForm=",
+ CellID->1923042836]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->417000467],
+
+Cell["Command with arguments:", "ExampleText",
+ CellID->544369607],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<TeXUtilities`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1589152665],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TeXCommand", "[", 
+   RowBox[{"\"\<comm\>\"", ",", 
+    RowBox[{"{", 
+     RowBox[{"alpha", ",", "b"}], "}"}]}], "]"}], "//", "TeXForm"}]], "Input",\
+
+ CellLabel->"In[2]:=",
+ CellID->385139934],
+
+Cell["\\comm{\\alpha}{b}", "Output",
+ ImageSize->{128, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TeXForm=",
+ CellID->1709998604]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->346950878],
+
+Cell["Command with optional arguments:", "ExampleText",
+ CellID->1715900981],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<TeXUtilities`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1917287582],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TeXCommand", "[", 
+   RowBox[{"\"\<comm\>\"", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"a", "\[Rule]", "alpha"}], ",", "b"}], "}"}], ",", "c", ",", 
+      "beta"}], "}"}]}], "]"}], "//", "TeXForm"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->622467443],
+
+Cell["\\comm[a=\\alpha,b]{c}{\\beta}", "Output",
+ ImageSize->{216, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TeXForm=",
+ CellID->1427207727]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Scope",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1293636265],
+
+Cell[TextData[{
+ Cell[BoxData["TeXCommand"], "InlineFormula",
+  ShowStringCharacters->False],
+ " can be nested:"
+}], "ExampleText",
+ CellID->1311951073],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<TeXUtilities`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->354730472],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TeXCommand", "[", "\[IndentingNewLine]", 
+   RowBox[{"\"\<comm1\>\"", ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"a", "\[Rule]", 
+         RowBox[{"TeXCommand", "[", "\"\<comm2\>\"", "]"}]}], ",", "b"}], 
+       "}"}], ",", "c", ",", 
+      RowBox[{"TeXCommand", "[", 
+       RowBox[{"\"\<comm3\>\"", ",", 
+        RowBox[{"{", "beta", "}"}]}], "]"}]}], "}"}]}], "\[IndentingNewLine]",
+    "]"}], "//", "TeXForm"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->1908431843],
+
+Cell["\\comm1[a=\\comm2,b]{c}{\\comm3{\\beta}}", "Output",
+ ImageSize->{288, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TeXForm=",
+ CellID->758772355]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Options",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(2)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "\"ArgumentConverter\"",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(2)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True],
+
+Cell[TextData[{
+ "With ",
+ StyleBox["\"ArgumentConverter\"", "InlineCode"],
+ " set to ",
+ Cell[BoxData[
+  RowBox[{
+      ButtonBox["Function",
+       BaseStyle->"Link",
+       ButtonData->"paclet:ref/Function"], "[", 
+      RowBox[{",", 
+       RowBox[{
+        ButtonBox["ToString",
+         BaseStyle->"Link",
+         ButtonData->"paclet:ref/ToString"], "[", 
+        RowBox[{
+         RowBox[{
+          ButtonBox["Unevaluated",
+           BaseStyle->"Link",
+           ButtonData->"paclet:ref/Unevaluated"], "@", "#"}], ",", 
+         ButtonBox["TeXForm",
+          BaseStyle->"Link",
+          ButtonData->"paclet:ref/TeXForm"]}], "]"}], ",", 
+       ButtonBox["HoldAllComplete",
+        BaseStyle->"Link",
+        ButtonData->"paclet:ref/HoldAllComplete"]}], "]"}]], "InlineFormula",
+  ShowStringCharacters->False],
+ " (default value) arguments are converted to ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]],
+ ":"
+}], "ExampleText",
+ CellID->18900439],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<TeXUtilities`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->531061760],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TeXCommand", "[", 
+   RowBox[{"\"\<comm\>\"", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"opt1", "\[Rule]", "alpha"}], ",", "opt2"}], "}"}], ",", 
+      "arg", ",", "beta"}], "}"}], ",", 
+    RowBox[{"\"\<ArgumentConverter\>\"", "\[Rule]", 
+     RowBox[{"Function", "[", 
+      RowBox[{",", 
+       RowBox[{"ToString", "[", 
+        RowBox[{
+         RowBox[{"Unevaluated", "@", "#"}], ",", "TeXForm"}], "]"}], ",", 
+       "HoldAllComplete"}], "]"}]}]}], "]"}], "//", 
+  "TeXForm"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->671180129],
+
+Cell["\\comm[\\text{opt1}=\\alpha,\\text{opt2}]{\\arg}{\\beta}", "Output",
+ ImageSize->{400, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TeXForm=",
+ CellID->1852935110]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->1101731154],
+
+Cell[TextData[{
+ "With ",
+ StyleBox["\"ArgumentConverter\"", "InlineCode"],
+ " set to any function, arguments are passed to this function before joining \
+with other strings building ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]],
+ " form of expression:"
+}], "ExampleText",
+ CellID->448392044],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<TeXUtilities`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->269394985],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TeXCommand", "[", 
+   RowBox[{"\"\<comm\>\"", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"opt1", "\[Rule]", "alpha"}], ",", "opt2"}], "}"}], ",", 
+      "arg", ",", "beta"}], "}"}], ",", 
+    RowBox[{"\"\<ArgumentConverter\>\"", "\[Rule]", "ToString"}]}], "]"}], "//",
+   "TeXForm"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->1986887612],
+
+Cell["\\comm[opt1=alpha,opt2]{arg}{beta}", "Output",
+ ImageSize->{264, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//TeXForm=",
+ CellID->1021973108]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Applications",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->258228157],
+
+Cell[TextData[{
+ Cell[BoxData["TeXCommand"], "InlineFormula",
+  ShowStringCharacters->False],
+ " can be used to define formatting using ",
+ Cell[BoxData[
+  ButtonBox["Format",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Format"]], "InlineFormula",
+  ShowStringCharacters->False],
+ ":"
+}], "ExampleText",
+ CellID->908547004],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<TeXUtilities`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1920081157],
+
+Cell[TextData[{
+ "Assign ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]],
+ " formatting for a function:"
+}], "ExampleText",
+ CellID->1565222199],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Format", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], ",", "TeXForm"}], "]"}], ":=", 
+  RowBox[{"TeXCommand", "[", 
+   RowBox[{"\"\<f\>\"", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", "\[Rule]", "y"}], "}"}], ",", "z"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->828485488],
+
+Cell[TextData[{
+ "Formatting is used when function is converted to ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}], "TR",
+    SingleLetterItalics->False], TraditionalForm]]],
+ ":"
+}], "ExampleText",
+ CellID->1137687184],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x", ",", "5", ",", 
+    RowBox[{"alpha", " ", "-", 
+     RowBox[{"2", "y"}]}]}], "]"}], "//", "TeXForm"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->1497456338],
+
+Cell["\\f[x=5]{\\alpha -2 y}", "Output",
+ ImageSize->{160, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TeXForm=",
+ CellID->1541786272]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer",
+ Editable->False,
+ Selectable->False,
+ Deletable->False,
+ ShowCellBracket->False,
+ ShowSelection->False,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 0, Inherited],
+ CellElementSpacings->{"CellMinHeight"->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 1, Inherited]},
+ CellSize->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {Inherited, 1}, 
+   Inherited]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellElementSpacings->{"CellMinHeight"->3},
+ CellFrameLabels->{{
+    FEPrivate`If[
+     FEPrivate`Or[
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 
+     Cell[
+      TextData[
+       ButtonBox[
+       "SEE ALSO", BaseStyle -> None, Appearance -> {Automatic, None}, 
+        Evaluator -> None, Method -> "Preemptive", 
+        ButtonFunction :> (FrontEndExecute[{
+           FrontEnd`SelectionMove[
+            FrontEnd`SelectedNotebook[], All, ButtonCell], 
+           FrontEndToken["OpenCloseGroup"], 
+           FrontEnd`SelectionMove[
+            FrontEnd`SelectedNotebook[], After, CellContents]}]& )]], 
+      "SeeAlsoSection", CellSize -> {5000, Inherited}], 
+     TextData[
+      ButtonBox[
+       Cell[
+        TextData[{
+          Cell[
+           BoxData[
+            InterpretationBox[
+             StyleBox[
+              
+              GraphicsBox[{}, ImageSize -> {24, 0}, BaselinePosition -> 
+               Baseline], "CacheGraphics" -> False], 
+             Spacer[24]]]], "See Also"}], "SeeAlsoSection", 
+        CellSize -> {5000, Inherited}], BaseStyle -> None, 
+       Appearance -> {Automatic, None}, Evaluator -> None, Method -> 
+       "Preemptive", ButtonFunction :> (FrontEndExecute[{
+          FrontEnd`SelectionMove[
+           FrontEnd`SelectedNotebook[], All, ButtonCell], 
+          FrontEndToken["OpenCloseGroup"], 
+          FrontEnd`SelectionMove[
+           FrontEnd`SelectedNotebook[], After, CellContents]}]& )]]], None}, {
+   None, None}},
+ CellFrameLabelMargins->0,
+ CellSize->{Inherited, 
+   FEPrivate`If[
+    FEPrivate`Or[
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 11, 14]},
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["TeXVerbatim",
+    BaseStyle->"Link",
+    ButtonData->"paclet:TeXUtilities/ref/TeXVerbatim"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["TeXDelimited",
+    BaseStyle->"Link",
+    ButtonData->"paclet:TeXUtilities/ref/TeXDelimited"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["TeXEnvironment",
+    BaseStyle->"Link",
+    ButtonData->"paclet:TeXUtilities/ref/TeXEnvironment"],
+   FontFamily->"Verdana"]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellElementSpacings->{"CellMinHeight"->3},
+ CellFrameLabels->{{
+    FEPrivate`If[
+     FEPrivate`Or[
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+      FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 
+     Cell[
+      TextData[
+       ButtonBox[
+       "MORE ABOUT", BaseStyle -> None, Appearance -> {Automatic, None}, 
+        Evaluator -> None, Method -> "Preemptive", 
+        ButtonFunction :> (FrontEndExecute[{
+           FrontEnd`SelectionMove[
+            FrontEnd`SelectedNotebook[], All, ButtonCell], 
+           FrontEndToken["OpenCloseGroup"], 
+           FrontEnd`SelectionMove[
+            FrontEnd`SelectedNotebook[], After, CellContents]}]& )]], 
+      "MoreAboutSection", CellSize -> {5000, Inherited}], 
+     TextData[
+      ButtonBox[
+       Cell[
+        TextData[{
+          Cell[
+           BoxData[
+            InterpretationBox[
+             StyleBox[
+              
+              GraphicsBox[{}, ImageSize -> {24, 0}, BaselinePosition -> 
+               Baseline], "CacheGraphics" -> False], 
+             Spacer[24]]]], "More About"}], "MoreAboutSection", 
+        CellSize -> {5000, Inherited}], BaseStyle -> None, 
+       Appearance -> {Automatic, None}, Evaluator -> None, Method -> 
+       "Preemptive", ButtonFunction :> (FrontEndExecute[{
+          FrontEnd`SelectionMove[
+           FrontEnd`SelectedNotebook[], All, ButtonCell], 
+          FrontEndToken["OpenCloseGroup"], 
+          FrontEnd`SelectionMove[
+           FrontEnd`SelectedNotebook[], After, CellContents]}]& )]]], None}, {
+   None, None}},
+ CellFrameLabelMargins->0,
+ CellSize->{Inherited, 
+   FEPrivate`If[
+    FEPrivate`Or[
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+     FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 11, 14]},
+ CellID->38303248],
+
+Cell["", "SectionHeaderSpacer",
+ Editable->False,
+ Selectable->False,
+ Deletable->False,
+ ShowCellBracket->False,
+ ShowSelection->False,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 0, Inherited],
+ CellElementSpacings->{"CellMinHeight"->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 1, Inherited]},
+ CellSize->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {Inherited, 1}, 
+   Inherited]],
+
+Cell[TextData[ButtonBox["Customizing TeX conversion",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:TeXUtilities/guide/CustomizingTeXConversion"]], "MoreAbout",
+ CellID->910785169],
+
+Cell["", "SectionFooterSpacer",
+ Editable->False,
+ Selectable->False,
+ Deletable->False,
+ ShowCellBracket->False,
+ ShowSelection->False,
+ CellMargins->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 0, Inherited],
+ CellElementSpacings->{"CellMinHeight"->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], 1, Inherited]},
+ CellSize->FEPrivate`If[
+   FEPrivate`Or[
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "6.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "7.0"], 
+    FEPrivate`SameQ[FEPrivate`$ProductVersion, "8.0"]], {Inherited, 1}, 
+   Inherited]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"TeXCommand - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:TeXUtilities/guide/TeXUtilities",
+          BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
+  "Metadata" -> {
+   "built" -> "{2014, 5, 18, 14, 20, 22.573946}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "TeXUtilities`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Te X Utilities Package Symbol", "language" -> "en", "paclet" -> 
+    "TeXUtilities Package", "status" -> "None", "summary" -> 
+    "TeXCommand[\"name \"] represents TeX command \\name . TeXCommand[\"name \
+\", {arg 1, arg 2, ...}] represents TeX command with arguments \\name \
+{arg_1}{arg_2}.... TeXCommand[\"name \", {{opt 1 -> val_1, opt_2, opt 3 -> \
+val_3, ...}, arg 1, arg 2, ...}] represents TeX command with optional \
+arguments \\name [opt_1=val_1,opt_2,opt_3=val_3]{arg_1}{arg_2}.... ", 
+    "synonyms" -> {}, "title" -> "TeXCommand", "titlemodifier" -> "", 
+    "windowtitle" -> "TeXCommand", "type" -> "Symbol", "uri" -> 
+    "TeXUtilities/ref/TeXCommand"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"6.0",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "6.0", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[12933, 379, 2056, 51, 29, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->1354278249]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 34519, 1093}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[603, 21, 2827, 64, 48, "AnchorBarGrid",
+ CellID->1],
+Cell[3433, 87, 53, 1, 42, "ObjectName",
+ CellID->1224892054],
+Cell[CellGroupData[{
+Cell[3511, 92, 4510, 149, 212, "Usage"],
+Cell[CellGroupData[{
+Cell[8046, 245, 2170, 54, 29, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1554794967],
+Cell[10219, 301, 861, 21, 70, "SectionHeaderSpacer"],
+Cell[11083, 324, 53, 0, 70, "Notes"],
+Cell[11139, 326, 881, 24, 70, "3ColumnTableMod"],
+Cell[12023, 352, 861, 21, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12933, 379, 2056, 51, 29, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->1354278249],
+Cell[CellGroupData[{
+Cell[15014, 434, 196, 6, 25, "ExampleSection",
+ CellID->1966896009],
+Cell[15213, 442, 70, 1, 33, "ExampleText",
+ CellID->1189277203],
+Cell[15286, 445, 122, 3, 27, "Input",
+ CellID->1323670272],
+Cell[CellGroupData[{
+Cell[15433, 452, 151, 5, 27, "Input",
+ CellID->1406218119],
+Cell[15587, 459, 164, 5, 48, "Output",
+ CellID->1923042836]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15788, 469, 125, 3, 7, "ExampleDelimiter",
+ CellID->417000467],
+Cell[15916, 474, 66, 1, 33, "ExampleText",
+ CellID->544369607],
+Cell[15985, 477, 122, 3, 27, "Input",
+ CellID->1589152665],
+Cell[CellGroupData[{
+Cell[16132, 484, 228, 8, 27, "Input",
+ CellID->385139934],
+Cell[16363, 494, 177, 5, 48, "Output",
+ CellID->1709998604]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16589, 505, 125, 3, 70, "ExampleDelimiter",
+ CellID->346950878],
+Cell[16717, 510, 76, 1, 70, "ExampleText",
+ CellID->1715900981],
+Cell[16796, 513, 122, 3, 70, "Input",
+ CellID->1917287582],
+Cell[CellGroupData[{
+Cell[16943, 520, 336, 11, 70, "Input",
+ CellID->622467443],
+Cell[17282, 533, 189, 5, 70, "Output",
+ CellID->1427207727]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17532, 545, 268, 8, 70, "ExampleSection",
+ CellID->1293636265],
+Cell[17803, 555, 152, 5, 70, "ExampleText",
+ CellID->1311951073],
+Cell[17958, 562, 121, 3, 70, "Input",
+ CellID->354730472],
+Cell[CellGroupData[{
+Cell[18104, 569, 574, 16, 70, "Input",
+ CellID->1908431843],
+Cell[18681, 587, 198, 5, 70, "Output",
+ CellID->758772355]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[18928, 598, 249, 7, 70, "ExampleSection"],
+Cell[CellGroupData[{
+Cell[19202, 609, 272, 7, 70, "ExampleSubsection"],
+Cell[19477, 618, 713, 26, 70, "ExampleText",
+ CellID->18900439],
+Cell[20193, 646, 121, 3, 70, "Input",
+ CellID->531061760],
+Cell[CellGroupData[{
+Cell[20339, 653, 535, 17, 70, "Input",
+ CellID->671180129],
+Cell[20877, 672, 215, 5, 70, "Output",
+ CellID->1852935110]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21129, 682, 126, 3, 70, "ExampleDelimiter",
+ CellID->1101731154],
+Cell[21258, 687, 464, 15, 70, "ExampleText",
+ CellID->448392044],
+Cell[21725, 704, 121, 3, 70, "Input",
+ CellID->269394985],
+Cell[CellGroupData[{
+Cell[21871, 711, 420, 13, 70, "Input",
+ CellID->1986887612],
+Cell[22294, 726, 193, 5, 70, "Output",
+ CellID->1021973108]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[22560, 739, 274, 8, 70, "ExampleSection",
+ CellID->258228157],
+Cell[22837, 749, 328, 11, 70, "ExampleText",
+ CellID->908547004],
+Cell[23168, 762, 122, 3, 70, "Input",
+ CellID->1920081157],
+Cell[23293, 767, 314, 12, 70, "ExampleText",
+ CellID->1565222199],
+Cell[23610, 781, 410, 14, 70, "Input",
+ CellID->828485488],
+Cell[24023, 797, 330, 12, 70, "ExampleText",
+ CellID->1137687184],
+Cell[CellGroupData[{
+Cell[24378, 813, 217, 7, 70, "Input",
+ CellID->1497456338],
+Cell[24598, 822, 181, 5, 70, "Output",
+ CellID->1541786272]
+}, Open  ]]
+}, Closed]],
+Cell[24806, 831, 861, 21, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25704, 857, 1949, 49, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[27656, 908, 835, 28, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28528, 941, 1957, 49, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[30488, 992, 861, 21, 70, "SectionHeaderSpacer"],
+Cell[31352, 1015, 178, 4, 70, "MoreAbout",
+ CellID->910785169],
+Cell[31533, 1021, 861, 21, 70, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[32409, 1045, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

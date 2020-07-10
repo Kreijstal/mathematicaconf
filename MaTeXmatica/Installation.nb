@@ -1,0 +1,323 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     11186,        314]
+NotebookOptionsPosition[     10426,        284]
+NotebookOutlinePosition[     10859,        302]
+CellTagsIndexPosition[     10816,        299]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"currentdir", "=", 
+    RowBox[{"ToFileName", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"\"\<FileName\>\"", " ", "/.", " ", 
+        RowBox[{"NotebookInformation", "[", 
+         RowBox[{"EvaluationNotebook", "[", "]"}], "]"}]}], ")"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mdir", "=", 
+    RowBox[{"$UserBaseDirectory", "<>", "\"\<\\\\MaTeXmatica\\\\\>\""}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"package", "=", 
+    RowBox[{"mdir", "<>", "\"\<MaTeXmatica.m\>\""}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ssfile", "=", 
+    RowBox[{
+    "$UserBaseDirectory", "<>", 
+     "\"\<\\SystemFiles\\FrontEnd\\StyleSheets\\\\\>\"", "<>", 
+     "\"\<MaTeXmatica.nb\>\""}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"files", "=", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<MaTeXMatica.m\>\"", ",", "\"\<tex2bmp.exe\>\"", ",", 
+      "\"\<tmp1.arg\>\"", ",", "\"\<tex2bmp.bat\>\"", ",", "\"\<gs.cmd\>\""}],
+      "}"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Step1", "[", "]"}], ":=", 
+    RowBox[{"(", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Run", "[", 
+       RowBox[{"\"\<mkdir \\\"\>\"", "<>", "mdir"}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"SetDirectory", "[", "currentdir", "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"res1", "=", "0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Do", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Run", "[", 
+          RowBox[{"\"\<del \\\"\>\"", "<>", "mdir", "<>", 
+           RowBox[{
+           "files", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+           "<>", "\"\<\\\"\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"res1", "=", 
+          RowBox[{"res1", "+", 
+           RowBox[{"Run", "[", 
+            RowBox[{"\"\<copy \\\"\>\"", "<>", 
+             RowBox[{
+             "files", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+             "<>", "\"\<\\\" \\\"\>\"", "<>", "mdir", "<>", 
+             RowBox[{
+             "files", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+             "<>", "\"\<\\\"\>\""}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", "files", "]"}]}], "}"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Run", "[", 
+       RowBox[{"\"\<del \\\"\>\"", "<>", "ssfile", "<>", "\"\<\\\"\>\""}], 
+       "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"res1", "=", 
+       RowBox[{"res1", "+", 
+        RowBox[{"Run", "[", 
+         RowBox[{
+         "\"\<copy \\\"MaTeXmatica.nb\\\" \\\"\>\"", "<>", "ssfile", "<>", 
+          "\"\<\\\"\>\""}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"res1", "!=", "0"}], ",", 
+        RowBox[{
+        "Print", "[", "\"\<Can not copy the installation files!\>\"", "]"}], 
+        ",", 
+        RowBox[{
+        "Print", "[", "\"\<Files copied to your $UserBaseDirectory\>\"", 
+         "]"}]}], "]"}]}], ")"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Step2", "[", "]"}], ":=", 
+   RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "Print", "[", 
+       "\"\<Looking for gs. It could take several minutes...\>\"", "]"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"SetDirectory", "[", 
+       RowBox[{"drive", "=", 
+        RowBox[{"StringTake", "[", 
+         RowBox[{"$InstallationDirectory", ",", "3"}], "]"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Run", "[", 
+      RowBox[{
+      "\"\<dir /S \\\"gswin32c.exe\\\" /X /b /o:gn > \\\"\>\"", "<>", 
+       "$UserBaseDirectory", "<>", "\"\<\\gslocation\\\"\>\""}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"location", "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"$UserBaseDirectory", "<>", "\"\<\\gslocation\>\""}], ",", 
+        "\"\<text\>\"", ",", 
+        RowBox[{"CharacterEncoding", "\[Rule]", "\"\<WindowsANSI\>\""}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"gspath", "=", 
+      RowBox[{
+       RowBox[{"StringSplit", "[", 
+        RowBox[{"location", ",", "\"\<\\n\>\""}], "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<gs detected in \>\"", "<>", "gspath"}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"param", "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"mdir", "<>", "\"\<gs.cmd\>\""}], ",", "\"\<text\>\""}], 
+       "]"}]}], ";", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"mdir", "<>", "\"\<gs.cmd\>\""}], ",", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"param", ",", 
+         RowBox[{"\"\<##gs##\>\"", "\[Rule]", 
+          RowBox[{"\"\<\>\"", "<>", "gspath"}]}]}], "]"}], ",", 
+       "\"\<text\>\"", ",", 
+       RowBox[{"CharacterEncoding", "\[Rule]", "\"\<WindowsANSI\>\""}]}], 
+      "]"}], ";"}], ")"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"InstallMe", ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"Step1", "[", "]"}], ";", 
+    RowBox[{"Step2", "[", "]"}], ";"}], ")"}]}]}], "Input",
+ CellOpen->False,
+ InitializationCell->True,
+ CellChangeTimes->{{3.489575399466221*^9, 3.4895755156178646`*^9}, {
+   3.489575729675108*^9, 3.489575729746112*^9}, 3.4895757640900764`*^9, {
+   3.48957582341747*^9, 3.4895758290507917`*^9}, {3.4895784574431276`*^9, 
+   3.489578483039592*^9}, {3.489582824462907*^9, 3.4895828524705086`*^9}, {
+   3.489583624355658*^9, 3.489583624522668*^9}, {3.4895842884436417`*^9, 
+   3.48958428876366*^9}, {3.4895861305220027`*^9, 3.489586136689355*^9}, {
+   3.489593457627089*^9, 3.4895934596822066`*^9}, {3.4895937664797544`*^9, 
+   3.489593792057217*^9}, 3.489594165833596*^9, {3.4895965851109705`*^9, 
+   3.4895965881591454`*^9}, {3.489600460160611*^9, 3.48960046154469*^9}, {
+   3.489600510457488*^9, 3.4896005938612585`*^9}, {3.4896006858095174`*^9, 
+   3.4896007174403267`*^9}, {3.4896007863202667`*^9, 3.489600786767292*^9}, {
+   3.489600947968512*^9, 3.489600972071891*^9}, {3.4896046751426945`*^9, 
+   3.4896046799999723`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Requirements :",
+  FontWeight->"Bold"],
+ "\n1) ",
+ ButtonBox["MiKTEX ",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://miktex.org/"], None},
+  ButtonNote->"http://miktex.org/"],
+ "\n2) ",
+ ButtonBox["Ghostscript \n",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://pages.cs.wisc.edu/~ghost/"], None},
+  ButtonNote->"http://pages.cs.wisc.edu/~ghost/"],
+ "\n",
+ StyleBox["Installation:",
+  FontWeight->"Bold"],
+ "\nRun the install command below once:\n(you will be asked to run \
+initiallization cells - please answer yes)"
+}], "Text",
+ CellChangeTimes->{{3.489582123010786*^9, 3.4895821504863577`*^9}, {
+  3.4895821882865195`*^9, 3.4895823202940702`*^9}, {3.4895828640711727`*^9, 
+  3.489582882670236*^9}, {3.489583888511767*^9, 3.489583912599145*^9}, {
+  3.4896048129525766`*^9, 3.489604816183761*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["InstallMe"], "Input",
+ CellChangeTimes->{{3.489576242090417*^9, 3.489576243303486*^9}, {
+   3.4895790670139933`*^9, 3.489579068559081*^9}, 3.4895824006956687`*^9, {
+   3.4895828595759153`*^9, 3.4895828598159285`*^9}, {3.4895829554303975`*^9, 
+   3.489582957847536*^9}, 3.4895836098478284`*^9, 3.489583665016984*^9, {
+   3.489584213992383*^9, 3.489584215191452*^9}, {3.489604667833276*^9, 
+   3.4896046683123035`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox["\<\"Files copied to your $UserBaseDirectory\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.489604856571071*^9, 3.48960498977369*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"Looking for gs. It could take several minutes...\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.489604856571071*^9, 3.4896049897776904`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"gs detected in C:\\\\Program Files (x86)\\\\gs\\\\gs8.64\\\\bin\
+\\\\gswin32c.exe\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{3.489604856571071*^9, 3.4896050186593423`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["\nTest it:\n",
+  FontWeight->"Bold"],
+ "Shift-Enter the cell below:"
+}], "Text",
+ CellChangeTimes->{{3.489582338057086*^9, 3.489582345630519*^9}, 
+   3.489582394351306*^9, {3.489582572479494*^9, 3.4895826052223673`*^9}, {
+   3.4895826417184544`*^9, 3.4895826559822702`*^9}}],
+
+Cell["\t\t$E=mc^2$", "TeX",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.4896055408122077`*^9}],
+
+Cell[TextData[{
+ StyleBox["\nUsage:\n",
+  FontWeight->"Bold"],
+ "To be able to use in yours notebooks \n1) reload ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", \n2) coose in the menu Format>Stylesheet>",
+ StyleBox["Ma",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ StyleBox["matica",
+  FontSlant->"Italic"],
+ "\n3) Enter a new cell in the ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " style (or copy the cell from above to your nb)"
+}], "Text",
+ CellChangeTimes->{{3.489580073189543*^9, 3.4895801816557465`*^9}, {
+   3.4895802360068555`*^9, 3.4895802682476997`*^9}, 3.489582364423594*^9, 
+   3.4895824151834974`*^9, {3.489582705401097*^9, 3.4895828023916445`*^9}}]
+},
+AutoGeneratedPackage->None,
+WindowSize->{1350, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+Magnification->1.8000001907348633`,
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (February 18, 2009)",
+StyleDefinitions->"MaTeXmatica.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 6495, 159, 34, "Input",
+ CellOpen->False,
+ InitializationCell->True],
+Cell[7043, 181, 850, 24, 233, "Text"],
+Cell[CellGroupData[{
+Cell[7918, 209, 431, 6, 52, "Input"],
+Cell[CellGroupData[{
+Cell[8374, 219, 167, 3, 39, "Print"],
+Cell[8544, 224, 179, 3, 39, "Print"],
+Cell[8726, 229, 209, 3, 39, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[8962, 236, 301, 7, 111, "Text"],
+Cell[9266, 245, 119, 3, 44, "TeX"],
+Cell[9388, 250, 1034, 32, 211, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)

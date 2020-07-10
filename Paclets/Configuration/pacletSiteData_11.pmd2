@@ -1,7 +1,7 @@
 0
 {{"http://pacletserver.wolfram.com", "Wolfram Research Paclet Server", False, 
-  {2020, 7, 2, 12, 37, 5.6102055`8.501553745135231}, 
-  {2020, 7, 2, 12, 37, 20.0299201`9.054254151491635}, 
+  {2020, 7, 9, 16, 5, 9.1547041`8.714219276132042}, 
+  {2020, 7, 9, 16, 5, 20.4712644`9.06371960213676}, 
   {Paclet["Name" -> "Alexa", "Version" -> "1.0.0", 
     "MathematicaVersion" -> "10+", "Description" -> "Easily create Alexa \
 skills for the Amazon Echo and other devices that support Alexa Voice \
